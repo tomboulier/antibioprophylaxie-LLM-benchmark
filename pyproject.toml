@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "antibioprophylaxie-llm-benchmark"
+version = "0.1.0"
+description = "Benchmark pour évaluer différentes approches IA sur les recommandations d'antibioprophylaxie SFAR"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{name = "Thomas Boulier", email = "thomas@example.com"}]
+license = {text = "MIT"}
+
+dependencies = [
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.5",
+]
+
+# LLM clients (conditionnels, pour les scripts)
+llm = [
+    "anthropic>=0.40",
+    "openai>=1.0",
+    "mistralai>=1.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]  # Line too long (gérée par ruff format)
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+addopts = "-v --cov=. --cov-report=html"
+
+[tool.coverage.run]
+omit = [
+    "*/site-packages/*",
+    "*/distutils/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]
