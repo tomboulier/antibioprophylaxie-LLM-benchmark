@@ -1,0 +1,5 @@
+module,phase,code,name,description,command,workflow-file,agent-title,agent-display-name,required,output-location
+core,1-discover,SYNC,Align Scope,"Valider le périmetre de la story active et les criteres d'acceptation.",bmad-analyst,,Analyst,Jordan (Analyst),true,docs/s-019.md
+core,2-build,DEV,Implement Story,"Implementer la story en TDD sur scripts/ et research/ selon S-019.",bmad-dev-story,,Developer,Taylor (Developer),true,scripts/
+core,3-verify,TEST,Validate Results,"Executer tests, lint, et verifier les artefacts de benchmark.",bmad-qa,,QA,Casey (QA),true,research/results/
+core,4-ship,REPORT,Write Findings,"Produire le rapport final et recommandations d'integration.",bmad-tech-writer,,Tech Writer,Alex (Tech Writer),false,docs/findings-report.md
