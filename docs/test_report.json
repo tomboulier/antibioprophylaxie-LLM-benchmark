@@ -1,0 +1,1595 @@
+{
+  "tests": [
+    {
+      "file": "tests/property/test_dataset_loader_properties.py",
+      "name": "test_property_exhaustive_rejection",
+      "status": "PASSED",
+      "module": "dataset_loader_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_engine_properties.py",
+      "name": "test_property_run_id_uniqueness",
+      "status": "PASSED",
+      "module": "engine_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_engine_properties.py",
+      "name": "test_property_summary_correct_lte_total",
+      "status": "PASSED",
+      "module": "engine_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_engine_properties.py",
+      "name": "test_property_summary_accuracy_equals_correct_over_total",
+      "status": "PASSED",
+      "module": "engine_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_export_properties.py",
+      "name": "test_property_json_schema_stable",
+      "status": "PASSED",
+      "module": "export_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_scorer_properties.py",
+      "name": "test_property_open_scorer_determinism",
+      "status": "PASSED",
+      "module": "scorer_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_scorer_properties.py",
+      "name": "test_property_qcm_scorer_determinism",
+      "status": "PASSED",
+      "module": "scorer_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_scorer_properties.py",
+      "name": "test_property_normalize_idempotency",
+      "status": "PASSED",
+      "module": "scorer_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_scorer_properties.py",
+      "name": "test_property_qcm_correctness",
+      "status": "PASSED",
+      "module": "scorer_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_immutability[Cost-kwargs0]",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_immutability[Latency-kwargs1]",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_immutability[CarbonFootprint-kwargs2]",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_immutability[Accuracy-kwargs3]",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_immutability[ModelId-kwargs4]",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_immutability[ApproachId-kwargs5]",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_immutability[DatasetId-kwargs6]",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_immutability[RunId-kwargs7]",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_immutability[QuestionId-kwargs8]",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_immutability[DatasetVersion-kwargs9]",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_immutability[Source-kwargs10]",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_immutability[MCQChoices-kwargs11]",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_cost_valid",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_cost_negative_invalid",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_cost_invalid_currency",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_accuracy_valid_range",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/property/test_value_objects_properties.py",
+      "name": "test_accuracy_out_of_range_invalid",
+      "status": "PASSED",
+      "module": "value_objects_properties",
+      "kind": "property"
+    },
+    {
+      "file": "tests/unit/test_cli.py",
+      "name": "TestListSubcommands::test_list_models_exits_zero",
+      "status": "PASSED",
+      "module": "cli",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_cli.py",
+      "name": "TestListSubcommands::test_list_models_prints_model_ids",
+      "status": "PASSED",
+      "module": "cli",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_cli.py",
+      "name": "TestListSubcommands::test_list_approaches_exits_zero",
+      "status": "PASSED",
+      "module": "cli",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_cli.py",
+      "name": "TestListSubcommands::test_list_approaches_prints_approach_ids",
+      "status": "PASSED",
+      "module": "cli",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_cli.py",
+      "name": "TestRunSubcommandValidation::test_run_without_dataset_exits_nonzero",
+      "status": "PASSED",
+      "module": "cli",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_cli.py",
+      "name": "TestRunSubcommandValidation::test_run_without_approach_exits_nonzero",
+      "status": "PASSED",
+      "module": "cli",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_cli.py",
+      "name": "TestRunSubcommandValidation::test_run_without_model_exits_nonzero",
+      "status": "PASSED",
+      "module": "cli",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_cli.py",
+      "name": "TestCompareSubcommandValidation::test_compare_without_runs_exits_nonzero",
+      "status": "PASSED",
+      "module": "cli",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_cli.py",
+      "name": "TestParserStructure::test_parser_returns_argument_parser",
+      "status": "PASSED",
+      "module": "cli",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_cli.py",
+      "name": "TestParserStructure::test_run_subcommand_accepts_multiple_approaches",
+      "status": "PASSED",
+      "module": "cli",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_cli.py",
+      "name": "TestParserStructure::test_run_subcommand_accepts_multiple_models",
+      "status": "PASSED",
+      "module": "cli",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_cli.py",
+      "name": "TestParserStructure::test_run_subcommand_accepts_question_filter",
+      "status": "PASSED",
+      "module": "cli",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_cli.py",
+      "name": "TestParserStructure::test_run_subcommand_accepts_output_dir",
+      "status": "PASSED",
+      "module": "cli",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_config_loader.py",
+      "name": "TestLoadConfigValid::test_returns_benchmark_config_instance",
+      "status": "PASSED",
+      "module": "config_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_config_loader.py",
+      "name": "TestLoadConfigValid::test_dataset_path_is_resolved",
+      "status": "PASSED",
+      "module": "config_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_config_loader.py",
+      "name": "TestLoadConfigValid::test_approaches_list_is_loaded",
+      "status": "PASSED",
+      "module": "config_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_config_loader.py",
+      "name": "TestLoadConfigValid::test_llms_list_is_loaded",
+      "status": "PASSED",
+      "module": "config_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_config_loader.py",
+      "name": "TestLoadConfigValid::test_optional_output_dir_defaults_to_none",
+      "status": "PASSED",
+      "module": "config_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_config_loader.py",
+      "name": "TestLoadConfigValid::test_optional_output_dir_is_loaded_when_present",
+      "status": "PASSED",
+      "module": "config_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_config_loader.py",
+      "name": "TestLoadConfigValid::test_optional_question_ids_defaults_to_none",
+      "status": "PASSED",
+      "module": "config_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_config_loader.py",
+      "name": "TestLoadConfigValid::test_optional_question_ids_is_loaded_when_present",
+      "status": "PASSED",
+      "module": "config_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_config_loader.py",
+      "name": "TestLoadConfigMissingFields::test_raises_when_dataset_missing",
+      "status": "PASSED",
+      "module": "config_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_config_loader.py",
+      "name": "TestLoadConfigMissingFields::test_raises_when_approaches_missing",
+      "status": "PASSED",
+      "module": "config_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_config_loader.py",
+      "name": "TestLoadConfigMissingFields::test_raises_when_llms_missing",
+      "status": "PASSED",
+      "module": "config_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_config_loader.py",
+      "name": "TestLoadConfigMissingFields::test_raises_when_file_does_not_exist",
+      "status": "PASSED",
+      "module": "config_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_dataset_loader.py",
+      "name": "test_load_valid_dataset_open_questions",
+      "status": "PASSED",
+      "module": "dataset_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_dataset_loader.py",
+      "name": "test_load_valid_dataset_mcq_questions",
+      "status": "PASSED",
+      "module": "dataset_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_dataset_loader.py",
+      "name": "test_load_valid_dataset_mixed_questions",
+      "status": "PASSED",
+      "module": "dataset_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_dataset_loader.py",
+      "name": "test_loaded_dataset_has_correct_fields",
+      "status": "PASSED",
+      "module": "dataset_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_dataset_loader.py",
+      "name": "test_reject_question_missing_required_field[id]",
+      "status": "PASSED",
+      "module": "dataset_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_dataset_loader.py",
+      "name": "test_reject_question_missing_required_field[type]",
+      "status": "PASSED",
+      "module": "dataset_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_dataset_loader.py",
+      "name": "test_reject_question_missing_required_field[question]",
+      "status": "PASSED",
+      "module": "dataset_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_dataset_loader.py",
+      "name": "test_reject_question_missing_required_field[r\\xe9ponse]",
+      "status": "PASSED",
+      "module": "dataset_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_dataset_loader.py",
+      "name": "test_reject_question_missing_required_field[source]",
+      "status": "PASSED",
+      "module": "dataset_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_dataset_loader.py",
+      "name": "test_reject_dataset_collects_all_errors",
+      "status": "PASSED",
+      "module": "dataset_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_dataset_loader.py",
+      "name": "test_reject_unknown_question_type",
+      "status": "PASSED",
+      "module": "dataset_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_dataset_loader.py",
+      "name": "test_reject_mcq_question_missing_choices",
+      "status": "PASSED",
+      "module": "dataset_loader",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_engine.py",
+      "name": "TestBenchmarkEngineRunStructure::test_returns_one_run_result_per_approach_llm_combination",
+      "status": "PASSED",
+      "module": "engine",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_engine.py",
+      "name": "TestBenchmarkEngineRunStructure::test_run_result_has_unique_run_id",
+      "status": "PASSED",
+      "module": "engine",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_engine.py",
+      "name": "TestBenchmarkEngineRunStructure::test_two_successive_runs_produce_distinct_run_ids",
+      "status": "PASSED",
+      "module": "engine",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_engine.py",
+      "name": "TestBenchmarkEngineRunStructure::test_run_result_timestamp_is_utc",
+      "status": "PASSED",
+      "module": "engine",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_engine.py",
+      "name": "TestBenchmarkEngineRunStructure::test_run_result_carries_correct_ids",
+      "status": "PASSED",
+      "module": "engine",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_engine.py",
+      "name": "TestBenchmarkEngineRunStructure::test_prepare_is_called_once_per_approach_per_run",
+      "status": "PASSED",
+      "module": "engine",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_engine.py",
+      "name": "TestQuestionFiltering::test_filters_to_requested_question_ids",
+      "status": "PASSED",
+      "module": "engine",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_engine.py",
+      "name": "TestQuestionFiltering::test_none_question_ids_runs_all_questions",
+      "status": "PASSED",
+      "module": "engine",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_engine.py",
+      "name": "TestErrorHandling::test_llm_error_is_recorded_in_question_result",
+      "status": "PASSED",
+      "module": "engine",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_engine.py",
+      "name": "TestErrorHandling::test_run_continues_after_llm_error",
+      "status": "PASSED",
+      "module": "engine",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_engine.py",
+      "name": "TestErrorHandling::test_errored_question_does_not_count_as_correct",
+      "status": "PASSED",
+      "module": "engine",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_engine.py",
+      "name": "TestRunSummary::test_summary_total_matches_question_count",
+      "status": "PASSED",
+      "module": "engine",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_engine.py",
+      "name": "TestRunSummary::test_summary_correct_lte_total",
+      "status": "PASSED",
+      "module": "engine",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_engine.py",
+      "name": "TestRunSummary::test_summary_accuracy_equals_correct_over_total",
+      "status": "PASSED",
+      "module": "engine",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_engine.py",
+      "name": "TestRunSummary::test_summary_by_type_contains_question_types",
+      "status": "PASSED",
+      "module": "engine",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_entities.py",
+      "name": "test_question_open_construction",
+      "status": "PASSED",
+      "module": "entities",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_entities.py",
+      "name": "test_question_open_with_source",
+      "status": "PASSED",
+      "module": "entities",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_entities.py",
+      "name": "test_question_open_choices_not_required",
+      "status": "PASSED",
+      "module": "entities",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_entities.py",
+      "name": "test_question_mcq_construction",
+      "status": "PASSED",
+      "module": "entities",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_entities.py",
+      "name": "test_question_mcq_missing_choices_raises",
+      "status": "PASSED",
+      "module": "entities",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_entities.py",
+      "name": "test_question_mcq_with_source",
+      "status": "PASSED",
+      "module": "entities",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_entities.py",
+      "name": "test_dataset_construction",
+      "status": "PASSED",
+      "module": "entities",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_entities.py",
+      "name": "test_dataset_empty_questions",
+      "status": "PASSED",
+      "module": "entities",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_entities.py",
+      "name": "test_run_result_construction",
+      "status": "PASSED",
+      "module": "entities",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_entities.py",
+      "name": "test_run_result_summary_fields",
+      "status": "PASSED",
+      "module": "entities",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_entities.py",
+      "name": "test_run_result_question_result_fields",
+      "status": "PASSED",
+      "module": "entities",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_entities.py",
+      "name": "test_score_result_defaults",
+      "status": "PASSED",
+      "module": "entities",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_entities.py",
+      "name": "test_llm_request_defaults",
+      "status": "PASSED",
+      "module": "entities",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_entities.py",
+      "name": "test_llm_response_defaults",
+      "status": "PASSED",
+      "module": "entities",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_entities.py",
+      "name": "test_llm_response_with_metrics",
+      "status": "PASSED",
+      "module": "entities",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_export_adapters.py",
+      "name": "TestJsonExportAdapter::test_export_creates_file",
+      "status": "PASSED",
+      "module": "export_adapters",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_export_adapters.py",
+      "name": "TestJsonExportAdapter::test_export_returns_path_inside_output_dir",
+      "status": "PASSED",
+      "module": "export_adapters",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_export_adapters.py",
+      "name": "TestJsonExportAdapter::test_export_produces_valid_json",
+      "status": "PASSED",
+      "module": "export_adapters",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_export_adapters.py",
+      "name": "TestJsonExportAdapter::test_export_json_contains_required_top_level_keys",
+      "status": "PASSED",
+      "module": "export_adapters",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_export_adapters.py",
+      "name": "TestJsonExportAdapter::test_export_json_run_id_matches",
+      "status": "PASSED",
+      "module": "export_adapters",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_export_adapters.py",
+      "name": "TestJsonExportAdapter::test_export_json_results_count_matches",
+      "status": "PASSED",
+      "module": "export_adapters",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_export_adapters.py",
+      "name": "TestJsonExportAdapter::test_export_filename_contains_run_id",
+      "status": "PASSED",
+      "module": "export_adapters",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_export_adapters.py",
+      "name": "TestCsvExportAdapter::test_export_creates_file",
+      "status": "PASSED",
+      "module": "export_adapters",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_export_adapters.py",
+      "name": "TestCsvExportAdapter::test_export_returns_path_inside_output_dir",
+      "status": "PASSED",
+      "module": "export_adapters",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_export_adapters.py",
+      "name": "TestCsvExportAdapter::test_export_csv_has_expected_columns",
+      "status": "PASSED",
+      "module": "export_adapters",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_export_adapters.py",
+      "name": "TestCsvExportAdapter::test_export_csv_has_one_row_per_run",
+      "status": "PASSED",
+      "module": "export_adapters",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_export_adapters.py",
+      "name": "TestCsvExportAdapter::test_export_csv_accuracy_value",
+      "status": "PASSED",
+      "module": "export_adapters",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_litellm_adapter.py",
+      "name": "TestLiteLLMAdapterProperties::test_model_id_matches_constructor_argument",
+      "status": "PASSED",
+      "module": "litellm_adapter",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_litellm_adapter.py",
+      "name": "TestLiteLLMAdapterProperties::test_price_per_input_token_matches_constructor_argument",
+      "status": "PASSED",
+      "module": "litellm_adapter",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_litellm_adapter.py",
+      "name": "TestLiteLLMAdapterProperties::test_price_per_output_token_matches_constructor_argument",
+      "status": "PASSED",
+      "module": "litellm_adapter",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_litellm_adapter.py",
+      "name": "TestLiteLLMAdapterComplete::test_returns_llm_response",
+      "status": "PASSED",
+      "module": "litellm_adapter",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_litellm_adapter.py",
+      "name": "TestLiteLLMAdapterComplete::test_response_text_matches_litellm_content",
+      "status": "PASSED",
+      "module": "litellm_adapter",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_litellm_adapter.py",
+      "name": "TestLiteLLMAdapterComplete::test_response_input_tokens_matches_usage",
+      "status": "PASSED",
+      "module": "litellm_adapter",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_litellm_adapter.py",
+      "name": "TestLiteLLMAdapterComplete::test_response_output_tokens_matches_usage",
+      "status": "PASSED",
+      "module": "litellm_adapter",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_litellm_adapter.py",
+      "name": "TestLiteLLMAdapterComplete::test_response_latency_is_positive",
+      "status": "PASSED",
+      "module": "litellm_adapter",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_litellm_adapter.py",
+      "name": "TestLiteLLMAdapterComplete::test_complete_passes_correct_model_to_litellm",
+      "status": "PASSED",
+      "module": "litellm_adapter",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_litellm_adapter.py",
+      "name": "TestLiteLLMAdapterComplete::test_complete_passes_max_tokens_to_litellm",
+      "status": "PASSED",
+      "module": "litellm_adapter",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_litellm_adapter.py",
+      "name": "TestLiteLLMAdapterComplete::test_litellm_exception_propagates",
+      "status": "PASSED",
+      "module": "litellm_adapter",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_long_context_approach.py",
+      "name": "TestLongContextApproachId::test_approach_id_is_long_context",
+      "status": "PASSED",
+      "module": "long_context_approach",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_long_context_approach.py",
+      "name": "TestLongContextApproachPrepare::test_prepare_loads_source_content",
+      "status": "PASSED",
+      "module": "long_context_approach",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_long_context_approach.py",
+      "name": "TestLongContextApproachPrepare::test_prepare_raises_when_source_file_missing",
+      "status": "PASSED",
+      "module": "long_context_approach",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_long_context_approach.py",
+      "name": "TestLongContextApproachBuildPrompt::test_build_prompt_returns_non_empty_string",
+      "status": "PASSED",
+      "module": "long_context_approach",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_long_context_approach.py",
+      "name": "TestLongContextApproachBuildPrompt::test_build_prompt_contains_question_text",
+      "status": "PASSED",
+      "module": "long_context_approach",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_long_context_approach.py",
+      "name": "TestLongContextApproachBuildPrompt::test_build_prompt_contains_source_content",
+      "status": "PASSED",
+      "module": "long_context_approach",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_long_context_approach.py",
+      "name": "TestLongContextApproachBuildPrompt::test_build_prompt_raises_when_prepare_not_called",
+      "status": "PASSED",
+      "module": "long_context_approach",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_metrics.py",
+      "name": "TestComputeCost::test_returns_cost_with_known_prices_and_tokens",
+      "status": "PASSED",
+      "module": "metrics",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_metrics.py",
+      "name": "TestComputeCost::test_returns_none_when_input_tokens_is_none",
+      "status": "PASSED",
+      "module": "metrics",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_metrics.py",
+      "name": "TestComputeCost::test_returns_none_when_output_tokens_is_none",
+      "status": "PASSED",
+      "module": "metrics",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_metrics.py",
+      "name": "TestComputeCost::test_returns_none_when_both_tokens_are_none",
+      "status": "PASSED",
+      "module": "metrics",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_metrics.py",
+      "name": "TestComputeCost::test_zero_tokens_returns_zero_cost",
+      "status": "PASSED",
+      "module": "metrics",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_metrics.py",
+      "name": "TestComputeCost::test_currency_matches_llm_port_currency",
+      "status": "PASSED",
+      "module": "metrics",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_metrics.py",
+      "name": "TestCarbonTrackerInjection::test_stop_run_returns_none_when_no_tracker_injected",
+      "status": "PASSED",
+      "module": "metrics",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_metrics.py",
+      "name": "TestCarbonTrackerInjection::test_start_and_stop_run_delegates_to_tracker",
+      "status": "PASSED",
+      "module": "metrics",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_metrics.py",
+      "name": "TestCarbonTrackerInjection::test_stop_run_returns_none_when_tracker_not_started",
+      "status": "PASSED",
+      "module": "metrics",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_metrics.py",
+      "name": "TestCarbonTrackerInjection::test_stop_run_returns_none_when_tracker_raises",
+      "status": "PASSED",
+      "module": "metrics",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestNormalize::test_lowercases_text",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestNormalize::test_strips_leading_whitespace",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestNormalize::test_strips_trailing_whitespace",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestNormalize::test_collapses_multiple_spaces",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestNormalize::test_strips_trailing_period",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestNormalize::test_combined_transformations",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestNormalize::test_empty_string",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestNormalize::test_no_change_already_normalized",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestOpenScorer::test_single_molecule_case_insensitive_correct",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestOpenScorer::test_single_molecule_wrong_answer",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestOpenScorer::test_multi_molecule_both_present_correct",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestOpenScorer::test_multi_molecule_one_missing_incorrect",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestOpenScorer::test_non_expected_non_in_actual_correct",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestOpenScorer::test_non_expected_pas_d_in_actual_correct",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestOpenScorer::test_non_expected_molecule_in_actual_incorrect",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestOpenScorer::test_hors_perimetre_case_insensitive_correct",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestOpenScorer::test_mixed_case_in_actual_correct",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestOpenScorer::test_returns_score_result",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestQCMScorer::test_letter_alone_correct",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestQCMScorer::test_letter_in_sentence_correct",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestQCMScorer::test_wrong_letter_incorrect",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestQCMScorer::test_no_letter_found_incorrect",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestQCMScorer::test_returns_score_result",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestQCMScorer::test_case_insensitive_letter_extraction",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestSourcingScorer::test_source_present_and_correct",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestSourcingScorer::test_source_present_but_incorrect",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestSourcingScorer::test_no_source_reference_in_response",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestSourcingScorer::test_question_has_no_source_only_checks_presence",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestSourcingScorer::test_returns_score_result",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestScorerRegistry::test_score_open_question_delegates_to_open_scorer",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestScorerRegistry::test_score_mcq_question_delegates_to_qcm_scorer",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestScorerRegistry::test_score_open_incorrect",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestScorerRegistry::test_score_mcq_incorrect",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_scorer.py",
+      "name": "TestScorerRegistry::test_score_includes_sourcing_fields",
+      "status": "PASSED",
+      "module": "scorer",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_cost_zero_valid",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_cost_eur_valid",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_cost_negative_raises",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_cost_unsupported_currency_raises",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_latency_zero_valid",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_latency_positive_valid",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_latency_negative_raises",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_carbon_zero_valid",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_carbon_negative_raises",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_accuracy_zero_valid",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_accuracy_one_valid",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_accuracy_mid_valid",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_accuracy_negative_raises",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_accuracy_above_one_raises",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_accuracy_as_percent",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_valid[ModelId]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_valid[ApproachId]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_valid[DatasetId]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_valid[RunId]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_valid[QuestionId]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_valid[DatasetVersion]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_valid[Source]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_empty_raises[ModelId]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_empty_raises[ApproachId]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_empty_raises[DatasetId]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_empty_raises[RunId]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_empty_raises[QuestionId]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_empty_raises[DatasetVersion]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_empty_raises[Source]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_whitespace_raises[ModelId]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_whitespace_raises[ApproachId]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_whitespace_raises[DatasetId]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_whitespace_raises[RunId]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_whitespace_raises[QuestionId]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_whitespace_raises[DatasetVersion]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_string_vo_whitespace_raises[Source]",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_mcq_choices_valid",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_mcq_choices_empty_raises",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_mcq_choices_invalid_key_single_raises",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_mcq_choices_mixed_invalid_key_raises",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    },
+    {
+      "file": "tests/unit/test_value_objects.py",
+      "name": "test_cost_immutable",
+      "status": "PASSED",
+      "module": "value_objects",
+      "kind": "unit"
+    }
+  ],
+  "coverage": {
+    "src/llm_benchmark/__init__.py": {
+      "stmts": 0,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/adapters/__init__.py": {
+      "stmts": 0,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/adapters/approaches/__init__.py": {
+      "stmts": 3,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/adapters/approaches/long_context.py": {
+      "stmts": 23,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/adapters/exports/__init__.py": {
+      "stmts": 0,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/adapters/exports/csv_export.py": {
+      "stmts": 18,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/adapters/exports/json_export.py": {
+      "stmts": 21,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/adapters/llms/__init__.py": {
+      "stmts": 18,
+      "miss": 1,
+      "cover": 94
+    },
+    "src/llm_benchmark/adapters/llms/litellm_adapter.py": {
+      "stmts": 25,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/cli/__init__.py": {
+      "stmts": 0,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/cli/main.py": {
+      "stmts": 68,
+      "miss": 20,
+      "cover": 71
+    },
+    "src/llm_benchmark/config/__init__.py": {
+      "stmts": 0,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/config/loader.py": {
+      "stmts": 26,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/domain/__init__.py": {
+      "stmts": 0,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/domain/dataset_loader.py": {
+      "stmts": 47,
+      "miss": 2,
+      "cover": 96
+    },
+    "src/llm_benchmark/domain/engine.py": {
+      "stmts": 93,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/domain/entities.py": {
+      "stmts": 76,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/domain/exceptions.py": {
+      "stmts": 4,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/domain/metrics.py": {
+      "stmts": 28,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/domain/scorer.py": {
+      "stmts": 45,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/domain/value_objects.py": {
+      "stmts": 89,
+      "miss": 1,
+      "cover": 99
+    },
+    "src/llm_benchmark/ports/__init__.py": {
+      "stmts": 0,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/ports/approach.py": {
+      "stmts": 11,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/ports/carbon_tracker.py": {
+      "stmts": 7,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/ports/export.py": {
+      "stmts": 6,
+      "miss": 0,
+      "cover": 100
+    },
+    "src/llm_benchmark/ports/llm.py": {
+      "stmts": 15,
+      "miss": 0,
+      "cover": 100
+    }
+  },
+  "total": 208,
+  "passed": 208,
+  "failed": 0
+}
