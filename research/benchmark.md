@@ -4,7 +4,6 @@
 > sur les recommandations d'antibioprophylaxie chirurgicale (RFE SFAR 2024).
 >
 > **Source** : RFE SFAR 2024 (V2.0 du 22/05/2024)
-> **Périmètre** : Chirurgie orthopédique programmée + Traumatologie (47 interventions)
 > **Auteur initial** : Claude (à valider/corriger par un médecin)
 > **Date** : 2026-03-11
 

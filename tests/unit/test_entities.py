@@ -5,8 +5,6 @@ import pytest
 from llm_benchmark.domain.value_objects import (
     Accuracy,
     ApproachId,
-    CarbonFootprint,
-    Cost,
     DatasetId,
     DatasetVersion,
     Latency,
@@ -17,7 +15,6 @@ from llm_benchmark.domain.value_objects import (
     RunId,
     Source,
 )
-
 
 # ---------------------------------------------------------------------------
 # Helpers — minimal valid instances

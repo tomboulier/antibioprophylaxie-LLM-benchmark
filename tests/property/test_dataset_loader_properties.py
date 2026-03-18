@@ -71,9 +71,7 @@ def strategy_question_with_missing_field():
 
 @given(
     dataset=valid_dataset_strategy,
-    invalid_questions=st.lists(
-        strategy_question_with_missing_field(), min_size=1, max_size=3
-    ),
+    invalid_questions=st.lists(strategy_question_with_missing_field(), min_size=1, max_size=3),
 )
 @settings(max_examples=100)
 def test_property_exhaustive_rejection(dataset, invalid_questions):

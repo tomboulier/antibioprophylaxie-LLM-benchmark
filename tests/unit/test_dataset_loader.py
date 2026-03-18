@@ -11,7 +11,6 @@ from llm_benchmark.domain.value_objects import (
     Source,
 )
 
-
 # ---------------------------------------------------------------------------
 # Helpers — build minimal valid dataset dicts
 # ---------------------------------------------------------------------------
@@ -159,8 +158,8 @@ REQUIRED_QUESTION_FIELDS = ["id", "type", "question", "réponse", "source"]
 @pytest.mark.parametrize("missing_field", REQUIRED_QUESTION_FIELDS)
 def test_reject_question_missing_required_field(tmp_path, missing_field):
     """A dataset where a question is missing a required field raises DatasetValidationError."""
-    from llm_benchmark.domain.exceptions import DatasetValidationError
     from llm_benchmark.domain.dataset_loader import load_dataset
+    from llm_benchmark.domain.exceptions import DatasetValidationError
 
     question = make_open_question_dict()
     del question[missing_field]
@@ -175,8 +174,8 @@ def test_reject_question_missing_required_field(tmp_path, missing_field):
 
 def test_reject_dataset_collects_all_errors(tmp_path):
     """All validation errors are collected before raising, not just the first."""
-    from llm_benchmark.domain.exceptions import DatasetValidationError
     from llm_benchmark.domain.dataset_loader import load_dataset
+    from llm_benchmark.domain.exceptions import DatasetValidationError
 
     # Two questions each missing a different required field
     q1 = make_open_question_dict("Q01")
@@ -200,8 +199,8 @@ def test_reject_dataset_collects_all_errors(tmp_path):
 
 def test_reject_unknown_question_type(tmp_path):
     """A dataset with an unknown question type raises DatasetValidationError."""
-    from llm_benchmark.domain.exceptions import DatasetValidationError
     from llm_benchmark.domain.dataset_loader import load_dataset
+    from llm_benchmark.domain.exceptions import DatasetValidationError
 
     question = make_open_question_dict()
     question["type"] = "essay"  # not a valid type
@@ -221,8 +220,8 @@ def test_reject_unknown_question_type(tmp_path):
 
 def test_reject_mcq_question_missing_choices(tmp_path):
     """An MCQ question without choices raises DatasetValidationError."""
-    from llm_benchmark.domain.exceptions import DatasetValidationError
     from llm_benchmark.domain.dataset_loader import load_dataset
+    from llm_benchmark.domain.exceptions import DatasetValidationError
 
     question = make_mcq_question_dict()
     del question["choices"]
