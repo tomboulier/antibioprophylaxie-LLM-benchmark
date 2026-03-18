@@ -29,11 +29,12 @@ Comparer **5 systèmes** pour déterminer lequel est "meilleur" pour répondre a
 # Installer les dépendances
 uv sync --extra dev
 
-# Exporter les clés API
-export ANTHROPIC_API_KEY=sk-...
-export OPENAI_API_KEY=sk-...
-export MISTRAL_API_KEY=...
+# Configurer les clés API
+cp .env.example .env
+# Éditer .env et remplacer les valeurs par vos vraies clés API
 ```
+
+> **Note:** Les variables d'environnement déjà exportées dans le shell ont la priorité sur les valeurs définies dans `.env` (comportement non-override).
 
 ### 2. Préparer les questions
 

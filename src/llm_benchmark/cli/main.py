@@ -9,6 +9,8 @@ import argparse
 import sys
 from pathlib import Path
 
+import dotenv
+
 
 def build_parser() -> argparse.ArgumentParser:
     """Build and return the top-level argument parser.
@@ -97,6 +99,12 @@ def main(argv: list[str] | None = None) -> None:
     argv : list[str] or None, optional
         Argument list. Defaults to ``sys.argv[1:]`` when ``None``.
     """
+    try:
+        dotenv.load_dotenv(override=False)
+    except ValueError as error:
+        print(f"Error: could not parse .env file: {error}", file=sys.stderr)
+        sys.exit(1)
+
     parser = build_parser()
     args = parser.parse_args(argv)
 
