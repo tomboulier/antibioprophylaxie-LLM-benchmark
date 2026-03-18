@@ -31,7 +31,7 @@ def normalize(text: str) -> str:
     """
     text = text.lower().strip()
     text = re.sub(r"\s+", " ", text)
-    text = text.rstrip(".")
+    text = text.rstrip(".").strip()
     return text
 
 
