@@ -1,0 +1,9 @@
+id: sfar-antibioprophylaxie
+version: "1.0"
+source: "RFE SFAR 2024 (V2.0 du 22/05/2024)"
+scope: "Chirurgie orthopédique programmée + Traumatologie"
+question_count: 25
+question_types:
+  open: 15
+  mcq: 10
+license: "CC BY-NC-SA 4.0"
