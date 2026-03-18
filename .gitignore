@@ -38,6 +38,7 @@ env/
 .pytest_cache/
 .coverage
 htmlcov/
+.hypothesis/
 
 research/results/*.json
 research/results/*.csv
