@@ -1,0 +1,27 @@
+# Model registry — pricing in USD per token
+# Sources: provider pricing pages (approximate, verify before production use)
+models:
+  - id: claude-sonnet-4-5
+    price_per_input_token: 0.000003
+    price_per_output_token: 0.000015
+    currency: USD
+
+  - id: gpt-4o
+    price_per_input_token: 0.0000025
+    price_per_output_token: 0.00001
+    currency: USD
+
+  - id: gpt-4o-mini
+    price_per_input_token: 0.00000015
+    price_per_output_token: 0.0000006
+    currency: USD
+
+  - id: mistral-large-latest
+    price_per_input_token: 0.000002
+    price_per_output_token: 0.000006
+    currency: USD
+
+  - id: mistral-small-latest
+    price_per_input_token: 0.0000002
+    price_per_output_token: 0.0000006
+    currency: USD
