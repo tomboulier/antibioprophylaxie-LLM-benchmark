@@ -13,6 +13,10 @@ license = {text = "MIT"}
 
 dependencies = [
     "python-dotenv>=1.0",
+    "codecarbon>=2.0",
+    "marimo>=0.9",
+    "pyyaml>=6.0",
+    "litellm>=1.0",
 ]
 
 [project.optional-dependencies]
@@ -20,6 +24,7 @@ dev = [
     "pytest>=8.0",
     "pytest-cov>=5.0",
     "ruff>=0.5",
+    "hypothesis>=6.0",
 ]
 
 # LLM clients (conditionnels, pour les scripts)
@@ -28,6 +33,12 @@ llm = [
     "openai>=1.0",
     "mistralai>=1.0",
 ]
+
+[project.scripts]
+llm-benchmark = "llm_benchmark.cli.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llm_benchmark"]
 
 [tool.ruff]
 line-length = 100
@@ -40,13 +51,11 @@ ignore = ["E501"]  # Line too long (gérée par ruff format)
 [tool.pytest.ini_options]
 minversion = "8.0"
 testpaths = ["tests"]
-addopts = "-v --cov=. --cov-report=html"
+addopts = "-v --cov=src/llm_benchmark --cov-report=term-missing"
 
 [tool.coverage.run]
-omit = [
-    "*/site-packages/*",
-    "*/distutils/*",
-]
+source = ["src/llm_benchmark"]
+omit = ["*/site-packages/*", "*/distutils/*"]
 
 [tool.coverage.report]
 exclude_lines = [
