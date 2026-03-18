@@ -9,9 +9,9 @@ Executer la story `docs/s-019.md` de bout en bout jusqu'au rapport de findings.
 
 ## Next step (required)
 
-- Skill: `bmad-analyst`
-- Action: valider scope, hypotheses, criteres d'acceptation de `docs/s-019.md`
-- Sortie attendue: notes de cadrage pre-implementation
+- Skill: `bmad-dev-story`
+- Action: implementer AC3 puis AC4 en s'appuyant sur `docs/s-019-analyst-handoff.md`
+- Sortie attendue: scripts benchmark completes + artefacts dans `research/results/`
 
 ## Sequence cible
 
