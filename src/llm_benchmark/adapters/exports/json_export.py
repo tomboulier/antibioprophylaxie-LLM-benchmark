@@ -36,7 +36,8 @@ class JsonExportAdapter(ExportPort):
             Path to the created JSON file.
         """
         output_dir.mkdir(parents=True, exist_ok=True)
-        output_path = output_dir / f"{result.run_id.value}.json"
+        safe_name = result.run_id.value.replace("/", "_").replace("\\", "_")
+        output_path = output_dir / f"{safe_name}.json"
         payload = self._serialise(result)
         output_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
         return output_path
