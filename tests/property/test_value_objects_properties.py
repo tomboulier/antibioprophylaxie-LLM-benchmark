@@ -1,6 +1,6 @@
-"""Tests de propriété (Hypothesis) pour les Value Objects du domaine.
+"""Property-based tests (Hypothesis) for domain Value Objects.
 
-Valide : Requirements 2.1, 2.2, 2.3, 4.6, 5.3
+Validates : Requirements 2.1, 2.2, 2.3, 4.6, 5.3
 """
 
 import dataclasses
@@ -47,14 +47,14 @@ _FROZEN_VOS = [
 
 @pytest.mark.parametrize("cls,kwargs", _FROZEN_VOS)
 def test_immutability(cls, kwargs):
-    """Tout Value Object frozen lève FrozenInstanceError à toute tentative de mutation.
+    """Every frozen Value Object raises FrozenInstanceError on any mutation attempt.
 
-    Valide : Requirements 2.1, 2.2, 2.3
+    Validates : Requirements 2.1, 2.2, 2.3
     """
     obj = cls(**kwargs)
     field_name = next(iter(kwargs))
     with pytest.raises((dataclasses.FrozenInstanceError, AttributeError)):
-        object.__setattr__(obj, field_name, "mutated")  # type: ignore[arg-type]
+        setattr(obj, field_name, "mutated")
 
 
 # ---------------------------------------------------------------------------

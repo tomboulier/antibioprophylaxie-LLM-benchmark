@@ -1,4 +1,4 @@
-"""Tests unitaires des Value Objects du domaine."""
+"""Unit tests for domain Value Objects."""
 
 import dataclasses
 
