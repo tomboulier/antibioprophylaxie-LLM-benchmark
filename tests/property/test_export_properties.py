@@ -31,7 +31,11 @@ _TOP_LEVEL_KEYS = {
     "results",
 }
 
-_nonempty_text = st.text(min_size=1, max_size=30).filter(str.strip)
+_nonempty_text = st.text(
+    alphabet=st.characters(blacklist_categories=("Cs",), blacklist_characters="\x00"),
+    min_size=1,
+    max_size=30,
+).filter(str.strip)
 
 
 def _make_summary() -> RunSummary:
