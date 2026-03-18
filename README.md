@@ -26,8 +26,8 @@ Comparer **5 systèmes** pour déterminer lequel est "meilleur" pour répondre a
 ### 1. Setup
 
 ```bash
-# Installer les dépendances
-uv sync --extra dev
+# Installer les dépendances (dev + clients LLM)
+uv sync --extra dev --extra llm
 
 # Configurer les clés API
 cp .env.example .env
