@@ -285,3 +285,44 @@ class TestRunSummary:
         by_type = results[0].summary.by_type
         assert "open" in by_type
         assert "mcq" in by_type
+
+
+# ---------------------------------------------------------------------------
+# system_prompt propagation
+# ---------------------------------------------------------------------------
+
+
+class TestSystemPromptPropagation:
+    """Tests that dataset.system_prompt is passed to LLMRequest."""
+
+    def test_dataset_system_prompt_is_passed_to_llm_request(self) -> None:
+        """BenchmarkEngine must pass dataset.system_prompt as the system message."""
+        from llm_benchmark.domain.entities import LLMRequest
+
+        engine = BenchmarkEngine()
+        dataset = _make_dataset([_make_open_question("q1")])
+        dataset.system_prompt = "Réponds uniquement par le nom de la molécule."
+        approach = _make_approach(prompt="Quelle molécule ?")
+        llm = _make_llm()
+
+        engine.run(dataset, [approach], [llm])
+
+        call_args = llm.complete.call_args[0][0]
+        assert isinstance(call_args, LLMRequest)
+        assert call_args.system_prompt == "Réponds uniquement par le nom de la molécule."
+
+    def test_empty_system_prompt_when_dataset_has_none(self) -> None:
+        """When dataset.system_prompt is empty, LLMRequest.system_prompt is ''."""
+        from llm_benchmark.domain.entities import LLMRequest
+
+        engine = BenchmarkEngine()
+        dataset = _make_dataset([_make_open_question("q1")])
+        # system_prompt defaults to ""
+        approach = _make_approach()
+        llm = _make_llm()
+
+        engine.run(dataset, [approach], [llm])
+
+        call_args = llm.complete.call_args[0][0]
+        assert isinstance(call_args, LLMRequest)
+        assert call_args.system_prompt == ""

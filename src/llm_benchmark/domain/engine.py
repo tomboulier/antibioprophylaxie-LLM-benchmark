@@ -115,7 +115,9 @@ class BenchmarkEngine:
         question_results: list[QuestionResult] = []
 
         for question in questions:
-            question_result = self._evaluate_question(question, approach, llm)
+            question_result = self._evaluate_question(
+                question, approach, llm, dataset.system_prompt
+            )
             question_results.append(question_result)
             print(
                 f"  [{question.id.value}] correct={question_result.score.is_correct if question_result.score else 'error'}"
@@ -141,12 +143,13 @@ class BenchmarkEngine:
         question,
         approach: ApproachPort,
         llm: LLMPort,
+        system_prompt: str = "",
     ) -> QuestionResult:
         from llm_benchmark.domain.entities import LLMRequest
 
         try:
             prompt = approach.build_prompt(question)
-            request = LLMRequest(system_prompt=approach.system_prompt, user_prompt=prompt)
+            request = LLMRequest(system_prompt=system_prompt, user_prompt=prompt)
             response = llm.complete(request)
             score = self._scorer.score(question, response.text)
             cost = self._metrics.compute_cost(llm, response)
