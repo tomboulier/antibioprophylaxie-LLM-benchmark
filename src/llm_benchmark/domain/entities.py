@@ -81,6 +81,9 @@ class Dataset:
         Human-readable description of the dataset's domain.
     questions : list[Question]
         The questions contained in this dataset.
+    system_prompt : str, optional
+        Instructions sent to the LLM as the system message for every question
+        in this dataset (e.g. format constraints). Defaults to empty string.
     """
 
     id: DatasetId
@@ -88,6 +91,7 @@ class Dataset:
     source: Source
     scope: str
     questions: list[Question]
+    system_prompt: str = ""
 
 
 @dataclass

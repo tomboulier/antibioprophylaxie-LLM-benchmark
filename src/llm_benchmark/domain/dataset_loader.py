@@ -74,6 +74,7 @@ def load_dataset(path: Path) -> Dataset:
         source=Source(raw["source"]),
         scope=raw["scope"],
         questions=questions,
+        system_prompt=raw.get("system_prompt", ""),
     )
 
 

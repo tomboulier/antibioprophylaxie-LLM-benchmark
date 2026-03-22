@@ -232,3 +232,33 @@ def test_reject_mcq_question_missing_choices(tmp_path):
         load_dataset(path)
 
     assert len(exc_info.value.errors) > 0
+
+
+# ---------------------------------------------------------------------------
+# system_prompt field
+# ---------------------------------------------------------------------------
+
+
+def test_dataset_system_prompt_defaults_to_empty_string(tmp_path):
+    """When system_prompt is absent from the JSON, Dataset.system_prompt is ''."""
+    from llm_benchmark.domain.dataset_loader import load_dataset
+
+    data = make_dataset_dict([make_open_question_dict()])
+    path = write_dataset_file(tmp_path, data)
+
+    dataset = load_dataset(path)
+
+    assert dataset.system_prompt == ""
+
+
+def test_dataset_system_prompt_is_loaded_when_present(tmp_path):
+    """When system_prompt is present in the JSON, it is loaded into Dataset."""
+    from llm_benchmark.domain.dataset_loader import load_dataset
+
+    data = make_dataset_dict([make_open_question_dict()])
+    data["system_prompt"] = "Réponds uniquement par le nom de la molécule."
+    path = write_dataset_file(tmp_path, data)
+
+    dataset = load_dataset(path)
+
+    assert dataset.system_prompt == "Réponds uniquement par le nom de la molécule."
