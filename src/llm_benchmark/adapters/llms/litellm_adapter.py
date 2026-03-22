@@ -21,11 +21,15 @@ class LiteLLMAdapter(LLMPort):
     Parameters
     ----------
     model : str
-        LiteLLM model string (e.g. ``"gpt-4o"``, ``"claude-sonnet-4-5"``).
+        LiteLLM model string passed to ``litellm.completion()``
+        (e.g. ``"mistral/mistral-small-latest"``).
     price_per_input_token : Cost
         Cost charged per input (prompt) token.
     price_per_output_token : Cost
         Cost charged per output (completion) token.
+    model_alias : str | None
+        User-facing model identifier (e.g. ``"mistral-small-latest"``).
+        When ``None``, defaults to ``model``.
     """
 
     def __init__(
@@ -33,8 +37,10 @@ class LiteLLMAdapter(LLMPort):
         model: str,
         price_per_input_token: Cost,
         price_per_output_token: Cost,
+        model_alias: str | None = None,
     ) -> None:
-        self._model_id = ModelId(model)
+        self._litellm_model = model
+        self._model_id = ModelId(model_alias if model_alias is not None else model)
         self._price_in = price_per_input_token
         self._price_out = price_per_output_token
 
@@ -91,7 +97,7 @@ class LiteLLMAdapter(LLMPort):
         """
         start_time = time.perf_counter()
         raw_response = litellm.completion(
-            model=self._model_id.value,
+            model=self._litellm_model,
             messages=[
                 {"role": "system", "content": request.system_prompt},
                 {"role": "user", "content": request.user_prompt},

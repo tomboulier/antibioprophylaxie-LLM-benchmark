@@ -34,11 +34,16 @@ def _load_registry(config_path: Path) -> dict[str, LiteLLMAdapter]:
     registry: dict[str, LiteLLMAdapter] = {}
     for model_config in raw.get("models", []):
         model_id = model_config["id"]
+        # litellm_model is the string passed to litellm.completion(); it may
+        # include a provider prefix (e.g. "mistral/mistral-small-latest").
+        # Falls back to the user-facing id when not specified.
+        litellm_model = model_config.get("litellm_model", model_id)
         currency = model_config.get("currency", "USD")
         registry[model_id] = LiteLLMAdapter(
-            model=model_id,
+            model=litellm_model,
             price_per_input_token=Cost(model_config["price_per_input_token"], currency),
             price_per_output_token=Cost(model_config["price_per_output_token"], currency),
+            model_alias=model_id,
         )
     return registry
 
