@@ -35,17 +35,13 @@ def parse_benchmark(text: str) -> list[dict]:
         q: dict = {"id": qid, "titre": title}
 
         # Parser les champs "- **clé** : valeur"
-        for match in re.finditer(
-            r"^- \*\*(\w+(?:[- ]\w+)*)\*\*\s*:\s*(.+)$", block, re.MULTILINE
-        ):
+        for match in re.finditer(r"^- \*\*(\w+(?:[- ]\w+)*)\*\*\s*:\s*(.+)$", block, re.MULTILINE):
             key = match.group(1).strip().replace(" ", "_").replace("-", "_")
             value = match.group(2).strip()
             q[key] = value
 
         # Parser les choix QCM (lignes "  - A. ...")
-        choix_matches = re.findall(
-            r"^\s+- ([A-Z])\.\s+(.+)$", block, re.MULTILINE
-        )
+        choix_matches = re.findall(r"^\s+- ([A-Z])\.\s+(.+)$", block, re.MULTILINE)
         if choix_matches:
             q["choix"] = {letter: text.strip() for letter, text in choix_matches}
 
