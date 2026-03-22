@@ -154,13 +154,37 @@ class TestJsonExportAdapter:
 
         assert len(content["results"]) == 2
 
-    def test_export_filename_contains_run_id(self, tmp_path: Path) -> None:
+    def test_export_filename_contains_timestamp_model_and_approach(self, tmp_path: Path) -> None:
         adapter = JsonExportAdapter()
-        run_result = _make_run_result("abc-123")
+        run_result = _make_run_result()
 
         output_path = adapter.export(run_result, tmp_path)
 
-        assert "abc-123" in output_path.name
+        # Expected pattern: 20250115_103000_gpt-4o_long-context.json
+        assert "20250115_103000" in output_path.name
+        assert "gpt-4o" in output_path.name
+        assert "long-context" in output_path.name
+
+    def test_export_filename_sanitises_slashes(self, tmp_path: Path) -> None:
+        adapter = JsonExportAdapter()
+        run_result = _make_run_result()
+        # Simulate a model_id with a slash (e.g. from a litellm prefix)
+        run_result = RunResult(
+            run_id=run_result.run_id,
+            timestamp=run_result.timestamp,
+            dataset_id=run_result.dataset_id,
+            dataset_version=run_result.dataset_version,
+            approach_id=run_result.approach_id,
+            model_id=ModelId("mistral/mistral-small-latest"),
+            framework_version=run_result.framework_version,
+            config=run_result.config,
+            summary=run_result.summary,
+            results=run_result.results,
+        )
+
+        output_path = adapter.export(run_result, tmp_path)
+
+        assert "/" not in output_path.name
 
 
 # ---------------------------------------------------------------------------

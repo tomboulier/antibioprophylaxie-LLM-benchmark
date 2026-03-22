@@ -23,6 +23,10 @@ class JsonExportAdapter(ExportPort):
     def export(self, result: RunResult, output_dir: Path) -> Path:
         """Serialise *result* to JSON and write it to *output_dir*.
 
+        The output filename follows the pattern
+        ``{YYYYMMDD_HHMMSS}_{model_id}_{approach_id}.json`` so that results
+        are human-readable and sortable by time without opening the file.
+
         Parameters
         ----------
         result : RunResult
@@ -36,11 +40,29 @@ class JsonExportAdapter(ExportPort):
             Path to the created JSON file.
         """
         output_dir.mkdir(parents=True, exist_ok=True)
-        safe_name = result.run_id.value.replace("/", "_").replace("\\", "_")
-        output_path = output_dir / f"{safe_name}.json"
+        filename = self._build_filename(result)
+        output_path = output_dir / filename
         payload = self._serialise(result)
         output_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
         return output_path
+
+    def _build_filename(self, result: RunResult) -> str:
+        """Build a human-readable filename from run metadata.
+
+        Parameters
+        ----------
+        result : RunResult
+            The run result whose metadata is used for the filename.
+
+        Returns
+        -------
+        str
+            Filename of the form ``{YYYYMMDD_HHMMSS}_{model_id}_{approach_id}.json``.
+        """
+        timestamp_str = result.timestamp.strftime("%Y%m%d_%H%M%S")
+        safe_model = result.model_id.value.replace("/", "_").replace("\\", "_")
+        safe_approach = result.approach_id.value.replace("/", "_").replace("\\", "_")
+        return f"{timestamp_str}_{safe_model}_{safe_approach}.json"
 
     # ------------------------------------------------------------------
     # Private helpers
