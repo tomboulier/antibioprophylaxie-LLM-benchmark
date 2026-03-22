@@ -58,6 +58,22 @@ def test_prepare_is_noop(approach: SimplePromptApproach) -> None:
     approach.prepare()  # should not raise
 
 
+def test_system_prompt_contains_open_format_instruction(
+    approach: SimplePromptApproach,
+) -> None:
+    """system_prompt must instruct the model to reply with a molecule name only."""
+    assert (
+        "molécule" in approach.system_prompt.lower() or "molecule" in approach.system_prompt.lower()
+    )
+
+
+def test_system_prompt_contains_mcq_format_instruction(
+    approach: SimplePromptApproach,
+) -> None:
+    """system_prompt must instruct the model to reply with a single letter for MCQ."""
+    assert any(letter in approach.system_prompt for letter in ("A, B, C", "lettre", "letter"))
+
+
 def test_build_prompt_open_question_returns_question_text(
     approach: SimplePromptApproach,
     open_question: Question,

@@ -10,9 +10,29 @@ from llm_benchmark.ports.approach import ApproachPort
 class SimplePromptApproach(ApproachPort):
     """Minimal approach that sends the question text directly to the LLM.
 
-    No source document is injected. For MCQ questions the answer choices
-    are appended in a lettered list below the question text.
+    No source document is injected. A system prompt instructs the model to
+    reply concisely: molecule name only for open questions, single letter for MCQ.
     """
+
+    _SYSTEM_PROMPT = (
+        "You are a medical expert in antibiotic prophylaxis. "
+        "Answer as concisely as possible:\n"
+        "- For open questions: reply with only the molecule name (e.g. 'Céfazoline', "
+        "'Amoxicilline/Clavulanate', 'Non', 'Hors périmètre'). No explanation.\n"
+        "- For multiple-choice questions: reply with only the letter (A, B, C or D). "
+        "No explanation."
+    )
+
+    @property
+    def system_prompt(self) -> str:
+        """System instructions that enforce concise, format-compliant answers.
+
+        Returns
+        -------
+        str
+            The system prompt string.
+        """
+        return self._SYSTEM_PROMPT
 
     @property
     def approach_id(self) -> ApproachId:

@@ -14,6 +14,20 @@ class ApproachPort(ABC):
     """
 
     @property
+    def system_prompt(self) -> str:
+        """System-level instructions sent to the LLM before the user prompt.
+
+        Override in subclasses to provide format or role instructions.
+        Defaults to an empty string (no system prompt).
+
+        Returns
+        -------
+        str
+            The system prompt string.
+        """
+        return ""
+
+    @property
     @abstractmethod
     def approach_id(self) -> ApproachId:
         """Unique identifier for this approach (e.g. ``ApproachId('rag-pdf')``).

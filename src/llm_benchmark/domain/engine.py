@@ -146,7 +146,7 @@ class BenchmarkEngine:
 
         try:
             prompt = approach.build_prompt(question)
-            request = LLMRequest(system_prompt="", user_prompt=prompt)
+            request = LLMRequest(system_prompt=approach.system_prompt, user_prompt=prompt)
             response = llm.complete(request)
             score = self._scorer.score(question, response.text)
             cost = self._metrics.compute_cost(llm, response)
