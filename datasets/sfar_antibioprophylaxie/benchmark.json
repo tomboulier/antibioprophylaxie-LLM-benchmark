@@ -3,7 +3,7 @@
   "version": "1.0",
   "source": "RFE SFAR 2024 (V2.0 du 22/05/2024)",
   "scope": "Chirurgie orthopédique programmée + Traumatologie",
-  "system_prompt": "Tu es un expert en antibioprophylaxie chirurgicale. Réponds de façon concise :\n- Pour les questions ouvertes : réponds uniquement par le nom de la molécule (ex : 'Céfazoline', 'Amoxicilline/Clavulanate', 'Non', 'Hors périmètre'). Aucune explication.\n- Pour les questions à choix multiples : réponds uniquement par la lettre (A, B, C ou D). Aucune explication.",
+  "system_prompt": "Tu es un expert en antibioprophylaxie chirurgicale. Réponds de façon concise :\n- Pour les questions ouvertes : réponds uniquement par le nom de la molécule (ex : 'Céfazoline', 'Amoxicilline/Clavulanate', 'Non', 'Hors périmètre', etc.). Aucune explication.\n- Pour les questions à choix multiples : réponds uniquement par la lettre (A, B, C ou D). Aucune explication.",
   "questions": [
     {
       "id": "Q01",
