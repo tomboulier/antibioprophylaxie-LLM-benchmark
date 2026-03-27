@@ -6,8 +6,8 @@
 # Phase 1: Analysis (Optional)
 analysis:
   product-brief: "docs/product-brief.md"
-  brainstorm: "optional"
-  research: "optional"
+  brainstorm: "bmad/outputs/brainstorm-session.md"
+  research: "bmad/outputs/research-*.md"
 
 # Phase 2: Planning (Required)
 planning:

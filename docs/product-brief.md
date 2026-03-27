@@ -25,6 +25,8 @@ Framework open source d'évaluation scientifique permettant de mesurer l'alignem
 
 Les sociétés savantes médicales publient des recommandations formalisées d'experts (RFEs) qui sont la référence pour la pratique clinique. Des startups proposent des produits à base de LLM pour assister les praticiens, mais il n'existe aucun moyen standardisé de vérifier que ces produits sont alignés sur les RFEs en vigueur.
 
+**Exemple concret :** La SFAR a reçu une startup prétendant se baser sur les RFEs. Lorsque Thaïs Walter (membre du groupe numérique SFAR) l'a testée avec une question de reprise d'anticoagulation post-opératoire, la réponse a été clairement dangereuse et non alignée avec les recommandations du GIHP. Aujourd'hui, ce type de test se fait de manière artisanale, question par question, sans méthodologie reproductible.
+
 Les questions fondamentales sans réponse aujourd'hui :
 - Quel modèle de LLM est le mieux aligné sur une RFE donnée ?
 - Quelle approche technique (simple prompt, RAG, MCP, skills, long context, fine-tuning, etc.) produit les réponses les plus fiables ?
@@ -164,10 +166,21 @@ Permettre aux sociétés savantes d'auditer l'alignement des produits IA à leur
 - Scoring déterministe (exact match + fuzzy)
 - Rapport JSON + CSV avec métriques de base (précision, latence, coût)
 
+**Format du dataset :**
+- V1 : JSON custom proche du format MMLU (question + choix + lettre correcte), compatible HuggingFace
+- Versioning sémantique du dataset + DOI via Zenodo pour citabilité
+- Référence : SQuAD (Q&A extractif) et MMLU (QCM) sont les deux formats standards dans la communauté LLM
+
+**Scoring V1 vs évolutions :**
+- V1 : scoring binaire (correct/incorrect) pour les QCM, exact match pour les réponses factuelles
+- Évolution possible : scoring pondéré multi-critères (ex. molécule 40%, dose 30%, timing 20%, voie 10%) pour les questions ouvertes
+
 **Différé :**
 - Approches RAG, MCP, long context, skill
+- Scoring pondéré multi-critères
+- Vignettes cliniques
 - Métriques de performance, économiques/écologiques
-- Interface de visualisation
+- Interface de visualisation (notebook Marimo)
 - Extension à d'autres RFEs
 
 ---
@@ -318,7 +331,9 @@ Pas de modèle de revenus direct. Le projet est un outil de recherche open sourc
 - Thomas Boulier (chercheur/dev solo ; ingénieur polytechnicien + PhD mathématiques appliquées & médecin anesthésiste-réanimateur) : 100% sur la partie technique + publications
 
 **Phase scale-up (après POC) :**
-- Membres du groupe numérique SFAR : portage institutionnel, extension à d'autres RFEs
+- Tobias Gauss (Dr, Déchocage/Réanimation, CHU Grenoble Alpes) : extension vers l'Intensive Care avec les guidelines ESICM/américaines, réseau d'experts internationaux
+- Membres du groupe numérique SFAR (dont Thaïs Walter) : portage institutionnel, extension à d'autres RFEs
+- Experts cliniciens du GIHP : extension aux anticoagulants/antiagrégants en péri-opératoire
 - Experts cliniciens (MARs, infectiologues) : validation et enrichissement du dataset, co-publications
 - Startups partenaires : apportent leurs approches à évaluer via le framework
 - Autres sociétés savantes, reste de la communauté médicale : extension du dataset à d'autres spécialités (sur le modèle PARTAGES/PARHAF)
@@ -362,6 +377,8 @@ Passer au **PRD** avec le Product Manager pour formaliser les exigences fonction
 - AMEGA : https://github.com/DATEXIS/AMEGA-benchmark/
 - HealthBench : https://openai.com/index/healthbench/
 - Swedish Medical LLM Benchmark (SMLB) : Frontiers in AI, juin 2025 (angle "benchmark national + langue non anglaise", comme nous pour le français)
+- ICMx (Intensive Care Medicine Experimental, ESICM, IF 3.1) : call for submissions ouvert, accepte les "AI solutions"
+- Rapports de recherche BMAD : `bmad/outputs/research-*.md`
 
 ---
 
