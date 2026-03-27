@@ -1,0 +1,31 @@
+# BMAD Method v6 - Project Configuration
+# Generated: 2026-03-27
+# Project: antibioprophylaxie-LLM-benchmark
+
+# BMAD Version
+bmad_version: "6.0.0"
+
+# Project Information
+project_name: "antibioprophylaxie-LLM-benchmark"
+project_type: "library"
+project_level: 2  # Medium feature set (5-15 stories)
+
+# Output Configuration
+output_folder: "docs"
+stories_folder: "docs/stories"
+
+# Language Settings
+communication_language: "French"
+document_output_language: "French"
+
+# Project Metadata
+project_description: "Benchmark scientifique comparant 5 approches d'IA pour repondre aux questions d'antibioprophylaxie chirurgicale (RFE SFAR 2024)"
+repository_url: "https://github.com/tomboulier/antibioprophylaxie-LLM-benchmark"
+team_size: 1
+tech_stack:
+  - "Python 3.12"
+  - "uv"
+  - "anthropic"
+  - "openai"
+  - "mistral"
+  - "ruff"

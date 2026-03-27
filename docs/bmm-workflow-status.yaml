@@ -1,0 +1,26 @@
+# BMAD Workflow Status
+# Project: antibioprophylaxie-LLM-benchmark
+# Level: 2 (Medium feature set)
+# Generated: 2026-03-27
+
+# Phase 1: Analysis (Optional)
+analysis:
+  product-brief: "docs/product-brief.md"
+  brainstorm: "optional"
+  research: "optional"
+
+# Phase 2: Planning (Required)
+planning:
+  prd: "required"          # Level 2+ : PRD requis
+  tech-spec: "optional"   # Level 2+ : tech-spec optionnel
+
+# Phase 3: Solutioning (Conditional)
+solutioning:
+  architecture: "required"  # Level 2+ : architecture requise
+  ux-design: "optional"
+
+# Phase 4: Implementation (Required)
+implementation:
+  sprint-planning: "required"
+  stories: "required"
+  development: "required"
