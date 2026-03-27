@@ -45,5 +45,6 @@ research/results/*.csv
 !research/results/.gitkeep
 
 .DS_Store
+.remember/
 
 *.lock
