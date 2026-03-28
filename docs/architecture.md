@@ -226,3 +226,15 @@ questions = data["questions"]
 1. Create a new class in `src/llm_benchmark/adapters/approaches/` that extends `ApproachPort`.
 2. Register it in `src/llm_benchmark/adapters/approaches/__init__.py`.
 3. The CLI and scripts resolve approaches by string ID from `APPROACH_REGISTRY`.
+
+---
+
+## Évolutions prévues
+
+L'architecture actuelle supporte le POC (Epic 1 du PRD : scoring binaire, simple prompt + long context, 2+ modèles). Les Epics suivantes nécessiteront des évolutions du modèle de données et des scorers, sans toucher à la structure hexagonale :
+
+- **Epic 2 (dataset enrichi)** : ajouter `difficulty`, `clinical_impact`, `explanation`, `scoring_criteria` à `Question`. Ajouter une table de synonymes chargée depuis un fichier de config.
+- **Epic 3 (scoring multi-critères)** : faire évoluer `ScoreResult` d'un booléen `is_correct` vers un score pondéré 0.0-1.0 avec détail par critère. Ajouter un `MultiCriteriaScorer` dans le `ScorerRegistry`.
+- **Epic 4 (approches avancées)** : ajouter des adaptateurs `ApproachPort` pour RAG-PDF, RAG-structuré, MCP. Aucun changement au domaine.
+- **Epic 5 (métriques)** : implémenter `CsvExportAdapter`, brancher `CarbonFootprint` (actuellement `None` dans `RunSummary`).
+- **Epic 6 (publication)** : ajouter `scripts/eval_results.py` pour la génération du rapport.
