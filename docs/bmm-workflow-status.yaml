@@ -11,7 +11,7 @@ analysis:
 
 # Phase 2: Planning (Required)
 planning:
-  prd: "required"          # Level 2+ : PRD requis
+  prd: "docs/prd.md"       # Level 2+ : PRD requis
   tech-spec: "optional"   # Level 2+ : tech-spec optionnel
 
 # Phase 3: Solutioning (Conditional)
