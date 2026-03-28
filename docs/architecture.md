@@ -1,23 +1,22 @@
-# Architecture Reference
+# Référence d'architecture
 
-## Overview
+## Vue d'ensemble
 
-`llm-benchmark` follows **hexagonal architecture** (also called Ports & Adapters).
-The domain layer is the centre; all external concerns (LLM providers, file I/O, CLI) live
-at the edges and communicate with the domain through explicit port interfaces.
+`llm-benchmark` suit une **architecture hexagonale** (aussi appelée Ports & Adaptateurs).
+La couche domaine est au centre ; toutes les préoccupations externes (fournisseurs LLM, I/O fichiers, CLI) se trouvent en périphérie et communiquent avec le domaine via des interfaces de port explicites.
 
 ---
 
-## Layer Diagram
+## Diagramme des couches
 
 ```mermaid
 graph TD
-    subgraph CLI ["CLI / Scripts (edge)"]
+    subgraph CLI ["CLI / Scripts (périphérie)"]
         S[scripts/run_benchmark.py]
         C[src/llm_benchmark/cli/main.py]
     end
 
-    subgraph Adapters ["Adapters (edge)"]
+    subgraph Adapters ["Adaptateurs (périphérie)"]
         LA[LiteLLMAdapter]
         LCA[LongContextApproach]
         SPA[SimplePromptApproach]
@@ -25,13 +24,13 @@ graph TD
         CEA[CsvExportAdapter]
     end
 
-    subgraph Ports ["Ports (boundary)"]
+    subgraph Ports ["Ports (frontière)"]
         LP[LLMPort]
         AP[ApproachPort]
         EP[ExportPort]
     end
 
-    subgraph Domain ["Domain (centre)"]
+    subgraph Domain ["Domaine (centre)"]
         BE[BenchmarkEngine]
         SR[ScorerRegistry]
         MC[MetricsCollector]
@@ -73,89 +72,88 @@ graph TD
 
 ---
 
-## Layer Descriptions
+## Description des couches
 
-### Domain (`src/llm_benchmark/domain/`)
+### Domaine (`src/llm_benchmark/domain/`)
 
-The core of the application. Contains all business logic and domain entities.
+Le coeur de l'application. Contient toute la logique métier et les entités du domaine.
 
-**Zero external dependencies** — only Python stdlib is allowed here.
+**Zéro dépendance externe** : seule la bibliothèque standard Python est autorisée ici.
 
-| Module | Responsibility |
+| Module | Responsabilité |
 |---|---|
-| `entities.py` | Dataclasses: `Question`, `Dataset`, `RunResult`, `RunSummary`, etc. |
-| `value_objects.py` | Immutable value types: `ModelId`, `Accuracy`, `Cost`, `Latency`, etc. |
-| `engine.py` | `BenchmarkEngine` — orchestrates (approach × LLM) runs |
-| `scorer.py` | `ScorerRegistry` — evaluates LLM answers against expected answers |
-| `metrics.py` | `MetricsCollector` — computes cost and carbon from token counts |
-| `dataset_loader.py` | `DatasetLoader` / `load_dataset()` — loads and validates dataset JSON |
-| `exceptions.py` | Domain-specific exceptions |
+| `entities.py` | Dataclasses : `Question`, `Dataset`, `RunResult`, `RunSummary`, etc. |
+| `value_objects.py` | Types valeur immuables : `ModelId`, `Accuracy`, `Cost`, `Latency`, etc. |
+| `engine.py` | `BenchmarkEngine` : orchestre les runs (approche x LLM) |
+| `scorer.py` | `ScorerRegistry` : évalue les réponses LLM par rapport aux réponses attendues |
+| `metrics.py` | `MetricsCollector` : calcule le coût et le carbone à partir du nombre de tokens |
+| `dataset_loader.py` | `DatasetLoader` / `load_dataset()` : charge et valide le dataset JSON |
+| `exceptions.py` | Exceptions spécifiques au domaine |
 
 ### Ports (`src/llm_benchmark/ports/`)
 
-Abstract interfaces (Python ABCs) that define contracts between the domain and adapters.
-The domain depends on ports; adapters implement them.
+Interfaces abstraites (ABCs Python) qui définissent les contrats entre le domaine et les adaptateurs.
+Le domaine dépend des ports ; les adaptateurs les implémentent.
 
-| Port | Implemented by |
+| Port | Implémenté par |
 |---|---|
 | `LLMPort` | `LiteLLMAdapter` |
 | `ApproachPort` | `LongContextApproach`, `SimplePromptApproach` |
 | `ExportPort` | `JsonExportAdapter`, `CsvExportAdapter` |
 
-### Adapters (`src/llm_benchmark/adapters/`)
+### Adaptateurs (`src/llm_benchmark/adapters/`)
 
-Concrete implementations of ports. Each adapter may import external libraries.
+Implémentations concrètes des ports. Chaque adaptateur peut importer des bibliothèques externes.
 
-| Adapter | External dependency |
+| Adaptateur | Dépendance externe |
 |---|---|
 | `LiteLLMAdapter` | `litellm` |
-| `LongContextApproach` | none (stdlib only) |
-| `SimplePromptApproach` | none (stdlib only) |
-| `JsonExportAdapter` | none (stdlib only) |
-| `CsvExportAdapter` | none (stdlib only) |
+| `LongContextApproach` | aucune (stdlib uniquement) |
+| `SimplePromptApproach` | aucune (stdlib uniquement) |
+| `JsonExportAdapter` | aucune (stdlib uniquement) |
+| `CsvExportAdapter` | aucune (stdlib uniquement) |
 
-**Registries** (`adapters/llms/__init__.py`, `adapters/approaches/__init__.py`) load
-available adapters from `config/models.yaml` and expose them as dicts for CLI/script use.
+**Registres** (`adapters/llms/__init__.py`, `adapters/approaches/__init__.py`) : chargent
+les adaptateurs disponibles depuis `config/models.yaml` et les exposent sous forme de dicts pour la CLI/les scripts.
 
-### CLI / Scripts (edge)
+### CLI / Scripts (périphérie)
 
-Thin entry points. Their only job is:
-1. Parse arguments
-2. Resolve adapters from registries
-3. Call `BenchmarkEngine.run()`
-4. Export results via an `ExportPort` adapter
-5. Print human-readable output
+Points d'entrée légers. Leur seul rôle :
+1. Parser les arguments
+2. Résoudre les adaptateurs depuis les registres
+3. Appeler `BenchmarkEngine.run()`
+4. Exporter les résultats via un adaptateur `ExportPort`
+5. Afficher la sortie lisible
 
-They contain **no business logic**.
+Ils ne contiennent **aucune logique métier**.
 
 ---
 
-## Dependency Rules
+## Règles de dépendance
 
-| Layer | May import from | Must NOT import from |
+| Couche | Peut importer depuis | Ne doit PAS importer depuis |
 |---|---|---|
-| `domain/` | `domain/` (stdlib only) | `ports/`, `adapters/`, `cli/`, `scripts/`, any third-party lib |
+| `domain/` | `domain/` (stdlib uniquement) | `ports/`, `adapters/`, `cli/`, `scripts/`, toute lib tierce |
 | `ports/` | `domain/` | `adapters/`, `cli/`, `scripts/` |
-| `adapters/` | `ports/`, `domain/`, third-party libs | `cli/`, `scripts/` |
+| `adapters/` | `ports/`, `domain/`, libs tierces | `cli/`, `scripts/` |
 | `cli/` | `adapters/`, `ports/`, `domain/` | `scripts/` |
-| `scripts/` | `adapters/`, `ports/`, `domain/`, `cli/` | provider SDKs directly (`anthropic`, `openai`, `mistralai`, etc.) |
+| `scripts/` | `adapters/`, `ports/`, `domain/`, `cli/` | SDKs fournisseurs directement (`anthropic`, `openai`, `mistralai`, etc.) |
 
-**The golden rule**: dependencies point inward. Outer layers depend on inner layers, never
-the reverse.
+**La règle d'or** : les dépendances pointent vers l'intérieur. Les couches externes dépendent des couches internes, jamais l'inverse.
 
 ---
 
-## Correct vs Incorrect Patterns
+## Patterns corrects vs incorrects
 
-### LLM calls
+### Appels LLM
 
 ```python
-# CORRECT — route through LiteLLMAdapter via LLMPort
+# CORRECT : passer par LiteLLMAdapter via LLMPort
 from llm_benchmark.adapters.llms import LLM_REGISTRY
 adapter = LLM_REGISTRY["gpt-4o"]
 response = adapter.complete(request)
 
-# INCORRECT — direct provider SDK import
+# INCORRECT : import direct du SDK fournisseur
 import openai
 client = openai.OpenAI()
 response = client.chat.completions.create(...)
@@ -164,49 +162,49 @@ response = client.chat.completions.create(...)
 ### Scoring
 
 ```python
-# CORRECT — delegate to BenchmarkEngine (which uses ScorerRegistry internally)
+# CORRECT : déléguer au BenchmarkEngine (qui utilise ScorerRegistry en interne)
 engine = BenchmarkEngine()
 results = engine.run(dataset, [approach], [llm_adapter])
 
-# INCORRECT — inline scoring in a script or adapter
+# INCORRECT : scoring en ligne dans un script ou un adaptateur
 def score_qcm(expected, actual):
     ...
 ```
 
-### Model registry
+### Registre de modèles
 
 ```python
-# CORRECT — single source of truth
+# CORRECT : source de vérité unique
 from llm_benchmark.adapters.llms import LLM_REGISTRY
 available_models = sorted(LLM_REGISTRY.keys())
 
-# INCORRECT — hardcoded dict in a script
+# INCORRECT : dict codé en dur dans un script
 MODELS = {
     "gpt-4o": ("openai", "gpt-4o"),
     ...
 }
 ```
 
-### Result export
+### Export de résultats
 
 ```python
-# CORRECT — use JsonExportAdapter
+# CORRECT : utiliser JsonExportAdapter
 from llm_benchmark.adapters.exports.json_export import JsonExportAdapter
 path = JsonExportAdapter().export(run_result, output_dir)
 
-# INCORRECT — write custom JSON directly
+# INCORRECT : écrire du JSON directement
 import json
 path.write_text(json.dumps({"model_name": ..., "results": ...}))
 ```
 
-### Dataset loading
+### Chargement du dataset
 
 ```python
-# CORRECT — use DatasetLoader
+# CORRECT : utiliser DatasetLoader
 from llm_benchmark.domain.dataset_loader import load_dataset
 dataset = load_dataset(Path("datasets/sfar_antibioprophylaxie/benchmark.json"))
 
-# INCORRECT — raw JSON parsing in a script
+# INCORRECT : parsing JSON brut dans un script
 import json
 data = json.loads(Path("research/benchmark.json").read_text())
 questions = data["questions"]
@@ -214,18 +212,18 @@ questions = data["questions"]
 
 ---
 
-## Adding a New LLM Provider
+## Ajouter un nouveau fournisseur LLM
 
-1. Add the model to `config/models.yaml` with pricing.
-2. `LLM_REGISTRY` picks it up automatically at import time — no code change needed.
-3. If LiteLLM does not support the provider, implement a new class that extends `LLMPort`
-   in `src/llm_benchmark/adapters/llms/` and register it manually in `__init__.py`.
+1. Ajouter le modèle dans `config/models.yaml` avec les tarifs.
+2. `LLM_REGISTRY` le détecte automatiquement à l'import : aucun changement de code nécessaire.
+3. Si LiteLLM ne supporte pas le fournisseur, implémenter une nouvelle classe qui étend `LLMPort`
+   dans `src/llm_benchmark/adapters/llms/` et l'enregistrer manuellement dans `__init__.py`.
 
-## Adding a New Approach
+## Ajouter une nouvelle approche
 
-1. Create a new class in `src/llm_benchmark/adapters/approaches/` that extends `ApproachPort`.
-2. Register it in `src/llm_benchmark/adapters/approaches/__init__.py`.
-3. The CLI and scripts resolve approaches by string ID from `APPROACH_REGISTRY`.
+1. Créer une nouvelle classe dans `src/llm_benchmark/adapters/approaches/` qui étend `ApproachPort`.
+2. L'enregistrer dans `src/llm_benchmark/adapters/approaches/__init__.py`.
+3. La CLI et les scripts résolvent les approches par identifiant string depuis `APPROACH_REGISTRY`.
 
 ---
 
