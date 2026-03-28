@@ -16,7 +16,7 @@ planning:
 
 # Phase 3: Solutioning (Conditional)
 solutioning:
-  architecture: "required"  # Level 2+ : architecture requise
+  architecture: "docs/architecture.md"  # Validée, évolutions prévues documentées
   ux-design: "optional"
 
 # Phase 4: Implementation (Required)
