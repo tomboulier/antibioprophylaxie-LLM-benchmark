@@ -62,7 +62,7 @@ Critères d'acceptation :
 **FR-003 : SHOULD -- Le dataset doit couvrir au minimum 60 questions pour la V1 publication**
 
 Critères d'acceptation :
-1. Le dataset contient au moins 60 questions couvrant les 47 interventions des RFE SFAR 2024 ABP
+1. Le dataset contient au moins 60 questions couvrant les différentes spécialités des RFE SFAR 2024 ABP
 2. La répartition comprend des questions ouvertes et des QCM
 3. Chaque question est annotée avec un niveau de difficulté (facile, moyen, difficile) et un impact clinique (faible, modéré, critique)
 4. Le dataset est compatible avec le format HuggingFace Datasets pour publication et citabilité
