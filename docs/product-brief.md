@@ -9,11 +9,11 @@
 
 ## 1. Résumé exécutif
 
-Framework open source d'évaluation scientifique permettant de mesurer l'alignement des LLMs aux recommandations formalisées d'experts (RFEs) publiées par les sociétés savantes médicales. Le premier cas d'usage porte sur l'antibioprophylaxie chirurgicale (RFE SFAR 2024), avec une architecture conçue pour s'étendre à d'autres RFEs (anticoagulants, etc.).
+Framework open source d'évaluation scientifique permettant de mesurer l'alignement des LLMs aux recommandations formalisées d'experts (RFEs) publiées par les sociétés savantes médicales. Le premier cas d'usage porte sur l'antibioprophylaxie chirurgicale [RFE SFAR 2024](https://sfar.org/antibioprophylaxie-en-chirurgie-et-medecine-interventionnelle/), avec une architecture conçue pour s'étendre à d'autres RFEs (anticoagulants, etc.).
 
 **Points clés :**
 - Problème : aucun outil ne permet d'auditer objectivement si un produit à base de LLM est aligné sur les recommandations officielles d'une société savante
-- Solution : un framework de benchmark avec dataset de questions validé par des experts, scoring déterministe, et métriques opérationnelles (coût, latence, empreinte carbone)
+- Solution : un framework de benchmark avec jeu de questions (dataset) validé par des experts, évaluation (scoring) déterministe, et métriques opérationnelles (coût, latence, empreinte carbone)
 - Utilisateurs cibles : chercheurs, médecins, sociétés savantes, startups santé
 - Ambition : publications scientifiques + framework réutilisable en open source
 
@@ -25,7 +25,7 @@ Framework open source d'évaluation scientifique permettant de mesurer l'alignem
 
 Les sociétés savantes médicales publient des recommandations formalisées d'experts (RFEs) qui sont la référence pour la pratique clinique. Des startups proposent des produits à base de LLM pour assister les praticiens, mais il n'existe aucun moyen standardisé de vérifier que ces produits sont alignés sur les RFEs en vigueur.
 
-**Exemple concret :** La SFAR a reçu une startup prétendant se baser sur les RFEs. Lorsque Thaïs Walter (membre du groupe numérique SFAR) l'a testée avec une question de reprise d'anticoagulation post-opératoire, la réponse a été clairement dangereuse et non alignée avec les recommandations du GIHP. Aujourd'hui, ce type de test se fait de manière artisanale, question par question, sans méthodologie reproductible.
+**Exemple concret :** La SFAR (Société Française d'Anesthésie-Réanimation) a reçu une startup prétendant se baser sur ses RFEs. Lorsque qu'une membre du groupe numérique de cette société savante l'a testée avec une question de reprise d'anticoagulation post-opératoire, la réponse a été clairement dangereuse et non alignée avec les recommandations du GIHP (Groupe d'Intérêt en Hémostase Péri-Opératoire). Aujourd'hui, ce type de test se fait de manière artisanale, question par question, sans méthodologie reproductible.
 
 Les questions fondamentales sans réponse aujourd'hui :
 - Quel modèle de LLM est le mieux aligné sur une RFE donnée ?
