@@ -21,7 +21,7 @@ Les systèmes d'intelligence artificielle (IA) tels que ChatGPT, c'est-à-dire b
 
 Un jeu de 23 questions/réponses standardisées (14 questions ouvertes, 9 QCMs) a été construit à partir des RFE SFAR 2024 (V2.0, 22/05/2024), couvrant la chirurgie orthopédique programmée et la traumatologie. L'ensemble des questions/réponses, le code d'évaluation et les résultats sont publiés en accès libre (4), afin de permettre leur réplication et leur extension.
 
-Trois modèles commerciaux ont été évalués : Mistral, Claude et GPT-4. Chaque modèle a répondu à l'ensemble des questions dans des conditions identiques et reproductibles. La correction est automatisée : correspondance exacte pour les QCM, correspondance normalisée (insensible à la casse, prise en compte des synonymes DCI/noms commerciaux) pour les questions ouvertes. Les critère de jugement principal est le taux de réponses correctes (global et par type de question).
+Trois modèles commerciaux ont été évalués : Mistral, Claude et GPT-4. Chaque modèle a répondu à l'ensemble des questions dans des conditions identiques et reproductibles. La correction est automatisée : correspondance exacte pour les QCM, correspondance normalisée (insensible à la casse, prise en compte des synonymes DCI/noms commerciaux) pour les questions ouvertes. Le critère de jugement principal est le taux de réponses correctes (global et par type de question).
 
 **Résultats**
 
