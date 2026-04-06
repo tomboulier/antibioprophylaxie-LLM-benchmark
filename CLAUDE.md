@@ -36,6 +36,7 @@ Benchmark scientifique comparant **5 approches d'IA** pour répondre aux questio
 ```bash
 uv sync --extra dev           # Installer dépendances
 uv run python scripts/benchmark_md_to_json.py  # Convertir MD → JSON
+uv run python scripts/benchmark_json_to_md.py  # Convertir JSON → MD (round-trip)
 uv run python scripts/run_benchmark.py --model claude-sonnet  # Lancer benchmark
 uv run pytest                 # Tests
 uv run ruff check .           # Lint
@@ -46,12 +47,13 @@ uv run ruff format .          # Format
 
 ```
 research/
-  benchmark.md      ← Questions en Markdown léger (source de vérité)
-  benchmark.json    ← Questions compilées (généré)
+  benchmark.md      ← Questions en Markdown léger (source de vérité humaine)
+  benchmark.json    ← Questions compilées (source de vérité machine, généré)
   results/          ← Résultats d'exécution (JSON + CSV)
 
 scripts/
   benchmark_md_to_json.py     ← Parser MD → JSON
+  benchmark_json_to_md.py     ← Parser JSON → MD (round-trip)
   run_benchmark.py            ← Orchestrer les requêtes & scoring
   (à ajouter) eval_results.py ← Analyser & générer rapport
 
