@@ -33,6 +33,8 @@ import argparse
 import sys
 from pathlib import Path
 
+import dotenv
+
 from llm_benchmark.adapters.approaches.simple_prompt import SimplePromptApproach
 from llm_benchmark.adapters.exports.json_export import JsonExportAdapter
 from llm_benchmark.adapters.llms import LLM_REGISTRY
@@ -134,6 +136,8 @@ def main() -> None:
     None
     """
     args = parse_args()
+
+    dotenv.load_dotenv(override=False)
 
     if args.list_models:
         print("\nAvailable models:\n")

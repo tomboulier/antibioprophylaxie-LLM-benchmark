@@ -25,6 +25,7 @@ dev = [
     "pytest-cov>=5.0",
     "ruff>=0.5",
     "hypothesis>=6.0",
+    "matplotlib>=3.9",
 ]
 
 # LLM clients (conditionnels, pour les scripts)
