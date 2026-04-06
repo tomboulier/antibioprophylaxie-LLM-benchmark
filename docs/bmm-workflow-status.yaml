@@ -21,6 +21,6 @@ solutioning:
 
 # Phase 4: Implementation (Required)
 implementation:
-  sprint-planning: "required"
-  stories: "required"
-  development: "required"
+  sprint-planning: "done"  # Sprint 1 planifié (3 stories, 8 pts, deadline 2 avril)
+  stories: "done"          # 24 issues GitHub créées (6 milestones, label sprint-1)
+  development: "in-progress"  # Sprint 1 à attaquer

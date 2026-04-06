@@ -640,3 +640,42 @@ Passer à l'**architecture système** avec le System Architect (`bmad-system-arc
 *Document généré le 2026-03-28. 23 FR + 12 NFR + 6 Epics + 22 Stories.*
 *Priorités FR : 9 MUST, 9 SHOULD, 3 COULD, 0 WONT (2 ajoutées : FR-007 structured output, FR-023 plateforme QCM).*
 *Priorités NFR : 7 MUST, 5 SHOULD.*
+
+---
+
+## 11. Perspectives post-V1 (issues de la réunion Groupe Numérique SFAR — 2026-04-02)
+
+### Contexte
+
+Lors de la réunion en présentiel du Groupe Numérique SFAR (02/04/2026), l'exemple d'antibioprophylaxie au format JSON a servi d'illustration concrète. Plusieurs pistes d'évolution ont émergé, au-delà du scope V1 actuel.
+
+### Pistes identifiées
+
+**Généralisation à d'autres RFEs SFAR**
+- Notre benchmark antibio pourrait servir de pilote pour structurer l'ensemble des recommandations SFAR au format JSON
+- Proposition discutée : mettre à disposition des RFEs structurées pour intégration dans l'application SFAR (contexte : les recommandations sont peu appliquées en pratique)
+
+**MCP de recommandations nationales**
+- Idée émergente : créer un MCP (Model Context Protocol) exposant les recommandations nationales de sociétés savantes (SFAR et autres) comme source de contexte pour les LLMs
+- Permettrait à un modèle d'accéder aux guidelines à jour lors d'une interaction clinique
+
+**Outils d'extraction à évaluer**
+- DocuPipe (extraction structurée depuis PDF via IA) — à tester sur le free tier pour les PDFs de guidelines
+  → voir note ressource : [[DocuPipe]]
+
+**Workflow de gouvernance inspiré d'INDICATE (Boris Delange)**
+- INDICATE a développé pour ses données de réanimation une approche élégante : dataset versionné sur GitHub (source de vérité) + interface Shiny déployée sur GitHub Pages (consultation sans compétences techniques) + workflow de statut par concept (`draft → pending review → approved → deprecated`)
+- Application directe pour notre dataset : statut par question, interface de révision pour les cliniciens SFAR, traçabilité complète de la validation
+- **Point clé :** Boris Delange travaille à généraliser ce workflow de façon agnostique à INDICATE, avec une publication/mise à disposition prévue dans 1-2 mois. À surveiller et potentiellement contacter pour collaboration.
+- Argument fort pour publication : dataset consultable publiquement, méthodologie de validation transparente et reproductible
+
+### Backlog idées (hors scope V1)
+
+| Idée | Complexité estimée | Lien avec V1 | Statut |
+|------|--------------------|--------------|--------|
+| Extension à d'autres RFEs SFAR | Élevée | Architecture extensible prévue (ports & adaptateurs) | Idée |
+| MCP recommandations nationales | Moyenne | Dataset JSON = brique de base | Idée |
+| Intégration appli SFAR | Élevée | Dépend du format retenu par la SFAR | Idée |
+| Évaluation DocuPipe pour extraction PDF | Faible | Complément/alternative au parser AC2 | À tester |
+| Workflow de gouvernance dataset (inspiré INDICATE) | Moyenne | Dataset versionné déjà sur GitHub | En veille — attendre publication Boris Delange (juin 2026 ?) |
+| Interface Shiny/web de consultation du dataset | Moyenne | Dépend du workflow de gouvernance | En veille |

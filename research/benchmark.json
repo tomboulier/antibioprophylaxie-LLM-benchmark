@@ -2,7 +2,7 @@
   "version": "1.0",
   "source": "RFE SFAR 2024 (V2.0 du 22/05/2024)",
   "perimetre": "Chirurgie orthopédique programmée + Traumatologie",
-  "nb_questions": 25,
+  "nb_questions": 23,
   "questions": [
     {
       "id": "Q01",
@@ -86,14 +86,6 @@
     },
     {
       "id": "Q11",
-      "titre": "Hors périmètre",
-      "type": "open",
-      "question": "Quelle antibioprophylaxie pour une cholécystectomie par coelioscopie ?",
-      "réponse": "Hors périmètre",
-      "source": "aucune (chirurgie digestive, hors ortho/trauma)"
-    },
-    {
-      "id": "Q12",
       "titre": "Plaie tellurique",
       "type": "open",
       "question": "Quelle molécule d'antibioprophylaxie pour une plaie de cuisse par accident agricole, susceptible d'être contaminée par des germes telluriques ?",
@@ -101,7 +93,7 @@
       "source": "trauma-plaie-contaminee"
     },
     {
-      "id": "Q13",
+      "id": "Q12",
       "titre": "Plaie simple parties molles",
       "type": "open",
       "question": "Faut-il une antibioprophylaxie pour le parage d'une plaie simple du mollet ?",
@@ -109,7 +101,7 @@
       "source": "trauma-plaie-simple"
     },
     {
-      "id": "Q14",
+      "id": "Q13",
       "titre": "Allergie Gustilo 3",
       "type": "open",
       "question": "Un patient allergique aux pénicillines présente une fracture ouverte Gustilo 3. Quelle(s) molécule(s) d'antibioprophylaxie ?",
@@ -117,7 +109,7 @@
       "source": "trauma-fracture-ouverte-gustilo-2-3"
     },
     {
-      "id": "Q15",
+      "id": "Q14",
       "titre": "Ablation matériel membre inférieur",
       "type": "open",
       "question": "Faut-il une antibioprophylaxie pour l'ablation de matériel d'ostéosynthèse au membre inférieur ?",
@@ -125,7 +117,7 @@
       "source": "ortho-prog-mi-ablation-materiel"
     },
     {
-      "id": "Q16",
+      "id": "Q15",
       "titre": "Molécule PTG (QCM)",
       "type": "qcm",
       "question": "Quelle molécule est recommandée en première intention pour l'antibioprophylaxie d'une prothèse totale de genou ?",
@@ -139,7 +131,7 @@
       "source": "ortho-prog-mi-prothese-hanche-genou"
     },
     {
-      "id": "Q17",
+      "id": "Q16",
       "titre": "Dose Céfazoline (QCM)",
       "type": "qcm",
       "question": "Quelle est la dose initiale de Céfazoline recommandée en antibioprophylaxie en chirurgie orthopédique ?",
@@ -153,7 +145,7 @@
       "source": "ortho-prog-mi-prothese-hanche-genou"
     },
     {
-      "id": "Q18",
+      "id": "Q17",
       "titre": "Pas d'antibioprophylaxie (QCM)",
       "type": "qcm",
       "question": "Parmi ces interventions, laquelle ne nécessite PAS d'antibioprophylaxie ?",
@@ -167,7 +159,7 @@
       "source": "ortho-prog-mi-ablation-materiel"
     },
     {
-      "id": "Q19",
+      "id": "Q18",
       "titre": "Allergie bêtalactamines (QCM)",
       "type": "qcm",
       "question": "En cas d'allergie aux bêtalactamines, quelle est l'alternative de première intention pour l'antibioprophylaxie d'une prothèse de hanche ?",
@@ -181,7 +173,7 @@
       "source": "ortho-prog-mi-prothese-hanche-genou"
     },
     {
-      "id": "Q20",
+      "id": "Q19",
       "titre": "Gustilo classification (QCM)",
       "type": "qcm",
       "question": "À partir de quel stade de Gustilo la molécule d'antibioprophylaxie change-t-elle (passage de la Céfazoline à l'Amoxicilline/Clavulanate) ?",
@@ -195,7 +187,7 @@
       "source": "trauma-fracture-ouverte-gustilo-1, trauma-fracture-ouverte-gustilo-2-3"
     },
     {
-      "id": "Q21",
+      "id": "Q20",
       "titre": "Réinjection Amoxicilline/Clavulanate (QCM)",
       "type": "qcm",
       "question": "À quel intervalle doit-on réinjecter l'Amoxicilline/Clavulanate en antibioprophylaxie ?",
@@ -209,7 +201,7 @@
       "source": "trauma-fracture-ouverte-gustilo-2-3"
     },
     {
-      "id": "Q22",
+      "id": "Q21",
       "titre": "Plaie main tellurique (QCM)",
       "type": "qcm",
       "question": "Un patient se présente avec une plaie de la main par accident de jardinage, susceptible de contamination tellurique. Quelle est la recommandation ?",
@@ -223,7 +215,7 @@
       "source": "trauma-main-plaie-contaminee"
     },
     {
-      "id": "Q23",
+      "id": "Q22",
       "titre": "Allergie trauma complexe main (QCM)",
       "type": "qcm",
       "question": "Quelle est l'alternative en cas d'allergie aux pénicillines pour un traumatisme complexe de la main (écrasement) ?",
@@ -237,21 +229,7 @@
       "source": "trauma-main-complexe"
     },
     {
-      "id": "Q24",
-      "titre": "Hors périmètre (QCM)",
-      "type": "qcm",
-      "question": "Quelle antibioprophylaxie pour une appendicectomie ?",
-      "choix": {
-        "A": "Céfazoline 2g IVL",
-        "B": "Amoxicilline/Clavulanate 2g IVL",
-        "C": "Pas d'antibioprophylaxie recommandée",
-        "D": "Hors périmètre de ces recommandations"
-      },
-      "réponse": "D",
-      "source": "aucune (chirurgie digestive)"
-    },
-    {
-      "id": "Q25",
+      "id": "Q23",
       "titre": "Distinction matériel / sans matériel (QCM)",
       "type": "qcm",
       "question": "Deux patients doivent bénéficier d'une arthroscopie de genou : l'un avec mise en place d'une ancre, l'autre sans matériel. Quelle est la bonne conduite ?",
