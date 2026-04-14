@@ -117,16 +117,16 @@
       "réponse": "C",
       "choices": {
         "A": "Prothèse d'épaule",
-        "B": "Arthrodèse lombaire instrumentée",
+        "B": "Cimentoplastie vertébrale",
         "C": "Ablation de matériel d'ostéosynthèse du fémur",
-        "D": "Arthroscopie du genou avec pose d'ancre"
+        "D": "Arthroscopie du genou avec mise en place de matériel"
       }
     },
     {
       "id": "Q16",
-      "titre": "PTH allergie alternative",
+      "titre": "PTG allergie alternative",
       "type": "mcq",
-      "question": "En cas d'allergie aux bêtalactamines, quelle est l'alternative de première intention pour l'antibioprophylaxie d'une prothèse de hanche ?",
+      "question": "En cas d'allergie aux bêtalactamines, quelle est l'alternative de première intention pour l'antibioprophylaxie d'une prothèse de genou ?",
       "réponse": "C",
       "choices": {
         "A": "Gentamicine",
@@ -150,19 +150,6 @@
     },
     {
       "id": "Q18",
-      "titre": "Réinjection Augmentin",
-      "type": "mcq",
-      "question": "À quel intervalle doit-on réinjecter l'Amoxicilline/Clavulanate en antibioprophylaxie ?",
-      "réponse": "A",
-      "choices": {
-        "A": "Toutes les 2h",
-        "B": "Toutes les 4h",
-        "C": "Toutes les 6h",
-        "D": "Pas de réinjection"
-      }
-    },
-    {
-      "id": "Q19",
       "titre": "Plaie jardinage main",
       "type": "mcq",
       "question": "Un patient se présente avec une plaie de la main par accident de jardinage, susceptible de contamination tellurique. Quelle est la recommandation ?",
@@ -172,45 +159,6 @@
         "B": "Amoxicilline/Clavulanate 2g IVL",
         "C": "Pas d'antibioprophylaxie recommandée",
         "D": "Clindamycine 900mg IVL"
-      }
-    },
-    {
-      "id": "Q20",
-      "titre": "Écrasement main allergie",
-      "type": "mcq",
-      "question": "Quelle est l'alternative en cas d'allergie aux pénicillines pour un traumatisme complexe de la main (écrasement) ?",
-      "réponse": "C",
-      "choices": {
-        "A": "Clindamycine seule",
-        "B": "Vancomycine seule",
-        "C": "Céfazoline + Gentamicine",
-        "D": "Clindamycine + Gentamicine"
-      }
-    },
-    {
-      "id": "Q21",
-      "titre": "Arthroscopie avec/sans matériel",
-      "type": "mcq",
-      "question": "Deux patients doivent bénéficier d'une arthroscopie de genou : l'un avec mise en place d'une ancre, l'autre sans matériel. Quelle est la bonne conduite ?",
-      "réponse": "B",
-      "choices": {
-        "A": "Antibioprophylaxie pour les deux",
-        "B": "Antibioprophylaxie uniquement pour celui avec matériel",
-        "C": "Pas d'antibioprophylaxie pour les deux",
-        "D": "Antibioprophylaxie uniquement pour celui sans matériel"
-      }
-    },
-    {
-      "id": "Q22",
-      "titre": "Appendicectomie hors périmètre",
-      "type": "mcq",
-      "question": "Quelle antibioprophylaxie pour une appendicectomie ?",
-      "réponse": "D",
-      "choices": {
-        "A": "Céfazoline 2g IVL",
-        "B": "Amoxicilline/Clavulanate 2g IVL",
-        "C": "Pas d'antibioprophylaxie recommandée",
-        "D": "Hors périmètre de ces recommandations"
       }
     }
   ]
