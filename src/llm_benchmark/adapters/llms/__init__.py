@@ -12,13 +12,19 @@ from llm_benchmark.domain.value_objects import Cost
 _MODELS_CONFIG_PATH = Path(__file__).parent.parent.parent.parent.parent / "config" / "models.yaml"
 
 
-def _load_registry(config_path: Path) -> dict[str, LiteLLMAdapter]:
+def _load_registry(
+    config_path: Path,
+    *,
+    enabled_only: bool = False,
+) -> dict[str, LiteLLMAdapter]:
     """Load the LLM registry from a YAML models config file.
 
     Parameters
     ----------
     config_path : Path
         Path to the models YAML file.
+    enabled_only : bool
+        When ``True``, only models with ``enabled: true`` are included.
 
     Returns
     -------
@@ -33,6 +39,8 @@ def _load_registry(config_path: Path) -> dict[str, LiteLLMAdapter]:
 
     registry: dict[str, LiteLLMAdapter] = {}
     for model_config in raw.get("models", []):
+        if enabled_only and not model_config.get("enabled", True):
+            continue
         model_id = model_config["id"]
         # litellm_model is the string passed to litellm.completion(); it may
         # include a provider prefix (e.g. "mistral/mistral-small-latest").
@@ -48,4 +56,10 @@ def _load_registry(config_path: Path) -> dict[str, LiteLLMAdapter]:
     return registry
 
 
+# Tous les modèles (pour --list-models, etc.)
 LLM_REGISTRY: dict[str, LiteLLMAdapter] = _load_registry(_MODELS_CONFIG_PATH)
+
+# Seulement les modèles activés (pour le pipeline automatisé)
+ENABLED_REGISTRY: dict[str, LiteLLMAdapter] = _load_registry(
+    _MODELS_CONFIG_PATH, enabled_only=True
+)
