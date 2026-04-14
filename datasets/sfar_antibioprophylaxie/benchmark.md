@@ -119,9 +119,9 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **question** : Parmi ces interventions, laquelle ne nécessite PAS d'antibioprophylaxie ?
 - **choix** :
   - A. Prothèse d'épaule
-  - B. Arthrodèse lombaire instrumentée
+  - B. Cimentoplastie vertébrale
   - C. Ablation de matériel d'ostéosynthèse du fémur
-  - D. Arthroscopie du genou avec pose d'ancre
+  - D. Arthroscopie du genou avec mise en place de matériel
 - **réponse** : C
 
 ### PTH allergie alternative
