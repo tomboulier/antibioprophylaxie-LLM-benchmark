@@ -37,7 +37,9 @@ Benchmark scientifique comparant **5 approches d'IA** pour répondre aux questio
 uv sync --extra dev           # Installer dépendances
 uv run python scripts/benchmark_md_to_json.py  # Convertir MD → JSON
 uv run python scripts/benchmark_json_to_md.py  # Convertir JSON → MD (round-trip)
-uv run python scripts/run_benchmark.py --model claude-sonnet  # Lancer benchmark
+uv run llm-benchmark run                       # Lancer le pipeline complet (modèles activés)
+uv run llm-benchmark run -m gpt-4o             # Lancer sur un modèle spécifique
+uv run llm-benchmark list models               # Lister les modèles disponibles
 uv run pytest                 # Tests
 uv run ruff check .           # Lint
 uv run ruff format .          # Format
@@ -46,28 +48,32 @@ uv run ruff format .          # Format
 ## Structure
 
 ```
-research/
-  benchmark.md      ← Questions en Markdown léger (source de vérité humaine)
-  benchmark.json    ← Questions compilées (source de vérité machine, généré)
-  results/          ← Résultats d'exécution (JSON + CSV)
+src/llm_benchmark/
+  cli/main.py                 ← Point d'entrée CLI (controller)
+  usecases/run_experiment.py  ← Use case : pipeline complet
+  domain/                     ← Entités, engine, scorer
+  adapters/                   ← LLM (LiteLLM), exports (JSON, figures)
+  ports/                      ← Interfaces abstraites
+
+config/
+  models.yaml                 ← Registry des modèles (enabled: true/false)
 
 scripts/
   benchmark_md_to_json.py     ← Parser MD → JSON
   benchmark_json_to_md.py     ← Parser JSON → MD (round-trip)
-  run_benchmark.py            ← Orchestrer les requêtes & scoring
-  (à ajouter) eval_results.py ← Analyser & générer rapport
 
-docs/                         ← Documentation du recherche
-  s-019.md                    ← Story file avec spec complète
-  findings-report.md          ← Résultats & recommandations (final)
+research/
+  benchmark.md                ← Questions (source de vérité humaine)
+  results/                    ← Résultats JSON par run
+  figures/                    ← Figures PNG générées automatiquement
 ```
 
 ## Workflow
 
 1. **Éditer** `research/benchmark.md` (ajouter/corriger questions)
 2. **Compiler** : `uv run python scripts/benchmark_md_to_json.py`
-3. **Lancer** : `uv run python scripts/run_benchmark.py -m claude-sonnet -m gpt-4o`
-4. **Analyser** : résultats stockés dans `research/results/`
+3. **Lancer** : `uv run llm-benchmark run` (pipeline complet automatisé)
+4. **Résultats** : JSON dans `research/results/`, figures dans `research/figures/`
 5. **Reporter** : générer findings report → `docs/findings-report.md`
 
 ## Ne pas faire
