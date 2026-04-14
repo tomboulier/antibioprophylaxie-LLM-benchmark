@@ -160,8 +160,10 @@ class TestJsonExportAdapter:
 
         output_path = adapter.export(run_result, tmp_path)
 
-        # Expected pattern: 20250115_103000_gpt-4o_long-context.json
-        assert "20250115_103000" in output_path.name
+        # Le nom de fichier utilise l'heure locale (pas UTC)
+        local_ts = run_result.timestamp.astimezone()
+        expected_ts = local_ts.strftime("%Y%m%d_%H%M%S")
+        assert expected_ts in output_path.name
         assert "gpt-4o" in output_path.name
         assert "long-context" in output_path.name
 

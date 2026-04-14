@@ -111,7 +111,7 @@ class BenchmarkEngine:
         llm: LLMPort,
     ) -> RunResult:
         run_id = RunId(str(uuid.uuid4()))
-        timestamp = datetime.now(tz=timezone.utc)
+        timestamp = datetime.now().astimezone()
         question_results: list[QuestionResult] = []
 
         for question in questions:
