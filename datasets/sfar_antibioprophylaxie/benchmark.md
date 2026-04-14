@@ -157,17 +157,6 @@ Pour les QCM, une seule réponse correcte (lettre).
   - D. Clindamycine 900mg IVL
 - **réponse** : C
 
-### Arthroscopie avec/sans matériel
-
-- **type** : qcm
-- **question** : Deux patients doivent bénéficier d'une arthroscopie de genou : l'un avec mise en place d'une ancre, l'autre sans matériel. Quelle est la bonne conduite ?
-- **choix** :
-  - A. Antibioprophylaxie pour les deux
-  - B. Antibioprophylaxie uniquement pour celui avec matériel
-  - C. Pas d'antibioprophylaxie pour les deux
-  - D. Antibioprophylaxie uniquement pour celui sans matériel
-- **réponse** : B
-
 ### Appendicectomie hors périmètre
 
 - **type** : qcm
