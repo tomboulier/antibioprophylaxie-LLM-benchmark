@@ -11,7 +11,6 @@ from pathlib import Path
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
-from matplotlib.colors import ListedColormap
 
 from llm_benchmark.domain.entities import RunResult
 
@@ -75,10 +74,8 @@ def generate_figures(
     paths = []
 
     paths.append(_fig_accuracy(run_results, output_dir))
-    paths.append(_fig_cost_latency(run_results, output_dir))
-    paths.append(_fig_heatmap(run_results, output_dir))
 
-    print(f"  Figures  : {output_dir}/ ({len(paths)} fichiers)")
+    print(f"  Figures  : {output_dir}/ ({len(paths)} fichier(s))")
     return paths
 
 
@@ -134,84 +131,3 @@ def _fig_accuracy(results: list[RunResult], output_dir: Path) -> Path:
     return path
 
 
-def _fig_cost_latency(results: list[RunResult], output_dir: Path) -> Path:
-    """Figure 2 : coût vs latence (taille bulle = précision)."""
-    fig, ax = plt.subplots(figsize=(8, 5))
-
-    for i, r in enumerate(results):
-        s = r.summary
-        name = _short_name(r.model_id.value)
-        cost = ((s.total_cost.amount if s.total_cost else 0) / max(s.total, 1)) * 1000
-        lat = s.avg_latency.seconds if s.avg_latency else 0
-        acc = s.accuracy.value * 100
-
-        ax.scatter(
-            lat, cost,
-            s=acc * 5, c=_COLORS[i % len(_COLORS)],
-            alpha=0.7, edgecolors="black", linewidth=0.5, zorder=3,
-        )
-        ax.annotate(
-            f"{name}\n({acc:.0f}%)",
-            (lat, cost),
-            textcoords="offset points", xytext=(10, 5), fontsize=9,
-        )
-
-    ax.set_xlabel("Latence moyenne par question (s)")
-    ax.set_ylabel("Coût par question (millièmes de $)")
-    ax.set_title("Compromis coût / latence / précision")
-    ax.spines["top"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-    ax.grid(True, alpha=0.3)
-
-    fig.tight_layout()
-    path = output_dir / "cost_latency_bubble.png"
-    fig.savefig(path)
-    plt.close(fig)
-    return path
-
-
-def _fig_heatmap(results: list[RunResult], output_dir: Path) -> Path:
-    """Figure 3 : heatmap correct/incorrect par question et modèle."""
-    names = [_short_name(r.model_id.value) for r in results]
-    question_ids = [qr.question_id.value for qr in results[0].results]
-
-    matrix = np.zeros((len(results), len(question_ids)))
-    for i, r in enumerate(results):
-        result_map = {qr.question_id.value: qr for qr in r.results}
-        for j, qid in enumerate(question_ids):
-            qr = result_map.get(qid)
-            if qr is None or qr.error:
-                matrix[i, j] = -0.5
-            elif qr.score and qr.score.is_correct:
-                matrix[i, j] = 1
-            else:
-                matrix[i, j] = 0
-
-    cmap = ListedColormap(["#fee2e2", "#fef9c3", "#dcfce7"])
-
-    fig, ax = plt.subplots(
-        figsize=(max(12, len(question_ids) * 0.6), max(3, len(results) * 1.2))
-    )
-    ax.imshow(matrix, cmap=cmap, aspect="auto", vmin=-0.5, vmax=1)
-
-    ax.set_xticks(range(len(question_ids)))
-    ax.set_xticklabels(question_ids, rotation=45, ha="right", fontsize=9)
-    ax.set_yticks(range(len(results)))
-    ax.set_yticklabels(names)
-    ax.set_title("Réponses correctes par question et modèle")
-
-    for i in range(len(results)):
-        for j in range(len(question_ids)):
-            val = matrix[i, j]
-            symbol = "?" if val == -0.5 else ("V" if val == 1 else "X")
-            color = "#6b7280" if val == -0.5 else ("#166534" if val == 1 else "#991b1b")
-            ax.text(
-                j, i, symbol,
-                ha="center", va="center", fontsize=8, color=color, fontweight="bold",
-            )
-
-    fig.tight_layout()
-    path = output_dir / "question_heatmap.png"
-    fig.savefig(path)
-    plt.close(fig)
-    return path
