@@ -36,11 +36,12 @@ def normalize(text: str) -> str:
 
 
 class OpenScorer:
-    """Scorer for open-ended questions (molecule names, 'Non', 'Hors périmètre').
+    """Scorer for open-ended questions.
 
-    Checks that every expected molecule (split on '+') appears in the
-    normalized actual answer. Handles the special case where the expected
-    answer is 'Non'.
+    Three categories of expected answers:
+    - Molecule name(s): each molecule (split on '+') must appear in the answer.
+    - 'Pas d'antibioprophylaxie': exact match (normalized).
+    - 'Hors périmètre': exact match (normalized).
     """
 
     def score(self, question: Question, actual: str) -> ScoreResult:
@@ -100,31 +101,29 @@ class QCMScorer:
 
 
 class SourcingScorer:
-    """Scorer that detects and validates source references in LLM answers.
+    """Scorer that detects source references in LLM answers.
 
-    Checks whether the actual answer contains a reference to the expected
-    source by looking for significant words (4+ characters) from the source
-    value in the answer text.
+    Heuristically checks whether the answer contains any bibliographic
+    reference (e.g. a 4-digit year). Presence-only detection: correctness
+    is not evaluated (always ``False``).
     """
 
-    _MIN_WORD_LENGTH = 4
-
     def score(self, question: Question, actual: str) -> ScoreResult:
-        """Detect sourcing presence and correctness in an answer.
+        """Detect whether the answer cites any source reference.
 
         Parameters
         ----------
         question : Question
-            The question being evaluated, carrying the expected source.
+            The question being evaluated.
         actual : str
             The LLM's raw answer text.
 
         Returns
         -------
         ScoreResult
-            Result with ``is_sourcing_present`` and ``is_sourcing_correct``
-            populated. ``is_correct`` is always ``False`` (sourcing is a
-            supplementary signal, not the primary correctness criterion).
+            ``is_sourcing_present`` indicates whether a reference was found.
+            ``is_sourcing_correct`` is always ``False`` (not evaluated).
+            ``is_correct`` is always ``False`` (sourcing is supplementary).
         """
         normalized_actual = normalize(actual)
 

@@ -120,6 +120,7 @@ class BenchmarkEngine:
         total = len(questions)
         correct = 0
         errors = 0
+        bar_len = 20
         t_start = time.monotonic()
         for i, question in enumerate(questions, 1):
             question_result = self._evaluate_question(
@@ -130,7 +131,6 @@ class BenchmarkEngine:
                 correct += 1
             if question_result.error:
                 errors += 1
-            bar_len = 20
             filled = int(bar_len * i / total)
             bar = "█" * filled + "░" * (bar_len - filled)
             elapsed = time.monotonic() - t_start
@@ -142,7 +142,9 @@ class BenchmarkEngine:
             )
             sys.stdout.flush()
         elapsed = time.monotonic() - t_start
-        sys.stdout.write(f"\r  {'█' * bar_len} {total}/{total}  {correct} ok{err_part}  ({elapsed:.0f}s)\n")
+        if total > 0:
+            err_part = f" {errors} err" if errors else ""
+            sys.stdout.write(f"\r  {'█' * bar_len} {total}/{total}  {correct} ok{err_part}  ({elapsed:.0f}s)\n")
 
         summary = self._build_summary(question_results)
 
