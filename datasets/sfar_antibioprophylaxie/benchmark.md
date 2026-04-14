@@ -113,17 +113,6 @@ Pour les QCM, une seule réponse correcte (lettre).
   - D. Vancomycine
 - **réponse** : B
 
-### Dose Céfazoline ortho
-
-- **type** : qcm
-- **question** : Quelle est la dose initiale de Céfazoline recommandée en antibioprophylaxie en chirurgie orthopédique ?
-- **choix** :
-  - A. 1g IVL
-  - B. 2g IVL
-  - C. 3g IVL
-  - D. 20 mg/kg IVL
-- **réponse** : B
-
 ### Intervention sans ABP
 
 - **type** : qcm

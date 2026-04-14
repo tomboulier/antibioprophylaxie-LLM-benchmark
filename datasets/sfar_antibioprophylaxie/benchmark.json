@@ -111,19 +111,6 @@
     },
     {
       "id": "Q15",
-      "titre": "Dose Céfazoline ortho",
-      "type": "mcq",
-      "question": "Quelle est la dose initiale de Céfazoline recommandée en antibioprophylaxie en chirurgie orthopédique ?",
-      "réponse": "B",
-      "choices": {
-        "A": "1g IVL",
-        "B": "2g IVL",
-        "C": "3g IVL",
-        "D": "20 mg/kg IVL"
-      }
-    },
-    {
-      "id": "Q16",
       "titre": "Intervention sans ABP",
       "type": "mcq",
       "question": "Parmi ces interventions, laquelle ne nécessite PAS d'antibioprophylaxie ?",
@@ -136,7 +123,7 @@
       }
     },
     {
-      "id": "Q17",
+      "id": "Q16",
       "titre": "PTH allergie alternative",
       "type": "mcq",
       "question": "En cas d'allergie aux bêtalactamines, quelle est l'alternative de première intention pour l'antibioprophylaxie d'une prothèse de hanche ?",
@@ -149,7 +136,7 @@
       }
     },
     {
-      "id": "Q18",
+      "id": "Q17",
       "titre": "Seuil Gustilo changement molécule",
       "type": "mcq",
       "question": "À partir de quel stade de Gustilo la molécule d'antibioprophylaxie change-t-elle (passage de la Céfazoline à l'Amoxicilline/Clavulanate) ?",
@@ -162,7 +149,7 @@
       }
     },
     {
-      "id": "Q19",
+      "id": "Q18",
       "titre": "Réinjection Augmentin",
       "type": "mcq",
       "question": "À quel intervalle doit-on réinjecter l'Amoxicilline/Clavulanate en antibioprophylaxie ?",
@@ -175,7 +162,7 @@
       }
     },
     {
-      "id": "Q20",
+      "id": "Q19",
       "titre": "Plaie jardinage main",
       "type": "mcq",
       "question": "Un patient se présente avec une plaie de la main par accident de jardinage, susceptible de contamination tellurique. Quelle est la recommandation ?",
@@ -188,7 +175,7 @@
       }
     },
     {
-      "id": "Q21",
+      "id": "Q20",
       "titre": "Écrasement main allergie",
       "type": "mcq",
       "question": "Quelle est l'alternative en cas d'allergie aux pénicillines pour un traumatisme complexe de la main (écrasement) ?",
@@ -201,7 +188,7 @@
       }
     },
     {
-      "id": "Q22",
+      "id": "Q21",
       "titre": "Arthroscopie avec/sans matériel",
       "type": "mcq",
       "question": "Deux patients doivent bénéficier d'une arthroscopie de genou : l'un avec mise en place d'une ancre, l'autre sans matériel. Quelle est la bonne conduite ?",
@@ -214,7 +201,7 @@
       }
     },
     {
-      "id": "Q23",
+      "id": "Q22",
       "titre": "Appendicectomie hors périmètre",
       "type": "mcq",
       "question": "Quelle antibioprophylaxie pour une appendicectomie ?",
