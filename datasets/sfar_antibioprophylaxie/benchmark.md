@@ -146,17 +146,6 @@ Pour les QCM, une seule réponse correcte (lettre).
   - D. Pas de changement, c'est toujours la Céfazoline
 - **réponse** : B
 
-### Réinjection Augmentin
-
-- **type** : qcm
-- **question** : À quel intervalle doit-on réinjecter l'Amoxicilline/Clavulanate en antibioprophylaxie ?
-- **choix** :
-  - A. Toutes les 2h
-  - B. Toutes les 4h
-  - C. Toutes les 6h
-  - D. Pas de réinjection
-- **réponse** : A
-
 ### Plaie jardinage main
 
 - **type** : qcm
