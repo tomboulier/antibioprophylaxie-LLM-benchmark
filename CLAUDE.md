@@ -35,8 +35,8 @@ Benchmark scientifique comparant **5 approches d'IA** pour répondre aux questio
 
 ```bash
 uv sync --extra dev           # Installer dépendances
-uv run python scripts/benchmark_md_to_json.py  # Convertir MD → JSON
-uv run python scripts/benchmark_json_to_md.py  # Convertir JSON → MD (round-trip)
+uv run python datasets/sfar_antibioprophylaxie/md_to_json.py  # Convertir MD → JSON
+uv run python datasets/sfar_antibioprophylaxie/json_to_md.py  # Convertir JSON → MD
 uv run llm-benchmark run                       # Lancer le pipeline complet (modèles activés)
 uv run llm-benchmark run -m gpt-4o             # Lancer sur un modèle spécifique
 uv run llm-benchmark list models               # Lister les modèles disponibles
@@ -58,20 +58,21 @@ src/llm_benchmark/
 config/
   models.yaml                 ← Registry des modèles (enabled: true/false)
 
-scripts/
-  benchmark_md_to_json.py     ← Parser MD → JSON
-  benchmark_json_to_md.py     ← Parser JSON → MD (round-trip)
+datasets/sfar_antibioprophylaxie/
+  benchmark.md                ← Questions (source de vérité humaine)
+  benchmark.json              ← Questions compilées (généré)
+  md_to_json.py               ← Convertir MD → JSON
+  json_to_md.py               ← Convertir JSON → MD
 
 research/
-  benchmark.md                ← Questions (source de vérité humaine)
   results/                    ← Résultats JSON par run
   figures/                    ← Figures PNG générées automatiquement
 ```
 
 ## Workflow
 
-1. **Éditer** `research/benchmark.md` (ajouter/corriger questions)
-2. **Compiler** : `uv run python scripts/benchmark_md_to_json.py`
+1. **Éditer** `datasets/sfar_antibioprophylaxie/benchmark.md` (ajouter/corriger questions)
+2. **Compiler** : `uv run python datasets/sfar_antibioprophylaxie/md_to_json.py`
 3. **Lancer** : `uv run llm-benchmark run` (pipeline complet automatisé)
 4. **Résultats** : JSON dans `research/results/`, figures dans `research/figures/`
 5. **Reporter** : générer findings report → `docs/findings-report.md`

@@ -16,7 +16,7 @@ Comparer **5 systèmes** pour déterminer lequel est "meilleur" pour répondre a
 
 ## Données
 
-- **Dataset de test**: 25 questions avec réponses attendues (`research/benchmark.json`)
+- **Dataset de test**: 25 questions avec réponses attendues (`datasets/sfar_antibioprophylaxie/benchmark.json`)
 - **Source**: RFE SFAR 2024 (V2.0 du 22/05/2024)
 - **Périmètre**: Chirurgie orthopédique + Traumatologie (47 interventions)
 - **Auteur initial**: Claude (à valider/corriger par un MD)
@@ -38,10 +38,10 @@ cp .env.example .env
 
 ### 2. Préparer les questions
 
-Si vous éditez `research/benchmark.md`:
+Si vous éditez `datasets/sfar_antibioprophylaxie/benchmark.md` :
 
 ```bash
-uv run python scripts/benchmark_md_to_json.py
+uv run python datasets/sfar_antibioprophylaxie/md_to_json.py
 ```
 
 ### 3. Lancer le benchmark
@@ -77,12 +77,13 @@ src/llm_benchmark/
 config/
 └── models.yaml                 ← Registry des modèles
 
-scripts/
-├── benchmark_md_to_json.py     ← Convertir MD → JSON
-└── benchmark_json_to_md.py     ← Convertir JSON → MD
+datasets/sfar_antibioprophylaxie/
+├── benchmark.md                ← Questions (source de vérité)
+├── benchmark.json              ← Questions compilées
+├── md_to_json.py               ← Convertir MD → JSON
+└── json_to_md.py               ← Convertir JSON → MD
 
 research/
-├── benchmark.md                ← Questions (source de vérité)
 ├── results/                    ← Résultats JSON par run
 └── figures/                    ← Figures PNG générées
 ```
