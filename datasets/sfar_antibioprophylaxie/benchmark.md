@@ -157,17 +157,6 @@ Pour les QCM, une seule réponse correcte (lettre).
   - D. Clindamycine 900mg IVL
 - **réponse** : C
 
-### Écrasement main allergie
-
-- **type** : qcm
-- **question** : Quelle est l'alternative en cas d'allergie aux pénicillines pour un traumatisme complexe de la main (écrasement) ?
-- **choix** :
-  - A. Clindamycine seule
-  - B. Vancomycine seule
-  - C. Céfazoline + Gentamicine
-  - D. Clindamycine + Gentamicine
-- **réponse** : C
-
 ### Arthroscopie avec/sans matériel
 
 - **type** : qcm
