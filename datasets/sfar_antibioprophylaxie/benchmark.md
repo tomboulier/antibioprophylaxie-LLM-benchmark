@@ -62,12 +62,6 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **question** : Quelle molécule d'antibioprophylaxie pour une arthrodèse lombaire instrumentée en un temps ?
 - **réponse** : Céfazoline
 
-### Hernie discale sans matériel
-
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie du rachis sans pose de matériel (ex : hernie discale) ?
-- **réponse** : Pas d'antibioprophylaxie
-
 ### Parage morsure
 
 - **type** : open

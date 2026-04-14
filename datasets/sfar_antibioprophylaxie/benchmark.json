@@ -56,55 +56,48 @@
     },
     {
       "id": "Q08",
-      "titre": "Hernie discale sans matériel",
-      "type": "open",
-      "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie du rachis sans pose de matériel (ex : hernie discale) ?",
-      "réponse": "Pas d'antibioprophylaxie"
-    },
-    {
-      "id": "Q09",
       "titre": "Parage morsure",
       "type": "open",
       "question": "Quelle molécule d'antibioprophylaxie pour le parage chirurgical d'une morsure ?",
       "réponse": "Amoxicilline/Clavulanate"
     },
     {
-      "id": "Q10",
+      "id": "Q09",
       "titre": "Écrasement main > 2h",
       "type": "open",
       "question": "Quelle molécule d'antibioprophylaxie pour un écrasement complexe de la main nécessitant une chirurgie de plus de 2 heures ?",
       "réponse": "Amoxicilline/Clavulanate"
     },
     {
-      "id": "Q11",
+      "id": "Q10",
       "titre": "Plaie agricole cuisse",
       "type": "open",
       "question": "Quelle molécule d'antibioprophylaxie pour une plaie de cuisse par accident agricole, susceptible d'être contaminée par des germes telluriques ?",
       "réponse": "Amoxicilline/Clavulanate"
     },
     {
-      "id": "Q12",
+      "id": "Q11",
       "titre": "Plaie simple mollet",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour le parage d'une plaie simple du mollet ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q13",
+      "id": "Q12",
       "titre": "Fracture ouverte Gustilo 3 allergie",
       "type": "open",
       "question": "Un patient allergique aux pénicillines présente une fracture ouverte Gustilo 3. Quelle(s) molécule(s) d'antibioprophylaxie ?",
       "réponse": "Clindamycine + Gentamicine"
     },
     {
-      "id": "Q14",
+      "id": "Q13",
       "titre": "Ablation matériel ostéosynthèse MI",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour l'ablation de matériel d'ostéosynthèse au membre inférieur ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q15",
+      "id": "Q14",
       "titre": "PTG première intention",
       "type": "mcq",
       "question": "Quelle molécule est recommandée en première intention pour l'antibioprophylaxie d'une prothèse totale de genou ?",
@@ -117,7 +110,7 @@
       }
     },
     {
-      "id": "Q16",
+      "id": "Q15",
       "titre": "Dose Céfazoline ortho",
       "type": "mcq",
       "question": "Quelle est la dose initiale de Céfazoline recommandée en antibioprophylaxie en chirurgie orthopédique ?",
@@ -130,7 +123,7 @@
       }
     },
     {
-      "id": "Q17",
+      "id": "Q16",
       "titre": "Intervention sans ABP",
       "type": "mcq",
       "question": "Parmi ces interventions, laquelle ne nécessite PAS d'antibioprophylaxie ?",
@@ -143,7 +136,7 @@
       }
     },
     {
-      "id": "Q18",
+      "id": "Q17",
       "titre": "PTH allergie alternative",
       "type": "mcq",
       "question": "En cas d'allergie aux bêtalactamines, quelle est l'alternative de première intention pour l'antibioprophylaxie d'une prothèse de hanche ?",
@@ -156,7 +149,7 @@
       }
     },
     {
-      "id": "Q19",
+      "id": "Q18",
       "titre": "Seuil Gustilo changement molécule",
       "type": "mcq",
       "question": "À partir de quel stade de Gustilo la molécule d'antibioprophylaxie change-t-elle (passage de la Céfazoline à l'Amoxicilline/Clavulanate) ?",
@@ -169,7 +162,7 @@
       }
     },
     {
-      "id": "Q20",
+      "id": "Q19",
       "titre": "Réinjection Augmentin",
       "type": "mcq",
       "question": "À quel intervalle doit-on réinjecter l'Amoxicilline/Clavulanate en antibioprophylaxie ?",
@@ -182,7 +175,7 @@
       }
     },
     {
-      "id": "Q21",
+      "id": "Q20",
       "titre": "Plaie jardinage main",
       "type": "mcq",
       "question": "Un patient se présente avec une plaie de la main par accident de jardinage, susceptible de contamination tellurique. Quelle est la recommandation ?",
@@ -195,7 +188,7 @@
       }
     },
     {
-      "id": "Q22",
+      "id": "Q21",
       "titre": "Écrasement main allergie",
       "type": "mcq",
       "question": "Quelle est l'alternative en cas d'allergie aux pénicillines pour un traumatisme complexe de la main (écrasement) ?",
@@ -208,7 +201,7 @@
       }
     },
     {
-      "id": "Q23",
+      "id": "Q22",
       "titre": "Arthroscopie avec/sans matériel",
       "type": "mcq",
       "question": "Deux patients doivent bénéficier d'une arthroscopie de genou : l'un avec mise en place d'une ancre, l'autre sans matériel. Quelle est la bonne conduite ?",
@@ -221,7 +214,7 @@
       }
     },
     {
-      "id": "Q24",
+      "id": "Q23",
       "titre": "Appendicectomie hors périmètre",
       "type": "mcq",
       "question": "Quelle antibioprophylaxie pour une appendicectomie ?",
