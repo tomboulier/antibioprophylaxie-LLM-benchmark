@@ -16,7 +16,7 @@ Comparer **5 systèmes** pour déterminer lequel est "meilleur" pour répondre a
 
 ## Données
 
-- **Dataset de test**: 25 questions avec réponses attendues (`datasets/sfar_antibioprophylaxie/benchmark.json`)
+- **Dataset de test**: 24 questions avec réponses attendues (`datasets/sfar_antibioprophylaxie/benchmark.json`)
 - **Source**: RFE SFAR 2024 (V2.0 du 22/05/2024)
 - **Périmètre**: Chirurgie orthopédique + Traumatologie (47 interventions)
 - **Auteur initial**: Claude (à valider/corriger par un MD)

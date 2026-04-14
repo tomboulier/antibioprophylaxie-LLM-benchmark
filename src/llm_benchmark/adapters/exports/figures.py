@@ -9,12 +9,13 @@ from __future__ import annotations
 from pathlib import Path
 
 import matplotlib
-import matplotlib.pyplot as plt
+
+matplotlib.use("Agg")
+
+import matplotlib.pyplot as plt  # noqa: E402 (backend avant pyplot)
 import numpy as np
 
 from llm_benchmark.domain.entities import RunResult
-
-matplotlib.use("Agg")
 
 # Style matplotlib cohérent
 plt.rcParams.update({
