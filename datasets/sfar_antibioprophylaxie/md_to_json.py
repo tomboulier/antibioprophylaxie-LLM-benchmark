@@ -25,8 +25,10 @@ _DATASET_META = {
         "Tu es un expert en antibioprophylaxie chirurgicale. "
         "Réponds de façon concise :\n"
         "- Pour les questions ouvertes : réponds uniquement par le nom de la "
-        "molécule (ex : 'Céfazoline', 'Amoxicilline/Clavulanate', 'Non', "
-        "'Hors périmètre', etc.). Aucune explication.\n"
+        "molécule (ex : 'Céfazoline', 'Amoxicilline/Clavulanate'), "
+        "par 'Pas d'antibioprophylaxie', ou par 'Hors périmètre' si la "
+        "situation n'est pas couverte par les recommandations. "
+        "Aucune explication.\n"
         "- Pour les questions à choix multiples : réponds uniquement par la "
         "lettre (A, B, C ou D). Aucune explication."
     ),

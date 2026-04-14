@@ -10,8 +10,9 @@
 ## Format des réponses attendues
 
 Pour les questions ouvertes, la réponse attendue est :
-- Un **nom de molécule** (ex : `Céfazoline`)
-- Ou bien `Non` (pas d'antibioprophylaxie recommandée)
+- Un **nom de molécule** (ex : `Céfazoline`, `Amoxicilline/Clavulanate`)
+- `Pas d'antibioprophylaxie` (pas d'ABP recommandée pour cette intervention)
+- `Hors périmètre` (situation non couverte par les RFE SFAR 2024)
 
 Pour les QCM, une seule réponse correcte (lettre).
 
@@ -28,8 +29,8 @@ Pour les QCM, une seule réponse correcte (lettre).
 ### Arthroscopie genou diagnostique
 
 - **type** : open
-- **question** : Faut-il prescrire une antibioprophylaxie pour une arthroscopie diagnostique du genou sans mise en place de matériel ?
-- **réponse** : Non
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une arthroscopie diagnostique du genou sans mise en place de matériel ?
+- **réponse** : Pas d'antibioprophylaxie
 
 ### PTG allergie bêtalactamines
 
@@ -40,7 +41,7 @@ Pour les QCM, une seule réponse correcte (lettre).
 ### PTH voie antérieure allergie
 
 - **type** : open
-- **question** : Pour une prothèse de hanche par voie antérieure chez un patient allergique aux bêtalactamines, faut-il préférer la clindamycine ou la vancomycine ?
+- **question** : Quelle molécule d'antibioprophylaxie pour une prothèse de hanche par voie antérieure chez un patient allergique aux bêtalactamines ?
 - **réponse** : Vancomycine
 
 ### Fracture ouverte Gustilo 2
@@ -52,8 +53,8 @@ Pour les QCM, une seule réponse correcte (lettre).
 ### Fixateur externe fracture fermée
 
 - **type** : open
-- **question** : Faut-il une antibioprophylaxie pour la pose d'un fixateur externe sur une fracture fermée ?
-- **réponse** : Non
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la pose d'un fixateur externe sur une fracture fermée ?
+- **réponse** : Pas d'antibioprophylaxie
 
 ### Arthrodèse lombaire instrumentée
 
@@ -64,8 +65,8 @@ Pour les QCM, une seule réponse correcte (lettre).
 ### Hernie discale sans matériel
 
 - **type** : open
-- **question** : Faut-il une antibioprophylaxie pour une chirurgie du rachis sans pose de matériel (par ex. hernie discale) ?
-- **réponse** : Non
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie du rachis sans pose de matériel (ex : hernie discale) ?
+- **réponse** : Pas d'antibioprophylaxie
 
 ### Parage morsure
 
@@ -88,8 +89,8 @@ Pour les QCM, une seule réponse correcte (lettre).
 ### Plaie simple mollet
 
 - **type** : open
-- **question** : Faut-il une antibioprophylaxie pour le parage d'une plaie simple du mollet ?
-- **réponse** : Non
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour le parage d'une plaie simple du mollet ?
+- **réponse** : Pas d'antibioprophylaxie
 
 ### Fracture ouverte Gustilo 3 allergie
 
@@ -100,8 +101,8 @@ Pour les QCM, une seule réponse correcte (lettre).
 ### Ablation matériel ostéosynthèse MI
 
 - **type** : open
-- **question** : Faut-il une antibioprophylaxie pour l'ablation de matériel d'ostéosynthèse au membre inférieur ?
-- **réponse** : Non
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour l'ablation de matériel d'ostéosynthèse au membre inférieur ?
+- **réponse** : Pas d'antibioprophylaxie
 
 ---
 

@@ -128,29 +128,41 @@ class TestOpenScorer:
         result = scorer.score(question, "Clindamycine")
         assert result.is_correct is False
 
-    def test_non_expected_non_in_actual_correct(self, scorer):
-        """'Non' expected, 'non' in actual → correct."""
-        question = make_open_question("Non")
-        result = scorer.score(question, "non")
+    def test_pas_d_abp_exact_correct(self, scorer):
+        """'Pas d'antibioprophylaxie' expected, same in actual → correct."""
+        question = make_open_question("Pas d'antibioprophylaxie")
+        result = scorer.score(question, "Pas d'antibioprophylaxie")
         assert result.is_correct is True
 
-    def test_non_expected_pas_d_in_actual_correct(self, scorer):
-        """'Non' expected, 'pas d'antibioprophylaxie' in actual → correct."""
-        question = make_open_question("Non")
+    def test_pas_d_abp_case_insensitive_correct(self, scorer):
+        """'Pas d'antibioprophylaxie' expected, lowercase actual → correct."""
+        question = make_open_question("Pas d'antibioprophylaxie")
         result = scorer.score(question, "pas d'antibioprophylaxie")
         assert result.is_correct is True
 
-    def test_non_expected_molecule_in_actual_incorrect(self, scorer):
-        """'Non' expected, 'Céfazoline' in actual → incorrect."""
-        question = make_open_question("Non")
+    def test_pas_d_abp_molecule_in_actual_incorrect(self, scorer):
+        """'Pas d'antibioprophylaxie' expected, 'Céfazoline' actual → incorrect."""
+        question = make_open_question("Pas d'antibioprophylaxie")
         result = scorer.score(question, "Céfazoline")
         assert result.is_correct is False
 
+    def test_hors_perimetre_exact_correct(self, scorer):
+        """'Hors périmètre' expected, same in actual → correct."""
+        question = make_open_question("Hors périmètre")
+        result = scorer.score(question, "Hors périmètre")
+        assert result.is_correct is True
+
     def test_hors_perimetre_case_insensitive_correct(self, scorer):
-        """'Hors périmètre' expected, 'hors périmètre' in actual → correct."""
+        """'Hors périmètre' expected, lowercase actual → correct."""
         question = make_open_question("Hors périmètre")
         result = scorer.score(question, "hors périmètre")
         assert result.is_correct is True
+
+    def test_hors_perimetre_molecule_in_actual_incorrect(self, scorer):
+        """'Hors périmètre' expected, 'Céfazoline' actual → incorrect."""
+        question = make_open_question("Hors périmètre")
+        result = scorer.score(question, "Céfazoline")
+        assert result.is_correct is False
 
     def test_mixed_case_in_actual_correct(self, scorer):
         """Mixed case in actual → correct (case-insensitive matching)."""

@@ -61,8 +61,8 @@ class OpenScorer:
         normalized_expected = normalize(question.expected_answer)
         normalized_actual = normalize(actual)
 
-        if normalized_expected == "non":
-            is_correct = "non" in normalized_actual or "pas d'" in normalized_actual
+        if normalized_expected in ("pas d'antibioprophylaxie", "hors périmètre"):
+            is_correct = normalized_expected in normalized_actual
         else:
             molecules = [normalize(molecule) for molecule in question.expected_answer.split("+")]
             is_correct = all(molecule in normalized_actual for molecule in molecules)
