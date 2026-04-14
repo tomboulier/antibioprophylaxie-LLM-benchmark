@@ -7,105 +7,105 @@
   "questions": [
     {
       "id": "Q01",
-      "titre": "Quelle molécule d'antibioprophylaxie recommandez-v",
+      "titre": "PTH standard",
       "type": "open",
       "question": "Quelle molécule d'antibioprophylaxie recommandez-vous pour une prothèse totale de hanche ?",
       "réponse": "Céfazoline"
     },
     {
       "id": "Q02",
-      "titre": "Faut-il prescrire une antibioprophylaxie pour une",
+      "titre": "Arthroscopie genou diagnostique",
       "type": "open",
       "question": "Faut-il prescrire une antibioprophylaxie pour une arthroscopie diagnostique du genou sans mise en place de matériel ?",
       "réponse": "Non"
     },
     {
       "id": "Q03",
-      "titre": "Un patient allergique aux bêtalactamines doit béné",
+      "titre": "PTH allergie bêtalactamines",
       "type": "open",
       "question": "Un patient allergique aux bêtalactamines doit bénéficier d'une prothèse de hanche. Quelle molécule en première intention ?",
       "réponse": "Clindamycine"
     },
     {
       "id": "Q04",
-      "titre": "Pour une prothèse de hanche par voie antérieure ch",
+      "titre": "PTH voie antérieure allergie",
       "type": "open",
       "question": "Pour une prothèse de hanche par voie antérieure chez un patient allergique aux bêtalactamines, faut-il préférer la clindamycine ou la vancomycine ?",
       "réponse": "Vancomycine"
     },
     {
       "id": "Q05",
-      "titre": "Quelle molécule d'antibioprophylaxie pour une frac",
+      "titre": "Fracture ouverte Gustilo 2",
       "type": "open",
       "question": "Quelle molécule d'antibioprophylaxie pour une fracture ouverte de jambe Gustilo 2 ?",
       "réponse": "Amoxicilline/Clavulanate"
     },
     {
       "id": "Q06",
-      "titre": "Faut-il une antibioprophylaxie pour la pose d'un f",
+      "titre": "Fixateur externe fracture fermée",
       "type": "open",
       "question": "Faut-il une antibioprophylaxie pour la pose d'un fixateur externe sur une fracture fermée ?",
       "réponse": "Non"
     },
     {
       "id": "Q07",
-      "titre": "Quelle molécule d'antibioprophylaxie pour une arth",
+      "titre": "Arthrodèse lombaire instrumentée",
       "type": "open",
       "question": "Quelle molécule d'antibioprophylaxie pour une arthrodèse lombaire instrumentée en un temps ?",
       "réponse": "Céfazoline"
     },
     {
       "id": "Q08",
-      "titre": "Faut-il une antibioprophylaxie pour une chirurgie",
+      "titre": "Hernie discale sans matériel",
       "type": "open",
       "question": "Faut-il une antibioprophylaxie pour une chirurgie du rachis sans pose de matériel (par ex. hernie discale) ?",
       "réponse": "Non"
     },
     {
       "id": "Q09",
-      "titre": "Quelle molécule d'antibioprophylaxie pour le parag",
+      "titre": "Parage morsure",
       "type": "open",
       "question": "Quelle molécule d'antibioprophylaxie pour le parage chirurgical d'une morsure ?",
       "réponse": "Amoxicilline/Clavulanate"
     },
     {
       "id": "Q10",
-      "titre": "Quelle molécule d'antibioprophylaxie pour un écras",
+      "titre": "Écrasement main > 2h",
       "type": "open",
       "question": "Quelle molécule d'antibioprophylaxie pour un écrasement complexe de la main nécessitant une chirurgie de plus de 2 heures ?",
       "réponse": "Amoxicilline/Clavulanate"
     },
     {
       "id": "Q11",
-      "titre": "Quelle molécule d'antibioprophylaxie pour une plai",
+      "titre": "Plaie agricole cuisse",
       "type": "open",
       "question": "Quelle molécule d'antibioprophylaxie pour une plaie de cuisse par accident agricole, susceptible d'être contaminée par des germes telluriques ?",
       "réponse": "Amoxicilline/Clavulanate"
     },
     {
       "id": "Q12",
-      "titre": "Faut-il une antibioprophylaxie pour le parage d'un",
+      "titre": "Plaie simple mollet",
       "type": "open",
       "question": "Faut-il une antibioprophylaxie pour le parage d'une plaie simple du mollet ?",
       "réponse": "Non"
     },
     {
       "id": "Q13",
-      "titre": "Un patient allergique aux pénicillines présente un",
+      "titre": "Fracture ouverte Gustilo 3 allergie",
       "type": "open",
       "question": "Un patient allergique aux pénicillines présente une fracture ouverte Gustilo 3. Quelle(s) molécule(s) d'antibioprophylaxie ?",
       "réponse": "Clindamycine + Gentamicine"
     },
     {
       "id": "Q14",
-      "titre": "Faut-il une antibioprophylaxie pour l'ablation de",
+      "titre": "Ablation matériel ostéosynthèse MI",
       "type": "open",
       "question": "Faut-il une antibioprophylaxie pour l'ablation de matériel d'ostéosynthèse au membre inférieur ?",
       "réponse": "Non"
     },
     {
       "id": "Q15",
-      "titre": "Quelle molécule est recommandée en première intent",
+      "titre": "PTG première intention",
       "type": "mcq",
       "question": "Quelle molécule est recommandée en première intention pour l'antibioprophylaxie d'une prothèse totale de genou ?",
       "réponse": "B",
@@ -118,7 +118,7 @@
     },
     {
       "id": "Q16",
-      "titre": "Quelle est la dose initiale de Céfazoline recomman",
+      "titre": "Dose Céfazoline ortho",
       "type": "mcq",
       "question": "Quelle est la dose initiale de Céfazoline recommandée en antibioprophylaxie en chirurgie orthopédique ?",
       "réponse": "B",
@@ -131,7 +131,7 @@
     },
     {
       "id": "Q17",
-      "titre": "Parmi ces interventions, laquelle ne nécessite PAS",
+      "titre": "Intervention sans ABP",
       "type": "mcq",
       "question": "Parmi ces interventions, laquelle ne nécessite PAS d'antibioprophylaxie ?",
       "réponse": "C",
@@ -144,7 +144,7 @@
     },
     {
       "id": "Q18",
-      "titre": "En cas d'allergie aux bêtalactamines, quelle est l",
+      "titre": "PTH allergie alternative",
       "type": "mcq",
       "question": "En cas d'allergie aux bêtalactamines, quelle est l'alternative de première intention pour l'antibioprophylaxie d'une prothèse de hanche ?",
       "réponse": "C",
@@ -157,7 +157,7 @@
     },
     {
       "id": "Q19",
-      "titre": "À partir de quel stade de Gustilo la molécule d'an",
+      "titre": "Seuil Gustilo changement molécule",
       "type": "mcq",
       "question": "À partir de quel stade de Gustilo la molécule d'antibioprophylaxie change-t-elle (passage de la Céfazoline à l'Amoxicilline/Clavulanate) ?",
       "réponse": "B",
@@ -170,7 +170,7 @@
     },
     {
       "id": "Q20",
-      "titre": "À quel intervalle doit-on réinjecter l'Amoxicillin",
+      "titre": "Réinjection Augmentin",
       "type": "mcq",
       "question": "À quel intervalle doit-on réinjecter l'Amoxicilline/Clavulanate en antibioprophylaxie ?",
       "réponse": "A",
@@ -183,7 +183,7 @@
     },
     {
       "id": "Q21",
-      "titre": "Un patient se présente avec une plaie de la main p",
+      "titre": "Plaie jardinage main",
       "type": "mcq",
       "question": "Un patient se présente avec une plaie de la main par accident de jardinage, susceptible de contamination tellurique. Quelle est la recommandation ?",
       "réponse": "C",
@@ -196,7 +196,7 @@
     },
     {
       "id": "Q22",
-      "titre": "Quelle est l'alternative en cas d'allergie aux pén",
+      "titre": "Écrasement main allergie",
       "type": "mcq",
       "question": "Quelle est l'alternative en cas d'allergie aux pénicillines pour un traumatisme complexe de la main (écrasement) ?",
       "réponse": "C",
@@ -209,7 +209,7 @@
     },
     {
       "id": "Q23",
-      "titre": "Deux patients doivent bénéficier d'une arthroscopi",
+      "titre": "Arthroscopie avec/sans matériel",
       "type": "mcq",
       "question": "Deux patients doivent bénéficier d'une arthroscopie de genou : l'un avec mise en place d'une ancre, l'autre sans matériel. Quelle est la bonne conduite ?",
       "réponse": "B",
@@ -222,7 +222,7 @@
     },
     {
       "id": "Q24",
-      "titre": "Quelle antibioprophylaxie pour une appendicectomie",
+      "titre": "Appendicectomie hors périmètre",
       "type": "mcq",
       "question": "Quelle antibioprophylaxie pour une appendicectomie ?",
       "réponse": "D",
