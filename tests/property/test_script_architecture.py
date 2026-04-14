@@ -1,14 +1,8 @@
-"""Property tests for script architecture compliance.
+"""Property tests for architecture compliance.
 
-These tests parse ``scripts/run_benchmark.py`` with Python's ``ast`` module and
-assert that the script does NOT contain forbidden patterns (direct provider SDK
-imports, duplicated domain functions) and DOES delegate to ``BenchmarkEngine``
-and ``LLM_REGISTRY``.
-
-On the **unfixed** script all four tests are expected to FAIL — failure confirms
-the bug condition exists.  After the fix all four tests must PASS.
-
-**Validates: Requirements 2.1, 2.2, 2.3, 2.4, 2.5**
+Validate that the CLI and use case layers do NOT contain forbidden
+patterns (direct provider SDK imports, duplicated domain functions)
+and DO delegate to the domain layer (BenchmarkEngine, LLM_REGISTRY).
 """
 
 from __future__ import annotations
@@ -17,14 +11,13 @@ import ast
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
-# Module-level constant — read once at import time
+# Sources to validate
 # ---------------------------------------------------------------------------
 
-SCRIPT_SOURCE: str = Path("scripts/run_benchmark.py").read_text(encoding="utf-8")
-
-# ---------------------------------------------------------------------------
-# Helper
-# ---------------------------------------------------------------------------
+CLI_SOURCE: str = Path("src/llm_benchmark/cli/main.py").read_text(encoding="utf-8")
+USECASE_SOURCE: str = Path("src/llm_benchmark/usecases/run_experiment.py").read_text(
+    encoding="utf-8"
+)
 
 _FORBIDDEN_PROVIDER_MODULES: frozenset[str] = frozenset({"anthropic", "openai", "mistralai"})
 
@@ -33,169 +26,84 @@ _FORBIDDEN_FUNCTION_NAMES: frozenset[str] = frozenset(
 )
 
 
-def is_bug_condition(script_source: str) -> bool:
-    """Return ``True`` when *script_source* exhibits the architecture violation.
-
-    Walks the AST of *script_source* and returns ``True`` if any of the
-    following forbidden patterns are found:
-
-    * An ``import`` statement whose module name is in
-      ``{anthropic, openai, mistralai}``.
-    * A ``from … import`` statement whose module name is in
-      ``{anthropic, openai, mistralai}``.
-    * A ``def`` statement whose name is in
-      ``{score_qcm, score_open, query_anthropic, query_openai, query_mistral}``.
-    * No ``from … import`` statement that names ``BenchmarkEngine``.
-    * No ``from … import`` statement that names ``LLM_REGISTRY``.
-
-    Parameters
-    ----------
-    script_source : str
-        Full source text of the script to analyse.
-
-    Returns
-    -------
-    bool
-        ``True`` if the script violates the architecture, ``False`` otherwise.
-    """
-    tree = ast.parse(script_source)
-
-    has_forbidden_import = False
-    has_forbidden_function = False
-    imports_benchmark_engine = False
-    imports_llm_registry = False
-
-    for node in ast.walk(tree):
-        # Direct imports: import anthropic / import openai
-        if isinstance(node, ast.Import):
-            for alias in node.names:
-                root_module = alias.name.split(".")[0]
-                if root_module in _FORBIDDEN_PROVIDER_MODULES:
-                    has_forbidden_import = True
-
-        # From-imports: from mistralai import Mistral / from anthropic import …
-        if isinstance(node, ast.ImportFrom):
-            module = node.module or ""
-            root_module = module.split(".")[0]
-            if root_module in _FORBIDDEN_PROVIDER_MODULES:
-                has_forbidden_import = True
-
-            # Check for BenchmarkEngine and LLM_REGISTRY in any from-import
-            for alias in node.names:
-                if alias.name == "BenchmarkEngine":
-                    imports_benchmark_engine = True
-                if alias.name == "LLM_REGISTRY":
-                    imports_llm_registry = True
-
-        # Function definitions with forbidden names
-        if isinstance(node, ast.FunctionDef) and node.name in _FORBIDDEN_FUNCTION_NAMES:
-            has_forbidden_function = True
-
-    return (
-        has_forbidden_import
-        or has_forbidden_function
-        or not imports_benchmark_engine
-        or not imports_llm_registry
-    )
-
-
 # ---------------------------------------------------------------------------
-# Tests — all four FAIL on unfixed code (confirming the bug)
+# Helpers
 # ---------------------------------------------------------------------------
 
 
-def test_script_has_no_direct_provider_imports() -> None:
-    """Assert the script contains no direct provider SDK imports.
-
-    Checks that ``import anthropic``, ``import openai``, and
-    ``from mistralai import …`` are absent from the AST.
-
-    **Validates: Requirements 2.1**
-
-    Expected to FAIL on the unfixed script (bug confirmed).
-    Expected to PASS after the fix.
-    """
-    tree = ast.parse(SCRIPT_SOURCE)
-
-    forbidden_found: list[str] = []
-
-    for node in ast.walk(tree):
+def _find_forbidden_imports(source: str) -> list[str]:
+    found = []
+    for node in ast.walk(ast.parse(source)):
         if isinstance(node, ast.Import):
             for alias in node.names:
-                root = alias.name.split(".")[0]
-                if root in _FORBIDDEN_PROVIDER_MODULES:
-                    forbidden_found.append(f"import {alias.name}")
-
+                if alias.name.split(".")[0] in _FORBIDDEN_PROVIDER_MODULES:
+                    found.append(f"import {alias.name}")
         if isinstance(node, ast.ImportFrom):
             module = node.module or ""
-            root = module.split(".")[0]
-            if root in _FORBIDDEN_PROVIDER_MODULES:
+            if module.split(".")[0] in _FORBIDDEN_PROVIDER_MODULES:
                 names = ", ".join(a.name for a in node.names)
-                forbidden_found.append(f"from {module} import {names}")
+                found.append(f"from {module} import {names}")
+    return found
 
-    assert not forbidden_found, (
-        "Script contains forbidden direct provider SDK imports: " + ", ".join(forbidden_found)
+
+def _find_forbidden_functions(source: str) -> list[str]:
+    return [
+        node.name
+        for node in ast.walk(ast.parse(source))
+        if isinstance(node, ast.FunctionDef) and node.name in _FORBIDDEN_FUNCTION_NAMES
+    ]
+
+
+def _imports_name(source: str, name: str) -> bool:
+    return any(
+        isinstance(node, ast.ImportFrom) and any(a.name == name for a in node.names)
+        for node in ast.walk(ast.parse(source))
     )
 
 
-def test_script_does_not_define_duplicated_domain_functions() -> None:
-    """Assert the script does not define duplicated domain functions.
+# ---------------------------------------------------------------------------
+# Tests — CLI
+# ---------------------------------------------------------------------------
 
-    Checks that none of ``score_qcm``, ``score_open``, ``query_anthropic``,
-    ``query_openai``, ``query_mistral`` are defined as top-level or nested
-    functions.
 
-    **Validates: Requirements 2.3**
+def test_cli_has_no_direct_provider_imports() -> None:
+    """La CLI ne doit pas importer directement les SDKs provider."""
+    found = _find_forbidden_imports(CLI_SOURCE)
+    assert not found, f"CLI contient des imports provider interdits : {found}"
 
-    Expected to FAIL on the unfixed script (bug confirmed).
-    Expected to PASS after the fix.
-    """
-    tree = ast.parse(SCRIPT_SOURCE)
 
-    duplicated_found: list[str] = []
+def test_cli_does_not_define_domain_functions() -> None:
+    """La CLI ne doit pas dupliquer de fonctions du domaine."""
+    found = _find_forbidden_functions(CLI_SOURCE)
+    assert not found, f"CLI définit des fonctions domaine dupliquées : {found}"
 
-    for node in ast.walk(tree):
-        if isinstance(node, ast.FunctionDef) and node.name in _FORBIDDEN_FUNCTION_NAMES:
-            duplicated_found.append(node.name)
 
-    assert not duplicated_found, "Script defines duplicated domain functions: " + ", ".join(
-        duplicated_found
+# ---------------------------------------------------------------------------
+# Tests — Use case
+# ---------------------------------------------------------------------------
+
+
+def test_usecase_has_no_direct_provider_imports() -> None:
+    """Le use case ne doit pas importer directement les SDKs provider."""
+    found = _find_forbidden_imports(USECASE_SOURCE)
+    assert not found, f"Use case contient des imports provider interdits : {found}"
+
+
+def test_usecase_does_not_define_domain_functions() -> None:
+    """Le use case ne doit pas dupliquer de fonctions du domaine."""
+    found = _find_forbidden_functions(USECASE_SOURCE)
+    assert not found, f"Use case définit des fonctions domaine dupliquées : {found}"
+
+
+def test_usecase_imports_benchmark_engine() -> None:
+    """Le use case doit déléguer à BenchmarkEngine."""
+    assert _imports_name(USECASE_SOURCE, "BenchmarkEngine"), (
+        "Le use case n'importe pas BenchmarkEngine."
     )
 
 
-def test_script_imports_benchmark_engine() -> None:
-    """Assert the script imports ``BenchmarkEngine`` from the domain layer.
-
-    **Validates: Requirements 2.5**
-
-    Expected to FAIL on the unfixed script (bug confirmed).
-    Expected to PASS after the fix.
-    """
-    tree = ast.parse(SCRIPT_SOURCE)
-
-    found = any(
-        isinstance(node, ast.ImportFrom)
-        and any(alias.name == "BenchmarkEngine" for alias in node.names)
-        for node in ast.walk(tree)
-    )
-
-    assert found, "Script does not import BenchmarkEngine — it bypasses the domain engine entirely."
-
-
-def test_script_imports_llm_registry() -> None:
-    """Assert the script imports ``LLM_REGISTRY`` from the adapters layer.
-
-    **Validates: Requirements 2.2**
-
-    Expected to FAIL on the unfixed script (bug confirmed).
-    Expected to PASS after the fix.
-    """
-    tree = ast.parse(SCRIPT_SOURCE)
-
-    found = any(
-        isinstance(node, ast.ImportFrom)
-        and any(alias.name == "LLM_REGISTRY" for alias in node.names)
-        for node in ast.walk(tree)
-    )
-
-    assert found, "Script does not import LLM_REGISTRY — it uses a hardcoded MODELS dict instead."
+def test_usecase_imports_llm_registry() -> None:
+    """Le use case doit utiliser le registry de modèles."""
+    has_enabled = _imports_name(USECASE_SOURCE, "ENABLED_REGISTRY")
+    has_full = _imports_name(USECASE_SOURCE, "LLM_REGISTRY")
+    assert has_enabled or has_full, "Le use case n'importe aucun registry de modèles."
