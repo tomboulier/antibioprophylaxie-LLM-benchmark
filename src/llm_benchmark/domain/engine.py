@@ -7,6 +7,7 @@ scoring, and metric collection, then aggregates results into RunResult.
 
 from __future__ import annotations
 
+import sys
 import uuid
 from datetime import datetime
 from typing import Any
@@ -114,14 +115,28 @@ class BenchmarkEngine:
         timestamp = datetime.now().astimezone()
         question_results: list[QuestionResult] = []
 
-        for question in questions:
+        print(f"\n  ▶ {llm.model_id.value}")
+        total = len(questions)
+        correct = 0
+        errors = 0
+        for i, question in enumerate(questions, 1):
             question_result = self._evaluate_question(
                 question, approach, llm, dataset.system_prompt
             )
             question_results.append(question_result)
-            print(
-                f"  [{question.id.value}] correct={question_result.score.is_correct if question_result.score else 'error'}"
+            if question_result.score and question_result.score.is_correct:
+                correct += 1
+            if question_result.error:
+                errors += 1
+            bar_len = 20
+            filled = int(bar_len * i / total)
+            bar = "█" * filled + "░" * (bar_len - filled)
+            err_part = f" {errors} err" if errors else ""
+            sys.stdout.write(
+                f"\r  {bar} {i}/{total}  {correct} ok{err_part}"
             )
+            sys.stdout.flush()
+        sys.stdout.write("\n")
 
         summary = self._build_summary(question_results)
 
