@@ -31,10 +31,10 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **question** : Faut-il prescrire une antibioprophylaxie pour une arthroscopie diagnostique du genou sans mise en place de matériel ?
 - **réponse** : Non
 
-### PTH allergie bêtalactamines
+### PTG allergie bêtalactamines
 
 - **type** : open
-- **question** : Un patient allergique aux bêtalactamines doit bénéficier d'une prothèse de hanche. Quelle molécule en première intention ?
+- **question** : Un patient allergique aux bêtalactamines doit bénéficier d'une prothèse de genou. Quelle molécule en première intention ?
 - **réponse** : Clindamycine
 
 ### PTH voie antérieure allergie
