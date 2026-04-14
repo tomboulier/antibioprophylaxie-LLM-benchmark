@@ -39,8 +39,6 @@ class Question:
         The text of the question posed to the LLM.
     expected_answer : str
         The reference answer used for scoring.
-    source : Source or None, optional
-        Bibliographic reference or source identifier.
     choices : MCQChoices or None, optional
         Answer choices (A–D). Required when question_type is MCQ.
 
@@ -54,7 +52,6 @@ class Question:
     question_type: QuestionType
     question_text: str
     expected_answer: str
-    source: Source | None = None
     choices: MCQChoices | None = None
 
     def __post_init__(self) -> None:

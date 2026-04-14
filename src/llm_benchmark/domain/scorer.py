@@ -36,11 +36,12 @@ def normalize(text: str) -> str:
 
 
 class OpenScorer:
-    """Scorer for open-ended questions (molecule names, 'Non', 'Hors périmètre').
+    """Scorer for open-ended questions.
 
-    Checks that every expected molecule (split on '+') appears in the
-    normalized actual answer. Handles the special case where the expected
-    answer is 'Non'.
+    Three categories of expected answers:
+    - Molecule name(s): each molecule (split on '+') must appear in the answer.
+    - 'Pas d'antibioprophylaxie': exact match (normalized).
+    - 'Hors périmètre': exact match (normalized).
     """
 
     def score(self, question: Question, actual: str) -> ScoreResult:
@@ -61,8 +62,8 @@ class OpenScorer:
         normalized_expected = normalize(question.expected_answer)
         normalized_actual = normalize(actual)
 
-        if normalized_expected == "non":
-            is_correct = "non" in normalized_actual or "pas d'" in normalized_actual
+        if normalized_expected in ("pas d'antibioprophylaxie", "hors périmètre"):
+            is_correct = normalized_expected in normalized_actual
         else:
             molecules = [normalize(molecule) for molecule in question.expected_answer.split("+")]
             is_correct = all(molecule in normalized_actual for molecule in molecules)
@@ -100,45 +101,34 @@ class QCMScorer:
 
 
 class SourcingScorer:
-    """Scorer that detects and validates source references in LLM answers.
+    """Scorer that detects source references in LLM answers.
 
-    Checks whether the actual answer contains a reference to the expected
-    source by looking for significant words (4+ characters) from the source
-    value in the answer text.
+    Heuristically checks whether the answer contains any bibliographic
+    reference (e.g. a 4-digit year). Presence-only detection: correctness
+    is not evaluated (always ``False``).
     """
 
-    _MIN_WORD_LENGTH = 4
-
     def score(self, question: Question, actual: str) -> ScoreResult:
-        """Detect sourcing presence and correctness in an answer.
+        """Detect whether the answer cites any source reference.
 
         Parameters
         ----------
         question : Question
-            The question being evaluated, carrying the expected source.
+            The question being evaluated.
         actual : str
             The LLM's raw answer text.
 
         Returns
         -------
         ScoreResult
-            Result with ``is_sourcing_present`` and ``is_sourcing_correct``
-            populated. ``is_correct`` is always ``False`` (sourcing is a
-            supplementary signal, not the primary correctness criterion).
+            ``is_sourcing_present`` indicates whether a reference was found.
+            ``is_sourcing_correct`` is always ``False`` (not evaluated).
+            ``is_correct`` is always ``False`` (sourcing is supplementary).
         """
         normalized_actual = normalize(actual)
 
         is_sourcing_present = self._detect_any_reference(normalized_actual)
-
-        if question.source is not None and is_sourcing_present:
-            source_words = [
-                word
-                for word in question.source.value.lower().split()
-                if len(word) >= self._MIN_WORD_LENGTH
-            ]
-            is_sourcing_correct = any(word in normalized_actual for word in source_words)
-        else:
-            is_sourcing_correct = False
+        is_sourcing_correct = False
 
         return ScoreResult(
             is_correct=False,

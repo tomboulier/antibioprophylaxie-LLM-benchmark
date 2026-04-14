@@ -1,6 +1,6 @@
 """Unit tests for BenchmarkEngine."""
 
-from datetime import datetime, timezone
+from datetime import datetime
 from unittest.mock import MagicMock
 
 from llm_benchmark.domain.engine import BenchmarkEngine
@@ -33,7 +33,6 @@ def _make_open_question(question_id: str = "q1") -> Question:
         question_type=QuestionType.OPEN,
         question_text="What is the antibiotic of choice?",
         expected_answer="amoxicillin",
-        source=Source("SFAR 2024"),
     )
 
 

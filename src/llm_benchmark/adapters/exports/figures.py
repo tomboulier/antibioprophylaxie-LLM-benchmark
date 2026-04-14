@@ -110,7 +110,7 @@ def _fig_accuracy(results: list[RunResult], output_dir: Path) -> Path:
     ax.set_xticks(x)
     ax.set_xticklabels(display_names)
     ax.set_ylim(0, 105)
-    ax.legend(loc="upper right")
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.12), ncol=3)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
 

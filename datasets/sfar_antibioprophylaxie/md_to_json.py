@@ -25,8 +25,10 @@ _DATASET_META = {
         "Tu es un expert en antibioprophylaxie chirurgicale. "
         "Réponds de façon concise :\n"
         "- Pour les questions ouvertes : réponds uniquement par le nom de la "
-        "molécule (ex : 'Céfazoline', 'Amoxicilline/Clavulanate', 'Non', "
-        "'Hors périmètre', etc.). Aucune explication.\n"
+        "molécule (ex : 'Céfazoline', 'Amoxicilline/Clavulanate'), "
+        "par 'Pas d'antibioprophylaxie', ou par 'Hors périmètre' si la "
+        "situation n'est pas couverte par les recommandations. "
+        "Aucune explication.\n"
         "- Pour les questions à choix multiples : réponds uniquement par la "
         "lettre (A, B, C ou D). Aucune explication."
     ),
@@ -40,17 +42,25 @@ def parse_benchmark(text: str) -> list[dict]:
     """Parse le Markdown structuré et retourne une liste de questions."""
     questions: list[dict] = []
     blocks = re.split(r"^### ", text, flags=re.MULTILINE)
+    seq = 0
 
     for block in blocks:
         if not block.strip():
             continue
-        title_match = re.match(r"(Q\d+)\s*[—–-]\s*(.+)", block.split("\n")[0])
-        if not title_match:
+        first_line = block.split("\n")[0].strip()
+        if not first_line:
             continue
 
-        qid = title_match.group(1)
+        # Ignorer les lignes sans champ structuré (sections, etc.)
+        has_fields = re.search(r"^- \*\*\w+", block, re.MULTILINE)
+        if not has_fields:
+            continue
 
-        q: dict = {"id": qid}
+        seq += 1
+        titre = first_line
+        qid = f"Q{seq:02d}"
+
+        q: dict = {"id": qid, "titre": titre}
 
         # Parser les champs "- **clé** : valeur" ([ \t] évite de traverser les \n)
         for match in re.finditer(r"^- \*\*(\w+(?:[- ]\w+)*)\*\*[ \t]*:[ \t]*(.+)$", block, re.MULTILINE):

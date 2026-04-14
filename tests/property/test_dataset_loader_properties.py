@@ -16,7 +16,7 @@ from hypothesis import strategies as st
 # ---------------------------------------------------------------------------
 
 # All required fields for a question
-REQUIRED_QUESTION_FIELDS = ["id", "type", "question", "réponse", "source"]
+REQUIRED_QUESTION_FIELDS = ["id", "type", "question", "réponse"]
 
 # A strategy for a non-empty, non-whitespace-only string
 non_empty_text = st.text(min_size=1).filter(lambda s: s.strip())
@@ -27,7 +27,6 @@ valid_question_strategy = st.fixed_dictionaries(
         "type": st.just("open"),
         "question": non_empty_text,
         "réponse": non_empty_text,
-        "source": non_empty_text,
     }
 )
 

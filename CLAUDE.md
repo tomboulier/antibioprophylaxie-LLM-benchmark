@@ -36,7 +36,6 @@ Benchmark scientifique comparant **5 approches d'IA** pour répondre aux questio
 ```bash
 uv sync --extra dev           # Installer dépendances
 uv run python datasets/sfar_antibioprophylaxie/md_to_json.py  # Convertir MD → JSON
-uv run python datasets/sfar_antibioprophylaxie/json_to_md.py  # Convertir JSON → MD
 uv run llm-benchmark run                       # Lancer le pipeline complet (modèles activés)
 uv run llm-benchmark run -m gpt-4o             # Lancer sur un modèle spécifique
 uv run llm-benchmark list models               # Lister les modèles disponibles
@@ -61,8 +60,7 @@ config/
 datasets/sfar_antibioprophylaxie/
   benchmark.md                ← Questions (source de vérité humaine)
   benchmark.json              ← Questions compilées (généré)
-  md_to_json.py               ← Convertir MD → JSON
-  json_to_md.py               ← Convertir JSON → MD
+  md_to_json.py               ← Convertir MD → JSON (numérotation auto)
 
 research/
   results/                    ← Résultats JSON par run
