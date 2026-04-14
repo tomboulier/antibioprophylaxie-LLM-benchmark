@@ -17,10 +17,11 @@ from pathlib import Path
 
 from llm_benchmark.adapters.approaches.simple_prompt import SimplePromptApproach
 from llm_benchmark.adapters.exports.json_export import JsonExportAdapter
-from llm_benchmark.adapters.llms import ENABLED_REGISTRY
+from llm_benchmark.adapters.llms import ENABLED_REGISTRY, LLM_REGISTRY
 from llm_benchmark.domain.dataset_loader import load_dataset
 from llm_benchmark.domain.engine import BenchmarkEngine
 from llm_benchmark.domain.entities import Dataset, RunResult
+from llm_benchmark.domain.value_objects import QuestionId
 from llm_benchmark.ports.llm import LLMPort
 
 
@@ -57,6 +58,11 @@ class RunExperiment:
         Répertoire de sortie pour les résultats JSON.
     figures_dir : Path
         Répertoire de sortie pour les figures PNG.
+    model_ids : list[str] or None
+        Si fourni, lance uniquement ces modèles (override ``enabled``).
+        Si ``None``, lance tous les modèles activés dans ``models.yaml``.
+    question_ids : list[str] or None
+        Si fourni, ne lance que ces questions (ex: ``["Q01", "Q05"]``).
     """
 
     def __init__(
@@ -64,10 +70,15 @@ class RunExperiment:
         dataset_path: Path,
         output_dir: Path,
         figures_dir: Path,
+        *,
+        model_ids: list[str] | None = None,
+        question_ids: list[str] | None = None,
     ) -> None:
         self._dataset_path = dataset_path
         self._output_dir = output_dir
         self._figures_dir = figures_dir
+        self._model_ids = model_ids
+        self._question_ids = question_ids
 
     def execute(self) -> ExperimentReport:
         """Exécuter le pipeline complet.
@@ -78,7 +89,12 @@ class RunExperiment:
             Résultat agrégé de l'expérience.
         """
         dataset, llms = self._step_load()
-        run_results = self._step_benchmark(dataset, llms)
+        qids = (
+            [QuestionId(q) for q in self._question_ids]
+            if self._question_ids
+            else None
+        )
+        run_results = self._step_benchmark(dataset, llms, qids)
         result_paths = self._step_export(run_results)
         figure_paths = self._step_figures(run_results)
         self._step_summary(run_results)
@@ -95,14 +111,25 @@ class RunExperiment:
     # ------------------------------------------------------------------
 
     def _step_load(self) -> tuple[Dataset, list[LLMPort]]:
-        """Étape 1 : charger le dataset et les modèles activés."""
+        """Étape 1 : charger le dataset et résoudre les modèles."""
         dataset = load_dataset(self._dataset_path)
-        llms = list(ENABLED_REGISTRY.values())
+
+        if self._model_ids:
+            unknown = [m for m in self._model_ids if m not in LLM_REGISTRY]
+            if unknown:
+                msg = (
+                    f"Modèle(s) inconnu(s) : {', '.join(unknown)}. "
+                    "Voir 'llm-benchmark list models'."
+                )
+                raise RuntimeError(msg)
+            llms = [LLM_REGISTRY[m] for m in self._model_ids]
+        else:
+            llms = list(ENABLED_REGISTRY.values())
 
         if not llms:
             msg = (
-                "Aucun modèle activé dans config/models.yaml. "
-                "Ajouter 'enabled: true' à au moins un modèle."
+                "Aucun modèle à lancer. Activer des modèles dans "
+                "config/models.yaml ou en passer via --model."
             )
             raise RuntimeError(msg)
 
@@ -121,11 +148,12 @@ class RunExperiment:
         self,
         dataset: Dataset,
         llms: list[LLMPort],
+        question_ids: list[QuestionId] | None = None,
     ) -> list[RunResult]:
         """Étape 2 : lancer le benchmark sur chaque modèle."""
         approach = SimplePromptApproach()
         engine = BenchmarkEngine()
-        return engine.run(dataset, [approach], llms)
+        return engine.run(dataset, [approach], llms, question_ids)
 
     def _step_export(self, run_results: list[RunResult]) -> list[Path]:
         """Étape 3 : exporter les résultats en JSON."""
