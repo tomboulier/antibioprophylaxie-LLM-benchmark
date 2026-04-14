@@ -124,10 +124,10 @@ Pour les QCM, une seule réponse correcte (lettre).
   - D. Arthroscopie du genou avec mise en place de matériel
 - **réponse** : C
 
-### PTH allergie alternative
+### PTG allergie alternative
 
 - **type** : qcm
-- **question** : En cas d'allergie aux bêtalactamines, quelle est l'alternative de première intention pour l'antibioprophylaxie d'une prothèse de hanche ?
+- **question** : En cas d'allergie aux bêtalactamines, quelle est l'alternative de première intention pour l'antibioprophylaxie d'une prothèse de genou ?
 - **choix** :
   - A. Gentamicine
   - B. Vancomycine
