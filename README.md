@@ -80,8 +80,7 @@ config/
 datasets/sfar_antibioprophylaxie/
 ├── benchmark.md                ← Questions (source de vérité)
 ├── benchmark.json              ← Questions compilées
-├── md_to_json.py               ← Convertir MD → JSON
-└── json_to_md.py               ← Convertir JSON → MD
+└── md_to_json.py               ← Convertir MD → JSON (numérotation auto)
 
 research/
 ├── results/                    ← Résultats JSON par run

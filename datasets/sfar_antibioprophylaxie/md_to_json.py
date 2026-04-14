@@ -40,16 +40,23 @@ def parse_benchmark(text: str) -> list[dict]:
     """Parse le Markdown structuré et retourne une liste de questions."""
     questions: list[dict] = []
     blocks = re.split(r"^### ", text, flags=re.MULTILINE)
+    seq = 0
 
     for block in blocks:
         if not block.strip():
             continue
-        title_match = re.match(r"(Q\d+)\s*[—–-]+\s*(.+)", block.split("\n")[0])
-        if not title_match:
+        first_line = block.split("\n")[0].strip()
+        if not first_line:
             continue
 
-        qid = title_match.group(1)
-        titre = title_match.group(2).strip()
+        # Ignorer les lignes sans champ structuré (sections, etc.)
+        has_fields = re.search(r"^- \*\*\w+", block, re.MULTILINE)
+        if not has_fields:
+            continue
+
+        seq += 1
+        titre = first_line
+        qid = f"Q{seq:02d}"
 
         q: dict = {"id": qid, "titre": titre}
 
