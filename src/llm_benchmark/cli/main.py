@@ -63,7 +63,11 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> None:
     """Point d'entrée CLI."""
-    dotenv.load_dotenv(override=False)
+    try:
+        dotenv.load_dotenv(override=False)
+    except ValueError as error:
+        print(f"Error: could not parse .env file: {error}", file=sys.stderr)
+        sys.exit(1)
 
     parser = build_parser()
     args = parser.parse_args(argv)
