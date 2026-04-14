@@ -1,7 +1,7 @@
-"""Convertit research/benchmark.md en research/benchmark.json.
+"""Convertit benchmark.md en benchmark.json.
 
 Usage :
-    uv run python scripts/benchmark_md_to_json.py
+    uv run python datasets/sfar_antibioprophylaxie/md_to_json.py
 """
 
 from __future__ import annotations
@@ -11,8 +11,9 @@ import re
 import sys
 from pathlib import Path
 
-MD_PATH = Path("research/benchmark.md")
-JSON_PATH = Path("research/benchmark.json")
+_DIR = Path(__file__).parent
+MD_PATH = _DIR / "benchmark.md"
+JSON_PATH = _DIR / "benchmark.json"
 
 
 def parse_benchmark(text: str) -> list[dict]:

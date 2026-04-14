@@ -1,9 +1,9 @@
-"""Convertit research/benchmark.json en research/benchmark.md.
+"""Convertit benchmark.json en benchmark.md.
 
-Round-trip inverse de benchmark_md_to_json.py.
+Round-trip inverse de md_to_json.py.
 
 Usage :
-    uv run python scripts/benchmark_json_to_md.py
+    uv run python datasets/sfar_antibioprophylaxie/json_to_md.py
 """
 
 from __future__ import annotations
@@ -12,8 +12,9 @@ import json
 import sys
 from pathlib import Path
 
-JSON_PATH = Path("research/benchmark.json")
-MD_PATH = Path("research/benchmark.md")
+_DIR = Path(__file__).parent
+JSON_PATH = _DIR / "benchmark.json"
+MD_PATH = _DIR / "benchmark.md"
 
 HEADER = """\
 # Benchmark Antibioprophylaxie SFAR
