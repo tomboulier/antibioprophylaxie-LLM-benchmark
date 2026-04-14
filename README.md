@@ -1,25 +1,28 @@
 # Antibioprophylaxie LLM Benchmark
 
-Benchmark scientifique pour évaluer différentes approches d'IA appliquées aux recommandations d'antibioprophylaxie chirurgicale (RFE SFAR 2024).
+Benchmark scientifique pour évaluer différentes approches d'IA appliquées aux [recommandations formalisées d'experts de la SFAR à propos de l'antibioprophylaxie en chirurgie et médecine interventionnelle](https://sfar.org/antibioprophylaxie-en-chirurgie-et-medecine-interventionnelle/).
 
 ## Objectif
 
+### Initial
+
+Evaluer différents modèles sur des questions standardisées sur ces recommandations.
+
+### A terme
+
 Comparer **5 systèmes** pour déterminer lequel est "meilleur" pour répondre aux questions d'antibioprophylaxie:
 
-| Système | Description | Métrique clé |
-|---------|-------------|--------------|
-| **RAG Niveau 1** | Retrieval sur PDF | Temps + Précision |
-| **RAG Niveau 2** | Retrieval sur Excel structuré | Coûts |
-| **Long Context** | Tout le texte en Claude Opus | Latency |
-| **MCP Server** | Model Context Protocol avec tools | Réponses sourcées |
-| **LLM Fine-tuné** | Fine-tuning sur instruction set | Précision fine |
+| Système | Description |
+|---------|-------------|
+| **RAG Niveau 1** | Retrieval sur PDF |
+| **RAG Niveau 2** | Retrieval sur Excel structuré |
+| **Long Context** | Tout le texte dans le contexte du modèle |
+| **MCP Server** | Model Context Protocol avec tools |
 
 ## Données
 
-- **Dataset de test**: 24 questions avec réponses attendues (`datasets/sfar_antibioprophylaxie/benchmark.json`)
-- **Source**: RFE SFAR 2024 (V2.0 du 22/05/2024)
-- **Périmètre**: Chirurgie orthopédique + Traumatologie (47 interventions)
-- **Auteur initial**: Claude (à valider/corriger par un MD)
+- **Dataset de test**: jeu de questions avec réponses attendues (`datasets/sfar_antibioprophylaxie/benchmark.md`)
+- **Source**: RFE SFAR 2024 ([V2.0 du 22/05/2024](https://sfar.org/download/antibioprophylaxie-en-chirurgie-et-medecine-interventionnelle/?wpdmdl=68362&refresh=69deb2e63ecc01776202470))
 
 ## Usage
 
@@ -89,15 +92,14 @@ research/
 
 ## Métriques
 
-- **Précision**: % de réponses correctes
-- **Latency**: Temps moyen par question (s)
-- **Coûts**: Tokens ou calories consommés
-- **Écologie**: Émissions CO2 estimées
+Pour le moment, seule la **précision** (% de réponses correctes) est testée.
+
+Voici les autres métriques qui pourront être envisagées :
+- **Consistance**: Taux d'accord sur N runs identiques (même question, même modèle) ; mesure la reproductibilité des réponses.
 - **Sourçage**: Réponses incluent citation/source?
-
-## Résultats actuels
-
-Aucun résultat encore. En cours de développement (S-019).
+- **Latence**: Temps moyen par question (en secondes).
+- **Coûts**: Tokens ou calories consommés.
+- **Écologie**: Émissions CO2 estimées.
 
 ## Contributing
 
