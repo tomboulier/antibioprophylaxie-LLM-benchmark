@@ -33,7 +33,6 @@ def _open_question_strategy():
         question_type=st.just(QuestionType.OPEN),
         question_text=_nonempty_text,
         expected_answer=_nonempty_text,
-        source=st.just(None),
         choices=st.just(None),
     )
 

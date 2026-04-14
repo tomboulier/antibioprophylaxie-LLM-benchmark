@@ -58,7 +58,9 @@ def question_to_md(q: dict) -> str:
             lines.append(f"  - {letter}. {text}")
 
     lines.append(f"- **réponse** : {q['réponse']}")
-    lines.append(f"- **source** : {q['source']}")
+
+    if "source" in q:
+        lines.append(f"- **source** : {q['source']}")
 
     return "\n".join(lines)
 

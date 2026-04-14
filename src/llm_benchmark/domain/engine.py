@@ -8,7 +8,7 @@ scoring, and metric collection, then aggregates results into RunResult.
 from __future__ import annotations
 
 import uuid
-from datetime import datetime, timezone
+from datetime import datetime
 from typing import Any
 
 from llm_benchmark.domain.entities import (

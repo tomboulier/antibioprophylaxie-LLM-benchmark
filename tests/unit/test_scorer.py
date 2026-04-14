@@ -9,7 +9,6 @@ from llm_benchmark.domain.value_objects import (
     MCQChoices,
     QuestionId,
     QuestionType,
-    Source,
 )
 
 # ---------------------------------------------------------------------------
@@ -17,7 +16,7 @@ from llm_benchmark.domain.value_objects import (
 # ---------------------------------------------------------------------------
 
 
-def make_open_question(expected_answer: str, source: Source | None = None):
+def make_open_question(expected_answer: str):
     """Build a minimal open Question for testing."""
     from llm_benchmark.domain.entities import Question
 
@@ -26,11 +25,10 @@ def make_open_question(expected_answer: str, source: Source | None = None):
         question_type=QuestionType.OPEN,
         question_text="Which antibiotic?",
         expected_answer=expected_answer,
-        source=source,
     )
 
 
-def make_mcq_question(expected_answer: str, source: Source | None = None):
+def make_mcq_question(expected_answer: str):
     """Build a minimal MCQ Question for testing."""
     from llm_benchmark.domain.entities import Question
 
@@ -40,7 +38,6 @@ def make_mcq_question(expected_answer: str, source: Source | None = None):
         question_text="Which antibiotic?",
         expected_answer=expected_answer,
         choices=MCQChoices({"A": "Amoxicillin", "B": "Cefazolin", "C": "Clindamycin", "D": "None"}),
-        source=source,
     )
 
 
@@ -237,18 +234,9 @@ class TestSourcingScorer:
 
         return SourcingScorer()
 
-    def test_source_present_and_correct(self, scorer):
-        """Response contains 'SFAR 2024' and question source is 'SFAR 2024' → present=True, correct=True."""
-        question = make_open_question("Céfazoline", source=Source("SFAR 2024"))
-        result = scorer.score(
-            question, "Selon les recommandations SFAR 2024, la réponse est Céfazoline."
-        )
-        assert result.is_sourcing_present is True
-        assert result.is_sourcing_correct is True
-
-    def test_source_present_but_incorrect(self, scorer):
-        """Response contains 'SFAR 2024' but question source is 'autre' → present=True, correct=False."""
-        question = make_open_question("Céfazoline", source=Source("autre"))
+    def test_source_present_detected(self, scorer):
+        """Response contains a source reference → present=True."""
+        question = make_open_question("Céfazoline")
         result = scorer.score(
             question, "Selon les recommandations SFAR 2024, la réponse est Céfazoline."
         )
@@ -257,24 +245,16 @@ class TestSourcingScorer:
 
     def test_no_source_reference_in_response(self, scorer):
         """Response has no source reference → present=False, correct=False."""
-        question = make_open_question("Céfazoline", source=Source("SFAR 2024"))
+        question = make_open_question("Céfazoline")
         result = scorer.score(question, "Céfazoline")
         assert result.is_sourcing_present is False
-        assert result.is_sourcing_correct is False
-
-    def test_question_has_no_source_only_checks_presence(self, scorer):
-        """Question has no source (source=None) → only check presence, not correctness."""
-        question = make_open_question("Céfazoline", source=None)
-        result = scorer.score(question, "Selon SFAR 2024, la réponse est Céfazoline.")
-        # When source is None, we can only check presence heuristically
-        # is_sourcing_correct should be False (no expected source to match against)
         assert result.is_sourcing_correct is False
 
     def test_returns_score_result(self, scorer):
         """score() returns a ScoreResult instance."""
         from llm_benchmark.domain.entities import ScoreResult
 
-        question = make_open_question("Céfazoline", source=Source("SFAR 2024"))
+        question = make_open_question("Céfazoline")
         result = scorer.score(question, "Céfazoline")
         assert isinstance(result, ScoreResult)
 
@@ -325,7 +305,7 @@ class TestScorerRegistry:
 
     def test_score_includes_sourcing_fields(self, registry):
         """ScoreResult from registry includes sourcing fields."""
-        question = make_open_question("Céfazoline", source=Source("SFAR 2024"))
+        question = make_open_question("Céfazoline")
         result = registry.score(question, "Selon SFAR 2024, Céfazoline.")
         assert hasattr(result, "is_sourcing_present")
         assert hasattr(result, "is_sourcing_correct")

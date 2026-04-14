@@ -44,13 +44,14 @@ def parse_benchmark(text: str) -> list[dict]:
     for block in blocks:
         if not block.strip():
             continue
-        title_match = re.match(r"(Q\d+)\s*[—–-]\s*(.+)", block.split("\n")[0])
+        title_match = re.match(r"(Q\d+)\s*[—–-]+\s*(.+)", block.split("\n")[0])
         if not title_match:
             continue
 
         qid = title_match.group(1)
+        titre = title_match.group(2).strip()
 
-        q: dict = {"id": qid}
+        q: dict = {"id": qid, "titre": titre}
 
         # Parser les champs "- **clé** : valeur" ([ \t] évite de traverser les \n)
         for match in re.finditer(r"^- \*\*(\w+(?:[- ]\w+)*)\*\*[ \t]*:[ \t]*(.+)$", block, re.MULTILINE):

@@ -152,7 +152,7 @@ def test_loaded_dataset_has_correct_fields(tmp_path):
 # ---------------------------------------------------------------------------
 
 
-REQUIRED_QUESTION_FIELDS = ["id", "type", "question", "réponse", "source"]
+REQUIRED_QUESTION_FIELDS = ["id", "type", "question", "réponse"]
 
 
 @pytest.mark.parametrize("missing_field", REQUIRED_QUESTION_FIELDS)
@@ -181,7 +181,7 @@ def test_reject_dataset_collects_all_errors(tmp_path):
     q1 = make_open_question_dict("Q01")
     del q1["réponse"]
     q2 = make_open_question_dict("Q02")
-    del q2["source"]
+    del q2["type"]
     data = make_dataset_dict([q1, q2])
     path = write_dataset_file(tmp_path, data)
 

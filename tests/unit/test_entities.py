@@ -55,21 +55,7 @@ def test_question_open_construction():
     assert question.question_type == QuestionType.OPEN
     assert question.question_text == "What is the recommended antibiotic?"
     assert question.expected_answer == "amoxicillin"
-    assert question.source is None
     assert question.choices is None
-
-
-def test_question_open_with_source():
-    from llm_benchmark.domain.entities import Question
-
-    question = Question(
-        id=QuestionId("q-003"),
-        question_type=QuestionType.OPEN,
-        question_text="What is the dose?",
-        expected_answer="2g",
-        source=Source("SFAR-2024"),
-    )
-    assert question.source == Source("SFAR-2024")
 
 
 def test_question_open_choices_not_required():
@@ -101,20 +87,6 @@ def test_question_mcq_missing_choices_raises():
             expected_answer="B",
             choices=None,
         )
-
-
-def test_question_mcq_with_source():
-    from llm_benchmark.domain.entities import Question
-
-    question = Question(
-        id=QuestionId("q-005"),
-        question_type=QuestionType.MCQ,
-        question_text="Which antibiotic?",
-        expected_answer="A",
-        choices=MCQChoices({"A": "amoxicillin", "B": "cefazolin"}),
-        source=Source("SFAR-2024"),
-    )
-    assert question.source == Source("SFAR-2024")
 
 
 # ---------------------------------------------------------------------------

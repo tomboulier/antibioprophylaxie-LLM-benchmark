@@ -24,98 +24,84 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **type** : open
 - **question** : Quelle molécule d'antibioprophylaxie recommandez-vous pour une prothèse totale de hanche ?
 - **réponse** : Céfazoline
-- **source** : ortho-prog-mi-prothese-hanche-genou
 
-### Q02 -- Faut-il prescrire une antibioprophylaxie pour une 
+### Q02 -- Faut-il prescrire une antibioprophylaxie pour une
 
 - **type** : open
 - **question** : Faut-il prescrire une antibioprophylaxie pour une arthroscopie diagnostique du genou sans mise en place de matériel ?
 - **réponse** : Non
-- **source** : ortho-prog-mi-arthroscopie-sans-materiel
 
 ### Q03 -- Un patient allergique aux bêtalactamines doit béné
 
 - **type** : open
 - **question** : Un patient allergique aux bêtalactamines doit bénéficier d'une prothèse de hanche. Quelle molécule en première intention ?
 - **réponse** : Clindamycine
-- **source** : ortho-prog-mi-prothese-hanche-genou
 
 ### Q04 -- Pour une prothèse de hanche par voie antérieure ch
 
 - **type** : open
 - **question** : Pour une prothèse de hanche par voie antérieure chez un patient allergique aux bêtalactamines, faut-il préférer la clindamycine ou la vancomycine ?
 - **réponse** : Vancomycine
-- **source** : ortho-prog-mi-prothese-hanche-genou (note)
 
 ### Q05 -- Quelle molécule d'antibioprophylaxie pour une frac
 
 - **type** : open
 - **question** : Quelle molécule d'antibioprophylaxie pour une fracture ouverte de jambe Gustilo 2 ?
 - **réponse** : Amoxicilline/Clavulanate
-- **source** : trauma-fracture-ouverte-gustilo-2-3
 
 ### Q06 -- Faut-il une antibioprophylaxie pour la pose d'un f
 
 - **type** : open
 - **question** : Faut-il une antibioprophylaxie pour la pose d'un fixateur externe sur une fracture fermée ?
 - **réponse** : Non
-- **source** : trauma-fracture-fermee-fixateur-externe
 
 ### Q07 -- Quelle molécule d'antibioprophylaxie pour une arth
 
 - **type** : open
 - **question** : Quelle molécule d'antibioprophylaxie pour une arthrodèse lombaire instrumentée en un temps ?
 - **réponse** : Céfazoline
-- **source** : ortho-prog-rachis-instrumentee-1-temps
 
-### Q08 -- Faut-il une antibioprophylaxie pour une chirurgie 
+### Q08 -- Faut-il une antibioprophylaxie pour une chirurgie
 
 - **type** : open
 - **question** : Faut-il une antibioprophylaxie pour une chirurgie du rachis sans pose de matériel (par ex. hernie discale) ?
 - **réponse** : Non
-- **source** : ortho-prog-rachis-sans-materiel
 
 ### Q09 -- Quelle molécule d'antibioprophylaxie pour le parag
 
 - **type** : open
 - **question** : Quelle molécule d'antibioprophylaxie pour le parage chirurgical d'une morsure ?
 - **réponse** : Amoxicilline/Clavulanate
-- **source** : trauma-morsure
 
 ### Q10 -- Quelle molécule d'antibioprophylaxie pour un écras
 
 - **type** : open
 - **question** : Quelle molécule d'antibioprophylaxie pour un écrasement complexe de la main nécessitant une chirurgie de plus de 2 heures ?
 - **réponse** : Amoxicilline/Clavulanate
-- **source** : trauma-main-complexe
 
 ### Q11 -- Quelle molécule d'antibioprophylaxie pour une plai
 
 - **type** : open
 - **question** : Quelle molécule d'antibioprophylaxie pour une plaie de cuisse par accident agricole, susceptible d'être contaminée par des germes telluriques ?
 - **réponse** : Amoxicilline/Clavulanate
-- **source** : trauma-plaie-contaminee
 
 ### Q12 -- Faut-il une antibioprophylaxie pour le parage d'un
 
 - **type** : open
 - **question** : Faut-il une antibioprophylaxie pour le parage d'une plaie simple du mollet ?
 - **réponse** : Non
-- **source** : trauma-plaie-simple
 
 ### Q13 -- Un patient allergique aux pénicillines présente un
 
 - **type** : open
 - **question** : Un patient allergique aux pénicillines présente une fracture ouverte Gustilo 3. Quelle(s) molécule(s) d'antibioprophylaxie ?
 - **réponse** : Clindamycine + Gentamicine
-- **source** : trauma-fracture-ouverte-gustilo-2-3
 
-### Q14 -- Faut-il une antibioprophylaxie pour l'ablation de 
+### Q14 -- Faut-il une antibioprophylaxie pour l'ablation de
 
 - **type** : open
 - **question** : Faut-il une antibioprophylaxie pour l'ablation de matériel d'ostéosynthèse au membre inférieur ?
 - **réponse** : Non
-- **source** : ortho-prog-mi-ablation-materiel
 
 ---
 
@@ -131,7 +117,6 @@ Pour les QCM, une seule réponse correcte (lettre).
   - C. Clindamycine
   - D. Vancomycine
 - **réponse** : B
-- **source** : ortho-prog-mi-prothese-hanche-genou
 
 ### Q16 -- Quelle est la dose initiale de Céfazoline recomman
 
@@ -143,7 +128,6 @@ Pour les QCM, une seule réponse correcte (lettre).
   - C. 3g IVL
   - D. 20 mg/kg IVL
 - **réponse** : B
-- **source** : ortho-prog-mi-prothese-hanche-genou
 
 ### Q17 -- Parmi ces interventions, laquelle ne nécessite PAS
 
@@ -155,7 +139,6 @@ Pour les QCM, une seule réponse correcte (lettre).
   - C. Ablation de matériel d'ostéosynthèse du fémur
   - D. Arthroscopie du genou avec pose d'ancre
 - **réponse** : C
-- **source** : ortho-prog-mi-ablation-materiel
 
 ### Q18 -- En cas d'allergie aux bêtalactamines, quelle est l
 
@@ -167,7 +150,6 @@ Pour les QCM, une seule réponse correcte (lettre).
   - C. Clindamycine
   - D. Métronidazole
 - **réponse** : C
-- **source** : ortho-prog-mi-prothese-hanche-genou
 
 ### Q19 -- À partir de quel stade de Gustilo la molécule d'an
 
@@ -179,7 +161,6 @@ Pour les QCM, une seule réponse correcte (lettre).
   - C. Gustilo 3
   - D. Pas de changement, c'est toujours la Céfazoline
 - **réponse** : B
-- **source** : trauma-fracture-ouverte-gustilo-1, trauma-fracture-ouverte-gustilo-2-3
 
 ### Q20 -- À quel intervalle doit-on réinjecter l'Amoxicillin
 
@@ -191,7 +172,6 @@ Pour les QCM, une seule réponse correcte (lettre).
   - C. Toutes les 6h
   - D. Pas de réinjection
 - **réponse** : A
-- **source** : trauma-fracture-ouverte-gustilo-2-3
 
 ### Q21 -- Un patient se présente avec une plaie de la main p
 
@@ -203,7 +183,6 @@ Pour les QCM, une seule réponse correcte (lettre).
   - C. Pas d'antibioprophylaxie recommandée
   - D. Clindamycine 900mg IVL
 - **réponse** : C
-- **source** : trauma-main-plaie-contaminee
 
 ### Q22 -- Quelle est l'alternative en cas d'allergie aux pén
 
@@ -215,7 +194,6 @@ Pour les QCM, une seule réponse correcte (lettre).
   - C. Céfazoline + Gentamicine
   - D. Clindamycine + Gentamicine
 - **réponse** : C
-- **source** : trauma-main-complexe
 
 ### Q23 -- Deux patients doivent bénéficier d'une arthroscopi
 
@@ -227,7 +205,6 @@ Pour les QCM, une seule réponse correcte (lettre).
   - C. Pas d'antibioprophylaxie pour les deux
   - D. Antibioprophylaxie uniquement pour celui sans matériel
 - **réponse** : B
-- **source** : ortho-prog-mi-arthroscopie-avec-materiel, ortho-prog-mi-arthroscopie-sans-materiel
 
 ### Q24 -- Quelle antibioprophylaxie pour une appendicectomie
 
@@ -239,4 +216,3 @@ Pour les QCM, une seule réponse correcte (lettre).
   - C. Pas d'antibioprophylaxie recommandée
   - D. Hors périmètre de ces recommandations
 - **réponse** : D
-- **source** : aucune (chirurgie digestive)

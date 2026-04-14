@@ -22,7 +22,7 @@ from llm_benchmark.domain.value_objects import (
 _REQUIRED_DATASET_FIELDS = ("id", "version", "source", "scope", "questions")
 
 # Required fields for every question, regardless of type.
-_REQUIRED_QUESTION_FIELDS = ("id", "type", "question", "réponse", "source")
+_REQUIRED_QUESTION_FIELDS = ("id", "type", "question", "réponse")
 
 # Mapping from JSON string to QuestionType enum value.
 _QUESTION_TYPE_MAP: dict[str, QuestionType] = {
@@ -165,6 +165,5 @@ def _validate_and_build_question(
         question_type=question_type,
         question_text=question_dict["question"],
         expected_answer=question_dict["réponse"],
-        source=Source(question_dict["source"]),
         choices=choices,
     )

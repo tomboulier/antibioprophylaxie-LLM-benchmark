@@ -129,16 +129,7 @@ class SourcingScorer:
         normalized_actual = normalize(actual)
 
         is_sourcing_present = self._detect_any_reference(normalized_actual)
-
-        if question.source is not None and is_sourcing_present:
-            source_words = [
-                word
-                for word in question.source.value.lower().split()
-                if len(word) >= self._MIN_WORD_LENGTH
-            ]
-            is_sourcing_correct = any(word in normalized_actual for word in source_words)
-        else:
-            is_sourcing_correct = False
+        is_sourcing_correct = False
 
         return ScoreResult(
             is_correct=False,
