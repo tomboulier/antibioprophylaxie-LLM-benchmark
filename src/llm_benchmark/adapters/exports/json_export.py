@@ -59,7 +59,7 @@ class JsonExportAdapter(ExportPort):
         str
             Filename of the form ``{YYYYMMDD_HHMMSS}_{model_id}_{approach_id}.json``.
         """
-        timestamp_str = result.timestamp.strftime("%Y%m%d_%H%M%S")
+        timestamp_str = result.timestamp.astimezone().strftime("%Y%m%d_%H%M%S")
         safe_model = result.model_id.value.replace("/", "_").replace("\\", "_")
         safe_approach = result.approach_id.value.replace("/", "_").replace("\\", "_")
         return f"{timestamp_str}_{safe_model}_{safe_approach}.json"

@@ -16,7 +16,7 @@ Comparer **5 systèmes** pour déterminer lequel est "meilleur" pour répondre a
 
 ## Données
 
-- **Dataset de test**: 25 questions avec réponses attendues (`research/benchmark.json`)
+- **Dataset de test**: 24 questions avec réponses attendues (`datasets/sfar_antibioprophylaxie/benchmark.json`)
 - **Source**: RFE SFAR 2024 (V2.0 du 22/05/2024)
 - **Périmètre**: Chirurgie orthopédique + Traumatologie (47 interventions)
 - **Auteur initial**: Claude (à valider/corriger par un MD)
@@ -38,50 +38,54 @@ cp .env.example .env
 
 ### 2. Préparer les questions
 
-Si vous éditez `research/benchmark.md`:
+Si vous éditez `datasets/sfar_antibioprophylaxie/benchmark.md` :
 
 ```bash
-uv run python scripts/benchmark_md_to_json.py
+uv run python datasets/sfar_antibioprophylaxie/md_to_json.py
 ```
 
 ### 3. Lancer le benchmark
 
 ```bash
-# Un modèle
-uv run python scripts/run_benchmark.py --model claude-sonnet
+# Pipeline complet (tous les modèles activés, résultats + figures)
+uv run llm-benchmark run
 
-# Plusieurs modèles (comparaison)
-uv run python scripts/run_benchmark.py -m claude-sonnet -m gpt-4o -m mistral-large
+# Modèle(s) spécifique(s)
+uv run llm-benchmark run -m gpt-4o -m mistral-small-latest
+
+# Questions spécifiques
+uv run llm-benchmark run -q Q01,Q05,Q16
 
 # Voir les modèles disponibles
-uv run python scripts/run_benchmark.py --list-models
+uv run llm-benchmark list models
 ```
 
-Résultats: `research/results/<model>_<timestamp>.json`
+Résultats : `research/results/` (JSON) et `research/figures/` (PNG).
 
-### 4. Analyser
-
-```bash
-# (À implémenter) 
-uv run python scripts/eval_results.py --compare gpt-4o claude-sonnet
-```
+Les modèles activés par défaut se configurent dans `config/models.yaml` (champ `enabled`).
 
 ## Structure
 
 ```
+src/llm_benchmark/
+├── cli/main.py                 ← Point d'entrée CLI
+├── usecases/run_experiment.py  ← Pipeline complet (use case)
+├── domain/                     ← Entités, engine, scorer
+├── adapters/                   ← LLM (LiteLLM), exports (JSON, figures)
+└── ports/                      ← Interfaces abstraites
+
+config/
+└── models.yaml                 ← Registry des modèles
+
+datasets/sfar_antibioprophylaxie/
+├── benchmark.md                ← Questions (source de vérité)
+├── benchmark.json              ← Questions compilées
+├── md_to_json.py               ← Convertir MD → JSON
+└── json_to_md.py               ← Convertir JSON → MD
+
 research/
-├── benchmark.md       ← Questions en Markdown (source de vérité)
-├── benchmark.json     ← Questions compilées (généré)
-└── results/           ← Résultats (JSON + CSV)
-
-scripts/
-├── benchmark_md_to_json.py     ← Parser
-├── run_benchmark.py            ← Orchestrateur
-└── eval_results.py             ← Analyseur (TBD)
-
-docs/
-├── s-019.md                    ← Story file
-└── findings-report.md          ← Résultats finaux (TBD)
+├── results/                    ← Résultats JSON par run
+└── figures/                    ← Figures PNG générées
 ```
 
 ## Métriques

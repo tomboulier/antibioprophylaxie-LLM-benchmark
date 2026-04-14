@@ -11,27 +11,32 @@ models:
     price_per_input_token: 0.000003
     price_per_output_token: 0.000015
     currency: USD
+    enabled: true
 
   - id: gpt-4o
     litellm_model: openai/gpt-4o
     price_per_input_token: 0.0000025
     price_per_output_token: 0.00001
     currency: USD
+    enabled: true
 
   - id: gpt-4o-mini
     litellm_model: openai/gpt-4o-mini
     price_per_input_token: 0.00000015
     price_per_output_token: 0.0000006
     currency: USD
+    enabled: false
 
   - id: mistral-large-latest
     litellm_model: mistral/mistral-large-latest
     price_per_input_token: 0.000002
     price_per_output_token: 0.000006
     currency: USD
+    enabled: false
 
   - id: mistral-small-latest
     litellm_model: mistral/mistral-small-latest
     price_per_input_token: 0.0000002
     price_per_output_token: 0.0000006
     currency: USD
+    enabled: true

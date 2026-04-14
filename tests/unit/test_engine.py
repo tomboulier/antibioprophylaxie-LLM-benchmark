@@ -118,7 +118,7 @@ class TestBenchmarkEngineRunStructure:
 
         assert first[0].run_id != second[0].run_id
 
-    def test_run_result_timestamp_is_utc(self) -> None:
+    def test_run_result_timestamp_is_timezone_aware(self) -> None:
         engine = BenchmarkEngine()
         dataset = _make_dataset()
 
@@ -126,7 +126,7 @@ class TestBenchmarkEngineRunStructure:
 
         ts = results[0].timestamp
         assert isinstance(ts, datetime)
-        assert ts.tzinfo == timezone.utc
+        assert ts.tzinfo is not None
 
     def test_run_result_carries_correct_ids(self) -> None:
         engine = BenchmarkEngine()

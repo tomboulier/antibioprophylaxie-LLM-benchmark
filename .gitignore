@@ -43,8 +43,13 @@ htmlcov/
 research/results/*.json
 research/results/*.csv
 !research/results/.gitkeep
+research/figures/
 
 .DS_Store
 .remember/
 
 *.lock
+
+.claude/
+
+*/__marimo__/*

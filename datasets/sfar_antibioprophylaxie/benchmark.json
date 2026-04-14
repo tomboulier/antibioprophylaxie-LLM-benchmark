@@ -78,167 +78,160 @@
     {
       "id": "Q11",
       "type": "open",
-      "question": "Quelle antibioprophylaxie pour une cholécystectomie par coelioscopie ?",
-      "réponse": "Hors périmètre",
-      "source": "aucune (chirurgie digestive, hors ortho/trauma)"
-    },
-    {
-      "id": "Q12",
-      "type": "open",
       "question": "Quelle molécule d'antibioprophylaxie pour une plaie de cuisse par accident agricole, susceptible d'être contaminée par des germes telluriques ?",
       "réponse": "Amoxicilline/Clavulanate",
       "source": "trauma-plaie-contaminee"
     },
     {
-      "id": "Q13",
+      "id": "Q12",
       "type": "open",
       "question": "Faut-il une antibioprophylaxie pour le parage d'une plaie simple du mollet ?",
       "réponse": "Non",
       "source": "trauma-plaie-simple"
     },
     {
-      "id": "Q14",
+      "id": "Q13",
       "type": "open",
       "question": "Un patient allergique aux pénicillines présente une fracture ouverte Gustilo 3. Quelle(s) molécule(s) d'antibioprophylaxie ?",
       "réponse": "Clindamycine + Gentamicine",
       "source": "trauma-fracture-ouverte-gustilo-2-3"
     },
     {
-      "id": "Q15",
+      "id": "Q14",
       "type": "open",
       "question": "Faut-il une antibioprophylaxie pour l'ablation de matériel d'ostéosynthèse au membre inférieur ?",
       "réponse": "Non",
       "source": "ortho-prog-mi-ablation-materiel"
     },
     {
-      "id": "Q16",
+      "id": "Q15",
       "type": "mcq",
       "question": "Quelle molécule est recommandée en première intention pour l'antibioprophylaxie d'une prothèse totale de genou ?",
+      "réponse": "B",
+      "source": "ortho-prog-mi-prothese-hanche-genou",
       "choices": {
         "A": "Amoxicilline/Clavulanate",
         "B": "Céfazoline",
         "C": "Clindamycine",
         "D": "Vancomycine"
-      },
-      "réponse": "B",
-      "source": "ortho-prog-mi-prothese-hanche-genou"
+      }
     },
     {
-      "id": "Q17",
+      "id": "Q16",
       "type": "mcq",
       "question": "Quelle est la dose initiale de Céfazoline recommandée en antibioprophylaxie en chirurgie orthopédique ?",
+      "réponse": "B",
+      "source": "ortho-prog-mi-prothese-hanche-genou",
       "choices": {
         "A": "1g IVL",
         "B": "2g IVL",
         "C": "3g IVL",
         "D": "20 mg/kg IVL"
-      },
-      "réponse": "B",
-      "source": "ortho-prog-mi-prothese-hanche-genou"
+      }
     },
     {
-      "id": "Q18",
+      "id": "Q17",
       "type": "mcq",
       "question": "Parmi ces interventions, laquelle ne nécessite PAS d'antibioprophylaxie ?",
+      "réponse": "C",
+      "source": "ortho-prog-mi-ablation-materiel",
       "choices": {
         "A": "Prothèse d'épaule",
         "B": "Arthrodèse lombaire instrumentée",
         "C": "Ablation de matériel d'ostéosynthèse du fémur",
         "D": "Arthroscopie du genou avec pose d'ancre"
-      },
-      "réponse": "C",
-      "source": "ortho-prog-mi-ablation-materiel"
+      }
     },
     {
-      "id": "Q19",
+      "id": "Q18",
       "type": "mcq",
       "question": "En cas d'allergie aux bêtalactamines, quelle est l'alternative de première intention pour l'antibioprophylaxie d'une prothèse de hanche ?",
+      "réponse": "C",
+      "source": "ortho-prog-mi-prothese-hanche-genou",
       "choices": {
         "A": "Gentamicine",
         "B": "Vancomycine",
         "C": "Clindamycine",
         "D": "Métronidazole"
-      },
-      "réponse": "C",
-      "source": "ortho-prog-mi-prothese-hanche-genou"
+      }
     },
     {
-      "id": "Q20",
+      "id": "Q19",
       "type": "mcq",
       "question": "À partir de quel stade de Gustilo la molécule d'antibioprophylaxie change-t-elle (passage de la Céfazoline à l'Amoxicilline/Clavulanate) ?",
+      "réponse": "B",
+      "source": "trauma-fracture-ouverte-gustilo-1, trauma-fracture-ouverte-gustilo-2-3",
       "choices": {
         "A": "Gustilo 1",
         "B": "Gustilo 2",
         "C": "Gustilo 3",
         "D": "Pas de changement, c'est toujours la Céfazoline"
-      },
-      "réponse": "B",
-      "source": "trauma-fracture-ouverte-gustilo-1, trauma-fracture-ouverte-gustilo-2-3"
+      }
     },
     {
-      "id": "Q21",
+      "id": "Q20",
       "type": "mcq",
       "question": "À quel intervalle doit-on réinjecter l'Amoxicilline/Clavulanate en antibioprophylaxie ?",
+      "réponse": "A",
+      "source": "trauma-fracture-ouverte-gustilo-2-3",
       "choices": {
         "A": "Toutes les 2h",
         "B": "Toutes les 4h",
         "C": "Toutes les 6h",
         "D": "Pas de réinjection"
-      },
-      "réponse": "A",
-      "source": "trauma-fracture-ouverte-gustilo-2-3"
+      }
     },
     {
-      "id": "Q22",
+      "id": "Q21",
       "type": "mcq",
       "question": "Un patient se présente avec une plaie de la main par accident de jardinage, susceptible de contamination tellurique. Quelle est la recommandation ?",
+      "réponse": "C",
+      "source": "trauma-main-plaie-contaminee",
       "choices": {
         "A": "Céfazoline 2g IVL",
         "B": "Amoxicilline/Clavulanate 2g IVL",
         "C": "Pas d'antibioprophylaxie recommandée",
         "D": "Clindamycine 900mg IVL"
-      },
-      "réponse": "C",
-      "source": "trauma-main-plaie-contaminee"
+      }
     },
     {
-      "id": "Q23",
+      "id": "Q22",
       "type": "mcq",
       "question": "Quelle est l'alternative en cas d'allergie aux pénicillines pour un traumatisme complexe de la main (écrasement) ?",
+      "réponse": "C",
+      "source": "trauma-main-complexe",
       "choices": {
         "A": "Clindamycine seule",
         "B": "Vancomycine seule",
         "C": "Céfazoline + Gentamicine",
         "D": "Clindamycine + Gentamicine"
-      },
-      "réponse": "C",
-      "source": "trauma-main-complexe"
+      }
     },
     {
-      "id": "Q24",
-      "type": "mcq",
-      "question": "Quelle antibioprophylaxie pour une appendicectomie ?",
-      "choices": {
-        "A": "Céfazoline 2g IVL",
-        "B": "Amoxicilline/Clavulanate 2g IVL",
-        "C": "Pas d'antibioprophylaxie recommandée",
-        "D": "Hors périmètre de ces recommandations"
-      },
-      "réponse": "D",
-      "source": "aucune (chirurgie digestive)"
-    },
-    {
-      "id": "Q25",
+      "id": "Q23",
       "type": "mcq",
       "question": "Deux patients doivent bénéficier d'une arthroscopie de genou : l'un avec mise en place d'une ancre, l'autre sans matériel. Quelle est la bonne conduite ?",
+      "réponse": "B",
+      "source": "ortho-prog-mi-arthroscopie-avec-materiel, ortho-prog-mi-arthroscopie-sans-materiel",
       "choices": {
         "A": "Antibioprophylaxie pour les deux",
         "B": "Antibioprophylaxie uniquement pour celui avec matériel",
         "C": "Pas d'antibioprophylaxie pour les deux",
         "D": "Antibioprophylaxie uniquement pour celui sans matériel"
-      },
-      "réponse": "B",
-      "source": "ortho-prog-mi-arthroscopie-avec-materiel, ortho-prog-mi-arthroscopie-sans-materiel"
+      }
+    },
+    {
+      "id": "Q24",
+      "type": "mcq",
+      "question": "Quelle antibioprophylaxie pour une appendicectomie ?",
+      "réponse": "D",
+      "source": "aucune (chirurgie digestive)",
+      "choices": {
+        "A": "Céfazoline 2g IVL",
+        "B": "Amoxicilline/Clavulanate 2g IVL",
+        "C": "Pas d'antibioprophylaxie recommandée",
+        "D": "Hors périmètre de ces recommandations"
+      }
     }
   ]
 }
