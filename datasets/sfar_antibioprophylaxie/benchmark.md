@@ -3,9 +3,9 @@
 > Jeu de questions standardisé pour évaluer tout système (RAG, MCP, chatbot, LLM)
 > sur les recommandations d'antibioprophylaxie chirurgicale (RFE SFAR 2024).
 >
-> **Source** : RFE SFAR 2024 (V2.0 du 22/05/2024)
-> **Auteur initial** : Claude (à valider/corriger par un médecin)
-> **Date** : 2026-03-11
+> **Source** : RFE SFAR 2024 ([V2.0 du 22/05/2024](https://sfar.org/download/antibioprophylaxie-en-chirurgie-et-medecine-interventionnelle/?wpdmdl=68362&refresh=69de933379d901776194355))
+> **Auteur initial** : Thomas Boulier
+> **Date** : 2026-04-14
 
 ## Format des réponses attendues
 
