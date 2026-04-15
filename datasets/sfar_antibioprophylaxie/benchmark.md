@@ -781,7 +781,7 @@ Pour les QCM, une seule réponse correcte (lettre).
 ### Cataracte molécule
 
 - **type** : qcm
-- **question** : Quelle molécule est recommandée pour l'antibioprophylaxie de la chirurgie de la cataracte ?
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la chirurgie de la cataracte ?
 - **choix** :
   - A. Céfazoline IV
   - B. Céfuroxime intracamérulaire
@@ -847,7 +847,7 @@ Pour les QCM, une seule réponse correcte (lettre).
 ### Hystérectomie voie d'abord et molécule
 
 - **type** : qcm
-- **question** : Quelle molécule est recommandée pour l'antibioprophylaxie d'une hystérectomie totale par voie coelioscopique (avec annexectomie) ?
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une hystérectomie totale par voie coelioscopique (avec annexectomie) ?
 - **choix** :
   - A. Céfazoline
   - B. Céfoxitine
@@ -915,7 +915,7 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **type** : qcm
 - **question** : Une cholécystectomie élective par coelioscopie est programmée. Dans quel cas une antibioprophylaxie est-elle recommandée ?
 - **choix** :
-  - A. Chez un patient de moins de 60 ans, sans comorbidité, pour vésicule lithiasique symptomatique sans cholecystite
+  - A. Chez un patient de moins de 60 ans, sans comorbidité, pour vésicule lithiasique symptomatique sans cholécystite
   - B. Chez un patient avec ictère et calcul de la voie biliaire principale
   - C. Une antibioprophylaxie est toujours recommandée quelle que soit la situation
   - D. Une antibioprophylaxie n'est jamais recommandée pour la voie coelioscopique
