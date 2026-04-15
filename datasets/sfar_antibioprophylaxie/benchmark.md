@@ -506,6 +506,192 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **question** : Quelle est la recommandation d'antibioprophylaxie pour un prélèvement d'ovocytes par voie transvaginale avec échoguidage (PMA) ?
 - **réponse** : Pas d'antibioprophylaxie
 
+### Oesophagectomie
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une oesophagectomie ?
+- **réponse** : Céfazoline
+
+### Sleeve gastrectomie
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une sleeve gastrectomie (chirurgie bariatrique) ?
+- **réponse** : Céfoxitine
+
+### Anneau gastrique
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la mise en place d'un anneau gastrique (chirurgie bariatrique) ?
+- **réponse** : Céfazoline
+
+### Résection intestin grêle
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une résection de l'intestin grêle par laparotomie ?
+- **réponse** : Céfoxitine
+
+### Appendicectomie programmée
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une appendicectomie programmée ?
+- **réponse** : Céfoxitine
+
+### Hémorroïdes
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des hémorroïdes ?
+- **réponse** : Métronidazole
+
+### Cholécystectomie coelioscopique haut risque
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une cholécystectomie élective par coelioscopie chez un patient de 82 ans ictérique, présentant un calcul dans la voie biliaire principale ?
+- **réponse** : Céfazoline
+
+### Cholécystectomie par laparotomie
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une cholécystectomie par laparotomie ?
+- **réponse** : Céfazoline
+
+### Kyste hydatique du foie
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie d'un kyste hydatique du foie ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Splénectomie
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une splénectomie programmée par laparotomie ?
+- **réponse** : Céfazoline
+
+### Pancréatectomie gauche
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une pancréatectomie gauche avec conservation de la rate ?
+- **réponse** : Céfazoline
+
+### DPC sans drainage biliaire préopératoire
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une duodéno-pancréatectomie céphalique (DPC) sans geste de drainage biliaire préopératoire ?
+- **réponse** : Céfoxitine
+
+### DPT avec drainage biliaire préopératoire
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une duodéno-pancréatectomie totale (DPT) pour ampullome avec antécédent de drainage biliaire ?
+- **réponse** : Pipéracilline/Tazobactam
+
+### Transplantation hépatique
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une transplantation hépatique ?
+- **réponse** : Céfoxitine
+
+### Hernie inguinale avec prothèse
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une cure de hernie inguinale avec pose de prothèse par coelioscopie ?
+- **réponse** : Céfazoline
+
+### Hernie aine sans prothèse
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une cure de hernie de l'aine sans prothèse ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Gastrostomie percutanée
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la pose d'une gastrostomie par voie transcutanée avec guidage endoscopique ?
+- **réponse** : Céfazoline
+
+### Coloscopie avec biopsie
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une coloscopie diagnostique avec biopsie ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### CPRE avec drainage complet
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une CPRE avec extraction de calculs biliaires et drainage biliaire complet satisfaisant ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Embolisation hépatique
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chimio-embolisation hépatique ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### RTUP
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une résection trans-urétrale de prostate (RTUP) ?
+- **réponse** : Céfazoline
+
+### Prostatectomie totale
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une prostatectomie totale ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Biopsie prostate transrectale
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour des biopsies de prostate par voie transrectale ?
+- **réponse** : Fosfomycine-trométamol
+
+### Biopsie prostate transpérinéale
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour des biopsies de prostate par voie transpérinéale ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Cystoscopie diagnostique
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une cystoscopie diagnostique ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Cystectomie sustrigonale
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une cystectomie sustrigonale totale ?
+- **réponse** : Céfoxitine
+
+### Prothèse pénienne
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la pose d'une prothèse pénienne ?
+- **réponse** : Céfazoline
+
+### Chirurgie scrotale sans prothèse
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie scrotale sans prothèse ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Urétéroscopie
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une urétéroscopie diagnostique ?
+- **réponse** : Céfazoline
+
+### Lithotritie extra-corporelle
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une lithotritie extra-corporelle ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Néphrolithotomie percutanée
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une néphrolithotomie percutanée ?
+- **réponse** : Céfazoline
+
 ---
 
 ## QCM
@@ -706,4 +892,59 @@ Pour les QCM, une seule réponse correcte (lettre).
   - B. Céfoxitine seule
   - C. Céfazoline + Métronidazole
   - D. Amoxicilline/Clavulanate
+- **réponse** : C
+
+### Bariatrique anneau vs sleeve
+
+- **type** : qcm
+- **question** : Concernant l'antibioprophylaxie en chirurgie bariatrique, quelle affirmation est correcte ?
+- **choix** :
+  - A. Anneau gastrique et sleeve gastrectomie utilisent la même molécule
+  - B. L'anneau gastrique nécessite de la céfazoline, la sleeve gastrectomie de la céfoxitine
+  - C. Aucune chirurgie bariatrique ne nécessite d'antibioprophylaxie
+  - D. Toute chirurgie bariatrique nécessite de la céfoxitine
+- **réponse** : B
+
+### Colectomie protocole ABP
+
+- **type** : qcm
+- **question** : Quel est le protocole d'antibioprophylaxie recommandé pour une colectomie programmée ?
+- **choix** :
+  - A. Céfoxitine IV le jour de la chirurgie uniquement
+  - B. Tobramycine + Métronidazole per os la veille, puis Céfoxitine IV le jour de la chirurgie
+  - C. Amoxicilline/Clavulanate IV le jour de la chirurgie uniquement
+  - D. Céfazoline IV le jour de la chirurgie + Métronidazole per os la veille
+- **réponse** : B
+
+### Cholécystectomie coelioscopique risque
+
+- **type** : qcm
+- **question** : Une cholécystectomie élective par coelioscopie est programmée. Dans quel cas une antibioprophylaxie est-elle recommandée ?
+- **choix** :
+  - A. Chez un patient de moins de 60 ans, sans comorbidité, pour vésicule lithiasique symptomatique sans cholecystite
+  - B. Chez un patient avec ictère et calcul de la voie biliaire principale
+  - C. Une antibioprophylaxie est toujours recommandée quelle que soit la situation
+  - D. Une antibioprophylaxie n'est jamais recommandée pour la voie coelioscopique
+- **réponse** : B
+
+### Biopsie prostate voie d'abord
+
+- **type** : qcm
+- **question** : Concernant l'antibioprophylaxie des biopsies de prostate, quelle affirmation est correcte ?
+- **choix** :
+  - A. Les deux voies (transrectale et transpérinéale) nécessitent une antibioprophylaxie
+  - B. Aucune des deux voies ne nécessite d'antibioprophylaxie
+  - C. Seule la voie transrectale nécessite une antibioprophylaxie (fosfomycine-trométamol)
+  - D. Seule la voie transpérinéale nécessite une antibioprophylaxie (céfazoline)
+- **réponse** : C
+
+### Hernie inguinale avec vs sans prothèse
+
+- **type** : qcm
+- **question** : Concernant l'antibioprophylaxie de la cure de hernie inguinale, quelle affirmation est correcte ?
+- **choix** :
+  - A. Une antibioprophylaxie est toujours recommandée, avec ou sans prothèse
+  - B. Une antibioprophylaxie n'est jamais recommandée, avec ou sans prothèse
+  - C. Une antibioprophylaxie est recommandée uniquement en cas de pose de prothèse
+  - D. Une antibioprophylaxie est recommandée uniquement en l'absence de prothèse
 - **réponse** : C
