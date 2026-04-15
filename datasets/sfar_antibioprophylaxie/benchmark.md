@@ -164,6 +164,96 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **question** : Quelle est la recommandation d'antibioprophylaxie pour une plaie cranio-cérébrale chez un patient allergique aux pénicillines ?
 - **réponse** : Triméthoprime/Sulfaméthoxazole
 
+### Amygdalectomie
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une amygdalectomie ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Thyroïdectomie totale
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une thyroïdectomie totale ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Chirurgie sinusienne polypose
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie sinusienne de polypose nasale ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Laryngectomie totale
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une laryngectomie totale (chirurgie carcinologique ORL sans reconstruction) ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Implant cochléaire
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la pose d'un implant cochléaire ?
+- **réponse** : Céfazoline
+
+### Trachéotomie chirurgicale
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une trachéotomie chirurgicale ?
+- **réponse** : Céfazoline
+
+### Trachéotomie percutanée
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une trachéotomie percutanée ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Chirurgie cataracte
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie de la cataracte ?
+- **réponse** : Céfuroxime
+
+### Chirurgie glaucome
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie du glaucome ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Traumatisme globe ouvert
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour un traumatisme à globe ouvert ?
+- **réponse** : Vancomycine + Ceftazidime
+
+### Chirurgie strabisme
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie du strabisme ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Extraction dent incluse
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour l'extraction d'une dent incluse ?
+- **réponse** : Amoxicilline
+
+### Fracture mandibule
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une fracture ouverte de mandibule ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Chirurgie orthognatique
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie orthognatique ?
+- **réponse** : Céfazoline
+
+### Carcinologique cervico-faciale allergie bêtalactamines
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie carcinologique cervico-faciale avec lambeau chez un patient allergique aux bêtalactamines ?
+- **réponse** : Clindamycine + Gentamicine
+
 ---
 
 ## QCM
@@ -243,4 +333,37 @@ Pour les QCM, une seule réponse correcte (lettre).
   - B. Chirurgie du canal lombaire étroit
   - C. Arthrodèse instrumentée en un temps
   - D. Ablation de matériel du rachis
+- **réponse** : C
+
+### ORL sans ABP
+
+- **type** : qcm
+- **question** : Parmi ces interventions ORL, laquelle ne nécessite PAS d'antibioprophylaxie ?
+- **choix** :
+  - A. Pose d'implant cochléaire
+  - B. Amygdalectomie
+  - C. Laryngectomie totale
+  - D. Trachéotomie chirurgicale
+- **réponse** : B
+
+### Cataracte molécule
+
+- **type** : qcm
+- **question** : Quelle molécule est recommandée pour l'antibioprophylaxie de la chirurgie de la cataracte ?
+- **choix** :
+  - A. Céfazoline IV
+  - B. Céfuroxime intracamérulaire
+  - C. Vancomycine intravitréenne
+  - D. Moxifloxacine en collyre
+- **réponse** : B
+
+### Trachéotomie chirurgicale vs percutanée
+
+- **type** : qcm
+- **question** : Concernant l'antibioprophylaxie des trachéotomies, quelle affirmation est correcte ?
+- **choix** :
+  - A. Une antibioprophylaxie est recommandée pour les deux types de trachéotomie
+  - B. Aucune antibioprophylaxie n'est recommandée, quel que soit le type
+  - C. Une antibioprophylaxie est recommandée uniquement pour la trachéotomie chirurgicale
+  - D. Une antibioprophylaxie est recommandée uniquement pour la trachéotomie percutanée
 - **réponse** : C
