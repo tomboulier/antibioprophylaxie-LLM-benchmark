@@ -23,7 +23,7 @@ Pour les QCM, une seule réponse correcte (lettre).
 ### PTH standard
 
 - **type** : open
-- **question** : Quelle molécule d'antibioprophylaxie recommandez-vous pour une prothèse totale de hanche ?
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une prothèse totale de hanche ?
 - **réponse** : Céfazoline
 
 ### Arthroscopie genou diagnostique
@@ -35,19 +35,19 @@ Pour les QCM, une seule réponse correcte (lettre).
 ### PTG allergie bêtalactamines
 
 - **type** : open
-- **question** : Un patient allergique aux bêtalactamines doit bénéficier d'une prothèse de genou. Quelle molécule en première intention ?
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une prothèse totale de genou chez un patient allergique aux bêtalactamines ?
 - **réponse** : Clindamycine
 
 ### PTH voie antérieure allergie
 
 - **type** : open
-- **question** : Quelle molécule d'antibioprophylaxie pour une prothèse de hanche par voie antérieure chez un patient allergique aux bêtalactamines ?
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une prothèse de hanche par voie antérieure chez un patient allergique aux bêtalactamines ?
 - **réponse** : Vancomycine
 
 ### Fracture ouverte Gustilo 2
 
 - **type** : open
-- **question** : Quelle molécule d'antibioprophylaxie pour une fracture ouverte de jambe Gustilo 2 ?
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une fracture ouverte de jambe Gustilo 2 ?
 - **réponse** : Amoxicilline/Clavulanate
 
 ### Fixateur externe fracture fermée
@@ -59,25 +59,25 @@ Pour les QCM, une seule réponse correcte (lettre).
 ### Arthrodèse lombaire instrumentée
 
 - **type** : open
-- **question** : Quelle molécule d'antibioprophylaxie pour une arthrodèse lombaire instrumentée en un temps ?
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une arthrodèse lombaire instrumentée en un temps ?
 - **réponse** : Céfazoline
 
 ### Parage morsure
 
 - **type** : open
-- **question** : Quelle molécule d'antibioprophylaxie pour le parage chirurgical d'une morsure ?
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour le parage chirurgical d'une morsure ?
 - **réponse** : Amoxicilline/Clavulanate
 
 ### Écrasement main > 2h
 
 - **type** : open
-- **question** : Quelle molécule d'antibioprophylaxie pour un écrasement complexe de la main nécessitant une chirurgie de plus de 2 heures ?
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour un écrasement complexe de la main nécessitant une chirurgie de plus de 2 heures ?
 - **réponse** : Amoxicilline/Clavulanate
 
 ### Plaie agricole cuisse
 
 - **type** : open
-- **question** : Quelle molécule d'antibioprophylaxie pour une plaie de cuisse par accident agricole, susceptible d'être contaminée par des germes telluriques ?
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une plaie de cuisse par accident agricole, susceptible d'être contaminée par des germes telluriques ?
 - **réponse** : Amoxicilline/Clavulanate
 
 ### Plaie simple mollet
@@ -89,7 +89,7 @@ Pour les QCM, une seule réponse correcte (lettre).
 ### Fracture ouverte Gustilo 3 allergie
 
 - **type** : open
-- **question** : Un patient allergique aux pénicillines présente une fracture ouverte Gustilo 3. Quelle(s) molécule(s) d'antibioprophylaxie ?
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une fracture ouverte Gustilo 3 chez un patient allergique aux pénicillines ?
 - **réponse** : Clindamycine + Gentamicine
 
 ### Ablation matériel ostéosynthèse MI
@@ -97,6 +97,72 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **type** : open
 - **question** : Quelle est la recommandation d'antibioprophylaxie pour l'ablation de matériel d'ostéosynthèse au membre inférieur ?
 - **réponse** : Pas d'antibioprophylaxie
+
+### Craniotomie standard
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une craniotomie ?
+- **réponse** : Céfazoline
+
+### Biopsie cérébrale
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une biopsie cérébrale ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### DVE
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la pose d'une dérivation ventriculaire externe (DVE) ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### DVP
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la pose d'une dérivation ventriculo-péritonéale (DVP) ?
+- **réponse** : Céfazoline
+
+### Plaie cranio-cérébrale
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une plaie cranio-cérébrale pénétrante ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Fracture base du crâne sans otorrhée
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une fracture de la base du crâne sans otorrhée ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Fracture base du crâne avec otorrhée
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une fracture de la base du crâne avec otorrhée ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Pose stimulateur cérébral
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la pose d'une électrode de stimulation cérébrale profonde ?
+- **réponse** : Céfazoline
+
+### Embolisation anévrysme cérébral
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour l'embolisation d'un anévrysme cérébral ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Craniotomie allergie bêtalactamines
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une craniotomie chez un patient allergique aux bêtalactamines ?
+- **réponse** : Clindamycine
+
+### Plaie cranio-cérébrale allergie pénicillines
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une plaie cranio-cérébrale chez un patient allergique aux pénicillines ?
+- **réponse** : Triméthoprime/Sulfaméthoxazole
 
 ---
 
@@ -155,4 +221,26 @@ Pour les QCM, une seule réponse correcte (lettre).
   - B. Amoxicilline/Clavulanate 2g IVL
   - C. Pas d'antibioprophylaxie recommandée
   - D. Clindamycine 900mg IVL
+- **réponse** : C
+
+### DVE vs DVP
+
+- **type** : qcm
+- **question** : Parmi ces actes neurochirurgicaux, lequel nécessite une antibioprophylaxie ?
+- **choix** :
+  - A. Dérivation ventriculaire externe (DVE)
+  - B. Biopsie cérébrale
+  - C. Dérivation ventriculo-péritonéale (DVP)
+  - D. Angiographie des artères cérébrales
+- **réponse** : C
+
+### Rachis avec vs sans matériel
+
+- **type** : qcm
+- **question** : Pour la chirurgie du rachis, dans quel cas une antibioprophylaxie est-elle recommandée ?
+- **choix** :
+  - A. Laminectomie sans pose de matériel
+  - B. Chirurgie du canal lombaire étroit
+  - C. Arthrodèse instrumentée en un temps
+  - D. Ablation de matériel du rachis
 - **réponse** : C
