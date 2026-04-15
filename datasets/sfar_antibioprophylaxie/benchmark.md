@@ -254,6 +254,78 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie carcinologique cervico-faciale avec lambeau chez un patient allergique aux bêtalactamines ?
 - **réponse** : Clindamycine + Gentamicine
 
+### Remplacement valvulaire sous CEC
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour un remplacement valvulaire aortique sous circulation extracorporelle (CEC) ?
+- **réponse** : Céfazoline
+
+### TAVI
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la pose d'une bioprothèse de valve aortique par voie transcutanée (TAVI) ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Pose pacemaker
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour l'implantation d'un stimulateur cardiaque (pacemaker) ?
+- **réponse** : Céfazoline
+
+### Ablation FA par cathéter
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une ablation de fibrillation atriale par cathéter (radiofréquence), chez un patient n'ayant pas de prothèse intracardiaque déjà implantée ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### ECMO percutanée
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la mise en place d'une ECMO percutanée (sans abord chirurgical) ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Endartériectomie carotidienne sans matériel
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une endartériectomie carotidienne sans mise en place de matériel ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Amputation de membre
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une amputation de membre (hors contexte septique) ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Chirurgie varices sans scarpa
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des varices sans abord chirurgical du scarpa ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Drainage thoracique
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la pose d'un drain thoracique ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Médiastinoscopie avec biopsies
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une médiastinoscopie avec biopsies ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Fibroscopie bronchique
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une fibroscopie bronchique avec lavage broncho-alvéolaire ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Œsophagectomie
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une œsophagectomie ?
+- **réponse** : Céfazoline
+
 ---
 
 ## QCM
@@ -366,4 +438,28 @@ Pour les QCM, une seule réponse correcte (lettre).
   - B. Aucune antibioprophylaxie n'est recommandée, quel que soit le type
   - C. Une antibioprophylaxie est recommandée uniquement pour la trachéotomie chirurgicale
   - D. Une antibioprophylaxie est recommandée uniquement pour la trachéotomie percutanée
+- **réponse** : C
+
+### Assistance circulatoire et ABP
+
+### Lobectomie pulmonaire molécule
+
+- **type** : qcm
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une lobectomie pulmonaire par thoracotomie ?
+- **choix** :
+  - A. Amoxicilline/Clavulanate uniquement
+  - B. Céfazoline uniquement
+  - C. Céfuroxime uniquement
+  - D. Amoxicilline/Clavulanate, Céfazoline ou Céfuroxime (au choix)
+- **réponse** : D
+
+### Carotide avec vs sans matériel
+
+- **type** : qcm
+- **question** : Concernant l'antibioprophylaxie de la chirurgie carotidienne, quelle affirmation est correcte ?
+- **choix** :
+  - A. Une antibioprophylaxie est toujours recommandée
+  - B. Une antibioprophylaxie n'est jamais recommandée
+  - C. Une antibioprophylaxie est recommandée uniquement en cas de mise en place de matériel
+  - D. Une antibioprophylaxie est recommandée uniquement en cas de reprise chirurgicale
 - **réponse** : C
