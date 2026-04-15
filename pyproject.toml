@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Benchmark pour évaluer différentes approches IA sur les recommandations d'antibioprophylaxie SFAR"
 readme = "README.md"
 requires-python = ">=3.12"
-authors = [{name = "Thomas Boulier", email = "thomas@example.com"}]
+authors = [{name = "Thomas Boulier"}]
 license = {text = "MIT"}
 
 dependencies = [
