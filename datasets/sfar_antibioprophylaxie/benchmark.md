@@ -326,6 +326,66 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **question** : Quelle est la recommandation d'antibioprophylaxie pour une œsophagectomie ?
 - **réponse** : Céfazoline
 
+### Pose prothèse mammaire
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une augmentation mammaire avec pose d'implants siliconés ?
+- **réponse** : Céfazoline
+
+### Tumorectomie mammaire sans curage
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une tumorectomie mammaire sans curage ganglionnaire ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Mastectomie sans reconstruction
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une mastectomie sans reconstruction mammaire ?
+- **réponse** : Céfazoline
+
+### Rhinoplastie sans greffe cartilage
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une septo-rhinoplastie sans greffe de cartilage ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Lipoaspiration
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une lipoaspiration sous anesthésie générale ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Blépharoplastie
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une blépharoplastie ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Lambeau libre microchirurgical
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une reconstruction par lambeau libre microchirurgical ?
+- **réponse** : Céfazoline
+
+### Greffe cutanée hors brûlure
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une greffe cutanée (hors patient brûlé) ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Vaginoplastie affirmation de genre
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une vaginoplastie dans le cadre d'une chirurgie d'affirmation de genre ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Chondro-laryngoplastie
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chondro-laryngoplastie par cervicotomie ?
+- **réponse** : Pas d'antibioprophylaxie
+
 ---
 
 ## QCM
@@ -440,8 +500,6 @@ Pour les QCM, une seule réponse correcte (lettre).
   - D. Une antibioprophylaxie est recommandée uniquement pour la trachéotomie percutanée
 - **réponse** : C
 
-### Assistance circulatoire et ABP
-
 ### Lobectomie pulmonaire molécule
 
 - **type** : qcm
@@ -461,5 +519,27 @@ Pour les QCM, une seule réponse correcte (lettre).
   - A. Une antibioprophylaxie est toujours recommandée
   - B. Une antibioprophylaxie n'est jamais recommandée
   - C. Une antibioprophylaxie est recommandée uniquement en cas de mise en place de matériel
+  - D. Une antibioprophylaxie est recommandée uniquement en cas de reprise chirurgicale
+- **réponse** : C
+
+### Chirurgie mammaire et ABP
+
+- **type** : qcm
+- **question** : Parmi ces interventions mammaires, laquelle nécessite une antibioprophylaxie ?
+- **choix** :
+  - A. Tumorectomie mammaire sans curage
+  - B. Mastopexie pour ptose simple
+  - C. Mastectomie sans curage ganglionnaire
+  - D. Réduction mammaire
+- **réponse** : C
+
+### Rhinoplastie avec vs sans greffe
+
+- **type** : qcm
+- **question** : Concernant l'antibioprophylaxie en septo-rhinoplastie, quelle affirmation est correcte ?
+- **choix** :
+  - A. Une antibioprophylaxie est toujours recommandée
+  - B. Une antibioprophylaxie n'est jamais recommandée
+  - C. Une antibioprophylaxie est recommandée uniquement en cas de greffe de cartilage
   - D. Une antibioprophylaxie est recommandée uniquement en cas de reprise chirurgicale
 - **réponse** : C
