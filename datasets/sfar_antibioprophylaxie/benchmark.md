@@ -320,12 +320,6 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **question** : Quelle est la recommandation d'antibioprophylaxie pour une fibroscopie bronchique avec lavage broncho-alvéolaire ?
 - **réponse** : Pas d'antibioprophylaxie
 
-### Œsophagectomie
-
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une œsophagectomie ?
-- **réponse** : Céfazoline
-
 ### Pose prothèse mammaire
 
 - **type** : open
