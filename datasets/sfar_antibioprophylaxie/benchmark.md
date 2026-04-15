@@ -386,6 +386,126 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **question** : Quelle est la recommandation d'antibioprophylaxie pour une chondro-laryngoplastie par cervicotomie ?
 - **réponse** : Pas d'antibioprophylaxie
 
+### Tumorectomie mammaire avec curage axillaire
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une tumorectomie mammaire avec curage axillaire ?
+- **réponse** : Céfazoline
+
+### Mastoplastie de réduction
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une mastoplastie bilatérale de réduction ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Chirurgie du mamelon
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie du mamelon ou de la plaque aréolo-mamelonnaire ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Coelioscopie diagnostique gynécologique
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une coelioscopie diagnostique en gynécologie ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Annexectomie par coelioscopie
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une annexectomie par voie coelioscopique ?
+- **réponse** : Céfazoline
+
+### Résection endométriose avec atteinte rectale
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une résection de lésions endométriosiques avec atteinte rectale par coelioscopie ?
+- **réponse** : Céfazoline + Métronidazole
+
+### Hystérectomie totale par laparotomie
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une hystérectomie totale sans annexectomie par laparotomie ?
+- **réponse** : Céfoxitine
+
+### Hystérectomie subtotale avec annexectomie
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une hystérectomie subtotale avec annexectomie (sans temps vaginal) ?
+- **réponse** : Céfazoline
+
+### Conisation col utérin
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une conisation du col utérin ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Hystéroscopie diagnostique
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une hystéroscopie diagnostique ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Biopsie de l'endomètre
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une biopsie de l'endomètre par hystéroscopie ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Chirurgie du prolapsus
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une hystéropexie (chirurgie du prolapsus) ?
+- **réponse** : Céfazoline
+
+### Vulvectomie avec curage inguinal
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une vulvectomie partielle avec curage lymphonodal inguinal unilatéral ?
+- **réponse** : Céfazoline
+
+### Nymphoplastie de réduction
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une nymphoplastie de réduction ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Césarienne
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une césarienne programmée ?
+- **réponse** : Céfazoline
+
+### Cerclage col utérin grossesse
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour un cerclage du col de l'utérus au cours de la grossesse par voie transvaginale ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Révision utérine
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une révision de la cavité utérine après l'accouchement ?
+- **réponse** : Céfazoline
+
+### Tamponnement utérin hémorragie obstétricale
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la pose d'un tamponnement intra-utérin pour hémorragie obstétricale ?
+- **réponse** : Céfazoline
+
+### IVG premier trimestre
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une interruption volontaire de grossesse par aspiration au premier trimestre ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Ponction ovocytes PMA
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour un prélèvement d'ovocytes par voie transvaginale avec échoguidage (PMA) ?
+- **réponse** : Pas d'antibioprophylaxie
+
 ---
 
 ## QCM
@@ -542,4 +662,48 @@ Pour les QCM, une seule réponse correcte (lettre).
   - B. Une antibioprophylaxie n'est jamais recommandée
   - C. Une antibioprophylaxie est recommandée uniquement en cas de greffe de cartilage
   - D. Une antibioprophylaxie est recommandée uniquement en cas de reprise chirurgicale
+- **réponse** : C
+
+### Hystérectomie voie d'abord et molécule
+
+- **type** : qcm
+- **question** : Quelle molécule est recommandée pour l'antibioprophylaxie d'une hystérectomie totale par voie coelioscopique (avec annexectomie) ?
+- **choix** :
+  - A. Céfazoline
+  - B. Céfoxitine
+  - C. Amoxicilline/Clavulanate
+  - D. Céfuroxime
+- **réponse** : B
+
+### Coelioscopie gynécologique sans ABP
+
+- **type** : qcm
+- **question** : Parmi ces interventions gynécologiques par coelioscopie, laquelle ne nécessite PAS d'antibioprophylaxie ?
+- **choix** :
+  - A. Annexectomie
+  - B. Curage pelvien
+  - C. Kystectomie ovarienne
+  - D. Omentectomie
+- **réponse** : C
+
+### Obstétrique césarienne vs cerclage
+
+- **type** : qcm
+- **question** : Concernant l'antibioprophylaxie en obstétrique, quelle affirmation est correcte ?
+- **choix** :
+  - A. Le cerclage du col utérin nécessite une antibioprophylaxie par céfazoline
+  - B. La césarienne programmée ne nécessite pas d'antibioprophylaxie
+  - C. La délivrance artificielle nécessite une antibioprophylaxie par céfazoline
+  - D. Le curetage post-partum nécessite une antibioprophylaxie par céfoxitine
+- **réponse** : C
+
+### Endométriose rectale molécule
+
+- **type** : qcm
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une résection de lésions endométriosiques avec atteinte rectale ?
+- **choix** :
+  - A. Céfazoline seule
+  - B. Céfoxitine seule
+  - C. Céfazoline + Métronidazole
+  - D. Amoxicilline/Clavulanate
 - **réponse** : C
