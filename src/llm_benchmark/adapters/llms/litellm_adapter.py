@@ -5,10 +5,14 @@ from __future__ import annotations
 import time
 
 import litellm
+from litellm.exceptions import RateLimitError
 
 from llm_benchmark.domain.entities import LLMRequest, LLMResponse
 from llm_benchmark.domain.value_objects import Cost, Latency, ModelId
 from llm_benchmark.ports.llm import LLMPort
+
+_MAX_RETRIES = 5
+_INITIAL_BACKOFF_S = 1.0
 
 
 class LiteLLMAdapter(LLMPort):
@@ -17,6 +21,9 @@ class LiteLLMAdapter(LLMPort):
     Supports 100+ providers (Anthropic, OpenAI, Mistral, etc.) through a
     single interface. Pricing is declared at construction time and used by
     ``MetricsCollector`` to estimate per-question costs.
+
+    Rate-limit errors (HTTP 429) are retried up to ``_MAX_RETRIES`` times
+    with exponential backoff.
 
     Parameters
     ----------
@@ -80,6 +87,9 @@ class LiteLLMAdapter(LLMPort):
     def complete(self, request: LLMRequest) -> LLMResponse:
         """Send a prompt to the model and return the response with metrics.
 
+        Retries automatically on rate-limit errors (HTTP 429) with
+        exponential backoff (1s, 2s, 4s, 8s, 16s).
+
         Parameters
         ----------
         request : LLMRequest
@@ -93,23 +103,36 @@ class LiteLLMAdapter(LLMPort):
         Raises
         ------
         Exception
-            Any exception raised by LiteLLM is propagated to the caller.
+            Any exception raised by LiteLLM is propagated to the caller
+            after all retry attempts are exhausted.
         """
-        start_time = time.perf_counter()
-        raw_response = litellm.completion(
-            model=self._litellm_model,
-            messages=[
-                {"role": "system", "content": request.system_prompt},
-                {"role": "user", "content": request.user_prompt},
-            ],
-            max_tokens=request.max_tokens,
-        )
-        latency = Latency(time.perf_counter() - start_time)
+        backoff = _INITIAL_BACKOFF_S
+        last_exc: Exception | None = None
 
-        return LLMResponse(
-            text=raw_response.choices[0].message.content,
-            input_tokens=raw_response.usage.prompt_tokens,
-            output_tokens=raw_response.usage.completion_tokens,
-            latency=latency,
-            raw=raw_response.model_dump(),
-        )
+        for attempt in range(_MAX_RETRIES):
+            try:
+                start_time = time.perf_counter()
+                raw_response = litellm.completion(
+                    model=self._litellm_model,
+                    messages=[
+                        {"role": "system", "content": request.system_prompt},
+                        {"role": "user", "content": request.user_prompt},
+                    ],
+                    max_tokens=request.max_tokens,
+                )
+                latency = Latency(time.perf_counter() - start_time)
+
+                return LLMResponse(
+                    text=raw_response.choices[0].message.content,
+                    input_tokens=raw_response.usage.prompt_tokens,
+                    output_tokens=raw_response.usage.completion_tokens,
+                    latency=latency,
+                    raw=raw_response.model_dump(),
+                )
+            except RateLimitError as exc:
+                last_exc = exc
+                if attempt < _MAX_RETRIES - 1:
+                    time.sleep(backoff)
+                    backoff *= 2
+
+        raise last_exc  # type: ignore[misc]

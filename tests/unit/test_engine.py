@@ -232,6 +232,30 @@ class TestErrorHandling:
 
         assert results[0].summary.correct == 0
 
+    def test_accuracy_excludes_errored_questions(self) -> None:
+        engine = BenchmarkEngine()
+        dataset = _make_dataset([
+            _make_open_question("q1"),
+            _make_open_question("q2"),
+            _make_open_question("q3"),
+        ])
+        approach = _make_approach()
+        llm = _make_llm()
+        # q1 errors, q2 and q3 answer correctly
+        llm.complete.side_effect = [
+            RuntimeError("Rate limit"),
+            LLMResponse(text="amoxicillin", input_tokens=10, output_tokens=5, latency=Latency(0.1)),
+            LLMResponse(text="amoxicillin", input_tokens=10, output_tokens=5, latency=Latency(0.1)),
+        ]
+
+        results = engine.run(dataset, [approach], [llm])
+
+        summary = results[0].summary
+        assert summary.total == 3
+        assert summary.correct == 2
+        # Accuracy = 2/2 (not 2/3), because errored questions are excluded
+        assert abs(summary.accuracy.value - 1.0) < 1e-9
+
 
 # ---------------------------------------------------------------------------
 # Summary correctness

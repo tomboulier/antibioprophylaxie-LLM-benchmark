@@ -32,11 +32,11 @@ models:
     price_per_input_token: 0.000002
     price_per_output_token: 0.000006
     currency: USD
-    enabled: false
+    enabled: true
 
   - id: mistral-small-latest
     litellm_model: mistral/mistral-small-latest
     price_per_input_token: 0.0000002
     price_per_output_token: 0.0000006
     currency: USD
-    enabled: true
+    enabled: false

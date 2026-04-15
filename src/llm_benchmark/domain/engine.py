@@ -205,9 +205,10 @@ class BenchmarkEngine:
         sourcing_present = sum(1 for result in scored if result.score.is_sourcing_present)
         sourcing_correct = sum(1 for result in scored if result.score.is_sourcing_correct)
 
-        accuracy = Accuracy(correct / total if total > 0 else 0.0)
-        sourcing_rate = Accuracy(sourcing_present / total if total > 0 else 0.0)
-        sourcing_correct_rate = Accuracy(sourcing_correct / total if total > 0 else 0.0)
+        answered = len(scored)
+        accuracy = Accuracy(correct / answered if answered > 0 else 0.0)
+        sourcing_rate = Accuracy(sourcing_present / answered if answered > 0 else 0.0)
+        sourcing_correct_rate = Accuracy(sourcing_correct / answered if answered > 0 else 0.0)
 
         total_tokens = self._sum_tokens(question_results)
         total_cost = self._sum_costs(question_results)
@@ -260,11 +261,13 @@ class BenchmarkEngine:
         for result in question_results:
             type_key = result.question_type.value
             if type_key not in breakdown:
-                breakdown[type_key] = {"total": 0, "correct": 0}
+                breakdown[type_key] = {"total": 0, "answered": 0, "correct": 0}
             breakdown[type_key]["total"] += 1
-            if result.score is not None and result.score.is_correct:
-                breakdown[type_key]["correct"] += 1
+            if result.score is not None:
+                breakdown[type_key]["answered"] += 1
+                if result.score.is_correct:
+                    breakdown[type_key]["correct"] += 1
         for type_key, stats in breakdown.items():
-            total = stats["total"]
-            stats["accuracy"] = stats["correct"] / total if total > 0 else 0.0
+            answered = stats["answered"]
+            stats["accuracy"] = stats["correct"] / answered if answered > 0 else 0.0
         return breakdown
