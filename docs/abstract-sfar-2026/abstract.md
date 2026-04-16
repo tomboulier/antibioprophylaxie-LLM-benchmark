@@ -29,7 +29,7 @@ Les trois modèles obtiennent des taux de réponses correctes proches : Mistral 
 
 **Discussion**
 
-Un taux de 55 à 59 % est insuffisant pour un usage clinique sans supervision. Ce résultat, obtenu en interrogeant les modèles « à froid » (sans accès au texte des RFE), constitue un point de comparaison de base. Des techniques de réduction des hallucinations existent, notamment la génération augmentée par recherche documentaire (RAG), qui alimente le modèle avec les passages pertinents des recommandations (5), ou l'injection du texte intégral dans la requête. L'architecture modulaire du code permet de tester ces approches sur le même jeu de questions.
+Un taux de moins de 60 % est insuffisant pour un usage clinique sans supervision. Ce résultat, obtenu en interrogeant les modèles « à froid » (sans accès au texte des RFE), constitue un point de comparaison de base. Des techniques de réduction des hallucinations existent, notamment la génération augmentée par recherche documentaire (RAG), qui alimente le modèle avec les passages pertinents des recommandations (5), ou l'injection du texte intégral dans la requête. L'architecture modulaire du code permet de tester ces approches sur le même jeu de questions.
 
 **Conclusion**
 
