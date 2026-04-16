@@ -85,6 +85,7 @@ class JsonExportAdapter(ExportPort):
     def _serialise_summary(self, summary: RunSummary) -> dict[str, Any]:
         return {
             "total": summary.total,
+            "answered": summary.answered,
             "correct": summary.correct,
             "accuracy": summary.accuracy.value,
             "sourcing_rate": summary.sourcing_rate.value,

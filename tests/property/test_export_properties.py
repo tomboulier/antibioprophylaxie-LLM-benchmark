@@ -41,6 +41,7 @@ _nonempty_text = st.text(
 def _make_summary() -> RunSummary:
     return RunSummary(
         total=1,
+        answered=1,
         correct=1,
         accuracy=Accuracy(1.0),
         sourcing_rate=Accuracy(0.0),

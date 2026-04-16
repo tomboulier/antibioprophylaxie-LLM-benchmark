@@ -192,6 +192,7 @@ def _do_csv_export(mo, loaded_runs, export_button, Path):
             config=_run_data.get("config", {}),
             summary=RunSummary(
                 total=_sd.get("total", 0),
+                answered=_sd.get("answered", _sd.get("total", 0)),
                 correct=_sd.get("correct", 0),
                 accuracy=Accuracy(_sd.get("accuracy", 0.0)),
                 sourcing_rate=Accuracy(_sd.get("sourcing_rate", 0.0)),

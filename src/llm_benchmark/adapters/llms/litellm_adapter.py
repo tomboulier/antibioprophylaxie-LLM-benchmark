@@ -2,13 +2,23 @@
 
 from __future__ import annotations
 
+import os
+import random
 import time
 
-import litellm
+if os.environ.get("DEBUG", "").lower() in ("1", "true", "yes"):
+    os.environ.setdefault("LITELLM_LOG", "DEBUG")
+
+import litellm  # noqa: E402 — LITELLM_LOG must be set before import
+from litellm.exceptions import RateLimitError  # noqa: E402
 
 from llm_benchmark.domain.entities import LLMRequest, LLMResponse
 from llm_benchmark.domain.value_objects import Cost, Latency, ModelId
 from llm_benchmark.ports.llm import LLMPort
+
+_MAX_RETRIES = 7
+_INITIAL_BACKOFF_S = 2.0
+_MAX_BACKOFF_S = 60.0
 
 
 class LiteLLMAdapter(LLMPort):
@@ -17,6 +27,9 @@ class LiteLLMAdapter(LLMPort):
     Supports 100+ providers (Anthropic, OpenAI, Mistral, etc.) through a
     single interface. Pricing is declared at construction time and used by
     ``MetricsCollector`` to estimate per-question costs.
+
+    Rate-limit errors (HTTP 429) are retried up to ``_MAX_RETRIES`` times
+    with exponential backoff and jitter (2s, 4s, 8s, ..., max 60s).
 
     Parameters
     ----------
@@ -30,6 +43,9 @@ class LiteLLMAdapter(LLMPort):
     model_alias : str | None
         User-facing model identifier (e.g. ``"mistral-small-latest"``).
         When ``None``, defaults to ``model``.
+    request_delay : float
+        Seconds to wait before each API call, to avoid rate limiting.
+        Defaults to 0 (no delay).
     """
 
     def __init__(
@@ -38,11 +54,13 @@ class LiteLLMAdapter(LLMPort):
         price_per_input_token: Cost,
         price_per_output_token: Cost,
         model_alias: str | None = None,
+        request_delay: float = 0.0,
     ) -> None:
         self._litellm_model = model
         self._model_id = ModelId(model_alias if model_alias is not None else model)
         self._price_in = price_per_input_token
         self._price_out = price_per_output_token
+        self._request_delay = request_delay
 
     @property
     def model_id(self) -> ModelId:
@@ -80,6 +98,9 @@ class LiteLLMAdapter(LLMPort):
     def complete(self, request: LLMRequest) -> LLMResponse:
         """Send a prompt to the model and return the response with metrics.
 
+        Retries automatically on rate-limit errors (HTTP 429) with
+        exponential backoff and jitter (2s, 4s, 8s, ..., max 60s).
+
         Parameters
         ----------
         request : LLMRequest
@@ -93,23 +114,40 @@ class LiteLLMAdapter(LLMPort):
         Raises
         ------
         Exception
-            Any exception raised by LiteLLM is propagated to the caller.
+            Any exception raised by LiteLLM is propagated to the caller
+            after all retry attempts are exhausted.
         """
+        backoff = _INITIAL_BACKOFF_S
+        last_exc: Exception | None = None
         start_time = time.perf_counter()
-        raw_response = litellm.completion(
-            model=self._litellm_model,
-            messages=[
-                {"role": "system", "content": request.system_prompt},
-                {"role": "user", "content": request.user_prompt},
-            ],
-            max_tokens=request.max_tokens,
-        )
-        latency = Latency(time.perf_counter() - start_time)
 
-        return LLMResponse(
-            text=raw_response.choices[0].message.content,
-            input_tokens=raw_response.usage.prompt_tokens,
-            output_tokens=raw_response.usage.completion_tokens,
-            latency=latency,
-            raw=raw_response.model_dump(),
-        )
+        for attempt in range(_MAX_RETRIES):
+            try:
+                if self._request_delay > 0:
+                    time.sleep(self._request_delay)
+                raw_response = litellm.completion(
+                    model=self._litellm_model,
+                    messages=[
+                        {"role": "system", "content": request.system_prompt},
+                        {"role": "user", "content": request.user_prompt},
+                    ],
+                    max_tokens=request.max_tokens,
+                )
+                latency = Latency(time.perf_counter() - start_time)
+
+                return LLMResponse(
+                    text=raw_response.choices[0].message.content,
+                    input_tokens=raw_response.usage.prompt_tokens,
+                    output_tokens=raw_response.usage.completion_tokens,
+                    latency=latency,
+                    raw=raw_response.model_dump(),
+                )
+            except RateLimitError as exc:
+                last_exc = exc
+                if attempt < _MAX_RETRIES - 1:
+                    jitter = backoff * random.uniform(-0.1, 0.1)
+                    time.sleep(backoff + jitter)
+                    backoff = min(backoff * 2, _MAX_BACKOFF_S)
+
+        assert last_exc is not None  # noqa: S101
+        raise last_exc
