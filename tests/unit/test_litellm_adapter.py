@@ -205,6 +205,31 @@ class TestLiteLLMAdapterComplete:
         sleep_values = [call.args[0] for call in mock_sleep.call_args_list]
         assert sleep_values == [2.0, 4.0, 8.0]
 
+    def test_request_delay_is_applied_before_each_attempt(self) -> None:
+        adapter = LiteLLMAdapter(
+            model="gpt-4o",
+            price_per_input_token=Cost(0.000001),
+            price_per_output_token=Cost(0.000002),
+            request_delay=1.5,
+        )
+        request = LLMRequest(system_prompt="sys", user_prompt="user")
+        rate_limit_error = RateLimitError(
+            message="Rate limit exceeded", model="gpt-4o", llm_provider="openai"
+        )
+
+        with patch("llm_benchmark.adapters.llms.litellm_adapter.litellm") as mock_litellm, \
+             patch("llm_benchmark.adapters.llms.litellm_adapter.time.sleep") as mock_sleep, \
+             patch("llm_benchmark.adapters.llms.litellm_adapter.random.uniform", return_value=0.0):
+            mock_litellm.completion.side_effect = [
+                rate_limit_error,
+                _make_litellm_response(content="ok"),
+            ]
+            adapter.complete(request)
+
+        # 1.5 (delay) + rate limit + 2.0 (backoff) + 1.5 (delay avant 2e tentative)
+        sleep_values = [call.args[0] for call in mock_sleep.call_args_list]
+        assert sleep_values == [1.5, 2.0, 1.5]
+
     def test_non_rate_limit_error_not_retried(self) -> None:
         adapter = _make_adapter()
         request = LLMRequest(system_prompt="sys", user_prompt="user")

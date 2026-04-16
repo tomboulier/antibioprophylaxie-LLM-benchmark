@@ -6,15 +6,15 @@ import os
 import random
 import time
 
-import litellm
-from litellm.exceptions import RateLimitError
+if os.environ.get("DEBUG", "").lower() in ("1", "true", "yes"):
+    os.environ.setdefault("LITELLM_LOG", "DEBUG")
+
+import litellm  # noqa: E402 — LITELLM_LOG must be set before import
+from litellm.exceptions import RateLimitError  # noqa: E402
 
 from llm_benchmark.domain.entities import LLMRequest, LLMResponse
 from llm_benchmark.domain.value_objects import Cost, Latency, ModelId
 from llm_benchmark.ports.llm import LLMPort
-
-if os.environ.get("DEBUG", "").lower() in ("1", "true", "yes"):
-    os.environ.setdefault("LITELLM_LOG", "DEBUG")
 
 _MAX_RETRIES = 7
 _INITIAL_BACKOFF_S = 2.0
@@ -119,12 +119,12 @@ class LiteLLMAdapter(LLMPort):
         """
         backoff = _INITIAL_BACKOFF_S
         last_exc: Exception | None = None
+        start_time = time.perf_counter()
 
         for attempt in range(_MAX_RETRIES):
             try:
                 if self._request_delay > 0:
                     time.sleep(self._request_delay)
-                start_time = time.perf_counter()
                 raw_response = litellm.completion(
                     model=self._litellm_model,
                     messages=[
