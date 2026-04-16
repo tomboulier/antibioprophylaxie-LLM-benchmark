@@ -285,7 +285,7 @@ class TestRunSummary:
         summary = results[0].summary
         assert summary.correct <= summary.total
 
-    def test_summary_accuracy_equals_correct_over_total(self) -> None:
+    def test_summary_accuracy_equals_correct_over_answered(self) -> None:
         engine = BenchmarkEngine()
         # 2 questions, LLM answers correctly for both ("amoxicillin" matches expected)
         questions = [_make_open_question("q1"), _make_open_question("q2")]
@@ -295,7 +295,7 @@ class TestRunSummary:
         results = engine.run(dataset, [_make_approach()], [llm])
 
         summary = results[0].summary
-        expected_accuracy = summary.correct / summary.total
+        expected_accuracy = summary.correct / summary.answered
         assert abs(summary.accuracy.value - expected_accuracy) < 1e-9
 
     def test_summary_by_type_contains_question_types(self) -> None:

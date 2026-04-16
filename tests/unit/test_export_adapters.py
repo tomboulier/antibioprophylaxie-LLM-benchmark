@@ -68,7 +68,7 @@ def _make_summary() -> RunSummary:
         total_tokens=None,
         avg_latency=None,
         carbon_footprint=None,
-        by_type={"open": {"total": 2, "correct": 1, "accuracy": 0.5}},
+        by_type={"open": {"total": 2, "answered": 2, "correct": 1, "accuracy": 0.5}},
     )
 
 

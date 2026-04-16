@@ -268,7 +268,7 @@ class BenchmarkEngine:
                 breakdown[type_key]["answered"] += 1
                 if result.score.is_correct:
                     breakdown[type_key]["correct"] += 1
-        for type_key, stats in breakdown.items():
+        for stats in breakdown.values():
             answered = stats["answered"]
             stats["accuracy"] = stats["correct"] / answered if answered > 0 else 0.0
         return breakdown

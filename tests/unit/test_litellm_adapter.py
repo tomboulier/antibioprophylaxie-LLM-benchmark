@@ -182,7 +182,7 @@ class TestLiteLLMAdapterComplete:
             with pytest.raises(RateLimitError):
                 adapter.complete(request)
 
-        assert mock_litellm.completion.call_count == 5
+        assert mock_litellm.completion.call_count == 7
 
     def test_backoff_doubles_each_retry(self) -> None:
         adapter = _make_adapter()
@@ -192,7 +192,8 @@ class TestLiteLLMAdapterComplete:
         )
 
         with patch("llm_benchmark.adapters.llms.litellm_adapter.litellm") as mock_litellm, \
-             patch("llm_benchmark.adapters.llms.litellm_adapter.time.sleep") as mock_sleep:
+             patch("llm_benchmark.adapters.llms.litellm_adapter.time.sleep") as mock_sleep, \
+             patch("llm_benchmark.adapters.llms.litellm_adapter.random.uniform", return_value=0.0):
             mock_litellm.completion.side_effect = [
                 rate_limit_error,
                 rate_limit_error,
@@ -202,7 +203,7 @@ class TestLiteLLMAdapterComplete:
             adapter.complete(request)
 
         sleep_values = [call.args[0] for call in mock_sleep.call_args_list]
-        assert sleep_values == [1.0, 2.0, 4.0]
+        assert sleep_values == [2.0, 4.0, 8.0]
 
     def test_non_rate_limit_error_not_retried(self) -> None:
         adapter = _make_adapter()
