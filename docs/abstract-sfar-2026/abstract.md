@@ -33,7 +33,7 @@ Un taux de moins de 60 % est insuffisant pour un usage clinique sans supervision
 
 **Conclusion**
 
-Cette méthode d'évaluation standardisée et librement réutilisable permet de mesurer objectivement la fiabilité des LLM sur des recommandations médicales. Les questions, le code et les résultats sont disponibles publiquement (4) pour encourager la recherche collaborative.
+Trois LLM commerciaux ont été évalués sur 134 questions d'antibioprophylaxie issues des RFE SFAR 2024 : aucun ne dépasse 59 % de réponses correctes lorsqu'il est interrogé sans accès au texte des recommandations. Ce jeu de test, publié en accès libre (4), fournit une base de comparaison pour évaluer les approches augmentées susceptibles d'améliorer leur fiabilité.
 
 **Références**
 
