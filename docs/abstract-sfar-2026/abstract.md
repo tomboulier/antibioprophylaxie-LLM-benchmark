@@ -15,13 +15,13 @@
 
 **Introduction**
 
-Les grands modèles de langage (LLM, tels que ChatGPT) sont envisagés comme outils d'aide à la décision clinique, mais peuvent produire des réponses incorrectes formulées avec assurance (« hallucinations ») (1), un risque pour la sécurité des patients lorsqu'il s'agit de posologies ou de choix de molécules (2). Leur fiabilité sur des recommandations formalisées d'experts (RFE) reste peu évaluée. L'objectif de cette étude est de proposer une méthode d'évaluation reproductible pour mesurer la fiabilité de plusieurs LLM sur les RFE d'antibioprophylaxie chirurgicale (3).
+Les grands modèles de langage (large laguage models, LLMs) tel que ChatGPT sont envisagés comme outils d'aide à la décision clinique, mais peuvent produire des réponses incorrectes formulées avec assurance (« hallucinations ») (1), un risque pour la sécurité des patients lorsqu'il s'agit de posologies ou de choix de molécules (2). Leur fiabilité sur des recommandations formalisées d'experts (RFE) reste peu évaluée. L'objectif de cette étude est de proposer une méthode d'évaluation reproductible pour mesurer la fiabilité de plusieurs LLM sur les RFE d'antibioprophylaxie chirurgicale (3).
 
 **Matériel et méthodes**
 
-Un jeu de 134 questions/réponses standardisées (111 questions ouvertes, 23 QCM) a été construit à partir des RFE SFAR 2024 (V2.0, 22/05/2024), couvrant 8 spécialités chirurgicales : orthopédie-traumatologie, chirurgie digestive et bariatrique, urologie, gynécologie-obstétrique, neurochirurgie, chirurgie cardiaque et vasculaire, ORL et ophtalmologie, chirurgie plastique et des brûlés.
+Un jeu de 134 questions/réponses standardisées (111 questions ouvertes, 23 QCM) a été construit à partir des RFE SFAR 2024 (V2.0, 22/05/2024), couvrant l'ensemble des spécialités concernées par les recommandations.
 
-Trois modèles commerciaux ont été évalués : Claude Sonnet 4.5 (Anthropic), GPT-4o (OpenAI) et Mistral Large (Mistral AI), dans des conditions identiques et reproductibles (Figure 1). La correction est automatisée : correspondance exacte pour les QCM, correspondance normalisée (synonymes DCI/noms commerciaux) pour les questions ouvertes. Le critère de jugement principal est le taux de réponses correctes. L'ensemble du code et des données est publié en accès libre (4).
+Trois modèles commerciaux ont été évalués : Mistral Large (Mistral AI), GPT-4o (OpenAI) et Claude Sonnet 4.5 (Anthropic), dans des conditions identiques et reproductibles (Figure 1). La correction est automatisée : correspondance exacte pour les QCM, correspondance normalisée (insensibilité à la casse) pour les questions ouvertes. Le critère de jugement principal est le taux de réponses correctes. L'ensemble du code et des données est publié en accès libre (4).
 
 **Résultats**
 
