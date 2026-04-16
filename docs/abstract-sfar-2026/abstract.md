@@ -45,18 +45,6 @@ Trois modèles d'IA commerciaux ont été évalués sur 134 questions d'antibiop
 
 ---
 
-## Décompte
-
-2 895 caractères (corps + références). 605 de marge.
-
-## Notes pour les co-auteurs
-
-- **À relire en priorité** : les 134 questions dans `datasets/sfar_antibioprophylaxie/benchmark.md` (réponses correctes ? cas manquants ?)
-- **Anonymat** : le corps du texte ne doit pas mentionner de nom de centre, de ville ou d'auteur
-- **Figures** : voir ci-dessous
-
----
-
 ## Figures
 
 **Figure 1.** Méthode d'évaluation. Un questionnaire standardisé de 134 questions couvrant 8 spécialités chirurgicales est soumis à trois grands modèles de langage, puis corrigé automatiquement par comparaison aux réponses attendues issues des RFE SFAR 2024.
