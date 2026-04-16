@@ -40,7 +40,7 @@ Trois modèles d'IA commerciaux ont été évalués sur 134 questions d'antibiop
 1. Sallam M. Interact J Med Res. 2025;14:e59823.
 2. Bedi S et al. npj Digit Med. 2025;8:279.
 3. SFAR, SPILF. RFE Antibioprophylaxie. V2.0, 22/05/2024. sfar.org
-4. Dépôt public (code et données). Lien communiqué après évaluation.
+4. Dépôt public (code et données). Lien communiqué après évaluation pour garantir l'anonymat.
 5. Kohandel Gargari O et al. Digit Health. 2025;11:20552076251337177.
 
 ---
