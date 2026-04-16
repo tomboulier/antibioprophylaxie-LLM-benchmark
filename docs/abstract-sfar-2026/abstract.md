@@ -7,7 +7,7 @@
 
 ## Titre
 
-Évaluation comparative de grands modèles de langage pour l'antibioprophylaxie chirurgicale : une méthode de test standardisée appliquée aux recommandations SFAR 2024
+Évaluation comparative de l'adhérence des grands modèles de langage aux recommandations formalisées d'experts de la SFAR sur l'antibioprophylaxie en chirurgie et médecine interventionnelle : une méthode de test standardisée
 
 ---
 
