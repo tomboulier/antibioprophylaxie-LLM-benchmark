@@ -47,7 +47,7 @@ Cette méthode d'évaluation standardisée et librement réutilisable permet de 
 
 ## Décompte
 
-3 450 caractères (corps + références). Dans la limite (50 de marge).
+2 895 caractères (corps + références). 605 de marge.
 
 ## Notes pour les co-auteurs
 
