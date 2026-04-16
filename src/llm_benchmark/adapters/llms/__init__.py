@@ -52,6 +52,7 @@ def _load_registry(
             price_per_input_token=Cost(model_config["price_per_input_token"], currency),
             price_per_output_token=Cost(model_config["price_per_output_token"], currency),
             model_alias=model_id,
+            request_delay=model_config.get("request_delay", 0.0),
         )
     return registry
 

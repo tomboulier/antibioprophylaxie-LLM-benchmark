@@ -33,6 +33,7 @@ models:
     price_per_output_token: 0.000006
     currency: USD
     enabled: true
+    request_delay: 1.0  # secondes entre chaque requête (rate limit Mistral)
 
   - id: mistral-small-latest
     litellm_model: mistral/mistral-small-latest
@@ -40,3 +41,4 @@ models:
     price_per_output_token: 0.0000006
     currency: USD
     enabled: false
+    request_delay: 1.0

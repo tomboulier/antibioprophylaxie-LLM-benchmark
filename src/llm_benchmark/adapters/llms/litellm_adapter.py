@@ -43,6 +43,9 @@ class LiteLLMAdapter(LLMPort):
     model_alias : str | None
         User-facing model identifier (e.g. ``"mistral-small-latest"``).
         When ``None``, defaults to ``model``.
+    request_delay : float
+        Seconds to wait before each API call, to avoid rate limiting.
+        Defaults to 0 (no delay).
     """
 
     def __init__(
@@ -51,11 +54,13 @@ class LiteLLMAdapter(LLMPort):
         price_per_input_token: Cost,
         price_per_output_token: Cost,
         model_alias: str | None = None,
+        request_delay: float = 0.0,
     ) -> None:
         self._litellm_model = model
         self._model_id = ModelId(model_alias if model_alias is not None else model)
         self._price_in = price_per_input_token
         self._price_out = price_per_output_token
+        self._request_delay = request_delay
 
     @property
     def model_id(self) -> ModelId:
@@ -117,6 +122,8 @@ class LiteLLMAdapter(LLMPort):
 
         for attempt in range(_MAX_RETRIES):
             try:
+                if self._request_delay > 0:
+                    time.sleep(self._request_delay)
                 start_time = time.perf_counter()
                 raw_response = litellm.completion(
                     model=self._litellm_model,
