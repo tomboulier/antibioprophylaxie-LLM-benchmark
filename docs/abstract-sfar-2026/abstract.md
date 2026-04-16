@@ -37,11 +37,11 @@ Cette méthode d'évaluation standardisée et librement réutilisable permet de 
 
 **Références**
 
-1. Sallam M. The Clinicians' Guide to Large Language Models: A General Perspective With a Focus on Hallucinations. Interact J Med Res. 2025;14:e59823.
-2. Bedi S et al. A framework to assess clinical safety and hallucination rates of LLMs for medical text summarisation. npj Digit Med. 2025;8:279.
-3. SFAR, SPILF. Antibioprophylaxie en chirurgie et médecine interventionnelle. Recommandations formalisées d'experts. V2.0, 22/05/2024. Disponible sur : sfar.org
-4. Disponible sur : github.com/tomboulier/antibioprophylaxie-LLM-benchmark
-5. Kohandel Gargari O et al. Enhancing medical AI with retrieval-augmented generation: A mini narrative review. Digit Health. 2025;11:20552076251337177.
+1. Sallam M. Interact J Med Res. 2025;14:e59823.
+2. Bedi S et al. npj Digit Med. 2025;8:279.
+3. SFAR, SPILF. RFE Antibioprophylaxie. V2.0, 22/05/2024. sfar.org
+4. github.com/tomboulier/antibioprophylaxie-LLM-benchmark
+5. Kohandel Gargari O et al. Digit Health. 2025;11:20552076251337177.
 
 ---
 
