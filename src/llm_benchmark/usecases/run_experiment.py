@@ -13,6 +13,7 @@ Chaque étape est une méthode typée. ``execute()`` les chaîne.
 from __future__ import annotations
 
 import json
+import logging
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -24,6 +25,8 @@ from llm_benchmark.domain.engine import BenchmarkEngine
 from llm_benchmark.domain.entities import Dataset, RunResult
 from llm_benchmark.domain.value_objects import QuestionId
 from llm_benchmark.ports.llm import LLMPort
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -269,6 +272,7 @@ def _load_latest_results(results_dir: Path) -> dict[str, RunResult]:
             if model_id not in latest or path.name > latest[model_id][0]:
                 latest[model_id] = (path.name, data)
         except (json.JSONDecodeError, KeyError):
+            logger.warning("Fichier de résultats ignoré (format invalide) : %s", path)
             continue
 
     results: dict[str, RunResult] = {}
@@ -334,6 +338,7 @@ def _load_latest_results(results_dir: Path) -> dict[str, RunResult]:
                 results=question_results,
             )
         except (KeyError, TypeError, ValueError):
+            logger.warning("Résultat ignoré (désérialisation échouée) : %s", _filename)
             continue
 
     return results
