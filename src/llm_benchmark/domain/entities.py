@@ -205,10 +205,12 @@ class RunSummary:
     ----------
     total : int
         Total number of questions evaluated.
+    answered : int
+        Number of questions that received an answer (total minus errors).
     correct : int
         Number of correctly answered questions.
     accuracy : Accuracy
-        Overall accuracy (correct / total).
+        Overall accuracy (correct / answered).
     sourcing_rate : Accuracy
         Fraction of answers that contain a source reference.
     sourcing_correct_rate : Accuracy
@@ -226,6 +228,7 @@ class RunSummary:
     """
 
     total: int
+    answered: int
     correct: int
     accuracy: Accuracy
     sourcing_rate: Accuracy

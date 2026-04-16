@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import time
 
 import litellm
@@ -10,6 +11,9 @@ from litellm.exceptions import RateLimitError
 from llm_benchmark.domain.entities import LLMRequest, LLMResponse
 from llm_benchmark.domain.value_objects import Cost, Latency, ModelId
 from llm_benchmark.ports.llm import LLMPort
+
+if os.environ.get("DEBUG", "").lower() in ("1", "true", "yes"):
+    litellm._turn_on_debug()
 
 _MAX_RETRIES = 5
 _INITIAL_BACKOFF_S = 1.0
@@ -23,7 +27,7 @@ class LiteLLMAdapter(LLMPort):
     ``MetricsCollector`` to estimate per-question costs.
 
     Rate-limit errors (HTTP 429) are retried up to ``_MAX_RETRIES`` times
-    with exponential backoff.
+    with exponential backoff (1s, 2s, 4s, 8s).
 
     Parameters
     ----------
@@ -88,7 +92,7 @@ class LiteLLMAdapter(LLMPort):
         """Send a prompt to the model and return the response with metrics.
 
         Retries automatically on rate-limit errors (HTTP 429) with
-        exponential backoff (1s, 2s, 4s, 8s, 16s).
+        exponential backoff (1s, 2s, 4s, 8s).
 
         Parameters
         ----------
@@ -135,4 +139,5 @@ class LiteLLMAdapter(LLMPort):
                     time.sleep(backoff)
                     backoff *= 2
 
-        raise last_exc  # type: ignore[misc]
+        assert last_exc is not None  # noqa: S101
+        raise last_exc

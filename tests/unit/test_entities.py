@@ -150,6 +150,7 @@ def _make_run_result():
     )
     summary = RunSummary(
         total=1,
+        answered=1,
         correct=1,
         accuracy=Accuracy(1.0),
         sourcing_rate=Accuracy(0.0),

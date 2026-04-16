@@ -217,6 +217,7 @@ class BenchmarkEngine:
 
         return RunSummary(
             total=total,
+            answered=answered,
             correct=correct,
             accuracy=accuracy,
             sourcing_rate=sourcing_rate,

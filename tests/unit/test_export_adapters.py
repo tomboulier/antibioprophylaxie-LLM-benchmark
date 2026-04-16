@@ -59,6 +59,7 @@ _CSV_COLUMNS = {
 def _make_summary() -> RunSummary:
     return RunSummary(
         total=2,
+        answered=2,
         correct=1,
         accuracy=Accuracy(0.5),
         sourcing_rate=Accuracy(0.5),

@@ -12,6 +12,7 @@ Chaque étape est une méthode typée. ``execute()`` les chaîne.
 
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -166,10 +167,22 @@ class RunExperiment:
         return paths
 
     def _step_figures(self, run_results: list[RunResult]) -> list[Path]:
-        """Étape 4 : générer les figures comparatives."""
+        """Étape 4 : générer les figures comparatives.
+
+        Combine les résultats du run en cours avec les derniers résultats
+        disponibles sur disque pour les modèles non lancés, afin de
+        toujours produire une figure comparative complète.
+        """
         from llm_benchmark.adapters.exports.figures import generate_figures
 
-        return generate_figures(run_results, self._figures_dir)
+        all_results = _load_latest_results(self._output_dir)
+
+        # Les résultats du run en cours écrasent ceux sur disque
+        for result in run_results:
+            all_results[result.model_id.value] = result
+
+        combined = list(all_results.values())
+        return generate_figures(combined, self._figures_dir)
 
     def _step_summary(self, run_results: list[RunResult]) -> None:
         """Étape 5 : afficher le récapitulatif dans le terminal."""
@@ -192,7 +205,7 @@ class RunExperiment:
         for result in sorted_results:
             s = result.summary
             print(
-                f"  {result.model_id.value:<30} {s.correct:>4}/{s.total:<3}"
+                f"  {result.model_id.value:<30} {s.correct:>4}/{s.answered:<3}"
                 f" {s.accuracy.value:>9.0%}"
             )
 
@@ -209,3 +222,118 @@ class RunExperiment:
             print()
 
         print()
+
+
+def _load_latest_results(results_dir: Path) -> dict[str, RunResult]:
+    """Charger le dernier fichier JSON par modèle depuis le disque.
+
+    Parameters
+    ----------
+    results_dir : Path
+        Répertoire contenant les fichiers JSON de résultats.
+
+    Returns
+    -------
+    dict[str, RunResult]
+        Dictionnaire model_id -> RunResult (le plus récent par modèle).
+    """
+    from datetime import datetime
+
+    from llm_benchmark.domain.entities import (
+        QuestionResult,
+        RunSummary,
+        ScoreResult,
+    )
+    from llm_benchmark.domain.value_objects import (
+        Accuracy,
+        ApproachId,
+        CarbonFootprint,
+        Cost,
+        DatasetId,
+        Latency,
+        ModelId,
+        QuestionType,
+        RunId,
+    )
+
+    if not results_dir.exists():
+        return {}
+
+    latest: dict[str, tuple[str, dict]] = {}
+    for path in sorted(results_dir.glob("*.json")):
+        try:
+            data = json.loads(path.read_text())
+            model_id = data.get("model_id", "")
+            if not model_id:
+                continue
+            if model_id not in latest or path.name > latest[model_id][0]:
+                latest[model_id] = (path.name, data)
+        except (json.JSONDecodeError, KeyError):
+            continue
+
+    results: dict[str, RunResult] = {}
+    for model_id, (_filename, data) in latest.items():
+        try:
+            s = data["summary"]
+            total_cost = (
+                Cost(amount=s["total_cost"], currency=s.get("total_cost_currency", "USD"))
+                if s.get("total_cost") is not None
+                else None
+            )
+            carbon = (
+                CarbonFootprint(s["carbon_g_co2e"])
+                if s.get("carbon_g_co2e") is not None
+                else None
+            )
+            summary = RunSummary(
+                total=s["total"],
+                answered=s.get("answered", s["total"]),
+                correct=s["correct"],
+                accuracy=Accuracy(s["accuracy"]),
+                sourcing_rate=Accuracy(s.get("sourcing_rate", 0.0)),
+                sourcing_correct_rate=Accuracy(s.get("sourcing_correct_rate", 0.0)),
+                total_cost=total_cost,
+                total_tokens=s.get("total_tokens"),
+                avg_latency=Latency(s["avg_latency_s"]) if s.get("avg_latency_s") else None,
+                carbon_footprint=carbon,
+                by_type=s.get("by_type", {}),
+            )
+            question_results = []
+            for qr in data.get("results", []):
+                score = None
+                if qr.get("is_correct") is not None:
+                    score = ScoreResult(
+                        is_correct=qr["is_correct"],
+                        is_sourcing_present=qr.get("is_sourcing_present", False),
+                        is_sourcing_correct=qr.get("is_sourcing_correct", False),
+                    )
+                question_results.append(
+                    QuestionResult(
+                        question_id=QuestionId(qr["question_id"]),
+                        question_type=QuestionType(qr["question_type"]),
+                        expected_answer=qr["expected_answer"],
+                        actual_answer=qr.get("actual_answer"),
+                        score=score,
+                        latency=Latency(qr["latency_s"]) if qr.get("latency_s") else None,
+                        input_tokens=qr.get("input_tokens"),
+                        output_tokens=qr.get("output_tokens"),
+                        cost=Cost(qr["cost"]) if qr.get("cost") is not None else None,
+                        error=qr.get("error"),
+                    )
+                )
+            results[model_id] = RunResult(
+                run_id=RunId(data["run_id"]),
+                timestamp=datetime.fromisoformat(data["timestamp"]),
+                dataset_id=DatasetId(data["dataset_id"]),
+                dataset_version=data.get("dataset_version", ""),
+                approach_id=ApproachId(data.get("approach_id", "")),
+                model_id=ModelId(model_id),
+                framework_version=data.get("framework_version", ""),
+                config=data.get("config", {}),
+                summary=summary,
+                results=question_results,
+            )
+        except (KeyError, TypeError, ValueError):
+            continue
+
+    return results
