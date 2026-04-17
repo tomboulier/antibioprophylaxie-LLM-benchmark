@@ -98,6 +98,30 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **question** : Quelle est la recommandation d'antibioprophylaxie pour l'ablation de matériel d'ostéosynthèse au membre inférieur ?
 - **réponse** : Pas d'antibioprophylaxie
 
+### Morsure chien visage parage bloc
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour le parage au bloc opératoire d'une morsure de chien au visage ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Polytrauma fémur radius plaie main
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la prise en charge chirurgicale combinée de fractures fermées (fémur, radius) et d'une exploration de plaie de la main chez un accidenté de la route ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Splénectomie hémostase fixateur externe fémur
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une splénectomie d'hémostase associée à la pose d'un fixateur externe sur fracture fermée du fémur chez un polytraumatisé ?
+- **réponse** : Céfazoline
+
+### Dégantage bras augmentin préhospitalier
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la prise en charge chirurgicale d'un dégantage du bras par machine agricole chez un patient ayant déjà reçu de l'amoxicilline/clavulanate en pré-hospitalier ?
+- **réponse** : Amoxicilline/Clavulanate
+
 ### Craniotomie standard
 
 - **type** : open
@@ -530,6 +554,12 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **question** : Quelle est la recommandation d'antibioprophylaxie pour une appendicectomie programmée ?
 - **réponse** : Céfoxitine
 
+### Colectomie droite porteur BLSE
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une colectomie droite programmée chez un patient porteur d'une entérobactérie productrice de bêtalactamase à spectre étendu (BLSE) ?
+- **réponse** : Ertapénème
+
 ### Hémorroïdes
 
 - **type** : open
@@ -684,6 +714,116 @@ Pour les QCM, une seule réponse correcte (lettre).
 
 - **type** : open
 - **question** : Quelle est la recommandation d'antibioprophylaxie pour une néphrolithotomie percutanée ?
+- **réponse** : Céfazoline
+
+### Tympanoplastie
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une tympanoplastie (myringoplastie) ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Stapédectomie
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une stapédectomie pour otospongiose ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Cholestéatome non infecté
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie de cholestéatome non infecté (tympanotomie d'oreille moyenne) ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Adénoïdectomie
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une adénoïdectomie isolée ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Laryngoscopie avec cordectomie laser
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une laryngoscopie en suspension avec geste thérapeutique par laser (cordectomie) ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Parathyroïdectomie
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une parathyroïdectomie pour hyperparathyroïdie primaire ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Parotidectomie sans accès buccal
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une parotidectomie partielle superficielle sans accès par la cavité bucco-pharyngée ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Chirurgie glandes salivaires avec accès buccal
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des glandes salivaires avec accès par la cavité bucco-pharyngée (ex : ablation d'un calcul sous-mandibulaire par voie endobuccale) ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Rhinoplastie avec greffe de cartilage
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une septo-rhinoplastie avec greffe de cartilage ?
+- **réponse** : Céfazoline
+
+### Endartériectomie carotidienne avec matériel
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une endartériectomie carotidienne avec mise en place de matériel (patch) ?
+- **réponse** : Céfazoline
+
+### Fistule artério-veineuse sans matériel
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la création d'une fistule artério-veineuse native sans mise en place de matériel prothétique ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Fistule artério-veineuse avec matériel
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la création d'une fistule artério-veineuse prothétique avec mise en place d'un greffon synthétique ?
+- **réponse** : Céfazoline
+
+### Varices avec abord chirurgical du Scarpa
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des varices avec abord chirurgical du triangle de Scarpa ?
+- **réponse** : Céfazoline
+
+### Transplantation cardiaque standard
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une transplantation cardiaque chez un patient arrivant de son domicile, sans assistance mécanique circulatoire de longue durée préalable ?
+- **réponse** : Céfazoline
+
+### Fermeture de foramen ovale perméable
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la fermeture d'un foramen ovale perméable par voie percutanée avec implantation de matériel ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Chirurgie du pneumothorax par thoracoscopie
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une bullectomie avec pleurectomie apicale par vidéothoracoscopie pour pneumothorax spontané récidivant ?
+- **réponse** : Céfazoline
+
+### Body-lift
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour un body-lift (lifting corporel circulaire post-perte de poids massive) ?
+- **réponse** : Céfazoline
+
+### Abdominoplastie courte durée
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une abdominoplastie de durée inférieure ou égale à 2 heures ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Brachioplastie
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une brachioplastie (lifting des bras) ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Curage ganglionnaire axillaire seul
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour un curage ganglionnaire axillaire seul (sans geste mammaire associé) ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Génioplastie
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une génioplastie (avec ou sans implant) ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Pose de substitut dermique
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la pose d'un substitut dermique (matrice dermique acellulaire) ?
 - **réponse** : Céfazoline
 
 ---
@@ -943,140 +1083,25 @@ Pour les QCM, une seule réponse correcte (lettre).
   - D. Une antibioprophylaxie est recommandée uniquement en l'absence de prothèse
 - **réponse** : C
 
+### Fracture ouverte jambe chirurgie longue protocoles
 
+- **type** : qcm
+- **question** : Pour une chirurgie de fracture ouverte de jambe Gustilo 3 d'une durée prévisible supérieure à 4 heures, laquelle de ces conduites d'antibioprophylaxie est INCORRECTE ?
+- **choix** :
+  - A. Amoxicilline/Clavulanate avec réinjection toutes les 2 heures
+  - B. Céfazoline + Gentamicine, avec réinjection de la Céfazoline toutes les 4 heures
+  - C. Céfazoline en dose unique, sans réinjection
+- **réponse** : C
 
-# Benchmark Antibioprophylaxie SFAR — 30 questions supplémentaires
-> Jeu de questions standardisé pour évaluer tout système (RAG, MCP, chatbot, LLM)
-> sur les recommandations d'antibioprophylaxie chirurgicale (RFE SFAR 2024).
->
-> **Source** : RFE SFAR 2024 ([V2.0 du 22/05/2024](https://sfar.org/download/antibioprophylaxie-en-chirurgie-et-medecine-interventionnelle/?wpdmdl=68362&refresh=69de933379d901776194355))
-> **Spécialités couvertes** : ORL (otologie, salivaires, rhinologie), Chirurgie cardiaque/vasculaire, Chirurgie thoracique, Chirurgie plastique et reconstructrice
-> **Date** : 2026-04-17
+### Fracture ouverte radius ceftriaxone pneumopathie
 
-## Format des réponses attendues
-Pour les questions ouvertes, la réponse attendue est :
-- Un **nom de molécule** (ex : `Céfazoline`, `Amoxicilline/Clavulanate`)
-- `Pas d'antibioprophylaxie` (pas d'ABP recommandée pour cette intervention)
-- `Hors périmètre` (situation non couverte par les RFE SFAR 2024)
-Pour les QCM, une seule réponse correcte (lettre).
-
----
-
-## Questions ouvertes
-
-### Tympanoplastie
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une tympanoplastie (myringoplastie) ?
-- **réponse** : Pas d'antibioprophylaxie
-
-### Stapédectomie
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une stapédectomie pour otospongiose ?
-- **réponse** : Pas d'antibioprophylaxie
-
-### Cholestéatome non infecté
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie de cholestéatome non infecté (tympanotomie d'oreille moyenne) ?
-- **réponse** : Pas d'antibioprophylaxie
-
-### Adénoïdectomie
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une adénoïdectomie isolée ?
-- **réponse** : Pas d'antibioprophylaxie
-
-### Laryngoscopie avec cordectomie laser
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une laryngoscopie en suspension avec geste thérapeutique par laser (cordectomie) ?
-- **réponse** : Pas d'antibioprophylaxie
-
-### Parathyroïdectomie
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une parathyroïdectomie pour hyperparathyroïdie primaire ?
-- **réponse** : Pas d'antibioprophylaxie
-
-### Parotidectomie sans accès buccal
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une parotidectomie partielle superficielle sans accès par la cavité bucco-pharyngée ?
-- **réponse** : Pas d'antibioprophylaxie
-
-### Chirurgie glandes salivaires avec accès buccal
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des glandes salivaires avec accès par la cavité bucco-pharyngée (ex : ablation d'un calcul sous-mandibulaire par voie endobuccale) ?
-- **réponse** : Amoxicilline/Clavulanate
-
-### Rhinoplastie avec greffe de cartilage
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une septo-rhinoplastie avec greffe de cartilage ?
-- **réponse** : Céfazoline
-
-### Endartériectomie carotidienne avec matériel
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une endartériectomie carotidienne avec mise en place de matériel (patch) ?
-- **réponse** : Céfazoline
-
-### Fistule artério-veineuse sans matériel
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour la création d'une fistule artério-veineuse native sans mise en place de matériel prothétique ?
-- **réponse** : Pas d'antibioprophylaxie
-
-### Fistule artério-veineuse avec matériel
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour la création d'une fistule artério-veineuse prothétique avec mise en place d'un greffon synthétique ?
-- **réponse** : Céfazoline
-
-### Varices avec abord chirurgical du Scarpa
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des varices avec abord chirurgical du triangle de Scarpa ?
-- **réponse** : Céfazoline
-
-### Transplantation cardiaque standard
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une transplantation cardiaque chez un patient arrivant de son domicile, sans assistance mécanique circulatoire de longue durée préalable ?
-- **réponse** : Céfazoline
-
-### Fermeture de foramen ovale perméable
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour la fermeture d'un foramen ovale perméable par voie percutanée avec implantation de matériel ?
-- **réponse** : Amoxicilline/Clavulanate
-
-### Chirurgie du pneumothorax par thoracoscopie
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une bullectomie avec pleurectomie apicale par vidéothoracoscopie pour pneumothorax spontané récidivant ?
-- **réponse** : Céfazoline
-
-### Body-lift
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour un body-lift (lifting corporel circulaire post-perte de poids massive) ?
-- **réponse** : Céfazoline
-
-### Abdominoplastie courte durée
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une abdominoplastie de durée inférieure ou égale à 2 heures ?
-- **réponse** : Pas d'antibioprophylaxie
-
-### Brachioplastie
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une brachioplastie (lifting des bras) ?
-- **réponse** : Pas d'antibioprophylaxie
-
-### Curage ganglionnaire axillaire seul
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour un curage ganglionnaire axillaire seul (sans geste mammaire associé) ?
-- **réponse** : Pas d'antibioprophylaxie
-
-### Génioplastie
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour une génioplastie (avec ou sans implant) ?
-- **réponse** : Amoxicilline/Clavulanate
-
-### Pose de substitut dermique
-- **type** : open
-- **question** : Quelle est la recommandation d'antibioprophylaxie pour la pose d'un substitut dermique (matrice dermique acellulaire) ?
-- **réponse** : Céfazoline
-
----
-
-## QCM
+- **type** : qcm
+- **question** : Un patient traumatisé crânien a reçu de la ceftriaxone en prévention de la pneumopathie d'inhalation. Il doit être opéré d'une fracture ouverte du radius. Laquelle des conduites suivantes est INCORRECTE ?
+- **choix** :
+  - A. Amoxicilline/Clavulanate en dose unique pré-opératoire
+  - B. Céfazoline + Gentamicine en dose unique pré-opératoire
+  - C. Aucun ajout, la ceftriaxone couvre déjà l'antibioprophylaxie chirurgicale
+- **réponse** : C
 
 ### Chirurgie otologique : laquelle nécessite une ABP ?
 - **type** : qcm
