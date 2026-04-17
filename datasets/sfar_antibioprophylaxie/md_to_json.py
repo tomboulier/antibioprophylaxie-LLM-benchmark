@@ -1,7 +1,11 @@
 """Convertit benchmark.md en benchmark.json.
 
-Usage :
+Usage CLI :
     uv run python datasets/sfar_antibioprophylaxie/md_to_json.py
+
+Import :
+    from <module> import generate  # ou via importlib
+    count = generate(md_path, json_path)
 """
 
 from __future__ import annotations
@@ -63,7 +67,9 @@ def parse_benchmark(text: str) -> list[dict]:
         q: dict = {"id": qid, "titre": titre}
 
         # Parser les champs "- **clé** : valeur" ([ \t] évite de traverser les \n)
-        for match in re.finditer(r"^- \*\*(\w+(?:[- ]\w+)*)\*\*[ \t]*:[ \t]*(.+)$", block, re.MULTILINE):
+        for match in re.finditer(
+            r"^- \*\*(\w+(?:[- ]\w+)*)\*\*[ \t]*:[ \t]*(.+)$", block, re.MULTILINE
+        ):
             key = match.group(1).strip().replace(" ", "_").replace("-", "_")
             value = match.group(2).strip()
             q[key] = value
@@ -86,21 +92,48 @@ def parse_benchmark(text: str) -> list[dict]:
     return questions
 
 
-def main() -> None:
-    if not MD_PATH.exists():
-        print(f"Erreur : {MD_PATH} introuvable", file=sys.stderr)
-        sys.exit(1)
+def generate(md_path: Path = MD_PATH, json_path: Path = JSON_PATH) -> int:
+    """Convertit le Markdown en JSON et écrit le fichier cible.
 
-    text = MD_PATH.read_text(encoding="utf-8")
+    Parameters
+    ----------
+    md_path : Path
+        Chemin du fichier Markdown source.
+    json_path : Path
+        Chemin du fichier JSON à écrire.
+
+    Returns
+    -------
+    int
+        Nombre de questions converties.
+
+    Raises
+    ------
+    FileNotFoundError
+        Si ``md_path`` n'existe pas.
+    """
+    if not md_path.exists():
+        raise FileNotFoundError(md_path)
+
+    text = md_path.read_text(encoding="utf-8")
     questions = parse_benchmark(text)
 
     output = {**_DATASET_META, "questions": questions}
 
-    JSON_PATH.write_text(
+    json_path.write_text(
         json.dumps(output, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    print(f"{len(questions)} questions converties → {JSON_PATH}")
+    return len(questions)
+
+
+def main() -> None:
+    try:
+        count = generate()
+    except FileNotFoundError as err:
+        print(f"Erreur : {err} introuvable", file=sys.stderr)
+        sys.exit(1)
+    print(f"{count} questions converties → {JSON_PATH}")
 
 
 if __name__ == "__main__":

@@ -15,12 +15,16 @@ Usage
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import sys
 from pathlib import Path
 
 import dotenv
 
-DATASET_PATH = Path("datasets/sfar_antibioprophylaxie/benchmark.json")
+DATASET_DIR = Path("datasets/sfar_antibioprophylaxie")
+DATASET_MD = DATASET_DIR / "benchmark.md"
+DATASET_PATH = DATASET_DIR / "benchmark.json"
+DATASET_CONVERTER = DATASET_DIR / "md_to_json.py"
 OUTPUT_DIR = Path("research/results")
 FIGURES_DIR = Path("research/figures")
 
@@ -39,14 +43,16 @@ def build_parser() -> argparse.ArgumentParser:
         help="Lancer une expérience benchmark.",
     )
     run_parser.add_argument(
-        "--model", "-m",
+        "--model",
+        "-m",
         action="append",
         dest="models",
         metavar="MODEL",
         help="Modèle à évaluer (répétable). Sans -m, lance tous les modèles activés.",
     )
     run_parser.add_argument(
-        "--questions", "-q",
+        "--questions",
+        "-q",
         type=str,
         default=None,
         metavar="IDS",
@@ -85,6 +91,8 @@ def _handle_run(args: argparse.Namespace) -> None:
     """Déléguer au use case RunExperiment."""
     from llm_benchmark.usecases.run_experiment import RunExperiment
 
+    _ensure_dataset_json_fresh()
+
     question_ids = None
     if args.questions:
         question_ids = [q.strip() for q in args.questions.split(",") if q.strip()]
@@ -97,6 +105,32 @@ def _handle_run(args: argparse.Namespace) -> None:
         question_ids=question_ids,
     )
     experiment.execute()
+
+
+def _ensure_dataset_json_fresh() -> None:
+    """Régénère ``benchmark.json`` si absent ou plus ancien que ``benchmark.md``.
+
+    Le JSON est un artefact généré à partir du Markdown (source de vérité).
+    Cette fonction garantit qu'il est à jour avant le chargement du dataset.
+    Silencieuse si le Markdown source n'existe pas (dataset tiers).
+    """
+    if not DATASET_MD.exists():
+        return
+
+    json_stale = (
+        not DATASET_PATH.exists() or DATASET_MD.stat().st_mtime > DATASET_PATH.stat().st_mtime
+    )
+    if not json_stale:
+        return
+
+    spec = importlib.util.spec_from_file_location("_sfar_md_to_json", DATASET_CONVERTER)
+    if spec is None or spec.loader is None:
+        msg = f"Impossible de charger le convertisseur : {DATASET_CONVERTER}"
+        raise RuntimeError(msg)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    count = module.generate(DATASET_MD, DATASET_PATH)
+    print(f"[dataset] benchmark.json régénéré ({count} questions)")
 
 
 def _handle_list(args: argparse.Namespace) -> None:
