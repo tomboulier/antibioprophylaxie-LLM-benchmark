@@ -45,6 +45,9 @@ research/results/*.csv
 !research/results/.gitkeep
 research/figures/
 
+# Artefact généré automatiquement à partir de benchmark.md
+datasets/sfar_antibioprophylaxie/benchmark.json
+
 .DS_Store
 .remember/
 
