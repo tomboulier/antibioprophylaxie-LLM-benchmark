@@ -98,6 +98,30 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **question** : Quelle est la recommandation d'antibioprophylaxie pour l'ablation de matériel d'ostéosynthèse au membre inférieur ?
 - **réponse** : Pas d'antibioprophylaxie
 
+### Morsure chien visage parage bloc
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour le parage au bloc opératoire d'une morsure de chien au visage ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Polytrauma fémur radius plaie main
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la prise en charge chirurgicale combinée de fractures fermées (fémur, radius) et d'une exploration de plaie de la main chez un accidenté de la route ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Splénectomie hémostase fixateur externe fémur
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une splénectomie d'hémostase associée à la pose d'un fixateur externe sur fracture fermée du fémur chez un polytraumatisé ?
+- **réponse** : Céfazoline
+
+### Dégantage bras augmentin préhospitalier
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la prise en charge chirurgicale d'un dégantage du bras par machine agricole chez un patient ayant déjà reçu de l'amoxicilline/clavulanate en pré-hospitalier ?
+- **réponse** : Amoxicilline/Clavulanate
+
 ### Craniotomie standard
 
 - **type** : open
@@ -530,6 +554,12 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **question** : Quelle est la recommandation d'antibioprophylaxie pour une appendicectomie programmée ?
 - **réponse** : Céfoxitine
 
+### Colectomie droite porteur BLSE
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une colectomie droite programmée chez un patient porteur d'une entérobactérie productrice de bêtalactamase à spectre étendu (BLSE) ?
+- **réponse** : Ertapénème
+
 ### Hémorroïdes
 
 - **type** : open
@@ -941,4 +971,24 @@ Pour les QCM, une seule réponse correcte (lettre).
   - B. Une antibioprophylaxie n'est jamais recommandée, avec ou sans prothèse
   - C. Une antibioprophylaxie est recommandée uniquement en cas de pose de prothèse
   - D. Une antibioprophylaxie est recommandée uniquement en l'absence de prothèse
+- **réponse** : C
+
+### Fracture ouverte jambe chirurgie longue protocoles
+
+- **type** : qcm
+- **question** : Pour une chirurgie de fracture ouverte de jambe Gustilo 3 d'une durée prévisible supérieure à 4 heures, laquelle de ces conduites d'antibioprophylaxie est INCORRECTE ?
+- **choix** :
+  - A. Amoxicilline/Clavulanate avec réinjection toutes les 2 heures
+  - B. Céfazoline + Gentamicine, avec réinjection de la Céfazoline toutes les 4 heures
+  - C. Céfazoline en dose unique, sans réinjection
+- **réponse** : C
+
+### Fracture ouverte radius ceftriaxone pneumopathie
+
+- **type** : qcm
+- **question** : Un patient traumatisé crânien a reçu de la ceftriaxone en prévention de la pneumopathie d'inhalation. Il doit être opéré d'une fracture ouverte du radius. Laquelle des conduites suivantes est INCORRECTE ?
+- **choix** :
+  - A. Amoxicilline/Clavulanate en dose unique pré-opératoire
+  - B. Céfazoline + Gentamicine en dose unique pré-opératoire
+  - C. Aucun ajout, la ceftriaxone couvre déjà l'antibioprophylaxie chirurgicale
 - **réponse** : C
