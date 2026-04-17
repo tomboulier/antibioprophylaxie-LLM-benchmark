@@ -98,692 +98,727 @@
     },
     {
       "id": "Q14",
+      "titre": "Morsure chien visage parage bloc",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour le parage au bloc opératoire d'une morsure de chien au visage ?",
+      "réponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q15",
+      "titre": "Polytrauma fémur radius plaie main",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour la prise en charge chirurgicale combinée de fractures fermées (fémur, radius) et d'une exploration de plaie de la main chez un accidenté de la route ?",
+      "réponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q16",
+      "titre": "Splénectomie hémostase fixateur externe fémur",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une splénectomie d'hémostase associée à la pose d'un fixateur externe sur fracture fermée du fémur chez un polytraumatisé ?",
+      "réponse": "Céfazoline"
+    },
+    {
+      "id": "Q17",
+      "titre": "Dégantage bras augmentin préhospitalier",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour la prise en charge chirurgicale d'un dégantage du bras par machine agricole chez un patient ayant déjà reçu de l'amoxicilline/clavulanate en pré-hospitalier ?",
+      "réponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q18",
       "titre": "Craniotomie standard",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une craniotomie ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q15",
+      "id": "Q19",
       "titre": "Biopsie cérébrale",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une biopsie cérébrale ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q16",
+      "id": "Q20",
       "titre": "DVE",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'une dérivation ventriculaire externe (DVE) ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q17",
+      "id": "Q21",
       "titre": "DVP",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'une dérivation ventriculo-péritonéale (DVP) ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q18",
+      "id": "Q22",
       "titre": "Plaie cranio-cérébrale",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une plaie cranio-cérébrale pénétrante ?",
       "réponse": "Amoxicilline/Clavulanate"
     },
     {
-      "id": "Q19",
+      "id": "Q23",
       "titre": "Fracture base du crâne sans otorrhée",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une fracture de la base du crâne sans otorrhée ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q20",
+      "id": "Q24",
       "titre": "Fracture base du crâne avec otorrhée",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une fracture de la base du crâne avec otorrhée ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q21",
+      "id": "Q25",
       "titre": "Pose stimulateur cérébral",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'une électrode de stimulation cérébrale profonde ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q22",
+      "id": "Q26",
       "titre": "Embolisation anévrysme cérébral",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour l'embolisation d'un anévrysme cérébral ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q23",
+      "id": "Q27",
       "titre": "Craniotomie allergie bêtalactamines",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une craniotomie chez un patient allergique aux bêtalactamines ?",
       "réponse": "Clindamycine"
     },
     {
-      "id": "Q24",
+      "id": "Q28",
       "titre": "Plaie cranio-cérébrale allergie pénicillines",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une plaie cranio-cérébrale chez un patient allergique aux pénicillines ?",
       "réponse": "Triméthoprime/Sulfaméthoxazole"
     },
     {
-      "id": "Q25",
+      "id": "Q29",
       "titre": "Amygdalectomie",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une amygdalectomie ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q26",
+      "id": "Q30",
       "titre": "Thyroïdectomie totale",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une thyroïdectomie totale ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q27",
+      "id": "Q31",
       "titre": "Chirurgie sinusienne polypose",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie sinusienne de polypose nasale ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q28",
+      "id": "Q32",
       "titre": "Laryngectomie totale",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une laryngectomie totale (chirurgie carcinologique ORL sans reconstruction) ?",
       "réponse": "Amoxicilline/Clavulanate"
     },
     {
-      "id": "Q29",
+      "id": "Q33",
       "titre": "Implant cochléaire",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'un implant cochléaire ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q30",
+      "id": "Q34",
       "titre": "Trachéotomie chirurgicale",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une trachéotomie chirurgicale ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q31",
+      "id": "Q35",
       "titre": "Trachéotomie percutanée",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une trachéotomie percutanée ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q32",
+      "id": "Q36",
       "titre": "Chirurgie cataracte",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie de la cataracte ?",
       "réponse": "Céfuroxime"
     },
     {
-      "id": "Q33",
+      "id": "Q37",
       "titre": "Chirurgie glaucome",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie du glaucome ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q34",
+      "id": "Q38",
       "titre": "Traumatisme globe ouvert",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour un traumatisme à globe ouvert ?",
       "réponse": "Vancomycine + Ceftazidime"
     },
     {
-      "id": "Q35",
+      "id": "Q39",
       "titre": "Chirurgie strabisme",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie du strabisme ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q36",
+      "id": "Q40",
       "titre": "Extraction dent incluse",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour l'extraction d'une dent incluse ?",
       "réponse": "Amoxicilline"
     },
     {
-      "id": "Q37",
+      "id": "Q41",
       "titre": "Fracture mandibule",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une fracture ouverte de mandibule ?",
       "réponse": "Amoxicilline/Clavulanate"
     },
     {
-      "id": "Q38",
+      "id": "Q42",
       "titre": "Chirurgie orthognatique",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie orthognatique ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q39",
+      "id": "Q43",
       "titre": "Carcinologique cervico-faciale allergie bêtalactamines",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie carcinologique cervico-faciale avec lambeau chez un patient allergique aux bêtalactamines ?",
       "réponse": "Clindamycine + Gentamicine"
     },
     {
-      "id": "Q40",
+      "id": "Q44",
       "titre": "Remplacement valvulaire sous CEC",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour un remplacement valvulaire aortique sous circulation extracorporelle (CEC) ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q41",
+      "id": "Q45",
       "titre": "TAVI",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'une bioprothèse de valve aortique par voie transcutanée (TAVI) ?",
       "réponse": "Amoxicilline/Clavulanate"
     },
     {
-      "id": "Q42",
+      "id": "Q46",
       "titre": "Pose pacemaker",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour l'implantation d'un stimulateur cardiaque (pacemaker) ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q43",
+      "id": "Q47",
       "titre": "Ablation FA par cathéter",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une ablation de fibrillation atriale par cathéter (radiofréquence), chez un patient n'ayant pas de prothèse intracardiaque déjà implantée ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q44",
+      "id": "Q48",
       "titre": "ECMO percutanée",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour la mise en place d'une ECMO percutanée (sans abord chirurgical) ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q45",
+      "id": "Q49",
       "titre": "Endartériectomie carotidienne sans matériel",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une endartériectomie carotidienne sans mise en place de matériel ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q46",
+      "id": "Q50",
       "titre": "Amputation de membre",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une amputation de membre (hors contexte septique) ?",
       "réponse": "Amoxicilline/Clavulanate"
     },
     {
-      "id": "Q47",
+      "id": "Q51",
       "titre": "Chirurgie varices sans scarpa",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des varices sans abord chirurgical du scarpa ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q48",
+      "id": "Q52",
       "titre": "Drainage thoracique",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'un drain thoracique ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q49",
+      "id": "Q53",
       "titre": "Médiastinoscopie avec biopsies",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une médiastinoscopie avec biopsies ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q50",
+      "id": "Q54",
       "titre": "Fibroscopie bronchique",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une fibroscopie bronchique avec lavage broncho-alvéolaire ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q51",
+      "id": "Q55",
       "titre": "Pose prothèse mammaire",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une augmentation mammaire avec pose d'implants siliconés ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q52",
+      "id": "Q56",
       "titre": "Tumorectomie mammaire sans curage",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une tumorectomie mammaire sans curage ganglionnaire ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q53",
+      "id": "Q57",
       "titre": "Mastectomie sans reconstruction",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une mastectomie sans reconstruction mammaire ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q54",
+      "id": "Q58",
       "titre": "Rhinoplastie sans greffe cartilage",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une septo-rhinoplastie sans greffe de cartilage ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q55",
+      "id": "Q59",
       "titre": "Lipoaspiration",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une lipoaspiration sous anesthésie générale ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q56",
+      "id": "Q60",
       "titre": "Blépharoplastie",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une blépharoplastie ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q57",
+      "id": "Q61",
       "titre": "Lambeau libre microchirurgical",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une reconstruction par lambeau libre microchirurgical ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q58",
+      "id": "Q62",
       "titre": "Greffe cutanée hors brûlure",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une greffe cutanée (hors patient brûlé) ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q59",
+      "id": "Q63",
       "titre": "Vaginoplastie affirmation de genre",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une vaginoplastie dans le cadre d'une chirurgie d'affirmation de genre ?",
       "réponse": "Amoxicilline/Clavulanate"
     },
     {
-      "id": "Q60",
+      "id": "Q64",
       "titre": "Chondro-laryngoplastie",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une chondro-laryngoplastie par cervicotomie ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q61",
+      "id": "Q65",
       "titre": "Tumorectomie mammaire avec curage axillaire",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une tumorectomie mammaire avec curage axillaire ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q62",
+      "id": "Q66",
       "titre": "Mastoplastie de réduction",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une mastoplastie bilatérale de réduction ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q63",
+      "id": "Q67",
       "titre": "Chirurgie du mamelon",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie du mamelon ou de la plaque aréolo-mamelonnaire ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q64",
+      "id": "Q68",
       "titre": "Coelioscopie diagnostique gynécologique",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une coelioscopie diagnostique en gynécologie ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q65",
+      "id": "Q69",
       "titre": "Annexectomie par coelioscopie",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une annexectomie par voie coelioscopique ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q66",
+      "id": "Q70",
       "titre": "Résection endométriose avec atteinte rectale",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une résection de lésions endométriosiques avec atteinte rectale par coelioscopie ?",
       "réponse": "Céfazoline + Métronidazole"
     },
     {
-      "id": "Q67",
+      "id": "Q71",
       "titre": "Hystérectomie totale par laparotomie",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une hystérectomie totale sans annexectomie par laparotomie ?",
       "réponse": "Céfoxitine"
     },
     {
-      "id": "Q68",
+      "id": "Q72",
       "titre": "Hystérectomie subtotale avec annexectomie",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une hystérectomie subtotale avec annexectomie (sans temps vaginal) ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q69",
+      "id": "Q73",
       "titre": "Conisation col utérin",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une conisation du col utérin ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q70",
+      "id": "Q74",
       "titre": "Hystéroscopie diagnostique",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une hystéroscopie diagnostique ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q71",
+      "id": "Q75",
       "titre": "Biopsie de l'endomètre",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une biopsie de l'endomètre par hystéroscopie ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q72",
+      "id": "Q76",
       "titre": "Chirurgie du prolapsus",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une hystéropexie (chirurgie du prolapsus) ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q73",
+      "id": "Q77",
       "titre": "Vulvectomie avec curage inguinal",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une vulvectomie partielle avec curage lymphonodal inguinal unilatéral ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q74",
+      "id": "Q78",
       "titre": "Nymphoplastie de réduction",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une nymphoplastie de réduction ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q75",
+      "id": "Q79",
       "titre": "Césarienne",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une césarienne programmée ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q76",
+      "id": "Q80",
       "titre": "Cerclage col utérin grossesse",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour un cerclage du col de l'utérus au cours de la grossesse par voie transvaginale ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q77",
+      "id": "Q81",
       "titre": "Révision utérine",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une révision de la cavité utérine après l'accouchement ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q78",
+      "id": "Q82",
       "titre": "Tamponnement utérin hémorragie obstétricale",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'un tamponnement intra-utérin pour hémorragie obstétricale ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q79",
+      "id": "Q83",
       "titre": "IVG premier trimestre",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une interruption volontaire de grossesse par aspiration au premier trimestre ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q80",
+      "id": "Q84",
       "titre": "Ponction ovocytes PMA",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour un prélèvement d'ovocytes par voie transvaginale avec échoguidage (PMA) ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q81",
+      "id": "Q85",
       "titre": "Oesophagectomie",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une oesophagectomie ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q82",
+      "id": "Q86",
       "titre": "Sleeve gastrectomie",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une sleeve gastrectomie (chirurgie bariatrique) ?",
       "réponse": "Céfoxitine"
     },
     {
-      "id": "Q83",
+      "id": "Q87",
       "titre": "Anneau gastrique",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour la mise en place d'un anneau gastrique (chirurgie bariatrique) ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q84",
+      "id": "Q88",
       "titre": "Résection intestin grêle",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une résection de l'intestin grêle par laparotomie ?",
       "réponse": "Céfoxitine"
     },
     {
-      "id": "Q85",
+      "id": "Q89",
       "titre": "Appendicectomie programmée",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une appendicectomie programmée ?",
       "réponse": "Céfoxitine"
     },
     {
-      "id": "Q86",
+      "id": "Q90",
+      "titre": "Colectomie droite porteur BLSE",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une colectomie droite programmée chez un patient porteur d'une entérobactérie productrice de bêtalactamase à spectre étendu (BLSE) ?",
+      "réponse": "Ertapénème"
+    },
+    {
+      "id": "Q91",
       "titre": "Hémorroïdes",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des hémorroïdes ?",
       "réponse": "Métronidazole"
     },
     {
-      "id": "Q87",
+      "id": "Q92",
       "titre": "Cholécystectomie coelioscopique haut risque",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une cholécystectomie élective par coelioscopie chez un patient de 82 ans ictérique, présentant un calcul dans la voie biliaire principale ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q88",
+      "id": "Q93",
       "titre": "Cholécystectomie par laparotomie",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une cholécystectomie par laparotomie ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q89",
+      "id": "Q94",
       "titre": "Kyste hydatique du foie",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie d'un kyste hydatique du foie ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q90",
+      "id": "Q95",
       "titre": "Splénectomie",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une splénectomie programmée par laparotomie ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q91",
+      "id": "Q96",
       "titre": "Pancréatectomie gauche",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une pancréatectomie gauche avec conservation de la rate ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q92",
+      "id": "Q97",
       "titre": "DPC sans drainage biliaire préopératoire",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une duodéno-pancréatectomie céphalique (DPC) sans geste de drainage biliaire préopératoire ?",
       "réponse": "Céfoxitine"
     },
     {
-      "id": "Q93",
+      "id": "Q98",
       "titre": "DPT avec drainage biliaire préopératoire",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une duodéno-pancréatectomie totale (DPT) pour ampullome avec antécédent de drainage biliaire ?",
       "réponse": "Pipéracilline/Tazobactam"
     },
     {
-      "id": "Q94",
+      "id": "Q99",
       "titre": "Transplantation hépatique",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une transplantation hépatique ?",
       "réponse": "Céfoxitine"
     },
     {
-      "id": "Q95",
+      "id": "Q100",
       "titre": "Hernie inguinale avec prothèse",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une cure de hernie inguinale avec pose de prothèse par coelioscopie ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q96",
+      "id": "Q101",
       "titre": "Hernie aine sans prothèse",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une cure de hernie de l'aine sans prothèse ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q97",
+      "id": "Q102",
       "titre": "Gastrostomie percutanée",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'une gastrostomie par voie transcutanée avec guidage endoscopique ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q98",
+      "id": "Q103",
       "titre": "Coloscopie avec biopsie",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une coloscopie diagnostique avec biopsie ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q99",
+      "id": "Q104",
       "titre": "CPRE avec drainage complet",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une CPRE avec extraction de calculs biliaires et drainage biliaire complet satisfaisant ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q100",
+      "id": "Q105",
       "titre": "Embolisation hépatique",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une chimio-embolisation hépatique ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q101",
+      "id": "Q106",
       "titre": "RTUP",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une résection trans-urétrale de prostate (RTUP) ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q102",
+      "id": "Q107",
       "titre": "Prostatectomie totale",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une prostatectomie totale ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q103",
+      "id": "Q108",
       "titre": "Biopsie prostate transrectale",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour des biopsies de prostate par voie transrectale ?",
       "réponse": "Fosfomycine-trométamol"
     },
     {
-      "id": "Q104",
+      "id": "Q109",
       "titre": "Biopsie prostate transpérinéale",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour des biopsies de prostate par voie transpérinéale ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q105",
+      "id": "Q110",
       "titre": "Cystoscopie diagnostique",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une cystoscopie diagnostique ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q106",
+      "id": "Q111",
       "titre": "Cystectomie sustrigonale",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une cystectomie sustrigonale totale ?",
       "réponse": "Céfoxitine"
     },
     {
-      "id": "Q107",
+      "id": "Q112",
       "titre": "Prothèse pénienne",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'une prothèse pénienne ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q108",
+      "id": "Q113",
       "titre": "Chirurgie scrotale sans prothèse",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie scrotale sans prothèse ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q109",
+      "id": "Q114",
       "titre": "Urétéroscopie",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une urétéroscopie diagnostique ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q110",
+      "id": "Q115",
       "titre": "Lithotritie extra-corporelle",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une lithotritie extra-corporelle ?",
       "réponse": "Pas d'antibioprophylaxie"
     },
     {
-      "id": "Q111",
+      "id": "Q116",
       "titre": "Néphrolithotomie percutanée",
       "type": "open",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une néphrolithotomie percutanée ?",
       "réponse": "Céfazoline"
     },
     {
-      "id": "Q112",
+      "id": "Q117",
       "titre": "PTG première intention",
       "type": "mcq",
       "question": "Quelle molécule est recommandée en première intention pour l'antibioprophylaxie d'une prothèse totale de genou ?",
@@ -796,7 +831,7 @@
       }
     },
     {
-      "id": "Q113",
+      "id": "Q118",
       "titre": "Intervention sans ABP",
       "type": "mcq",
       "question": "Parmi ces interventions, laquelle ne nécessite PAS d'antibioprophylaxie ?",
@@ -809,7 +844,7 @@
       }
     },
     {
-      "id": "Q114",
+      "id": "Q119",
       "titre": "PTG allergie alternative",
       "type": "mcq",
       "question": "En cas d'allergie aux bêtalactamines, quelle est l'alternative de première intention pour l'antibioprophylaxie d'une prothèse de genou ?",
@@ -822,7 +857,7 @@
       }
     },
     {
-      "id": "Q115",
+      "id": "Q120",
       "titre": "Seuil Gustilo changement molécule",
       "type": "mcq",
       "question": "À partir de quel stade de Gustilo la molécule d'antibioprophylaxie change-t-elle (passage de la Céfazoline à l'Amoxicilline/Clavulanate) ?",
@@ -835,7 +870,7 @@
       }
     },
     {
-      "id": "Q116",
+      "id": "Q121",
       "titre": "Plaie jardinage main",
       "type": "mcq",
       "question": "Un patient se présente avec une plaie de la main par accident de jardinage, susceptible de contamination tellurique. Quelle est la recommandation ?",
@@ -848,7 +883,7 @@
       }
     },
     {
-      "id": "Q117",
+      "id": "Q122",
       "titre": "DVE vs DVP",
       "type": "mcq",
       "question": "Parmi ces actes neurochirurgicaux, lequel nécessite une antibioprophylaxie ?",
@@ -861,7 +896,7 @@
       }
     },
     {
-      "id": "Q118",
+      "id": "Q123",
       "titre": "Rachis avec vs sans matériel",
       "type": "mcq",
       "question": "Pour la chirurgie du rachis, dans quel cas une antibioprophylaxie est-elle recommandée ?",
@@ -874,7 +909,7 @@
       }
     },
     {
-      "id": "Q119",
+      "id": "Q124",
       "titre": "ORL sans ABP",
       "type": "mcq",
       "question": "Parmi ces interventions ORL, laquelle ne nécessite PAS d'antibioprophylaxie ?",
@@ -887,7 +922,7 @@
       }
     },
     {
-      "id": "Q120",
+      "id": "Q125",
       "titre": "Cataracte molécule",
       "type": "mcq",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour la chirurgie de la cataracte ?",
@@ -900,7 +935,7 @@
       }
     },
     {
-      "id": "Q121",
+      "id": "Q126",
       "titre": "Trachéotomie chirurgicale vs percutanée",
       "type": "mcq",
       "question": "Concernant l'antibioprophylaxie des trachéotomies, quelle affirmation est correcte ?",
@@ -913,7 +948,7 @@
       }
     },
     {
-      "id": "Q122",
+      "id": "Q127",
       "titre": "Lobectomie pulmonaire molécule",
       "type": "mcq",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une lobectomie pulmonaire par thoracotomie ?",
@@ -926,7 +961,7 @@
       }
     },
     {
-      "id": "Q123",
+      "id": "Q128",
       "titre": "Carotide avec vs sans matériel",
       "type": "mcq",
       "question": "Concernant l'antibioprophylaxie de la chirurgie carotidienne, quelle affirmation est correcte ?",
@@ -939,7 +974,7 @@
       }
     },
     {
-      "id": "Q124",
+      "id": "Q129",
       "titre": "Chirurgie mammaire et ABP",
       "type": "mcq",
       "question": "Parmi ces interventions mammaires, laquelle nécessite une antibioprophylaxie ?",
@@ -952,7 +987,7 @@
       }
     },
     {
-      "id": "Q125",
+      "id": "Q130",
       "titre": "Rhinoplastie avec vs sans greffe",
       "type": "mcq",
       "question": "Concernant l'antibioprophylaxie en septo-rhinoplastie, quelle affirmation est correcte ?",
@@ -965,7 +1000,7 @@
       }
     },
     {
-      "id": "Q126",
+      "id": "Q131",
       "titre": "Hystérectomie voie d'abord et molécule",
       "type": "mcq",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une hystérectomie totale par voie coelioscopique (avec annexectomie) ?",
@@ -978,7 +1013,7 @@
       }
     },
     {
-      "id": "Q127",
+      "id": "Q132",
       "titre": "Coelioscopie gynécologique sans ABP",
       "type": "mcq",
       "question": "Parmi ces interventions gynécologiques par coelioscopie, laquelle ne nécessite PAS d'antibioprophylaxie ?",
@@ -991,7 +1026,7 @@
       }
     },
     {
-      "id": "Q128",
+      "id": "Q133",
       "titre": "Obstétrique césarienne vs cerclage",
       "type": "mcq",
       "question": "Concernant l'antibioprophylaxie en obstétrique, quelle affirmation est correcte ?",
@@ -1004,7 +1039,7 @@
       }
     },
     {
-      "id": "Q129",
+      "id": "Q134",
       "titre": "Endométriose rectale molécule",
       "type": "mcq",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une résection de lésions endométriosiques avec atteinte rectale ?",
@@ -1017,7 +1052,7 @@
       }
     },
     {
-      "id": "Q130",
+      "id": "Q135",
       "titre": "Bariatrique anneau vs sleeve",
       "type": "mcq",
       "question": "Concernant l'antibioprophylaxie en chirurgie bariatrique, quelle affirmation est correcte ?",
@@ -1030,7 +1065,7 @@
       }
     },
     {
-      "id": "Q131",
+      "id": "Q136",
       "titre": "Colectomie protocole ABP",
       "type": "mcq",
       "question": "Quel est le protocole d'antibioprophylaxie recommandé pour une colectomie programmée ?",
@@ -1043,7 +1078,7 @@
       }
     },
     {
-      "id": "Q132",
+      "id": "Q137",
       "titre": "Cholécystectomie coelioscopique risque",
       "type": "mcq",
       "question": "Une cholécystectomie élective par coelioscopie est programmée. Dans quel cas une antibioprophylaxie est-elle recommandée ?",
@@ -1056,7 +1091,7 @@
       }
     },
     {
-      "id": "Q133",
+      "id": "Q138",
       "titre": "Biopsie prostate voie d'abord",
       "type": "mcq",
       "question": "Concernant l'antibioprophylaxie des biopsies de prostate, quelle affirmation est correcte ?",
@@ -1069,7 +1104,7 @@
       }
     },
     {
-      "id": "Q134",
+      "id": "Q139",
       "titre": "Hernie inguinale avec vs sans prothèse",
       "type": "mcq",
       "question": "Concernant l'antibioprophylaxie de la cure de hernie inguinale, quelle affirmation est correcte ?",
@@ -1079,6 +1114,32 @@
         "B": "Une antibioprophylaxie n'est jamais recommandée, avec ou sans prothèse",
         "C": "Une antibioprophylaxie est recommandée uniquement en cas de pose de prothèse",
         "D": "Une antibioprophylaxie est recommandée uniquement en l'absence de prothèse"
+      }
+    },
+    {
+      "id": "Q140",
+      "titre": "Fracture ouverte jambe chirurgie longue protocoles",
+      "type": "mcq",
+      "question": "Pour une chirurgie de fracture ouverte de jambe Gustilo 3 d'une durée prévisible supérieure à 4 heures, quelle conduite d'antibioprophylaxie est recommandée ?",
+      "réponse": "D",
+      "choices": {
+        "A": "Céfazoline en dose unique, sans réinjection",
+        "B": "Amoxicilline/Clavulanate avec réinjection toutes les 2 heures",
+        "C": "Céfazoline + Gentamicine, avec réinjection de la Céfazoline toutes les 4 heures",
+        "D": "Les options B et C sont toutes deux acceptables"
+      }
+    },
+    {
+      "id": "Q141",
+      "titre": "Fracture ouverte radius ceftriaxone pneumopathie",
+      "type": "mcq",
+      "question": "Un patient traumatisé crânien a reçu de la ceftriaxone en prévention de la pneumopathie d'inhalation. Il doit être opéré d'une fracture ouverte du radius. Quelle conduite d'antibioprophylaxie est recommandée ?",
+      "réponse": "D",
+      "choices": {
+        "A": "Aucun ajout, la ceftriaxone couvre déjà l'antibioprophylaxie chirurgicale",
+        "B": "Amoxicilline/Clavulanate en dose unique pré-opératoire",
+        "C": "Céfazoline + Gentamicine en dose unique pré-opératoire",
+        "D": "Les options B et C sont toutes deux acceptables"
       }
     }
   ]
