@@ -1,7 +1,7 @@
-# Abstract SFAR 2026 — Brouillon
+# Abstract SFAR 2026
 
 > **Limite** : 3 500 caractères espaces inclus (hors titre, auteurs, affiliations, images)
-> **Statut** : Brouillon v4, résultats 3 modèles (171 questions, couverture élargie)
+> **Statut** : Soumis le 17/04/2026 (v4, résultats 3 modèles sur 171 questions)
 
 ---
 
