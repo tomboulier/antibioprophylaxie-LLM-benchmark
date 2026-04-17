@@ -15,7 +15,7 @@
 
 **Introduction**
 
-Les grands modèles de langage (large language models, LLMs) tels que ChatGPT sont envisagés comme outils d'aide à la décision clinique. L'un des principaux obstacles à leur mise en place est le phénomène d'« hallucinations » [1], c'est-à-dire la production de réponses incorrectes formulées avec assurance. Cela représente un risque pour la sécurité des patients lorsqu'il s'agit de posologies ou de choix de molécules [2]. La fiabilité des LLMs sur des recommandations formalisées d'experts (RFE) reste peu évaluée. L'objectif de cette étude est de proposer une méthode d'évaluation reproductible pour mesurer la fiabilité de plusieurs LLM sur les RFE concernant l'antibioprophylaxie en chirurgie et médecine interventionnelle, émises par la SFAR en 2024 [3].
+Les grands modèles de langage (large language models, LLM) tels que ChatGPT sont envisagés comme outils d'aide à la décision clinique. L'un des principaux obstacles à leur mise en place est le phénomène d'« hallucinations » [1], c'est-à-dire la production de réponses incorrectes formulées avec assurance. Cela représente un risque pour la sécurité des patients lorsqu'il s'agit de posologies ou de choix de molécules [2]. La fiabilité des LLM sur des recommandations formalisées d'experts (RFE) reste peu évaluée. L'objectif de cette étude est de proposer une méthode d'évaluation reproductible pour mesurer la fiabilité de plusieurs LLM sur les RFE concernant l'antibioprophylaxie en chirurgie et médecine interventionnelle, émises par la SFAR en 2024 [3].
 
 **Matériel et méthodes**
 
