@@ -47,10 +47,10 @@ Trois modèles d'IA commerciaux ont été évalués sur 134 questions d'antibiop
 
 ## Figures
 
-**Figure 1.** Méthode d'évaluation. Un questionnaire standardisé de 134 questions couvrant 8 spécialités chirurgicales est soumis à trois grands modèles de langage, puis corrigé automatiquement par comparaison aux réponses attendues issues des RFE SFAR 2024.
+**Figure 1.** Méthode d'évaluation. Un questionnaire standardisé de questions est soumis à trois grands modèles de langage, puis corrigé automatiquement par comparaison aux réponses attendues issues des recommandations formalisées d'experts de la SFAR sur l'antibioprophylaxie en chirurgie et médecine interventionnelle.
 
 ![Figure 1 — Méthode d'évaluation](pipeline_benchmark.png)
 
-**Figure 2.** Taux de réponses correctes par modèle et par type de question (questions ouvertes et QCM). Les trois modèles obtiennent des scores globaux proches (55 à 59 %), mais avec des profils distincts selon le type de question.
+**Figure 2.** Taux de réponses correctes par modèle et par type de question (questions ouvertes et QCM).
 
 ![Figure 2 — Résultats comparatifs](accuracy_comparison.png)
