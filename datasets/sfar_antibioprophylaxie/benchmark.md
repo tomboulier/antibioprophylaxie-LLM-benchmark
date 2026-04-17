@@ -942,3 +942,218 @@ Pour les QCM, une seule réponse correcte (lettre).
   - C. Une antibioprophylaxie est recommandée uniquement en cas de pose de prothèse
   - D. Une antibioprophylaxie est recommandée uniquement en l'absence de prothèse
 - **réponse** : C
+
+
+
+# Benchmark Antibioprophylaxie SFAR — 30 questions supplémentaires
+> Jeu de questions standardisé pour évaluer tout système (RAG, MCP, chatbot, LLM)
+> sur les recommandations d'antibioprophylaxie chirurgicale (RFE SFAR 2024).
+>
+> **Source** : RFE SFAR 2024 ([V2.0 du 22/05/2024](https://sfar.org/download/antibioprophylaxie-en-chirurgie-et-medecine-interventionnelle/?wpdmdl=68362&refresh=69de933379d901776194355))
+> **Spécialités couvertes** : ORL (otologie, salivaires, rhinologie), Chirurgie cardiaque/vasculaire, Chirurgie thoracique, Chirurgie plastique et reconstructrice
+> **Date** : 2026-04-17
+
+## Format des réponses attendues
+Pour les questions ouvertes, la réponse attendue est :
+- Un **nom de molécule** (ex : `Céfazoline`, `Amoxicilline/Clavulanate`)
+- `Pas d'antibioprophylaxie` (pas d'ABP recommandée pour cette intervention)
+- `Hors périmètre` (situation non couverte par les RFE SFAR 2024)
+Pour les QCM, une seule réponse correcte (lettre).
+
+---
+
+## Questions ouvertes
+
+### Tympanoplastie
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une tympanoplastie (myringoplastie) ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Stapédectomie
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une stapédectomie pour otospongiose ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Cholestéatome non infecté
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie de cholestéatome non infecté (tympanotomie d'oreille moyenne) ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Adénoïdectomie
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une adénoïdectomie isolée ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Laryngoscopie avec cordectomie laser
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une laryngoscopie en suspension avec geste thérapeutique par laser (cordectomie) ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Parathyroïdectomie
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une parathyroïdectomie pour hyperparathyroïdie primaire ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Parotidectomie sans accès buccal
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une parotidectomie partielle superficielle sans accès par la cavité bucco-pharyngée ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Chirurgie glandes salivaires avec accès buccal
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des glandes salivaires avec accès par la cavité bucco-pharyngée (ex : ablation d'un calcul sous-mandibulaire par voie endobuccale) ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Rhinoplastie avec greffe de cartilage
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une septo-rhinoplastie avec greffe de cartilage ?
+- **réponse** : Céfazoline
+
+### Endartériectomie carotidienne avec matériel
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une endartériectomie carotidienne avec mise en place de matériel (patch) ?
+- **réponse** : Céfazoline
+
+### Fistule artério-veineuse sans matériel
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la création d'une fistule artério-veineuse native sans mise en place de matériel prothétique ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Fistule artério-veineuse avec matériel
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la création d'une fistule artério-veineuse prothétique avec mise en place d'un greffon synthétique ?
+- **réponse** : Céfazoline
+
+### Varices avec abord chirurgical du Scarpa
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des varices avec abord chirurgical du triangle de Scarpa ?
+- **réponse** : Céfazoline
+
+### Transplantation cardiaque standard
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une transplantation cardiaque chez un patient arrivant de son domicile, sans assistance mécanique circulatoire de longue durée préalable ?
+- **réponse** : Céfazoline
+
+### Fermeture de foramen ovale perméable
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la fermeture d'un foramen ovale perméable par voie percutanée avec implantation de matériel ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Chirurgie du pneumothorax par thoracoscopie
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une bullectomie avec pleurectomie apicale par vidéothoracoscopie pour pneumothorax spontané récidivant ?
+- **réponse** : Céfazoline
+
+### Body-lift
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour un body-lift (lifting corporel circulaire post-perte de poids massive) ?
+- **réponse** : Céfazoline
+
+### Abdominoplastie courte durée
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une abdominoplastie de durée inférieure ou égale à 2 heures ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Brachioplastie
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une brachioplastie (lifting des bras) ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Curage ganglionnaire axillaire seul
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour un curage ganglionnaire axillaire seul (sans geste mammaire associé) ?
+- **réponse** : Pas d'antibioprophylaxie
+
+### Génioplastie
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une génioplastie (avec ou sans implant) ?
+- **réponse** : Amoxicilline/Clavulanate
+
+### Pose de substitut dermique
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la pose d'un substitut dermique (matrice dermique acellulaire) ?
+- **réponse** : Céfazoline
+
+---
+
+## QCM
+
+### Chirurgie otologique : laquelle nécessite une ABP ?
+- **type** : qcm
+- **question** : Parmi ces interventions otologiques, laquelle nécessite une antibioprophylaxie ?
+- **choix** :
+  - A. Tympanoplastie pour perforation tympanique
+  - B. Stapédectomie pour otospongiose
+  - C. Pose d'implant cochléaire
+  - D. Chirurgie de cholestéatome non infecté
+- **réponse** : C
+
+### Glandes salivaires : condition déclenchant l'ABP
+- **type** : qcm
+- **question** : Concernant l'antibioprophylaxie de la chirurgie des glandes salivaires, quelle affirmation est correcte ?
+- **choix** :
+  - A. Une antibioprophylaxie est toujours recommandée, quelle que soit la voie d'abord
+  - B. Une antibioprophylaxie n'est jamais recommandée pour ce type de chirurgie
+  - C. Une antibioprophylaxie est recommandée uniquement en cas d'accès par la cavité bucco-pharyngée
+  - D. Une antibioprophylaxie est recommandée uniquement en l'absence d'accès par la cavité bucco-pharyngée
+- **réponse** : C
+
+### Stent vasculaire : quel cas sans ABP ?
+- **type** : qcm
+- **question** : Parmi ces procédures interventionnelles vasculaires, dans quel cas l'antibioprophylaxie n'est-elle PAS recommandée ?
+- **choix** :
+  - A. Pose d'un stent couvert aortique
+  - B. Pose d'une endoprothèse vasculaire
+  - C. Pose d'un stent nu chez un patient avec facteurs de risque infectieux
+  - D. Pose d'un stent nu chez un patient sans facteur de risque infectieux
+- **réponse** : D
+
+### Allergie bêtalactamines en chirurgie cardiaque
+- **type** : qcm
+- **question** : En cas d'allergie avérée aux bêtalactamines, quelle est la recommandation d'antibioprophylaxie pour une chirurgie cardiaque sous circulation extracorporelle (remplacement valvulaire, pontage, etc.) ?
+- **choix** :
+  - A. Clindamycine 900 mg IVL
+  - B. Vancomycine 20 mg/kg IVL ou Teicoplanine 12 mg/kg IVL
+  - C. Gentamicine 3 mg/kg IVL seule
+  - D. Céfuroxime 1,5g IVL
+- **réponse** : B
+
+### Fistule artério-veineuse : condition déclenchant l'ABP
+- **type** : qcm
+- **question** : Concernant l'antibioprophylaxie de la chirurgie de fistule artério-veineuse pour accès de dialyse, quelle affirmation est correcte ?
+- **choix** :
+  - A. Une antibioprophylaxie est recommandée dans tous les cas
+  - B. Une antibioprophylaxie n'est jamais recommandée
+  - C. Une antibioprophylaxie est recommandée uniquement en cas de mise en place de matériel prothétique
+  - D. Une antibioprophylaxie est recommandée uniquement en l'absence de matériel prothétique
+- **réponse** : C
+
+### Transplantation cardiaque : molécule de 1re intention
+- **type** : qcm
+- **question** : Quelle est la recommandation d'antibioprophylaxie en première intention pour une transplantation cardiaque chez un patient arrivant de son domicile, sans antécédent d'assistance mécanique circulatoire de longue durée ?
+- **choix** :
+  - A. Amoxicilline/Clavulanate 2g IVL
+  - B. Céfazoline 2g IVL
+  - C. Vancomycine 20 mg/kg IVL
+  - D. Céfoxitine 2g IVL
+- **réponse** : B
+
+### Chirurgie de silhouette : laquelle nécessite une ABP ?
+- **type** : qcm
+- **question** : Parmi ces chirurgies de silhouette, laquelle nécessite une antibioprophylaxie ?
+- **choix** :
+  - A. Brachioplastie (lifting des bras)
+  - B. Lipoaspiration sous anesthésie générale
+  - C. Body-lift (lifting corporel circulaire)
+  - D. Abdominoplastie de durée inférieure ou égale à 2 heures
+- **réponse** : C
+
+### ORL : laquelle ne nécessite PAS d'ABP ?
+- **type** : qcm
+- **question** : Parmi ces interventions ORL ou cervico-faciales, laquelle ne nécessite PAS d'antibioprophylaxie ?
+- **choix** :
+  - A. Septo-rhinoplastie avec greffe de cartilage
+  - B. Chirurgie des glandes salivaires avec accès par la cavité bucco-pharyngée
+  - C. Parathyroïdectomie
+  - D. Pose d'implant cochléaire
+- **réponse** : C
