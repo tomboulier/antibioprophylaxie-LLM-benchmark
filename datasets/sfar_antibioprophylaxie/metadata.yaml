@@ -1,9 +1,9 @@
 id: sfar-antibioprophylaxie
-version: "1.1"
+version: "1.2"
 source: "RFE SFAR 2024 (V2.0 du 22/05/2024)"
 scope: "Ensemble des spécialités couvertes par les RFE SFAR 2024 (chirurgie et médecine interventionnelle)"
-question_count: 141
+question_count: 171
 question_types:
-  open: 116
-  mcq: 25
+  open: 138
+  mcq: 33
 license: "CC BY-NC-SA 4.0"

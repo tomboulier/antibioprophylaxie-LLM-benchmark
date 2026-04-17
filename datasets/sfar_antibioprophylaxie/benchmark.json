@@ -819,6 +819,160 @@
     },
     {
       "id": "Q117",
+      "titre": "Tympanoplastie",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une tympanoplastie (myringoplastie) ?",
+      "réponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q118",
+      "titre": "Stapédectomie",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une stapédectomie pour otospongiose ?",
+      "réponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q119",
+      "titre": "Cholestéatome non infecté",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie de cholestéatome non infecté (tympanotomie d'oreille moyenne) ?",
+      "réponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q120",
+      "titre": "Adénoïdectomie",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une adénoïdectomie isolée ?",
+      "réponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q121",
+      "titre": "Laryngoscopie avec cordectomie laser",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une laryngoscopie en suspension avec geste thérapeutique par laser (cordectomie) ?",
+      "réponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q122",
+      "titre": "Parathyroïdectomie",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une parathyroïdectomie pour hyperparathyroïdie primaire ?",
+      "réponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q123",
+      "titre": "Parotidectomie sans accès buccal",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une parotidectomie partielle superficielle sans accès par la cavité bucco-pharyngée ?",
+      "réponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q124",
+      "titre": "Chirurgie glandes salivaires avec accès buccal",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des glandes salivaires avec accès par la cavité bucco-pharyngée (ex : ablation d'un calcul sous-mandibulaire par voie endobuccale) ?",
+      "réponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q125",
+      "titre": "Rhinoplastie avec greffe de cartilage",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une septo-rhinoplastie avec greffe de cartilage ?",
+      "réponse": "Céfazoline"
+    },
+    {
+      "id": "Q126",
+      "titre": "Endartériectomie carotidienne avec matériel",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une endartériectomie carotidienne avec mise en place de matériel (patch) ?",
+      "réponse": "Céfazoline"
+    },
+    {
+      "id": "Q127",
+      "titre": "Fistule artério-veineuse sans matériel",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour la création d'une fistule artério-veineuse native sans mise en place de matériel prothétique ?",
+      "réponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q128",
+      "titre": "Fistule artério-veineuse avec matériel",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour la création d'une fistule artério-veineuse prothétique avec mise en place d'un greffon synthétique ?",
+      "réponse": "Céfazoline"
+    },
+    {
+      "id": "Q129",
+      "titre": "Varices avec abord chirurgical du Scarpa",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des varices avec abord chirurgical du triangle de Scarpa ?",
+      "réponse": "Céfazoline"
+    },
+    {
+      "id": "Q130",
+      "titre": "Transplantation cardiaque standard",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une transplantation cardiaque chez un patient arrivant de son domicile, sans assistance mécanique circulatoire de longue durée préalable ?",
+      "réponse": "Céfazoline"
+    },
+    {
+      "id": "Q131",
+      "titre": "Fermeture de foramen ovale perméable",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour la fermeture d'un foramen ovale perméable par voie percutanée avec implantation de matériel ?",
+      "réponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q132",
+      "titre": "Chirurgie du pneumothorax par thoracoscopie",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une bullectomie avec pleurectomie apicale par vidéothoracoscopie pour pneumothorax spontané récidivant ?",
+      "réponse": "Céfazoline"
+    },
+    {
+      "id": "Q133",
+      "titre": "Body-lift",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour un body-lift (lifting corporel circulaire post-perte de poids massive) ?",
+      "réponse": "Céfazoline"
+    },
+    {
+      "id": "Q134",
+      "titre": "Abdominoplastie courte durée",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une abdominoplastie de durée inférieure ou égale à 2 heures ?",
+      "réponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q135",
+      "titre": "Brachioplastie",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une brachioplastie (lifting des bras) ?",
+      "réponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q136",
+      "titre": "Curage ganglionnaire axillaire seul",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour un curage ganglionnaire axillaire seul (sans geste mammaire associé) ?",
+      "réponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q137",
+      "titre": "Génioplastie",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour une génioplastie (avec ou sans implant) ?",
+      "réponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q138",
+      "titre": "Pose de substitut dermique",
+      "type": "open",
+      "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'un substitut dermique (matrice dermique acellulaire) ?",
+      "réponse": "Céfazoline"
+    },
+    {
+      "id": "Q139",
       "titre": "PTG première intention",
       "type": "mcq",
       "question": "Quelle molécule est recommandée en première intention pour l'antibioprophylaxie d'une prothèse totale de genou ?",
@@ -831,7 +985,7 @@
       }
     },
     {
-      "id": "Q118",
+      "id": "Q140",
       "titre": "Intervention sans ABP",
       "type": "mcq",
       "question": "Parmi ces interventions, laquelle ne nécessite PAS d'antibioprophylaxie ?",
@@ -844,7 +998,7 @@
       }
     },
     {
-      "id": "Q119",
+      "id": "Q141",
       "titre": "PTG allergie alternative",
       "type": "mcq",
       "question": "En cas d'allergie aux bêtalactamines, quelle est l'alternative de première intention pour l'antibioprophylaxie d'une prothèse de genou ?",
@@ -857,7 +1011,7 @@
       }
     },
     {
-      "id": "Q120",
+      "id": "Q142",
       "titre": "Seuil Gustilo changement molécule",
       "type": "mcq",
       "question": "À partir de quel stade de Gustilo la molécule d'antibioprophylaxie change-t-elle (passage de la Céfazoline à l'Amoxicilline/Clavulanate) ?",
@@ -870,7 +1024,7 @@
       }
     },
     {
-      "id": "Q121",
+      "id": "Q143",
       "titre": "Plaie jardinage main",
       "type": "mcq",
       "question": "Un patient se présente avec une plaie de la main par accident de jardinage, susceptible de contamination tellurique. Quelle est la recommandation ?",
@@ -883,7 +1037,7 @@
       }
     },
     {
-      "id": "Q122",
+      "id": "Q144",
       "titre": "DVE vs DVP",
       "type": "mcq",
       "question": "Parmi ces actes neurochirurgicaux, lequel nécessite une antibioprophylaxie ?",
@@ -896,7 +1050,7 @@
       }
     },
     {
-      "id": "Q123",
+      "id": "Q145",
       "titre": "Rachis avec vs sans matériel",
       "type": "mcq",
       "question": "Pour la chirurgie du rachis, dans quel cas une antibioprophylaxie est-elle recommandée ?",
@@ -909,7 +1063,7 @@
       }
     },
     {
-      "id": "Q124",
+      "id": "Q146",
       "titre": "ORL sans ABP",
       "type": "mcq",
       "question": "Parmi ces interventions ORL, laquelle ne nécessite PAS d'antibioprophylaxie ?",
@@ -922,7 +1076,7 @@
       }
     },
     {
-      "id": "Q125",
+      "id": "Q147",
       "titre": "Cataracte molécule",
       "type": "mcq",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour la chirurgie de la cataracte ?",
@@ -935,7 +1089,7 @@
       }
     },
     {
-      "id": "Q126",
+      "id": "Q148",
       "titre": "Trachéotomie chirurgicale vs percutanée",
       "type": "mcq",
       "question": "Concernant l'antibioprophylaxie des trachéotomies, quelle affirmation est correcte ?",
@@ -948,7 +1102,7 @@
       }
     },
     {
-      "id": "Q127",
+      "id": "Q149",
       "titre": "Lobectomie pulmonaire molécule",
       "type": "mcq",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une lobectomie pulmonaire par thoracotomie ?",
@@ -961,7 +1115,7 @@
       }
     },
     {
-      "id": "Q128",
+      "id": "Q150",
       "titre": "Carotide avec vs sans matériel",
       "type": "mcq",
       "question": "Concernant l'antibioprophylaxie de la chirurgie carotidienne, quelle affirmation est correcte ?",
@@ -974,7 +1128,7 @@
       }
     },
     {
-      "id": "Q129",
+      "id": "Q151",
       "titre": "Chirurgie mammaire et ABP",
       "type": "mcq",
       "question": "Parmi ces interventions mammaires, laquelle nécessite une antibioprophylaxie ?",
@@ -987,7 +1141,7 @@
       }
     },
     {
-      "id": "Q130",
+      "id": "Q152",
       "titre": "Rhinoplastie avec vs sans greffe",
       "type": "mcq",
       "question": "Concernant l'antibioprophylaxie en septo-rhinoplastie, quelle affirmation est correcte ?",
@@ -1000,7 +1154,7 @@
       }
     },
     {
-      "id": "Q131",
+      "id": "Q153",
       "titre": "Hystérectomie voie d'abord et molécule",
       "type": "mcq",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une hystérectomie totale par voie coelioscopique (avec annexectomie) ?",
@@ -1013,7 +1167,7 @@
       }
     },
     {
-      "id": "Q132",
+      "id": "Q154",
       "titre": "Coelioscopie gynécologique sans ABP",
       "type": "mcq",
       "question": "Parmi ces interventions gynécologiques par coelioscopie, laquelle ne nécessite PAS d'antibioprophylaxie ?",
@@ -1026,7 +1180,7 @@
       }
     },
     {
-      "id": "Q133",
+      "id": "Q155",
       "titre": "Obstétrique césarienne vs cerclage",
       "type": "mcq",
       "question": "Concernant l'antibioprophylaxie en obstétrique, quelle affirmation est correcte ?",
@@ -1039,7 +1193,7 @@
       }
     },
     {
-      "id": "Q134",
+      "id": "Q156",
       "titre": "Endométriose rectale molécule",
       "type": "mcq",
       "question": "Quelle est la recommandation d'antibioprophylaxie pour une résection de lésions endométriosiques avec atteinte rectale ?",
@@ -1052,7 +1206,7 @@
       }
     },
     {
-      "id": "Q135",
+      "id": "Q157",
       "titre": "Bariatrique anneau vs sleeve",
       "type": "mcq",
       "question": "Concernant l'antibioprophylaxie en chirurgie bariatrique, quelle affirmation est correcte ?",
@@ -1065,7 +1219,7 @@
       }
     },
     {
-      "id": "Q136",
+      "id": "Q158",
       "titre": "Colectomie protocole ABP",
       "type": "mcq",
       "question": "Quel est le protocole d'antibioprophylaxie recommandé pour une colectomie programmée ?",
@@ -1078,7 +1232,7 @@
       }
     },
     {
-      "id": "Q137",
+      "id": "Q159",
       "titre": "Cholécystectomie coelioscopique risque",
       "type": "mcq",
       "question": "Une cholécystectomie élective par coelioscopie est programmée. Dans quel cas une antibioprophylaxie est-elle recommandée ?",
@@ -1091,7 +1245,7 @@
       }
     },
     {
-      "id": "Q138",
+      "id": "Q160",
       "titre": "Biopsie prostate voie d'abord",
       "type": "mcq",
       "question": "Concernant l'antibioprophylaxie des biopsies de prostate, quelle affirmation est correcte ?",
@@ -1104,7 +1258,7 @@
       }
     },
     {
-      "id": "Q139",
+      "id": "Q161",
       "titre": "Hernie inguinale avec vs sans prothèse",
       "type": "mcq",
       "question": "Concernant l'antibioprophylaxie de la cure de hernie inguinale, quelle affirmation est correcte ?",
@@ -1117,7 +1271,7 @@
       }
     },
     {
-      "id": "Q140",
+      "id": "Q162",
       "titre": "Fracture ouverte jambe chirurgie longue protocoles",
       "type": "mcq",
       "question": "Pour une chirurgie de fracture ouverte de jambe Gustilo 3 d'une durée prévisible supérieure à 4 heures, laquelle de ces conduites d'antibioprophylaxie est INCORRECTE ?",
@@ -1129,7 +1283,7 @@
       }
     },
     {
-      "id": "Q141",
+      "id": "Q163",
       "titre": "Fracture ouverte radius ceftriaxone pneumopathie",
       "type": "mcq",
       "question": "Un patient traumatisé crânien a reçu de la ceftriaxone en prévention de la pneumopathie d'inhalation. Il doit être opéré d'une fracture ouverte du radius. Laquelle des conduites suivantes est INCORRECTE ?",
@@ -1138,6 +1292,110 @@
         "A": "Amoxicilline/Clavulanate en dose unique pré-opératoire",
         "B": "Céfazoline + Gentamicine en dose unique pré-opératoire",
         "C": "Aucun ajout, la ceftriaxone couvre déjà l'antibioprophylaxie chirurgicale"
+      }
+    },
+    {
+      "id": "Q164",
+      "titre": "Chirurgie otologique : laquelle nécessite une ABP ?",
+      "type": "mcq",
+      "question": "Parmi ces interventions otologiques, laquelle nécessite une antibioprophylaxie ?",
+      "réponse": "C",
+      "choices": {
+        "A": "Tympanoplastie pour perforation tympanique",
+        "B": "Stapédectomie pour otospongiose",
+        "C": "Pose d'implant cochléaire",
+        "D": "Chirurgie de cholestéatome non infecté"
+      }
+    },
+    {
+      "id": "Q165",
+      "titre": "Glandes salivaires : condition déclenchant l'ABP",
+      "type": "mcq",
+      "question": "Concernant l'antibioprophylaxie de la chirurgie des glandes salivaires, quelle affirmation est correcte ?",
+      "réponse": "C",
+      "choices": {
+        "A": "Une antibioprophylaxie est toujours recommandée, quelle que soit la voie d'abord",
+        "B": "Une antibioprophylaxie n'est jamais recommandée pour ce type de chirurgie",
+        "C": "Une antibioprophylaxie est recommandée uniquement en cas d'accès par la cavité bucco-pharyngée",
+        "D": "Une antibioprophylaxie est recommandée uniquement en l'absence d'accès par la cavité bucco-pharyngée"
+      }
+    },
+    {
+      "id": "Q166",
+      "titre": "Stent vasculaire : quel cas sans ABP ?",
+      "type": "mcq",
+      "question": "Parmi ces procédures interventionnelles vasculaires, dans quel cas l'antibioprophylaxie n'est-elle PAS recommandée ?",
+      "réponse": "D",
+      "choices": {
+        "A": "Pose d'un stent couvert aortique",
+        "B": "Pose d'une endoprothèse vasculaire",
+        "C": "Pose d'un stent nu chez un patient avec facteurs de risque infectieux",
+        "D": "Pose d'un stent nu chez un patient sans facteur de risque infectieux"
+      }
+    },
+    {
+      "id": "Q167",
+      "titre": "Allergie bêtalactamines en chirurgie cardiaque",
+      "type": "mcq",
+      "question": "En cas d'allergie avérée aux bêtalactamines, quelle est la recommandation d'antibioprophylaxie pour une chirurgie cardiaque sous circulation extracorporelle (remplacement valvulaire, pontage, etc.) ?",
+      "réponse": "B",
+      "choices": {
+        "A": "Clindamycine 900 mg IVL",
+        "B": "Vancomycine 20 mg/kg IVL ou Teicoplanine 12 mg/kg IVL",
+        "C": "Gentamicine 3 mg/kg IVL seule",
+        "D": "Céfuroxime 1,5g IVL"
+      }
+    },
+    {
+      "id": "Q168",
+      "titre": "Fistule artério-veineuse : condition déclenchant l'ABP",
+      "type": "mcq",
+      "question": "Concernant l'antibioprophylaxie de la chirurgie de fistule artério-veineuse pour accès de dialyse, quelle affirmation est correcte ?",
+      "réponse": "C",
+      "choices": {
+        "A": "Une antibioprophylaxie est recommandée dans tous les cas",
+        "B": "Une antibioprophylaxie n'est jamais recommandée",
+        "C": "Une antibioprophylaxie est recommandée uniquement en cas de mise en place de matériel prothétique",
+        "D": "Une antibioprophylaxie est recommandée uniquement en l'absence de matériel prothétique"
+      }
+    },
+    {
+      "id": "Q169",
+      "titre": "Transplantation cardiaque : molécule de 1re intention",
+      "type": "mcq",
+      "question": "Quelle est la recommandation d'antibioprophylaxie en première intention pour une transplantation cardiaque chez un patient arrivant de son domicile, sans antécédent d'assistance mécanique circulatoire de longue durée ?",
+      "réponse": "B",
+      "choices": {
+        "A": "Amoxicilline/Clavulanate 2g IVL",
+        "B": "Céfazoline 2g IVL",
+        "C": "Vancomycine 20 mg/kg IVL",
+        "D": "Céfoxitine 2g IVL"
+      }
+    },
+    {
+      "id": "Q170",
+      "titre": "Chirurgie de silhouette : laquelle nécessite une ABP ?",
+      "type": "mcq",
+      "question": "Parmi ces chirurgies de silhouette, laquelle nécessite une antibioprophylaxie ?",
+      "réponse": "C",
+      "choices": {
+        "A": "Brachioplastie (lifting des bras)",
+        "B": "Lipoaspiration sous anesthésie générale",
+        "C": "Body-lift (lifting corporel circulaire)",
+        "D": "Abdominoplastie de durée inférieure ou égale à 2 heures"
+      }
+    },
+    {
+      "id": "Q171",
+      "titre": "ORL : laquelle ne nécessite PAS d'ABP ?",
+      "type": "mcq",
+      "question": "Parmi ces interventions ORL ou cervico-faciales, laquelle ne nécessite PAS d'antibioprophylaxie ?",
+      "réponse": "C",
+      "choices": {
+        "A": "Septo-rhinoplastie avec greffe de cartilage",
+        "B": "Chirurgie des glandes salivaires avec accès par la cavité bucco-pharyngée",
+        "C": "Parathyroïdectomie",
+        "D": "Pose d'implant cochléaire"
       }
     }
   ]
