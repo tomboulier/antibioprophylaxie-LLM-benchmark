@@ -976,21 +976,19 @@ Pour les QCM, une seule réponse correcte (lettre).
 ### Fracture ouverte jambe chirurgie longue protocoles
 
 - **type** : qcm
-- **question** : Pour une chirurgie de fracture ouverte de jambe Gustilo 3 d'une durée prévisible supérieure à 4 heures, quelle conduite d'antibioprophylaxie est recommandée ?
+- **question** : Pour une chirurgie de fracture ouverte de jambe Gustilo 3 d'une durée prévisible supérieure à 4 heures, laquelle de ces conduites d'antibioprophylaxie est INCORRECTE ?
 - **choix** :
-  - A. Céfazoline en dose unique, sans réinjection
-  - B. Amoxicilline/Clavulanate avec réinjection toutes les 2 heures
-  - C. Céfazoline + Gentamicine, avec réinjection de la Céfazoline toutes les 4 heures
-  - D. Les options B et C sont toutes deux acceptables
-- **réponse** : D
+  - A. Amoxicilline/Clavulanate avec réinjection toutes les 2 heures
+  - B. Céfazoline + Gentamicine, avec réinjection de la Céfazoline toutes les 4 heures
+  - C. Céfazoline en dose unique, sans réinjection
+- **réponse** : C
 
 ### Fracture ouverte radius ceftriaxone pneumopathie
 
 - **type** : qcm
-- **question** : Un patient traumatisé crânien a reçu de la ceftriaxone en prévention de la pneumopathie d'inhalation. Il doit être opéré d'une fracture ouverte du radius. Quelle conduite d'antibioprophylaxie est recommandée ?
+- **question** : Un patient traumatisé crânien a reçu de la ceftriaxone en prévention de la pneumopathie d'inhalation. Il doit être opéré d'une fracture ouverte du radius. Laquelle des conduites suivantes est INCORRECTE ?
 - **choix** :
-  - A. Aucun ajout, la ceftriaxone couvre déjà l'antibioprophylaxie chirurgicale
-  - B. Amoxicilline/Clavulanate en dose unique pré-opératoire
-  - C. Céfazoline + Gentamicine en dose unique pré-opératoire
-  - D. Les options B et C sont toutes deux acceptables
-- **réponse** : D
+  - A. Amoxicilline/Clavulanate en dose unique pré-opératoire
+  - B. Céfazoline + Gentamicine en dose unique pré-opératoire
+  - C. Aucun ajout, la ceftriaxone couvre déjà l'antibioprophylaxie chirurgicale
+- **réponse** : C
