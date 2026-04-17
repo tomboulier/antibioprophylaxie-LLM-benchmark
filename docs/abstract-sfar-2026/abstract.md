@@ -1,7 +1,7 @@
 # Abstract SFAR 2026 — Brouillon
 
 > **Limite** : 3 500 caractères espaces inclus (hors titre, auteurs, affiliations, images)
-> **Statut** : Brouillon v3 — résultats 3 modèles (134 questions, 8 spécialités)
+> **Statut** : Brouillon v4, résultats 3 modèles (171 questions, couverture élargie)
 
 ---
 
@@ -19,21 +19,21 @@ Les grands modèles de langage (large language models, LLMs) tels que ChatGPT so
 
 **Matériel et méthodes**
 
-Un jeu de 134 questions/réponses standardisées (111 questions ouvertes, 23 QCM) a été construit à partir des RFE SFAR 2024 (V2.0, 22/05/2024), couvrant l'ensemble des spécialités concernées par les recommandations.
+Un jeu de 171 questions/réponses standardisées (138 questions ouvertes, 33 QCM) a été construit à partir des RFE SFAR 2024 (V2.0, 22/05/2024), couvrant l'ensemble des spécialités concernées par les recommandations.
 
 Trois modèles commerciaux ont été évalués : Mistral Large (Mistral AI), GPT-4o (OpenAI) et Claude Sonnet 4.5 (Anthropic), dans des conditions identiques et reproductibles (Figure 1). Le code est écrit en Python 3.12 et utilise la bibliothèque LiteLLM pour interroger les modèles via les interfaces de programmation de chaque fournisseur. La correction est automatisée : correspondance exacte pour les QCM, correspondance normalisée (insensibilité aux accents et aux majuscules/minuscules) pour les questions ouvertes. Le critère de jugement principal est le taux de réponses correctes. L'ensemble du code et des données est publié en accès libre (4).
 
 **Résultats**
 
-Les trois modèles obtiennent des taux de réponses correctes proches : Mistral Large 59 % (79/134), GPT-4o 58 % (78/134) et Claude Sonnet 55 % (74/134), mais avec des profils distincts (Figure 2). Claude Sonnet est le plus performant sur les QCM (70 % vs 57 % et 48 %), tandis que GPT-4o et Mistral Large obtiennent de meilleurs résultats sur les questions ouvertes (60 % et 59 % vs 52 %). L'exécution complète (402 requêtes) a duré environ 14 minutes sur un ordinateur portable personnel.
+Les trois modèles obtiennent des taux de réponses correctes contrastés (Figure 2) : GPT-4o 71 % (122/171), Mistral Large 62 % (106/171) et Claude Sonnet 61 % (104/171). GPT-4o devance les deux autres modèles à la fois sur les QCM (76 % vs 67 % et 73 %) et sur les questions ouvertes (70 % vs 61 % et 58 %). L'exécution complète (513 requêtes) a duré environ 19 minutes sur un ordinateur portable personnel.
 
 **Discussion**
 
-Un taux de moins de 60 % est insuffisant pour un usage clinique sans supervision. Ce résultat, obtenu en interrogeant les modèles « à froid » (sans accès au texte des RFE), constitue un point de comparaison de base. Des techniques de réduction des hallucinations existent, notamment la génération augmentée par recherche documentaire (retrieval augmented generation, RAG), qui alimente le modèle avec les passages pertinents des recommandations (5), ou l'injection du texte intégral dans la requête. L'architecture modulaire du code permet de tester ces approches sur le même jeu de questions.
+Un taux plafonnant à 71 % reste insuffisant pour un usage clinique sans supervision. Ces résultats, obtenus en interrogeant les modèles « à froid » (sans accès au texte des RFE), constituent un point de comparaison de base. Des techniques de réduction des hallucinations existent, notamment la génération augmentée par recherche documentaire (retrieval augmented generation, RAG), qui alimente le modèle avec les passages pertinents des recommandations (5), ou l'injection du texte intégral dans la requête. L'architecture modulaire du code permet de tester ces approches sur le même jeu de questions.
 
 **Conclusion**
 
-Trois modèles d'IA commerciaux ont été évalués sur 134 questions d'antibioprophylaxie issues des RFE SFAR 2024 : aucun ne dépasse 60 % de réponses correctes lorsqu'il est interrogé sans accès au texte des recommandations. Ce jeu de test, publié en accès libre (4), fournit une base de comparaison pour évaluer les approches augmentées comme le RAG, susceptibles d'améliorer leur fiabilité.
+Trois modèles d'IA commerciaux ont été évalués sur 171 questions d'antibioprophylaxie issues des RFE SFAR 2024 : le meilleur (GPT-4o) atteint 71 % de réponses correctes lorsqu'il est interrogé sans accès au texte des recommandations. Ce jeu de test, publié en accès libre (4), fournit une base de comparaison pour évaluer les approches augmentées comme le RAG, susceptibles d'améliorer leur fiabilité.
 
 **Références**
 
