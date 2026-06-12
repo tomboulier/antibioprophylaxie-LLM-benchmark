@@ -826,6 +826,97 @@ Pour les QCM, une seule réponse correcte (lettre).
 - **question** : Quelle est la recommandation d'antibioprophylaxie pour la pose d'un substitut dermique (matrice dermique acellulaire) ?
 - **réponse** : Céfazoline
 
+### Remplacement valvulaire pour endocardite infectieuse active
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour un remplacement valvulaire mitral réalisé dans le cadre d'une endocardite infectieuse active déjà documentée ?
+- **réponse** : Hors périmètre
+
+### Reprise de sternotomie pour médiastinite
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une reprise chirurgicale de sternotomie compliquée de médiastinite post-opératoire ?
+- **réponse** : Hors périmètre
+
+### Extraction de pacemaker infecté
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour l'extraction d'un boîtier de pacemaker en contexte d'infection de loge documentée ?
+- **réponse** : Hors périmètre
+
+### Implantation de valve en contexte de bactériémie
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une chirurgie valvulaire sous CEC chez un patient ayant une bactériémie active à Staphylococcus aureus ?
+- **réponse** : Hors périmètre
+
+### Assistance ventriculaire infectée
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour le changement d'une assistance ventriculaire gauche en contexte d'infection documentée du dispositif ?
+- **réponse** : Hors périmètre
+
+### Décortication pleurale pour empyème
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une décortication pleurale par thoracoscopie dans le cadre d'un empyème pleural ?
+- **réponse** : Hors périmètre
+
+
+### Pontage fémoro-poplité sur site infecté
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour un pontage fémoro-poplité réalisé sur un site opératoire infecté avec collection purulente inguinale ?
+- **réponse** : Hors périmètre
+
+### Exérèse de greffon vasculaire infecté
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour l'exérèse d'un tube prothétique en Dacron infecté ?
+- **réponse** : Hors périmètre
+
+### Anévrysme mycotique aortique
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la réparation chirurgicale d'un anévrysme mycotique de l'aorte abdominale ?
+- **réponse** : Hors périmètre
+
+### Amputation pour pied diabétique infecté
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une amputation trans-tibiale réalisée pour pied diabétique avec ostéite documentée ?
+- **réponse** : Hors périmètre
+
+### Endoprothèse infectée
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour la prise en charge chirurgicale d'une infection d'endoprothèse aortique ?
+- **réponse** : Hors périmètre
+
+### Appendicite perforée avec péritonite
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une appendicectomie réalisée pour appendicite perforée avec péritonite généralisée ?
+- **réponse** : Hors périmètre
+
+### Cholécystite aiguë fébrile
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une cholécystectomie réalisée en urgence pour cholécystite aiguë fébrile ?
+- **réponse** : Hors périmètre
+
+### Colectomie pour diverticulite perforée
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour une colectomie en urgence réalisée pour diverticulite sigmoïdienne perforée avec abcès ?
+- **réponse** : Hors périmètre
+
+### Drainage d'abcès intra-abdominal
+
+- **type** : open
+- **question** : Quelle est la recommandation d'antibioprophylaxie pour le drainage chirurgical d'un abcès intra-abdominal post-opératoire ?
+- **réponse** : Hors périmètre
+
 ---
 
 ## QCM
