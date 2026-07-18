@@ -90,6 +90,11 @@ def to_markdown(dataset: dict) -> str:
 
 
 def main() -> None:
+    """Point d'entrée : génère ``questions.json`` et ``questions.md``.
+
+    Lit ``benchmark.json``, retire les réponses, puis écrit les deux pièces
+    jointes (structurée et texte brut) dans le dossier du script.
+    """
     if not BENCHMARK_PATH.exists():
         print(f"Erreur : {BENCHMARK_PATH} introuvable", file=sys.stderr)
         sys.exit(1)

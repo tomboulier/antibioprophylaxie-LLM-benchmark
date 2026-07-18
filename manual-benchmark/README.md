@@ -59,7 +59,7 @@ Le modèle répond par un **bloc JSON** conforme à ce schéma (v2) :
   "date": "2026-07-18",
   "prompt_version": "2.0.0",
   "mode": "A",
-  "dataset_version": "1.0",
+  "dataset_version": "1.2",
   "reponses": [
     { "id": "Q01", "reponse": "Céfazoline" },
     { "id": "Q02", "reponse": "Pas d'antibioprophylaxie" }
@@ -77,7 +77,7 @@ scorer affiche `?` pour ces champs.)
 Copier le bloc JSON dans `results/`, nommé d'après l'outil. Pour archiver un
 run reproductible (open science), le ranger dans un sous-dossier daté :
 
-```
+```text
 manual-benchmark/results/2026-07-18/gpt-4o.json
 manual-benchmark/results/2026-07-18/le-chat.json
 ```
@@ -94,7 +94,7 @@ python manual-benchmark/score_results.py manual-benchmark/results/2026-07-18/*.j
 
 Exemple de sortie :
 
-```
+```text
 Modèle                     Mode  Prompt   Global     Open      QCM  Manquantes
 ------------------------------------------------------------------------------
 Claude Opus 4.8               A   2.0.0    83.6%    82.6%    87.9%           0

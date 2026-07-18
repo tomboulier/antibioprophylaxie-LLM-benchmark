@@ -1,12 +1,13 @@
 """Scorer hors-ligne pour les résultats collectés manuellement.
 
 Compare un ou plusieurs fichiers de résultats (au format renvoyé par le prompt,
-voir ``PROMPT.md``) à la vérité terrain de ``benchmark.json``, puis affiche un
+voir ``prompts/``) à la vérité terrain de ``benchmark.json``, puis affiche un
 comparatif de précision (global + par type de question).
 
 La logique de notation est **identique** à celle du pipeline automatisé
 (``src/llm_benchmark/domain/scorer.py``) afin que les deux approches soient
-directement comparables.
+directement comparables. Le score global porte sur les questions **répondues** ;
+le nombre de questions manquantes est affiché à part (colonne « Manquantes »).
 
 Usage :
     python manual-benchmark/score_results.py manual-benchmark/results/*.json
@@ -28,7 +29,18 @@ BENCHMARK_PATH = _DIR.parent / "datasets" / "sfar_antibioprophylaxie" / "benchma
 def normalize(text: str) -> str:
     """Normalise un texte pour comparaison (identique au pipeline).
 
-    Minuscule, trim, espaces multiples réduits, point final retiré.
+    Minuscule, trim, espaces multiples réduits, point final retiré. Les accents
+    ne sont **pas** retirés (``Cefazoline`` ne matche donc pas ``Céfazoline``).
+
+    Parameters
+    ----------
+    text : str
+        Texte brut à normaliser.
+
+    Returns
+    -------
+    str
+        Texte normalisé.
     """
     text = text.lower().strip()
     text = re.sub(r"\s+", " ", text)
@@ -37,7 +49,21 @@ def normalize(text: str) -> str:
 
 
 def score_open(expected: str, actual: str) -> bool:
-    """Note une question ouverte (cf. OpenScorer du domaine)."""
+    """Note une question ouverte (cf. OpenScorer du domaine).
+
+    Parameters
+    ----------
+    expected : str
+        Réponse attendue (nom de molécule(s), ``Pas d'antibioprophylaxie`` ou
+        ``Hors périmètre``).
+    actual : str
+        Réponse fournie par l'outil.
+
+    Returns
+    -------
+    bool
+        ``True`` si la réponse est jugée correcte.
+    """
     normalized_expected = normalize(expected)
     normalized_actual = normalize(actual)
     if normalized_expected in ("pas d'antibioprophylaxie", "hors périmètre"):
@@ -47,14 +73,33 @@ def score_open(expected: str, actual: str) -> bool:
 
 
 def score_mcq(expected: str, actual: str) -> bool:
-    """Note une question à choix multiples (cf. QCMScorer du domaine)."""
+    """Note une question à choix multiples (cf. QCMScorer du domaine).
+
+    Parameters
+    ----------
+    expected : str
+        Lettre attendue (``A``–``D``).
+    actual : str
+        Réponse fournie ; la première lettre ``A``–``D`` trouvée est comparée.
+
+    Returns
+    -------
+    bool
+        ``True`` si la lettre extraite correspond à la lettre attendue.
+    """
     expected_letter = expected.strip().upper()
     match = re.search(r"\b([A-D])\b", actual.upper())
     return (match.group(1) if match else None) == expected_letter
 
 
 def load_benchmark() -> dict:
-    """Charge le benchmark et l'indexe par id de question."""
+    """Charge le benchmark et l'indexe par id de question.
+
+    Returns
+    -------
+    dict
+        Dictionnaire ``{id: question}`` (chaque question porte sa ``réponse``).
+    """
     data = json.loads(BENCHMARK_PATH.read_text(encoding="utf-8"))
     return {q["id"]: q for q in data["questions"]}
 
@@ -72,8 +117,10 @@ def score_file(path: Path, benchmark: dict) -> dict:
     Returns
     -------
     dict
-        Récapitulatif : modèle, compteurs global/open/mcq, questions manquantes,
-        et liste des erreurs.
+        Récapitulatif avec les clés : ``model``, ``mode`` et ``prompt_version``
+        (champs de traçabilité, ``"?"`` si absents), ``totals`` (compteurs
+        ``[corrects, total]`` pour ``all``/``open``/``mcq``), ``errors`` (liste
+        des réponses fausses) et ``missing`` (ids sans réponse).
     """
     payload = json.loads(path.read_text(encoding="utf-8"))
     model = payload.get("modele") or path.stem
@@ -114,11 +161,39 @@ def score_file(path: Path, benchmark: dict) -> dict:
 
 
 def pct(correct: int, total: int) -> str:
-    """Formate un pourcentage lisible (ou 'n/a' si aucun élément)."""
+    """Formate un pourcentage lisible.
+
+    Parameters
+    ----------
+    correct : int
+        Nombre de réponses correctes.
+    total : int
+        Nombre de réponses évaluées.
+
+    Returns
+    -------
+    str
+        Pourcentage formaté (``'  n/a'`` si ``total`` vaut 0).
+    """
     return f"{100 * correct / total:5.1f}%" if total else "  n/a"
 
 
 def main(argv: list[str]) -> int:
+    """Point d'entrée CLI : score les fichiers passés en arguments.
+
+    Chaque fichier est scoré indépendamment ; un fichier illisible ou invalide
+    est signalé sur ``stderr`` et ignoré, sans interrompre les autres.
+
+    Parameters
+    ----------
+    argv : list[str]
+        Chemins des fichiers de résultats à scorer.
+
+    Returns
+    -------
+    int
+        Code de sortie (0 = succès, 1 = aucun fichier valide / erreur).
+    """
     if not argv:
         print(__doc__)
         return 1
@@ -127,7 +202,15 @@ def main(argv: list[str]) -> int:
         return 1
 
     benchmark = load_benchmark()
-    summaries = [score_file(Path(a), benchmark) for a in argv]
+    summaries = []
+    for arg in argv:
+        try:
+            summaries.append(score_file(Path(arg), benchmark))
+        except (OSError, ValueError, KeyError) as exc:
+            print(f"⚠ {arg} ignoré ({type(exc).__name__} : {exc})", file=sys.stderr)
+    if not summaries:
+        print("Aucun fichier valide à scorer.", file=sys.stderr)
+        return 1
 
     # Tableau comparatif
     header = (

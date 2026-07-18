@@ -3,13 +3,37 @@
   "date": "2026-07-18",
   "note": "Réponses reformatées manuellement depuis la sortie libre de MedGPT (voir medgpt-partiel-brut.json). MedGPT n'accepte ni le JSON en entrée ni de pièce jointe ; seules 8 réponses ont pu être obtenues avant quota. Q05 = extraction interprétée (réponse curative ambiguë 'céfazoline ou céfuroxime').",
   "reponses": [
-    { "id": "Q01", "reponse": "Céfazoline" },
-    { "id": "Q02", "reponse": "Pas d'antibioprophylaxie" },
-    { "id": "Q03", "reponse": "Vancomycine" },
-    { "id": "Q04", "reponse": "Vancomycine" },
-    { "id": "Q05", "reponse": "Céfazoline" },
-    { "id": "Q169", "reponse": "B" },
-    { "id": "Q170", "reponse": "C" },
-    { "id": "Q171", "reponse": "C" }
+    {
+      "id": "Q01",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q02",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q03",
+      "reponse": "Vancomycine"
+    },
+    {
+      "id": "Q04",
+      "reponse": "Vancomycine"
+    },
+    {
+      "id": "Q05",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q169",
+      "reponse": "B"
+    },
+    {
+      "id": "Q170",
+      "reponse": "C"
+    },
+    {
+      "id": "Q171",
+      "reponse": "C"
+    }
   ]
 }

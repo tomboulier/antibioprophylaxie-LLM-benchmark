@@ -1,7 +1,7 @@
 # Vérification du corrigé — 14 désaccords partagés
 
 Items où **Claude ET Le Chat** donnent une réponse contraire au corrigé. Chacun
-a été **recroisé avec le PDF de la RFE** (`datasets/sfar_antibioprophylaxie/RFE-antibioprophylaxie-SFAR-v2.0.pdf`).
+a été **recroisé avec le PDF de la RFE** ([`RFE-antibioprophylaxie-SFAR-v2.0.pdf`](../../../datasets/sfar_antibioprophylaxie/RFE-antibioprophylaxie-SFAR-v2.0.pdf)).
 
 ## Conclusion : corrigé **correct 14/14**. Ce sont les modèles qui se trompent.
 
