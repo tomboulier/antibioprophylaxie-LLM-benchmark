@@ -1,3 +1,7 @@
-# Ne pas versionner les runs collectés, sauf l'exemple de référence.
-*.json
-!exemple.json
+# Fichiers déposés en vrac à la racine de results/ : non versionnés
+# (sauf l'exemple de référence). Le `/` en tête n'ancre qu'à ce niveau.
+/*.json
+!/exemple.json
+
+# Les runs que l'on souhaite archiver (open science) vont dans un sous-dossier
+# daté AAAA-MM-JJ/ : ceux-là sont versionnés (non couverts par /*.json).
