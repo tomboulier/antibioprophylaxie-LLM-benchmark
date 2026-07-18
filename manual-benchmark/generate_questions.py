@@ -1,9 +1,14 @@
-"""Génère questions.json (questions SANS réponses) depuis benchmark.json.
+"""Génère les pièces jointes « questions seules » depuis benchmark.json.
 
-Cette version « questions seules » est la pièce jointe à fournir aux interfaces
-de chat (ChatGPT, Mistral Le Chat, Claude, MedGPT…). On retire volontairement le
-champ ``réponse`` (et pour les QCM la lettre correcte reste absente) afin de ne
-pas divulguer la vérité terrain au modèle interrogé.
+Produit deux fichiers synchronisés, à joindre aux interfaces de chat (ChatGPT,
+Mistral Le Chat, Claude, MedGPT…) :
+
+- ``questions.json`` : format structuré (défaut) ;
+- ``questions.md`` : variante **texte brut** (liste numérotée) pour les outils
+  qui refusent le JSON ou les pièces jointes (ex. MedGPT), à coller directement.
+
+On retire volontairement le champ ``réponse`` (et pour les QCM la lettre
+correcte reste absente) afin de ne pas divulguer la vérité terrain.
 
 Usage :
     uv run python manual-benchmark/generate_questions.py
@@ -20,6 +25,7 @@ from pathlib import Path
 _DIR = Path(__file__).parent
 BENCHMARK_PATH = _DIR.parent / "datasets" / "sfar_antibioprophylaxie" / "benchmark.json"
 QUESTIONS_PATH = _DIR / "questions.json"
+QUESTIONS_MD_PATH = _DIR / "questions.md"
 
 # Champs conservés dans la pièce jointe (ordre stable, blindé de toute réponse).
 _KEEP = ("id", "type", "question", "choices")
@@ -53,6 +59,36 @@ def strip_answers(benchmark: dict) -> dict:
     }
 
 
+def to_markdown(dataset: dict) -> str:
+    """Rend le dataset « questions seules » en Markdown texte brut.
+
+    Parameters
+    ----------
+    dataset : dict
+        Sortie de :func:`strip_answers`.
+
+    Returns
+    -------
+    str
+        Liste numérotée des questions (énoncés + choix QCM), sans réponse.
+    """
+    lines = [
+        f"# Questions — {dataset.get('id')} (dataset v{dataset.get('version')})",
+        "",
+        f"{dataset['question_count']} questions. Les réponses ne sont "
+        "volontairement pas fournies (c'est un test).",
+        "",
+    ]
+    for q in dataset["questions"]:
+        kind = "QCM" if q.get("type") == "mcq" else "ouverte"
+        lines.append(f"## {q['id']} ({kind})")
+        lines.append(q["question"])
+        for letter, text in (q.get("choices") or {}).items():
+            lines.append(f"- {letter}. {text}")
+        lines.append("")
+    return "\n".join(lines).rstrip() + "\n"
+
+
 def main() -> None:
     if not BENCHMARK_PATH.exists():
         print(f"Erreur : {BENCHMARK_PATH} introuvable", file=sys.stderr)
@@ -65,7 +101,10 @@ def main() -> None:
         json.dumps(output, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    print(f"{output['question_count']} questions (sans réponses) → {QUESTIONS_PATH}")
+    QUESTIONS_MD_PATH.write_text(to_markdown(output), encoding="utf-8")
+    n = output["question_count"]
+    print(f"{n} questions (sans réponses) → {QUESTIONS_PATH}")
+    print(f"{n} questions (texte brut)   → {QUESTIONS_MD_PATH}")
 
 
 if __name__ == "__main__":

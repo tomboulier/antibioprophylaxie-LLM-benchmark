@@ -77,6 +77,9 @@ def score_file(path: Path, benchmark: dict) -> dict:
     """
     payload = json.loads(path.read_text(encoding="utf-8"))
     model = payload.get("modele") or path.stem
+    # Champs de traçabilité (schéma v2 ; absents des runs v1 → "?").
+    mode = payload.get("mode", "?")
+    prompt_version = payload.get("prompt_version", "?")
     answers = {r["id"]: r["reponse"] for r in payload.get("reponses", [])}
 
     totals = {"all": [0, 0], "open": [0, 0], "mcq": [0, 0]}  # [correct, total]
@@ -100,7 +103,14 @@ def score_file(path: Path, benchmark: dict) -> dict:
         else:
             errors.append({"id": qid, "attendu": expected, "obtenu": actual})
 
-    return {"model": model, "totals": totals, "errors": errors, "missing": missing}
+    return {
+        "model": model,
+        "mode": mode,
+        "prompt_version": prompt_version,
+        "totals": totals,
+        "errors": errors,
+        "missing": missing,
+    }
 
 
 def pct(correct: int, total: int) -> str:
@@ -120,13 +130,16 @@ def main(argv: list[str]) -> int:
     summaries = [score_file(Path(a), benchmark) for a in argv]
 
     # Tableau comparatif
-    header = f"{'Modèle':<28} {'Global':>8} {'Open':>8} {'QCM':>8} {'Manquantes':>11}"
+    header = (
+        f"{'Modèle':<26} {'Mode':>4} {'Prompt':>7} "
+        f"{'Global':>8} {'Open':>8} {'QCM':>8} {'Manquantes':>11}"
+    )
     print(header)
     print("-" * len(header))
     for s in sorted(summaries, key=lambda x: -x["totals"]["all"][0]):
         t = s["totals"]
         print(
-            f"{s['model']:<28} "
+            f"{s['model']:<26} {s['mode']:>4} {s['prompt_version']:>7} "
             f"{pct(*t['all']):>8} {pct(*t['open']):>8} {pct(*t['mcq']):>8} "
             f"{len(s['missing']):>11}"
         )

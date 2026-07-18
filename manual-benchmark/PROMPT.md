@@ -1,69 +1,24 @@
-# Prompt à copier-coller dans une interface de chat
+# Prompts — index
 
-> Copiez **tout le bloc ci-dessous** (entre les deux lignes `─────`) dans la
-> fenêtre de discussion (ChatGPT, Mistral Le Chat, Claude, MedGPT…), **et
-> joignez le fichier `questions.json`** au même message. Récupérez ensuite le
-> bloc JSON renvoyé et enregistrez-le dans `results/` (voir `README.md`).
+Les prompts à copier-coller vivent dans [`prompts/`](./prompts), versionnés
+sémantiquement (voir [`prompts/CHANGELOG.md`](./prompts/CHANGELOG.md)).
 
-─────────────────────────────────────────────────────────────────────────────
+Deux **modes** de test, selon ce qu'on fournit à l'outil :
 
-Tu es un **expert en antibioprophylaxie chirurgicale**, spécialiste des
-Recommandations Formalisées d'Experts (RFE) de la SFAR 2024 sur
-l'antibioprophylaxie en chirurgie et médecine interventionnelle.
+| Mode | Fichier | Ce qu'on joint | Ce qu'on mesure |
+|------|---------|----------------|-----------------|
+| **A — auto-documentation** | [`prompts/mode-A-autodoc.md`](./prompts/mode-A-autodoc.md) | `questions.json` (ou `questions.md`) | connaissances propres de l'outil (± web) sur les RFE |
+| **B — RFE fournie (RAG)** | [`prompts/mode-B-rag.md`](./prompts/mode-B-rag.md) | le **PDF des RFE** + `questions.json` | capacité à lire et appliquer le document fourni |
 
-Le fichier `questions.json` joint à ce message contient une liste de questions.
-Chaque question possède :
+Dans les deux cas, l'outil répond par un **bloc JSON** au schéma standard
+(champs `prompt_version`, `mode`, `dataset_version` + `reponses`). On enregistre
+le résultat dans [`results/`](./results) puis on score avec
+[`score_results.py`](./score_results.py). Voir [`README.md`](./README.md) pour le
+mode d'emploi complet.
 
-- `id` : identifiant unique (ex. `Q01`).
-- `type` : `open` (question ouverte) ou `mcq` (question à choix multiples).
-- `question` : l'énoncé.
-- `choices` : uniquement pour les `mcq`, les propositions `A`/`B`/`C`/`D`.
+> Pièces jointes : `questions.json` (structuré, défaut) ou `questions.md` (texte
+> brut, pour les outils qui refusent le JSON / les pièces jointes, ex. MedGPT).
+> Les deux sont générés par `generate_questions.py`.
 
-## Ta mission
-
-Réponds à **toutes** les questions du fichier, dans l'ordre, **sans en omettre
-aucune**. Fonde-toi exclusivement sur les recommandations de la RFE SFAR 2024.
-
-## Règles de réponse
-
-**Questions ouvertes (`type` = `open`)** — réponds par l'un de ces formats,
-et rien d'autre :
-
-- le **nom de la ou des molécules** recommandées (ex. `Céfazoline`,
-  `Amoxicilline/Clavulanate`, `Clindamycine + Gentamicine`) ;
-- `Pas d'antibioprophylaxie` si aucune antibioprophylaxie n'est recommandée ;
-- `Hors périmètre` si la situation n'est pas couverte par les recommandations.
-
-N'ajoute ni posologie, ni voie d'administration, ni justification, ni durée.
-
-**Questions à choix multiples (`type` = `mcq`)** — réponds uniquement par la
-**lettre** de la bonne proposition : `A`, `B`, `C` ou `D`.
-
-## Format de sortie (IMPORTANT)
-
-Ne fournis **aucune explication**. Réponds **uniquement** par un **seul bloc de
-code JSON** strictement conforme au schéma suivant :
-
-```json
-{
-  "modele": "<nom exact du modèle ou de l'outil que tu es, ex. GPT-4o, Le Chat, Claude, MedGPT>",
-  "date": "<date du jour au format AAAA-MM-JJ>",
-  "reponses": [
-    { "id": "Q01", "reponse": "Céfazoline" },
-    { "id": "Q02", "reponse": "Pas d'antibioprophylaxie" },
-    { "id": "Q03", "reponse": "..." }
-  ]
-}
-```
-
-Contraintes :
-
-- Un objet par question, dans le **même ordre** que `questions.json`.
-- `id` doit correspondre exactement à celui de la question.
-- `reponse` est une **chaîne de caractères** (le nom de molécule, la mention
-  spéciale, ou la lettre pour les `mcq`).
-- Le tableau `reponses` doit contenir **exactement autant d'éléments qu'il y a
-  de questions** dans le fichier.
-- Aucun texte avant ou après le bloc JSON.
-
-─────────────────────────────────────────────────────────────────────────────
+Le prompt v1.0.0 (unique, utilisé pour le run `results/2026-07-18/`) est conservé
+dans l'historique git.
