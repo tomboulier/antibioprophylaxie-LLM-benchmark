@@ -65,11 +65,12 @@ ChatGPT n'a produit aucune réponse. Objection en deux temps :
 → Ce refus est un **défaut de formulation du prompt v1**, pas un échec du modèle.
 Il motive un **prompt v2** (voir plus bas).
 
-## À vérifier — désaccords partagés (corrigé à valider)
+## Désaccords partagés — VÉRIFIÉS ✅
 
 Items où **Claude ET Le Chat donnent la MÊME réponse, contraire au corrigé**.
-Deux modèles indépendants qui convergent contre la vérité terrain = signal à
-inspecter dans la RFE (soit cas réellement difficile, soit corrigé discutable) :
+Recroisés un par un avec le PDF de la RFE → **corrigé correct 14/14** ; ce sont
+les modèles qui ratent les exceptions de tableau. Détail et preuves dans
+[`VERIFICATION-corrige.md`](./VERIFICATION-corrige.md).
 
 | id | Réponse commune des 2 modèles | Corrigé actuel |
 |----|----|----|
