@@ -8,34 +8,32 @@ public », dans les **deux modes** :
 
 Notation via `manual-benchmark/score_results.py` (mêmes règles que le pipeline).
 
-## Mode A — auto-documentation
+## Mode A — auto-documentation (171 questions)
 
-| Outil | Statut | Global | Ouvertes | QCM | n |
-|-------|--------|:---:|:---:|:---:|:---:|
-| **Claude Opus 4.8** | complet | **83,6 %** | 82,6 % | 87,9 % | 171 |
-| **Le Chat (Mistral)** | complet | **72,5 %** | 71,7 % | 75,8 % | 171 |
-| **MedGPT** | partiel / reformaté | *(6/8)* | *(3/5)* | *(3/3)* | 8 |
-| **ChatGPT** | refus | — | — | — | 0 |
+| Outil | Statut | Global | Ouvertes | QCM |
+|-------|--------|:---:|:---:|:---:|
+| **Claude Opus 4.8** | complet | **83,6 %** | 82,6 % | 87,9 % |
+| **Le Chat (Mistral)** | complet | **72,5 %** | 71,7 % | 75,8 % |
+| **GPT-5.5-mini (ChatGPT)** | complet | **72,5 %** | 69,6 % | 84,8 % |
+| **MedGPT** | partiel / reformaté | *(6/8)* | *(3/5)* | *(3/3)* |
 
-> ⚠️ Le score MedGPT porte sur **8 questions** seulement (163 manquantes) : il
-> n'est **pas comparable** aux runs complets.
+> ⚠️ Le score MedGPT porte sur **8 questions** seulement : non comparable.
+> **ChatGPT a été débloqué par le prompt v2** (il refusait en v1) ; il s'identifie
+> comme *GPT-5.5-mini*, un modèle de tier « mini » — d'où un score proche du Chat.
 
-## Mode B — RFE jointe (RAG)
+## Mode B — RFE jointe (RAG, 171 questions)
 
-| Outil | Statut | Global | n |
-|-------|--------|:---:|:---:|
-| **Claude Opus 4.8** | complet | **98,2 %** | 171 |
-| **Mistral Large 2** | partiel (arrêt à Q50) | **96,0 %** | 50 |
+| Outil | Statut | Global | Ouvertes | QCM |
+|-------|--------|:---:|:---:|:---:|
+| **Claude Opus 4.8** | complet | **98,2 %** | 98,6 % | 97,0 % |
+| **Mistral Large 2** | complet | **83,0 %** | 83,3 % | 81,8 % |
 
 ### Fournir la RFE fait bondir la précision
 
-Comparaison A → B (à périmètre égal) :
-
-| Modèle | Périmètre | Mode A | Mode B | Δ |
-|--------|-----------|:---:|:---:|:---:|
-| Claude Opus 4.8 | 171 | 83,6 % | **98,2 %** | **+14,6 pts** |
-| Mistral | Q01–Q50 | 76,0 % | **96,0 %** | **+20,0 pts** |
-| Claude (réf.) | Q01–Q50 | 80,0 % | 98,0 % | +18 pts |
+| Modèle | Mode A | Mode B | Δ |
+|--------|:---:|:---:|:---:|
+| Claude Opus 4.8 | 83,6 % | **98,2 %** | **+14,6 pts** |
+| Mistral | 72,5 % | **83,0 %** | **+10,5 pts** |
 
 Le RAG corrige quasiment tous les pièges du mode A (Q04, Q27, Q42, Q45, Q69, Q71,
 Q91, Q114, Q131, Q136, Q142, Q154 deviennent justes). **Claude mode B ne laisse
@@ -46,19 +44,33 @@ que 3 erreurs / 171** :
 - **Q143** : toujours le piège « plaie de la **main** » (B au lieu de C) — **ce
   piège survit au RAG**.
 
-> Note protocole : Mistral s'est **arrêté à Q50** malgré l'autorisation de
-> découper en lots. Il faudra parfois relancer explicitement « continue ».
+### Mistral mode B : le RAG « décroche » au fil des lots
+
+Mistral a répondu en **plusieurs messages** (arrêt à Q50, relances successives).
+Sa précision s'effondre après le premier lot — signe qu'il **perd le contexte du
+PDF** entre les messages :
+
+| Segment | Q01–Q50 | Q51–Q100 | Q101–Q171 |
+|---------|:---:|:---:|:---:|
+| Mistral mode B | 96,0 % | 72,0 % | 81,7 % |
+| Claude mode B (réf.) | 98,0 % | — | 98,6 % |
+
+Claude, lui, reste à ~98 % partout → la chute est **spécifique à Mistral**, pas
+une question de difficulté. **Leçon protocole** : pour le mode B, privilégier une
+réponse en **un seul message** ; si découpage nécessaire, **re-joindre le PDF** à
+chaque relance.
 
 ## Fichiers
 
+**Mode A :**
 - `claude-opus-4.8.json` — run complet, format respecté à la lettre.
-- `le-chat.json` — run complet (l'export était nommé « Le Chat »).
-- `medgpt-partiel-brut.json` — sortie **brute** de MedGPT (texte libre verbeux).
-- `medgpt-partiel.json` — sortie **reformatée** manuellement au format canonique
-  (table de correspondance ci-dessous).
-- ChatGPT : aucun JSON produit (refus, voir §MedGPT/ChatGPT).
-- `claude-opus-4.8-modeB.json` — mode B (RFE jointe), run complet 171.
-- `mistral-modeB-partiel.json` — mode B, partiel (Q01–Q50, arrêt).
+- `le-chat.json` — run complet (export nommé « Le Chat »).
+- `chatgpt-gpt5.5-mini-modeA.json` — run complet (prompt v2 ; s'identifie GPT-5.5-mini).
+- `medgpt-partiel.json` / `medgpt-partiel-brut.json` — 8 réponses reformatées + brut.
+
+**Mode B :**
+- `claude-opus-4.8-modeB.json` — run complet 171.
+- `mistral-modeB.json` — run complet 171 (reconstitué à partir de lots successifs).
 
 ## MedGPT — reformatage manuel
 
@@ -81,9 +93,9 @@ fidèle (on transcrit ce que MedGPT a dit, sans corriger vers la bonne réponse)
 Q05 est litigieux : MedGPT a répondu de façon *curative* et n'a pas tranché une
 molécule unique. Item faux quoi qu'il arrive (attendu `Amoxicilline/Clavulanate`).
 
-## ChatGPT — refus (résultat en soi)
+## ChatGPT — refus en v1, débloqué en v2
 
-ChatGPT n'a produit aucune réponse. Objection en deux temps :
+En **prompt v1**, ChatGPT n'a produit aucune réponse. Objection en deux temps :
 
 1. **Consigne jugée contradictoire** — le prompt demande de se fonder
    *« exclusivement sur les RFE SFAR 2024 »*, mais la pièce jointe *« ne contient
@@ -93,8 +105,9 @@ ChatGPT n'a produit aucune réponse. Objection en deux temps :
    estime que 171 réponses dépassent une seule réponse et propose un découpage en
    5 lots… sans finalement produire le JSON.
 
-→ Ce refus est un **défaut de formulation du prompt v1**, pas un échec du modèle.
-Il motive un **prompt v2** (voir plus bas).
+→ Ce refus était un **défaut de formulation du prompt v1**, pas un échec du
+modèle. Le **prompt v2** (anti-refus + découpage autorisé) l'a **débloqué** :
+ChatGPT a répondu aux 171 questions en mode A (voir tableau Mode A).
 
 ## Désaccords partagés — VÉRIFIÉS ✅
 
