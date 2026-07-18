@@ -1,0 +1,3 @@
+# Ne pas versionner les runs collectés, sauf l'exemple de référence.
+*.json
+!exemple.json
