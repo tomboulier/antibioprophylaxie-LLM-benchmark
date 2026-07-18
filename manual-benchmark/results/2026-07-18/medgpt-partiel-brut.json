@@ -1,0 +1,36 @@
+{
+  "reponses": [
+    {
+      "id": "Q01",
+      "reponse": "Céfazoline 2 g IV (administration unique en préopératoire, dose adaptée au poids si >120 kg selon recommandations SFAR)."
+    },
+    {
+      "id": "Q02",
+      "reponse": "Pas d'antibioprophylaxie systématique (arthroscopie pure sans mise en place de matériel : pas d'ABP recommandée)."
+    },
+    {
+      "id": "Q03",
+      "reponse": "Vancomycine IV en dose adaptée au poids (dose d'attaque, posologie selon protocole local) ± un agent couvrant les gram‑négatifs selon contexte ; décision et posologie à préciser localement en concertation infectiologue/antibiogramme."
+    },
+    {
+      "id": "Q04",
+      "reponse": "Vancomycine IV (dose d'attaque adaptée au poids) en alternative à la céfazoline chez patient allergique aux bêtalactamines ; ajuster selon protocole local et conférence infectiologique."
+    },
+    {
+      "id": "Q05",
+      "reponse": "Antibiothérapie curative initiale adaptée (prise en charge infection/plaie ouverte) — pour une fracture ouverte Gustilo type II, AB empirique couvrant Staphylococcus aureus et gram‑négatifs (par exemple céfazoline ou céfuroxime selon protocole), relais et adaptation après prélèvements ; ne pas confondre avec AB prophylactique unique en chirurgie propre non contaminée."
+    },
+    {
+      "id": "Q169",
+      "reponse": "B"
+    },
+    {
+      "id": "Q170",
+      "reponse": "C"
+    },
+    {
+      "id": "Q171",
+      "reponse": "C"
+    }
+  ]
+}

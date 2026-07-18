@@ -18,7 +18,7 @@ JSON_PATH = _DIR / "benchmark.json"
 # Métadonnées du dataset (alignées sur le schéma attendu par dataset_loader.py).
 _DATASET_META = {
     "id": "sfar-antibioprophylaxie",
-    "version": "1.0",
+    "version": "1.2",
     "source": "RFE SFAR 2024 (V2.0 du 22/05/2024)",
     "scope": "Chirurgie orthopédique programmée + Traumatologie",
     "system_prompt": (

@@ -1,0 +1,693 @@
+{
+  "modele": "Exemple (démo)",
+  "date": "2026-07-18",
+  "prompt_version": "2.0.0",
+  "mode": "A",
+  "dataset_version": "1.2",
+  "reponses": [
+    {
+      "id": "Q01",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q02",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q03",
+      "reponse": "Vancomycine"
+    },
+    {
+      "id": "Q04",
+      "reponse": "Vancomycine"
+    },
+    {
+      "id": "Q05",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q06",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q07",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q08",
+      "reponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q09",
+      "reponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q10",
+      "reponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q11",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q12",
+      "reponse": "Clindamycine + Gentamicine"
+    },
+    {
+      "id": "Q13",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q14",
+      "reponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q15",
+      "reponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q16",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q17",
+      "reponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q18",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q19",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q20",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q21",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q22",
+      "reponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q23",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q24",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q25",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q26",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q27",
+      "reponse": "Clindamycine"
+    },
+    {
+      "id": "Q28",
+      "reponse": "Triméthoprime/Sulfaméthoxazole"
+    },
+    {
+      "id": "Q29",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q30",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q31",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q32",
+      "reponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q33",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q34",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q35",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q36",
+      "reponse": "Céfuroxime"
+    },
+    {
+      "id": "Q37",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q38",
+      "reponse": "Vancomycine + Ceftazidime"
+    },
+    {
+      "id": "Q39",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q40",
+      "reponse": "Amoxicilline"
+    },
+    {
+      "id": "Q41",
+      "reponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q42",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q43",
+      "reponse": "Clindamycine + Gentamicine"
+    },
+    {
+      "id": "Q44",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q45",
+      "reponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q46",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q47",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q48",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q49",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q50",
+      "reponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q51",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q52",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q53",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q54",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q55",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q56",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q57",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q58",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q59",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q60",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q61",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q62",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q63",
+      "reponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q64",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q65",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q66",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q67",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q68",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q69",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q70",
+      "reponse": "Céfazoline + Métronidazole"
+    },
+    {
+      "id": "Q71",
+      "reponse": "Céfoxitine"
+    },
+    {
+      "id": "Q72",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q73",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q74",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q75",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q76",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q77",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q78",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q79",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q80",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q81",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q82",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q83",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q84",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q85",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q86",
+      "reponse": "Céfoxitine"
+    },
+    {
+      "id": "Q87",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q88",
+      "reponse": "Céfoxitine"
+    },
+    {
+      "id": "Q89",
+      "reponse": "Céfoxitine"
+    },
+    {
+      "id": "Q90",
+      "reponse": "Ertapénème"
+    },
+    {
+      "id": "Q91",
+      "reponse": "Métronidazole"
+    },
+    {
+      "id": "Q92",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q93",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q94",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q95",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q96",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q97",
+      "reponse": "Céfoxitine"
+    },
+    {
+      "id": "Q98",
+      "reponse": "Pipéracilline/Tazobactam"
+    },
+    {
+      "id": "Q99",
+      "reponse": "Céfoxitine"
+    },
+    {
+      "id": "Q100",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q101",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q102",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q103",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q104",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q105",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q106",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q107",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q108",
+      "reponse": "Fosfomycine-trométamol"
+    },
+    {
+      "id": "Q109",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q110",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q111",
+      "reponse": "Céfoxitine"
+    },
+    {
+      "id": "Q112",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q113",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q114",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q115",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q116",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q117",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q118",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q119",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q120",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q121",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q122",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q123",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q124",
+      "reponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q125",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q126",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q127",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q128",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q129",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q130",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q131",
+      "reponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q132",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q133",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q134",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q135",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q136",
+      "reponse": "Pas d'antibioprophylaxie"
+    },
+    {
+      "id": "Q137",
+      "reponse": "Amoxicilline/Clavulanate"
+    },
+    {
+      "id": "Q138",
+      "reponse": "Céfazoline"
+    },
+    {
+      "id": "Q139",
+      "reponse": "B"
+    },
+    {
+      "id": "Q140",
+      "reponse": "C"
+    },
+    {
+      "id": "Q141",
+      "reponse": "C"
+    },
+    {
+      "id": "Q142",
+      "reponse": "B"
+    },
+    {
+      "id": "Q143",
+      "reponse": "C"
+    },
+    {
+      "id": "Q144",
+      "reponse": "C"
+    },
+    {
+      "id": "Q145",
+      "reponse": "C"
+    },
+    {
+      "id": "Q146",
+      "reponse": "B"
+    },
+    {
+      "id": "Q147",
+      "reponse": "B"
+    },
+    {
+      "id": "Q148",
+      "reponse": "C"
+    },
+    {
+      "id": "Q149",
+      "reponse": "D"
+    },
+    {
+      "id": "Q150",
+      "reponse": "C"
+    },
+    {
+      "id": "Q151",
+      "reponse": "C"
+    },
+    {
+      "id": "Q152",
+      "reponse": "C"
+    },
+    {
+      "id": "Q153",
+      "reponse": "B"
+    },
+    {
+      "id": "Q154",
+      "reponse": "C"
+    },
+    {
+      "id": "Q155",
+      "reponse": "C"
+    },
+    {
+      "id": "Q156",
+      "reponse": "C"
+    },
+    {
+      "id": "Q157",
+      "reponse": "B"
+    },
+    {
+      "id": "Q158",
+      "reponse": "B"
+    },
+    {
+      "id": "Q159",
+      "reponse": "B"
+    },
+    {
+      "id": "Q160",
+      "reponse": "C"
+    },
+    {
+      "id": "Q161",
+      "reponse": "C"
+    },
+    {
+      "id": "Q162",
+      "reponse": "C"
+    },
+    {
+      "id": "Q163",
+      "reponse": "C"
+    },
+    {
+      "id": "Q164",
+      "reponse": "C"
+    },
+    {
+      "id": "Q165",
+      "reponse": "C"
+    },
+    {
+      "id": "Q166",
+      "reponse": "D"
+    },
+    {
+      "id": "Q167",
+      "reponse": "B"
+    },
+    {
+      "id": "Q168",
+      "reponse": "C"
+    },
+    {
+      "id": "Q169",
+      "reponse": "B"
+    },
+    {
+      "id": "Q170",
+      "reponse": "C"
+    },
+    {
+      "id": "Q171",
+      "reponse": "C"
+    }
+  ]
+}
