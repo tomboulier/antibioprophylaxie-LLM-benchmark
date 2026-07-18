@@ -1,13 +1,14 @@
 # Run manuel — 2026-07-18
 
-Premier test du protocole « prompt + `questions.json` collés dans une interface
-de chat grand public ». Mode testé : **auto-documentation** (l'outil se débrouille
-seul — connaissances internes et/ou recherche web ; la RFE n'est PAS fournie en
-pièce jointe).
+Test du protocole « prompt + questions collés dans une interface de chat grand
+public », dans les **deux modes** :
+- **Mode A — auto-documentation** (prompt v1.0.0 puis v2.0.0) : l'outil se
+  débrouille seul (connaissances / web), la RFE n'est PAS fournie ;
+- **Mode B — RAG** (prompt v2.0.0) : le PDF des RFE est joint en pièce jointe.
 
 Notation via `manual-benchmark/score_results.py` (mêmes règles que le pipeline).
 
-## Résultats
+## Mode A — auto-documentation
 
 | Outil | Statut | Global | Ouvertes | QCM | n |
 |-------|--------|:---:|:---:|:---:|:---:|
@@ -17,8 +18,36 @@ Notation via `manual-benchmark/score_results.py` (mêmes règles que le pipeline
 | **ChatGPT** | refus | — | — | — | 0 |
 
 > ⚠️ Le score MedGPT porte sur **8 questions** seulement (163 manquantes) : il
-> n'est **pas comparable** aux runs complets et ne doit pas figurer comme tel
-> dans un comparatif agrégé.
+> n'est **pas comparable** aux runs complets.
+
+## Mode B — RFE jointe (RAG)
+
+| Outil | Statut | Global | n |
+|-------|--------|:---:|:---:|
+| **Claude Opus 4.8** | complet | **98,2 %** | 171 |
+| **Mistral Large 2** | partiel (arrêt à Q50) | **96,0 %** | 50 |
+
+### Fournir la RFE fait bondir la précision
+
+Comparaison A → B (à périmètre égal) :
+
+| Modèle | Périmètre | Mode A | Mode B | Δ |
+|--------|-----------|:---:|:---:|:---:|
+| Claude Opus 4.8 | 171 | 83,6 % | **98,2 %** | **+14,6 pts** |
+| Mistral | Q01–Q50 | 76,0 % | **96,0 %** | **+20,0 pts** |
+| Claude (réf.) | Q01–Q50 | 80,0 % | 98,0 % | +18 pts |
+
+Le RAG corrige quasiment tous les pièges du mode A (Q04, Q27, Q42, Q45, Q69, Q71,
+Q91, Q114, Q131, Q136, Q142, Q154 deviennent justes). **Claude mode B ne laisse
+que 3 erreurs / 171** :
+- **Q15** : Céfazoline au lieu d'Amox/Clav ;
+- **Q90** : a repéré la note BLSE (« antibioprophylaxie active sur la souche
+  identifiée ») mais pas la molécule précise (Ertapénème) ;
+- **Q143** : toujours le piège « plaie de la **main** » (B au lieu de C) — **ce
+  piège survit au RAG**.
+
+> Note protocole : Mistral s'est **arrêté à Q50** malgré l'autorisation de
+> découper en lots. Il faudra parfois relancer explicitement « continue ».
 
 ## Fichiers
 
@@ -28,6 +57,8 @@ Notation via `manual-benchmark/score_results.py` (mêmes règles que le pipeline
 - `medgpt-partiel.json` — sortie **reformatée** manuellement au format canonique
   (table de correspondance ci-dessous).
 - ChatGPT : aucun JSON produit (refus, voir §MedGPT/ChatGPT).
+- `claude-opus-4.8-modeB.json` — mode B (RFE jointe), run complet 171.
+- `mistral-modeB-partiel.json` — mode B, partiel (Q01–Q50, arrêt).
 
 ## MedGPT — reformatage manuel
 
